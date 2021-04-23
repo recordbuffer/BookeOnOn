@@ -1,36 +1,5 @@
 @charset "UTF-8";
 
-.d1 {
-	width: 58%;
-	height: 1500px;
-	border: 1px solid black;
-	position: absolute;
-	border: 1px solid black;
-	left: 10%;
-}
-
-.d2 {
-	width: 400px;
-	height: 692px;
-	border: 1px solid black;
-	position: fixed;
-	left: 69%;
-	right: 10%;
-	border: 1px solid black;
-	position: fixed;
-	left: 69%;
-}
-
-.d3 {
-	width: 400px;
-	height: 200px;
-	border: 1px solid black;
-	position: fixed;
-	left: 69%;
-	top: 740px;
-	right: 10%;
-}
-
 .a1 {
 	height: 30%;
 	border: 1px solid black;

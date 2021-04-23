@@ -34,11 +34,22 @@ public class HomeController {
 	
 	@RequestMapping("/welcome.do")
 	public String index() {
+		logger.info("WELCOME PAGE");
+		
 		return "welcome";
 	}
 	
 	@RequestMapping("/main.do")
 	public String main() {
+		logger.info("MAIN PAGE");
+		
 		return "mainpage";
+	}
+	
+	@RequestMapping("/loginform.do")
+	public String loginForm() {
+		logger.info("LOGIN FORM");
+		
+		return "loginpage";
 	}
 }

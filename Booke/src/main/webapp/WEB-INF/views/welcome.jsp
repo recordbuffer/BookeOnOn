@@ -28,7 +28,7 @@
       <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
 <style type="text/css">
-.logo{
+.logo {
 	width: 70px;
 }
 
@@ -46,7 +46,8 @@
 </style>
 </head>
 <!-- body -->
-<body class="main-layout home_page" style="background-color: rgb(181, 227, 216);">
+<body class="main-layout home_page"
+	style="background-color: rgb(181, 227, 216);">
 	<!-- header -->
 	<header>
 		<!-- header inner -->
@@ -57,7 +58,8 @@
 						<div class="full">
 							<div class="center-desk">
 								<div class="logo">
-									<a href="index.html"><img src="resources/images/logo2.png" alt="#" id="logo"></a>
+									<a href="index.html"><img src="resources/images/logo2.png"
+										alt="#" id="logo"></a>
 								</div>
 							</div>
 						</div>
@@ -68,7 +70,7 @@
 								<nav class="main-menu">
 									<ul class="menu-area-main">
 										<li class="mean-last"><a
-											onclick="location.href='main.do'"><img
+											onclick="location.href='loginform.do'"><img
 												src="resources/images/top-icon.png" /></a></li>
 									</ul>
 								</nav>
@@ -79,10 +81,10 @@
 			</div>
 		</div>
 	</header>
-	
-	
+
+
 	<!-- slider section -->
-	
+
 	<section class="slider_section">
 		<div id="myCarousel" class="carousel slide banner-main"
 			data-ride="carousel">
@@ -157,16 +159,14 @@
 			</a>
 		</div>
 	</section>
-	
+
 	<!-- team-section -->
 	<div class="brown"></div>
 	<div class="site-section border-bottom" id="team-section">
 		<div class="container">
 			<div class="row justify-content-center mb-5">
 				<div class="col-md-7 text-center">
-					<br>
-					<br>
-					<br>
+					<br> <br> <br>
 					<h2 class="text-black h1 site-section-heading">Our Team</h2>
 				</div>
 			</div>
@@ -265,43 +265,9 @@
 	</div>
 	<div class="chatbot">챗봇</div>
 
-<!-- footer -->
-	<footer>
-		<div class="footer">
-			<div class="container">
-				<div class="row pdn-top-30">
-					<div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
-						<div class="Follow">
-							<h3>Follow Us</h3>
-						</div>
-						<ul class="location_icon">
-							<li><a href="#"><img src="icon/facebook.png"></a></li>
-							<li><a href="#"><img src="icon/Twitter.png"></a></li>
-							<li><a href="#"><img src="icon/linkedin.png"></a></li>
-							<li><a href="#"><img src="icon/instagram.png"></a></li>
-						</ul>
-					</div>
-					<div class="col-xl-8 col-lg-8 col-md-8 col-sm-12">
-						<div class="Follow">
-							<h3>Newsletter</h3>
-						</div>
-						<input class="Newsletter" placeholder="Enter your email"
-							type="Enter your email">
-						<button class="Subscribe">Subscribe</button>
-					</div>
-				</div>
-			</div>
-		</div>	
-		<div class="copyright">
-			<div class="container">
-				<p>
-					Copyright 2019 All Right Reserved By <a href="https://html.design/">Free
-						html Templates</a>
-				</p>
-			</div>
-		</div>
-	</footer>
-	<!-- end footer -->
+	<jsp:include page="footer.jsp"></jsp:include>
+
+
 	<!-- Javascript files-->
 	<script
 		src="${pageContext.request.contextPath}/resources/js/jquery.min.js"></script>
