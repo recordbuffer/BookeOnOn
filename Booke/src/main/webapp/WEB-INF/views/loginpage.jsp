@@ -18,16 +18,14 @@
 <link
 	href="${pageContext.request.contextPath}/resources/css/bootstrap.min.css"
 	rel="stylesheet"
-	integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6"
-	crossorigin="anonymous">
-
+	integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6">
 <meta name="theme-color" content="#7952b3">
 
 <style>
 body {
 	display: flex;
 	align-items: center;
-	padding-top: 100px;
+	padding-top: 90px;
 	padding-bottom: 40px;
 	background-color: #f5f5f5;
 }
@@ -43,15 +41,19 @@ body {
 	margin: auto;
 }
 
-.form-signin input[type="email"] {
-	margin-bottom: -1px;
-	border-bottom-right-radius: 0;
-	border-bottom-left-radius: 0;
+.form>.form-control {
+	padding: 0.5rem;
 }
 
-.form-floating>.form-control, .form-floating>.form-select {
-	padding: 1rem .75rem;
+#btn {
+	width: 176.8px;
+	background-color: rgb(181, 227, 216);
+	border: none;
 }
+
+a{text-decoration: none;
+}
+a:hover{color:hotpink;}
 </style>
 
 
@@ -60,28 +62,30 @@ body {
 </head>
 <body class="text-center">
 
+
 	<main class="form-signin">
-		<img class="mb-4" src="resources/images/logo.png" alt="" width="130">
-		<br>
-		<br>
+		<img class="mb-4" src="resources/images/logo.png" alt="#" width="130">
+		<br> <br><br>
 		<hr>
 		<br>
-		<form>
-			<div class="form-floating">
-				<input type="email" class="form-control" id="floatingInput"
-					placeholder="name@example.com">
+		<br>
+		<form action="">
+			<div class="form">
+				<input type="text" class="form-control" placeholder="아이디">
 			</div>
 			<br>
-			<div class="form-floating">
-				<input type="password" class="form-control" id="floatingPassword"
-					placeholder="Password">
+			<div class="form">
+				<input type="password" class="form-control" placeholder="비밀번호">
 			</div>
-
-			<br> <br>
-			<div class="d-grid gap-2 col-6 mx-auto">
-				<button class="btn btn-primary" type="button">Button</button>
+			<br>
+			<div class="form">
+				<input type="submit" value="로그인" class="form-control" id="btn"
+					onclick="">
 			</div>
 		</form>
+		<br><br><br>
+		<a href="">아이디 or 비밀번호 찾기</a>&nbsp;&nbsp;<span>/</span>&nbsp;
+		<a href="">회원가입</a>
 	</main>
 
 
