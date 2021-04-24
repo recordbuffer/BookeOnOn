@@ -11,21 +11,17 @@
 <meta name="generator" content="Hugo 0.82.0">
 <title>Book e On&On</title>
 
-<link rel="canonical"
-	href="https://getbootstrap.com/docs/5.0/examples/sign-in/">
-
 <!-- Bootstrap core CSS -->
 <link
 	href="${pageContext.request.contextPath}/resources/css/bootstrap.min.css"
 	rel="stylesheet"
 	integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6">
-<meta name="theme-color" content="#7952b3">
-
-<style>
+	
+<style type="text/css">
 body {
 	display: flex;
 	align-items: center;
-	padding-top: 90px;
+	padding-top: 80px;
 	padding-bottom: 40px;
 	background-color: #f5f5f5;
 }
@@ -53,29 +49,27 @@ body {
 
 a{text-decoration: none;
 }
-a:hover{color:hotpink;}
+a:hover{color:rgb(223, 45, 139);}
 </style>
 
-
-<!-- Custom styles for this template -->
-<link href="signin.css" rel="stylesheet">
 </head>
 <body class="text-center">
 
 
 	<main class="form-signin">
 		<img class="mb-4" src="resources/images/logo.png" alt="#" width="130">
-		<br> <br><br>
+		<br> <br>
 		<hr>
 		<br>
 		<br>
+		
 		<form action="">
 			<div class="form">
 				<input type="text" class="form-control" placeholder="아이디">
 			</div>
 			<br>
 			<div class="form">
-				<input type="password" class="form-control" placeholder="비밀번호">
+				<input type="text" class="form-control" placeholder="비밀번호">
 			</div>
 			<br>
 			<div class="form">
@@ -83,9 +77,11 @@ a:hover{color:hotpink;}
 					onclick="">
 			</div>
 		</form>
+		
 		<br><br><br>
 		<a href="">아이디 or 비밀번호 찾기</a>&nbsp;&nbsp;<span>/</span>&nbsp;
-		<a href="">회원가입</a>
+		<a href="signup.do">회원가입</a>
+
 	</main>
 
 

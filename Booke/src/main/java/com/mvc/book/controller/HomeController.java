@@ -32,6 +32,7 @@ public class HomeController {
 		return "home";
 	}
 	
+	//웰컴페이지로 이동
 	@RequestMapping("/welcome.do")
 	public String index() {
 		logger.info("WELCOME PAGE");
@@ -39,6 +40,8 @@ public class HomeController {
 		return "welcome";
 	}
 	
+	
+	//메인 페이지로 이동
 	@RequestMapping("/main.do")
 	public String main() {
 		logger.info("MAIN PAGE");
@@ -46,10 +49,27 @@ public class HomeController {
 		return "mainpage";
 	}
 	
+	//로그인 페이지로 이동
 	@RequestMapping("/loginform.do")
 	public String loginForm() {
 		logger.info("LOGIN FORM");
 		
 		return "loginpage";
+	}
+	
+	//회원가입 페이지로 이동
+	@RequestMapping("/signup.do")
+	public String signupform() {
+		logger.info("SIGN UP FORM");
+		
+		return "signuppage";
+	}
+	
+	
+	@RequestMapping(value="/idChk.do")
+	public String signup_idChk() {
+		logger.info("SIGNUP ID CHECK POP UP");
+		
+		return "signuppage_idchk";
 	}
 }
