@@ -70,7 +70,7 @@
 								<nav class="main-menu">
 									<ul class="menu-area-main">
 										<li class="mean-last"><a
-											onclick="location.href='loginform.do'"><img
+											onclick="location.href='updateform.do'"><img
 												src="resources/images/top-icon.png" /></a></li>
 									</ul>
 								</nav>

@@ -65,11 +65,26 @@ public class HomeController {
 		return "signuppage";
 	}
 	
-	
+	//회원가입_아이디 중복 체크 페이지로 이동
 	@RequestMapping(value="/idChk.do")
 	public String signup_idChk() {
 		logger.info("SIGNUP ID CHECK POP UP");
 		
 		return "signuppage_idchk";
 	}
+	
+	//회원 정보 수정 페이지로 이동
+	
+	@RequestMapping("/updateform.do")
+	public String updateform() {
+		logger.info("UPDATE MEMBER INFO PAGE");
+	
+		return "updatepage";
+	}
+	
+	
+	
+	
+	
+	
 }
