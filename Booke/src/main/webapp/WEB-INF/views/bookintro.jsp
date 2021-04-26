@@ -32,10 +32,11 @@
 <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script type="text/javascript">
 	function detailPopup() {
-		window.open("detailpopup.do", "test", "width=1000, height=500, left=350, top=200")
+		window.open("detailpopup.do", "test", "width=700, height=800, left=350, top=100")
 	}
 </script>
 <style type="text/css">
+
 body {
 	background-color: #f5f5f5;
 }
@@ -77,7 +78,7 @@ body {
 
 .login_menu {
 	position: absolute;
-	background-color: rgb(119, 109, 097);
+	background-color: rgb(119, 109, 97);
 	left: -35px;
 	top: -42px;
 }
@@ -300,6 +301,8 @@ body {
     border: 5px solid rgb(119, 109, 97);
     background-color: rgb(181, 227, 216);
 }
+
+
 </style>
 </head>
 
@@ -437,7 +440,7 @@ body {
 						<div class="col-sm-12">
 							<div class="login_menu">
 								<!-- 서재 / 커뮤니티 / 내 서재 버튼 div -->
-								<input type="button" class="login_btn" value="서재" onclick="">
+								<input type="button" class="login_btn" value="서재" onclick="location.href='map.do'">
 								<input type="button" class="login_btn" value="커뮤니티" onclick="">
 								<input type="button" class="login_btn" value="책 소개" onclick="">
 								<div class="login_img">
@@ -465,7 +468,19 @@ body {
 									목표달성도
 								</div>
 							</div>
-							<div class="library_map"></div>
+							<div class="library_map">
+								<div id="map" style="width:400px;height:225px;"></div>
+								<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=9ec334948643a95282b6e3466aaebc54"></script>
+								<script type="text/javascript">
+								var container = document.getElementById('map'); //지도를 담을 영역의 DOM 레퍼런스
+								var options = { //지도를 생성할 때 필요한 기본 옵션
+									center: new kakao.maps.LatLng(33.450701, 126.570667), //지도의 중심좌표.
+									level: 3 //지도의 레벨(확대, 축소 정도)
+								};
+
+								var map = new kakao.maps.Map(container, options); //지도 생성 및 객체 리턴
+								</script>
+							</div>
 							<input class="map_btn" type="button" value="도서관 & 서점 찾기" onclick="">
 						</div>
 					</div>
@@ -473,46 +488,8 @@ body {
 			</div>
 		</div>
 	</div>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
+	<footer style="position: relative; top: 1000px;">
 	<jsp:include page="footer.jsp"></jsp:include>
+	</footer>
 </body>
 </html>

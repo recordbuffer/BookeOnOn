@@ -51,5 +51,13 @@ public class HomeController {
 	public String detailpopup() {
 		return "detailpopup";
 	}
+	@RequestMapping("/updatepage.do")
+	public String updatepage() {
+		return "updatepage";
+	}
+	@RequestMapping("/map.do")
+	public String map() {
+		return "NewFile";
+	}
 		
 }

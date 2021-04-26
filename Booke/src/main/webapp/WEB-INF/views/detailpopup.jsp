@@ -5,144 +5,99 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
-<script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <style type="text/css">
-@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
-
-html, body {
-  width: 100%;
-  height: 100%;
-  margin: 0;
+body{
+	background-color: rgb(181, 227, 216);
 }
 
-.page-wrapper {
-  width: 100%;
-  height: 100%;
-  background: url(https://goo.gl/OeVhun) center no-repeat;
-  background-size: cover;
+.exit{
+	width: 50px;
+	height: 50px;
+	border-radius: 50px;
+	background-color: rgb(181, 227, 216);
+	position: relative;
+	left: 90%;
+	border: 5px solid rgb(119, 109, 97);
 }
 
-.blur-it {
-  filter: blur(4px);
+.exit:hover{
+	box-shadow: 1px 1px 20px black;
 }
 
-a.btn {
-  width: 200px;
-  padding: 18px 0;
-  position: absolute;
-  top: 50%; 
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
-  font-weight: 700;
-  text-align: center;
-  text-decoration: none;
-  text-transform: uppercase;
-  color: #fff;
-  border-radius: 0;
-  background: #e2525c;
+.detail{
+	border: 5px solid rgb(119, 109, 97);
+    width: 94%;
+    height: 400px;
+    margin: 20px;	
+    background-color: #f5f5f5;
 }
 
-.modal-wrapper {
-  width: 100%;
-  height: 100%;
-  position: fixed;
-  top: 0; 
-  left: 0;
-  background: rgba(41, 171, 164, 0.8);
-  visibility: hidden;
-  opacity: 0;
-  transition: all 0.25s ease-in-out;
+.comment{
+	border: 5px solid rgb(119, 109, 97);
+    width: 94%;
+    height: 261px;
+    margin: 20px;
 }
 
-.modal-wrapper.open {
-  opacity: 1;
-  visibility: visible;
+.cover{
+	border: 5px solid rgb(119, 109, 97);
+    width: 180px;
+    height: 255px;
+    position: relative;
+    margin: 20px;
 }
-
-.modal {
-  width: 600px;
-  height: 400px;
-  display: block;
-  margin: 50% 0 0 -300px;
-  position: relative;
-  top: 50%; 
-  left: 50%;
-  background: #fff;
-  opacity: 0;
-  transition: all 0.5s ease-in-out;
+.intro{
+	border: 5px solid rgb(119, 109, 97);
+    width: 372px;
+    height: 255px;
+    position: relative;
+    left: 240px;
+    top: -285px;
 }
-
-.modal-wrapper.open .modal {
-  margin-top: -200px;
-  opacity: 1;
+.content{
+	border: 5px solid rgb(119, 109, 97);
+    width: 592px;
+    height: 100px;
+    position: relative;
+    top: -282px;
+    left: 20px;
 }
-
-.head { 
-  width: 90%;
-  height: 32px;
-  padding: 12px 30px;
-  overflow: hidden;
-  background: #e2525c;
+.date{
+	border: 5px solid rgb(119, 109, 97);
+    width: 175px;
+    height: 40px;
+    position: absolute;
+    left: 183px;
+    top: 139px;
 }
-
-.btn-close {
-  font-size: 28px;
-  display: block;
-  float: right;
-  color: #fff;
-}
-
-.content {
-  padding: 10%;
-}
-
-.good-job {
-  text-align: center;
-  font-family: 'Montserrat', Arial,       Helvetica, sans-serif;
-  color: #e2525c;
-}
-.good-job .fa-thumbs-o-up {
-  font-size: 60px;
-}
-.good-job h1 {
-  font-size: 45px;
+.btn{
+	border: 5px solid rgb(119, 109, 97);
+    width: 160px;
+    height: 50px;
+    left: 10px;
+    top: 40px;
+    position: relative;
 }
 </style>
 </head>
 <body>
-<script type="text/javascript">
-$( document ).ready(function() {
-	  $('.trigger').on('click', function() {
-	     $('.modal-wrapper').toggleClass('open');
-	    $('.page-wrapper').toggleClass('blur-it');
-	     return false;
-	  });
-	});
-</script>
-
-	<!-- Button -->
-<div class="page-wrapper">
-  <a class="btn trigger" href="#">click me</a>
-</div>
-
-
-
-<!-- Modal -->
-<div class="modal-wrapper">
-  <div class="modal">
-    <div class="head">
-      <a class="btn-close trigger" href="#">
-        <i class="fa fa-times" aria-hidden="true"></i>
-      </a>
-    </div>
-    <div class="content">
-        <div class="good-job">
-          <i class="fa fa-thumbs-o-up" aria-hidden="true"></i>
-          <h1>Good Job!</h1>
-        </div>
-    </div>
-  </div>
-</div>
+	<button class="exit"><img  src="resources/images/exit.png" style="width: 30px; height: 30px;"></button>
+	
+	<div class="detail">
+		<div class="cover"></div>
+		<div class="intro">
+			<h3>김미경의 리부트</h3>
+			<p>김미경        웅진 출판사 </p>
+			<input class="btn" type="button" value="읽은 책 담기">
+			<div class="date"></div>
+		</div>
+		<div class="content">
+			코로나 도서 500여 종 中 베스트셀러 1위의 화제작 <br>
+			변화의 흐름을 꿰뚫어 본 130만 유튜버 김미경의 코로나 이후 생존법!<br>
+		</div>
+	</div>
+	<div class="comment">
+	
+	</div>
 </body>
 </html>

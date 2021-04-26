@@ -13,6 +13,11 @@
 		<div class="footer">
 			<div class="container">
 				<div class="row pdn-top-30">
+					<div class="col-xl-8 col-lg-8 col-md-8 col-sm-12">
+						<div class="Follow">
+							<a href="#"><img src="resources/images/logo2.png" alt="#" style="margin: 0px 0px 10px 0px; width: 70%;" ></a>
+						</div>
+					</div>
 					<div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
 						<div class="Follow">
 							<h3>Checkin</h3>
@@ -23,14 +28,6 @@
 							<li><a href="#"><img src="resources/icon/linkedin.png"></a></li>
 							<li><a href="#"><img src="resources/icon/instagram.png"></a></li>
 						</ul>
-					</div>
-					<div class="col-xl-8 col-lg-8 col-md-8 col-sm-12">
-						<div class="Follow">
-							<h3>Book e On & On</h3>
-						</div>
-						<input class="Newsletter" placeholder="Search for what you want."
-							type="Search for what you want.">
-						<button class="Subscribe">검색</button>
 					</div>
 				</div>
 			</div>
