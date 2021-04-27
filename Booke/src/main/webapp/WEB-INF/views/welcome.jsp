@@ -70,7 +70,7 @@
 								<nav class="main-menu">
 									<ul class="menu-area-main">
 										<li class="mean-last"><a
-											onclick="location.href='fres.do'"><img
+											onclick="location.href='md_aks.do'"><img
 												src="resources/images/top-icon.png" /></a></li>
 									</ul>
 								</nav>

@@ -53,7 +53,7 @@ body {
 	<br>
 
 	<main class="form-signup">
-		<h1 style="margin-bottom: 20px;">내 친구 관리</h1>
+		<h1 style="margin-bottom: 20px;">회원 검색</h1>
 
 		<!-- 검색 창 -->
 		<div id="hddiv">
@@ -69,6 +69,7 @@ body {
 		</section>
 
 	</main>
+	<jsp:include page="footer.jsp"></jsp:include>
 
 
 </body>

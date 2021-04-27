@@ -81,7 +81,23 @@ public class HomeController {
 		return "updatepage";
 	}
 	
-	//친구관리 페이지로 이동
+	//회원 탈퇴 페이지로 이동
+	@RequestMapping("/md_aks.do")
+	public String mdelete() {
+		logger.info("MEMBER DELETE PAGE");
+		
+		return "mdeletepage";
+	}
+	
+	//회원 탈퇴 확인 페이지로 이동
+	@RequestMapping(value="/deleteChk.do")
+	public String mdelete_Chk() {
+		logger.info("MEMBER DELETE CHECK POP UP");
+		
+		return "mdeletepage_Chk";
+	}
+	
+	//친구 검색 페이지로 이동
 	@RequestMapping("/friend.do")
 	public String friend() {
 		logger.info("FRIEND PAGE");
@@ -90,13 +106,14 @@ public class HomeController {
 	}
 	
 	
-	//친구 관리 페이지 > 검색 결과 페이지로 이동
+	//친구 검색 페이지 > 검색 결과 페이지로 이동
 	@RequestMapping("/fres.do")
 	public String fres() {
 		logger.info("FRIEND RES PAGE");
 		
 		return "friendpage_res";
 	}
+	
 	
 	
 	
