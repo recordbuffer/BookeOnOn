@@ -74,7 +74,6 @@ public class HomeController {
 	}
 	
 	//회원 정보 수정 페이지로 이동
-	
 	@RequestMapping("/updateform.do")
 	public String updateform() {
 		logger.info("UPDATE MEMBER INFO PAGE");
@@ -82,7 +81,22 @@ public class HomeController {
 		return "updatepage";
 	}
 	
+	//친구관리 페이지로 이동
+	@RequestMapping("/friend.do")
+	public String friend() {
+		logger.info("FRIEND PAGE");
+		
+		return "friendpage";
+	}
 	
+	
+	//친구 관리 페이지 > 검색 결과 페이지로 이동
+	@RequestMapping("/fres.do")
+	public String fres() {
+		logger.info("FRIEND RES PAGE");
+		
+		return "friendpage_res";
+	}
 	
 	
 	

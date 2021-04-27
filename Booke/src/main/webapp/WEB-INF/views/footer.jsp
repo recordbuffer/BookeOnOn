@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -8,11 +8,17 @@
 <link rel="stylesheet" href="resources/css/footer.css">
 </head>
 <body>
-<!-- footer -->
+	<!-- footer -->
 	<footer>
 		<div class="footer">
 			<div class="container">
-				<div class="row pdn-top-30">
+				<div class="row pdn-top-30" style="padding-top: 25px !important;">
+					<div class="col-xl-8 col-lg-8 col-md-8 col-sm-12">
+						<div class="Follow">
+							<a href="#"></a><img src="resources/images/logo_mi.png" alt="#"
+								style="padding-top: 10px; width: 70%"></a>
+						</div>
+					</div>
 					<div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
 						<div class="Follow">
 							<h3>Checkin</h3>
@@ -24,22 +30,14 @@
 							<li><a href="#"><img src="resources/icon/instagram.png"></a></li>
 						</ul>
 					</div>
-					<div class="col-xl-8 col-lg-8 col-md-8 col-sm-12">
-						<div class="Follow">
-							<h3>Book e On & On</h3>
-						</div>
-						<input class="Newsletter" placeholder="Search for what you want."
-							type="Search for what you want.">
-						<button class="Subscribe">검색</button>
-					</div>
 				</div>
 			</div>
-		</div>	
+		</div>
 		<div class="copyright">
 			<div class="container">
 				<p>
-					Copyright 2021 All Right Reserved By <a href="https://html.design/">BooK e On & On
-						html Templates</a>
+					Copyright 2021 All Right Reserved By <a href="https://html.design/">BooK
+						e On & On html Templates</a>
 				</p>
 			</div>
 		</div>

@@ -20,12 +20,9 @@
 
 <style type="text/css">
 body {
-	display: flex;
 	align-items: center;
 	padding-top: 80px;
-	padding-bottom: 40px;
 	background-color: #f5f5f5;
-	padding-bottom: 40px;
 }
 
 .text-center {
@@ -37,6 +34,7 @@ body {
 	max-width: 400px;
 	padding: 15px;
 	margin: auto;
+	margin-bottom: 100px;
 }
 
 .form-control {
@@ -112,8 +110,8 @@ td>#btn {
 				</tr>
 			</table>
 		</form>
-	</main>
-
-	<!-- footer -->
+	</main>	
 </body>
+	<jsp:include page="footer.jsp"></jsp:include>
+
 </html>
