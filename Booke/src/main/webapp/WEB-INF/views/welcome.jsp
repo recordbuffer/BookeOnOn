@@ -58,7 +58,7 @@
 						<div class="full">
 							<div class="center-desk">
 								<div class="logo">
-									<a href="index.html"><img src="resources/images/logo2.png"
+									<a href="fsearch.do"><img src="resources/images/logo2.png"
 										alt="#" id="logo"></a>
 								</div>
 							</div>
@@ -70,7 +70,7 @@
 								<nav class="main-menu">
 									<ul class="menu-area-main">
 										<li class="mean-last"><a
-											onclick="location.href='md_aks.do'"><img
+											onclick="location.href='friend.do'"><img
 												src="resources/images/top-icon.png" /></a></li>
 									</ul>
 								</nav>

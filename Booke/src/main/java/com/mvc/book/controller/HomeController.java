@@ -98,20 +98,29 @@ public class HomeController {
 	}
 	
 	//친구 검색 페이지로 이동
-	@RequestMapping("/friend.do")
-	public String friend() {
-		logger.info("FRIEND PAGE");
+		@RequestMapping("/friend.do")
+		public String friend() {
+			logger.info("FRIEND PAGE");
+			
+			return "friendpage";
+		}
 		
-		return "friendpage";
+		
+	//친구 검색 페이지로 이동
+	@RequestMapping("/fsearch.do")
+	public String fsearch() {
+		logger.info("FRIEND SEARCH PAGE");
+		
+		return "fsearchpage";
 	}
 	
 	
 	//친구 검색 페이지 > 검색 결과 페이지로 이동
 	@RequestMapping("/fres.do")
 	public String fres() {
-		logger.info("FRIEND RES PAGE");
+		logger.info("FRIEND SEARCH RES PAGE");
 		
-		return "friendpage_res";
+		return "fsearchpage_res";
 	}
 	
 	

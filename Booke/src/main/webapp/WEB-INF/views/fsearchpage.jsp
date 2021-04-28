@@ -40,11 +40,9 @@ body {
 	padding: 0.5rem;
 }
 
-td>img{
-	margin-left: 20px;
-    height: 30px;
+#dvres {
+	height: 270px;
 }
-
 </style>
 </head>
 
@@ -55,7 +53,7 @@ td>img{
 	<br>
 
 	<main class="form-signup">
-		<h1 style="margin-bottom: 20px;">내 친구 목록</h1>
+		<h1 style="margin-bottom: 20px;">회원 검색</h1>
 
 		<!-- 검색 창 -->
 		<div id="hddiv">
@@ -65,45 +63,12 @@ td>img{
 			</form>
 		</div>
 
-		<div style="height: 60px"></div>
-
-		<!-- 결과 테이블 -->
+		<!-- 친구 리스트 테이블 -->
 		<section>
-			<div style="height: 270px" >
-				<table class="table table-hover">
-					<col width="100">
-					<col width="100">
-					<col width="100">
-					<col width="100">
-					<col width="100">
-					<tr>
-						<th>아이디</th>
-						<th>닉네임</th>
-						<th>회원등급</th>
-						<th>친구 상태</th>
-						<th>쪽지 보내기</th>
-					</tr>
-					<!-- 여기서 부턴 예시로 넣은 거니 나중에 지우고 코드 넣으시면 될 것 같습니다. -->
-					<tr>
-						<td>wjddn99</td>
-						<td>수박</td>
-						<td>L1</td>
-						<td><button class="btn btn-outline-dark" type="submit">친구</button></td>
-						<td><img src="resources/images/mail.png" ></td>
-					</tr>
-					<tr>
-						<td>tjdtn44</td>
-						<td>옥수수</td>
-						<td>L1</td>
-						<td><button class="btn btn-outline-dark" type="submit">친구</button></td>
-						<td><img src="resources/images/mail.png"></td>
-					</tr>
-				</table>
-			</div>
+			<div id="dvres"></div>
 		</section>
 
 	</main>
-
 	<jsp:include page="footer.jsp"></jsp:include>
 
 
