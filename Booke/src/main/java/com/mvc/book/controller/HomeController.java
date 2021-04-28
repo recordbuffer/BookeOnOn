@@ -46,4 +46,19 @@ public class HomeController {
 	public String searchm() {
 		return "searchpage";
 	}
+	
+	@RequestMapping("/search2.do")
+	public String searchm2() {
+		return "searchpage2";
+	}
+	
+	//회원 정보 수정 페이지로 이동
+	
+	@RequestMapping("/updateform.do")
+	public String updateform() {
+		logger.info("UPDATE MEMBER INFO PAGE");
+	
+		return "updatepage";
+	}
+	
 }

@@ -22,10 +22,15 @@
             </div>
             <div class="col-xl-9 col-lg-9 col-md-9 col-sm-9">
                 <div class="menu-area">
-                    <div class="limit-box menu-area-main">
-                            <a href="search.do"><img src="resources/images/search_icon.png" alt="#'" style="margin: 0px 50px 0px 0px;"/></a>
-                    </div>
-                </div>
+					<div class="limit-box menu-area-main">
+						<a href="search.do"><img src="resources/images/search_icon.png" 
+							alt="#'" style="margin: 0px 50px 0px 0px;" /></a>
+					</div>
+					<div class="limit-box menu-area-main">
+						<a href="search2.do"><img src="resources/images/top-icon.png"
+							alt="#'" style="margin: 0px 50px 0px 0px;" /></a>
+					</div>
+				</div>
             </div>
         </div>
     </div>

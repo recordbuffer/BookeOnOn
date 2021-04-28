@@ -68,9 +68,8 @@
 							<div class="limit-box">
 								<nav class="main-menu">
 									<ul class="menu-area-main">
-										<li class="mean-last"><a
-											onclick="location.href='main.do'"><img
-												src="resources/images/top-icon.png" /></a></li>
+										<li class="mean-last">
+										<a onclick="location.href='search2.do'"><img src="resources/images/top-icon.png" /></a></li>
 									</ul>
 								</nav>
 							</div>
