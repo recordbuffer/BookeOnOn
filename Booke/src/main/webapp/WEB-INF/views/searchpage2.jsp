@@ -66,40 +66,21 @@
 	<!-- Page Content -->
 
 	<main class="bg-primary py-2 mb-5" id="mainbody">
-
-		<div class="margin-top_30 col-md-8 offset-md-2 white_fonts">
-			<div class="row">
-				<div class="col-md-4">
-					<div class="full icon text_align_center">
-						<img src="resources/icon/위치.png">
-					</div>
-					<div class="full white_fonts text_align_center">
-						<p>
-							서울특별시 강남구 역삼동<br>테헤란로14길 6
-						</p>
-					</div>
-				</div>
-				<div class="col-md-4">
-					<div class="full icon text_align_center">
-						<img src="resources/icon/전화.png">
-					</div>
-					<div class="full white_fonts text_align_center">
-						<p>010-123-456</p>
-					</div>
-				</div>
-				<div class="col-md-4">
-					<div class="full icon text_align_center">
-						<img src="resources/icon/편지.png">
-					</div>
-					<div class="full white_fonts text_align_center">
-						<p>naver.com</p>
-					</div>
-				</div>
-			</div>
-		</div>
-
-	</main>
 	
+	<div class="container">
+    <div class="row">
+        <div class="col-lg-4"><img src="resources/images/bookimg1.png"></div>
+        <div class="col-lg-4"><img src="resources/images/bookimg2.png"></div>
+        <div class="col-lg-4"><img src="resources/images/bookimg3.png"></div>
+        <br>
+        <div class="col-lg-4"><p><button type="button" class="btn btn-danger btn-block">자기소개 책 추천</button></p></div>
+        <div class="col-lg-4"><p><button type="button" class="btn btn-danger btn-block">국내 베스트 셀러</button></p></div>
+        <div class="col-lg-4"><p><button type="button" class="btn btn-danger btn-block">해외 배스트 셀러</button></p></div>
+    </div>
+</div>
+	
+		
+	</main>
 	<jsp:include page="footer.jsp"></jsp:include>
 </body>
 </html>
