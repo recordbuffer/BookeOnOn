@@ -10,20 +10,6 @@ body{
 	background-color: rgb(181, 227, 216);
 }
 
-.exit{
-	width: 50px;
-	height: 50px;
-	border-radius: 50px;
-	background-color: rgb(181, 227, 216);
-	position: relative;
-	left: 90%;
-	border: 5px solid rgb(119, 109, 97);
-}
-
-.exit:hover{
-	box-shadow: 1px 1px 20px black;
-}
-
 .detail{
 	border: 5px solid rgb(119, 109, 97);
     width: 94%;
@@ -81,7 +67,6 @@ body{
 </style>
 </head>
 <body>
-	<button class="exit"><img  src="resources/images/exit.png" style="width: 30px; height: 30px;"></button>
 	
 	<div class="detail">
 		<div class="cover"></div>

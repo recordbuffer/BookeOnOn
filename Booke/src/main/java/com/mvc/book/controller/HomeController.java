@@ -54,10 +54,10 @@ public class HomeController {
 	@RequestMapping("/updatepage.do")
 	public String updatepage() {
 		return "updatepage";
+	}	
+	@RequestMapping("/detailmap.do")
+	public String detailmap() {
+		return "detailmap";
 	}
-	@RequestMapping("/map.do")
-	public String map() {
-		return "NewFile";
-	}
-		
+	
 }

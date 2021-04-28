@@ -32,7 +32,10 @@
 <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script type="text/javascript">
 	function detailPopup() {
-		window.open("detailpopup.do", "test", "width=700, height=800, left=350, top=100")
+		window.open("detailpopup.do", "test", "width=700, height=800, left=350, top=100");
+	}
+	function detailmap() {
+		window.open("detailmap.do", "test", "width=900, height=600, left=350, top=100");
 	}
 </script>
 <style type="text/css">
@@ -481,7 +484,7 @@ body {
 								var map = new kakao.maps.Map(container, options); //지도 생성 및 객체 리턴
 								</script>
 							</div>
-							<input class="map_btn" type="button" value="도서관 & 서점 찾기" onclick="">
+							<input class="map_btn" type="button" value="도서관 & 서점 찾기" onclick="detailmap();">
 						</div>
 					</div>
 				</div>
