@@ -35,277 +35,36 @@
 		window.open("detailpopup.do", "test", "width=700, height=800, left=350, top=100");
 	}
 	function detailmap() {
-		window.open("detailmap.do", "test", "width=900, height=600, left=350, top=100");
+		window.open("detailmap.do", "test", "width=1000, height=600, left=350, top=200");
 	}
 </script>
+<link rel="stylesheet" href="resources/css/bookintro.css">
 <style type="text/css">
-
-body {
-	background-color: #f5f5f5;
+.like{
+	display: none;
 }
 
-#mainnav {
-	background-color: rgb(252, 252, 255) !important;
-}
-
-#mainhd {
-	background-color: rgb(119, 109, 97) !important;
-}
-
-#hddiv {
-	background-color: rgb(119, 109, 97) !important;
-	margin-top: 50px;
-}
-
-.col-lg-12 {
-	flex: 0 0 68%;
-	width: 100%;
-}
-
-.best_seller, .new_seller {
-	height: 200px;
-}
-
-.total_category {
-	width: 620px;
-	background-color: rgb(119, 109, 97);
-}
-
-.detail_category {
-	width: 620px;
-	left: 0px;
-	top: 30px;
-	background-color: rgb(119, 109, 97);
-	position: relative;
-}
-
-.login_menu {
+.check{
 	position: absolute;
-	background-color: rgb(119, 109, 97);
-	left: -35px;
-	top: -42px;
-}
+    left: 95px;
+    top: 5px;
+	}
 
-.btn {
-	margin: 10px 0px 10px 0px;
-	left: 10px;
-}
-
-.btn-group, .btn-group-vertical {
-	position: relative;
-	display: inline-flex;
+input[id="chk1"] + label {
+	display: inline-block;
+	width: 30px;
+	height: 30px;
+	background: url("resources/images/default.png") 0 0 no-repeat;
 	vertical-align: middle;
-	z-index: 0;
 }
 
-.btn:hover {
-	color: white;
-	font-weight: bold;
-	background-color: rgb(181, 227, 216);
-	border-color: rgb(181, 227, 216);
-}
-
-.btn-check:checked+.btn-outline-primary {
-	color: black;
-	background-color: rgb(181, 227, 216);
-	border-color: rgb(181, 227, 216);
-	border: 3px solid white;
-	z-index: 1;
-}
-
-.btn-outline-primary {
-	color: white;
-	font-weight: bold;
-	background-color: rgb(119, 109, 097);
-	border-color: rgb(119, 109, 097);
-}
-
-.library_map {
-	position: absolute;
-	width: 400px;
-	height: 225px;
-	background-color: rgb(119, 109, 097);
-	top: 616px;
-	left: -35px;
-}
-
-.login_btn {
-	border: 5px solid white;
-	border-radius: 100%;
-	width: 80px;
-	height: 80px;
-	margin: 24px;
-	background-color: rgb(181, 227, 216);
-}
-
-.login_btn:hover, .login_mini_btn:hover {
-	font-weight: bold;
-}
-
-.login_img {
-	border: 5px solid white;
-	border-radius: 100%;
-	width: 130px;
-	height: 130px;
-	margin: 20px;
-}
-
-.login_name {
-	width: 200px;
-	height: 100px;
-	position: relative;
-	left: 180px;
-	top: -170px;
-}
-
-.login_mini_btn {
-	border: 5px solid white;
-	border-radius: 100%;
-	width: 50px;
-	height: 50px;
-	margin: 20px;
-	background-color: rgb(181, 227, 216);
-}
-
-.login_nick, .read_book, .want_book {
-	background-color: rgb(181, 227, 216);
-	border: 5px solid white;
-	height: 60px;
-	text-align: center;
+input[id="chk1"]:checked + .check {
+	display: inline-block;
+	width: 30px;
+	height: 30px;
+	background: url("resources/images/like.png") 0 0 no-repeat;
 	vertical-align: middle;
-	line-height: 50px;
 }
-
-.read_book {
-	border: 5px solid white;
-	width: 170px;
-	height: 125px;
-	margin: 20px;
-	position: relative;
-	top: -90px;
-}
-
-.want_book {
-	border: 5px solid white;
-	width: 170px;
-	height: 125px;
-	position: relative;
-	top: -235px;
-	margin: 0px 0px 0px 210px;
-}
-
-.attainment {
-	border: 5px solid white;
-	background-color: rgb(181, 227, 216);
-	width: 360px;
-	height: 155px;
-	position: relative;
-	top: -233px;
-	margin: 20px;
-}
-
-.nickname {
-	position: relative;
-	top: 90px;
-}
-
-.book_intro {
-	width: 620px;
-	height: 1020px;
-	position: relative;
-	top: 40px;
-	background-color: rgb(119, 109, 97);
-}
-
-.intro_1 {
-	position: absolute;
-	margin: 20px;
-	width: 580px;
-	height: 230px;
-	background-color: rgb(181, 227, 216);
-}
-
-.intro_2 {
-	position: absolute;
-	margin: 20px;
-	width: 580px;
-	height: 230px;
-	top: 250px;
-	background-color: rgb(181, 227, 216);
-}
-
-.intro_3 {
-	position: absolute;
-	margin: 20px;
-	width: 580px;
-	height: 230px;
-	background-color: rgb(181, 227, 216);
-	top: 500px;
-}
-
-.intro_4 {
-	position: absolute;
-	margin: 20px;
-	width: 580px;
-	height: 230px;
-	background-color: rgb(181, 227, 216);
-	top: 750px;
-}
-
-.detail_intro1 {
-	margin: 10px;
-	position: absolute;
-	width: 130px;
-	height: 180px;
-	background-color: rgb(252, 252, 255);
-}
-
-.detail_intro2 {
-	margin: 10px;
-	position: absolute;
-	width: 130px;
-	height: 180px;
-	background-color: rgb(252, 252, 255);
-	left: 143px;
-}
-
-.detail_intro3 {
-	margin: 10px;
-	position: absolute;
-	width: 130px;
-	height: 180px;
-	left: 286px;
-	background-color: rgb(252, 252, 255);
-}
-
-.detail_intro4 {
-	margin: 10px;
-	position: absolute;
-	width: 130px;
-	height: 180px;
-	background-color: rgb(252, 252, 255);
-	left: 430px;
-}
-
-.intro1_star, .intro2_star, .intro3_star, .intro4_star, .intro5_star {
-	width: 130px;
-	height: 25px;
-	border: 1px solid black;
-	top: 187px;
-	position: absolute;
-}
-
-.map_btn{
-	position: relative;
-    width: 400px;
-    height: 60px;
-    right: 50px;
-    top: 845px;
-    border: 5px solid rgb(119, 109, 97);
-    background-color: rgb(181, 227, 216);
-}
-
-
 </style>
 </head>
 
@@ -377,9 +136,11 @@ body {
 								<div class="intro_1">
 									<div class="detail_intro1">
 										<img src="resources/images/bookimg1.jpg" onclick="detailPopup();">
+										<input type="checkbox" id="chk1" class="like"><label for="chk1" class="check"></label>
 										<div class="intro1_star"></div>
 									</div>
 									<div class="detail_intro2">
+
 										<div class="intro2_star"></div>
 									</div>
 									<div class="detail_intro3">
