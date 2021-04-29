@@ -179,10 +179,8 @@
 							class="img-fluid rounded-circle w-50 mb-5">
 						<h3>John Rooster</h3>
 						<p class="position text-muted">Co-Founder, President</p>
-						<p class="mb-4">민성수씨. Nisi at consequatur unde molestiae
-							quidem provident voluptatum deleniti quo iste error eos est
-							praesentium distinctio cupiditate tempore suscipit inventore
-							deserunt tenetur.</p>
+						<p class="mb-4">민성수씨. test페이지<br>
+						<a href="community.do">커뮤니티페이지</a></p>
 
 					</div>
 				</div>
@@ -193,11 +191,8 @@
 							class="img-fluid rounded-circle w-50 mb-5">
 						<h3>Tom Sharp</h3>
 						<p class="position text-muted">Co-Founder, COO</p>
-						<p class="mb-4">Lorem ipsum dolor sit amet consectetur
-							adipisicing elit. Nisi at consequatur unde molestiae quidem
-							provident voluptatum deleniti quo iste error eos est praesentium
-							distinctio cupiditate tempore suscipit inventore deserunt
-							tenetur.</p>
+						<p class="mb-4">박소미씨. test페이지<br>
+						<a href="updatepage.do">회원정보수정</a></p>
 
 					</div>
 				</div>

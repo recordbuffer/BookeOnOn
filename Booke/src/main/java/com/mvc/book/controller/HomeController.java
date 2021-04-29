@@ -41,4 +41,26 @@ public class HomeController {
 	public String main() {
 		return "mainpage";
 	}
+	
+	@RequestMapping("/community.do")
+	public String community() {
+		return "community_2";
+	}
+	
+	@RequestMapping("/community2.do")
+	public String community2() {
+		return "community_1";
+	}
+	
+	@RequestMapping("/communityModal.do")
+	public String communityModal() {
+		return "communityModal";
+	}
+	
+	@RequestMapping("/updatepage.do")
+	public String update() {
+		return "updatepage";
+	}
+	
+	
 }
