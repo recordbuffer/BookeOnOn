@@ -1,9 +1,11 @@
 package com.mvc.book.model.biz;
 
+import java.util.Date;
 import java.util.List;
 
-import com.mvc.book.model.dto.BkDto;
 import com.mvc.book.model.dto.MemberDto;
+import com.mvc.book.model.dto.R_bookDto;
+import com.mvc.book.model.dto.W_bookDto;
 
 public interface BookeBiz {
 	
@@ -48,14 +50,22 @@ public interface BookeBiz {
 	
 	//[서재 기능]
 	//서재 읽고 싶은 책 리스트
+//	public List<W_bookDto> W_bookSelectAll();
 	
+	//서재 읽고 싶은 책 삭제
+//	public int W_bookDel(W_bookDto no);
 	
 	//서재 읽은 책 리스트
+//	public List<R_bookDto> R_bookSelectAll();
 	
+	//서재 읽은 책 삭제
+//	public int R_bookDelete(R_bookDto no);
+	
+    //서재 읽은 책 날짜 수정
+//	public Date R_bookUpdate(R_bookDto date);
 	
 	//서재 캘린더 API에 띄우기
-	
-	
+		
 	//내 년간 목표량 설정 > 통계분석
 	
 	//목표량 삭제 

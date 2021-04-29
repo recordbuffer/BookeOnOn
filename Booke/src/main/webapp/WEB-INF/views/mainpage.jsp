@@ -156,8 +156,8 @@
 						<div class="col-sm-12">
 							<div class="login_menu">
 								<!-- 서재 / 커뮤니티 / 내 서재 버튼 div -->
-								<input type="button" class="login_btn" value="서재" onclick="location.href='community.do'">
-								<input type="button" class="login_btn" value="커뮤니티" onclick="location.href='community2.do'">
+								<input type="button" class="login_btn" value="서재" onclick="location.href='updatepage.do'">
+								<input type="button" class="login_btn" value="커뮤니티" onclick="">
 								<input type="button" class="login_btn" value="책 소개" onclick="location.href='bookintro.do'">
 								<div class="login_img">
 									<img src="resources/images/kjh.png"
