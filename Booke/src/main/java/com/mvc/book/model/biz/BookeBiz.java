@@ -15,11 +15,11 @@ public interface BookeBiz {
 	
 
 	//책 검색_서재 담기 읽고 싶은 책
-	public List<BookeW> selectbookWanna();
+	public int bookWanna(BookeW dto);
 	
 	
 	//책 검색_서재 담기 읽은 책
-	public List<BookeR> selectbookRead();
+	public int bookRead(BookeR dto);
 	
 	
 }

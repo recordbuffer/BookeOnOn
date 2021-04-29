@@ -22,16 +22,17 @@ public class BookeBizImpl implements BookeBiz{
 	}
 
 	@Override
-	public List<BookeW> selectbookWanna() {
+	public int bookWanna(BookeW dto) {
 		// TODO Auto-generated method stub
-		return null;
+		return 0;
 	}
 
 	@Override
-	public List<BookeR> selectbookRead() {
+	public int bookRead(BookeR dto) {
 		// TODO Auto-generated method stub
-		return null;
+		return 0;
 	}
+
 
 	
 
