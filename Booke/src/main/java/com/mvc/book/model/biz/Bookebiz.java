@@ -54,33 +54,23 @@ public interface BookeBiz {
 	
 	
 	//내 년간 목표량 설정 > 통계분석
-	public List selectAllList(BookDto dto) () {
 
-		public String getId(){
-		}
-		public void SetId(String id) {
-		}
-
-		public String getPwd() {
-		}
-
-		public String setPwd() {
-		}
 
 		public String getMonthTarget(){
 		}
-
+		//월별 통계를 반환하는 메서드 
 		public String getYearTarget(){
 		}
-
+		//년벌통계를 반환하는 메서드 
 		public void setMonthTarget(String monthstats){ 
 		}
-
+		//setMonthTarget은 monthstats의 값을 전달받아 지정하는 것이기 때문에 매개변수 monthstats가 필요하다.
 
 		public void setYearTarget(String yearstats){
 		}
-
-		 
+		//setYearTarget은 yearstats의 값을 전달받아 지정하는 것이기 때문에 매개변수 yearstats가 필요하다 
+		
+		
 	//목표량 삭제 
 	
 	//목표량 수정
