@@ -80,8 +80,10 @@ public interface BookeBiz {
 	public List<BookDto> bserch(BookDto dto);
 
 	// 책 검색_서재 담기 읽고 싶은 책
+	public int bookWanna(W_bookDto dto);
 
 	// 책 검색_서재 담기 읽은 책
+	public int bookRead(R_bookDto dto);
 
 
 	
@@ -169,23 +171,14 @@ public interface BookeBiz {
 	
 	
 	// [ 서재 기능_통계 ]
-	// 내 년간 목표량 설정 > 통계분석
-	public String getMonthTarget();
-
-	// 월별 통계를 반환하는 메서드
-	public String getYearTarget();
-
-	// 년벌통계를 반환하는 메서드
-	public void setMonthTarget(String monthstats);
-	// setMonthTarget은 monthstats의 값을 전달받아 지정하는 것이기 때문에 매개변수 monthstats가 필요하다.
-
-	public void setYearTarget(String yearstats);
-	// setYearTarget은 yearstats의 값을 전달받아 지정하는 것이기 때문에 매개변수 yearstats가 필요하다
+	// 매년간 목표량 설정 > 통계분석
+	public int Y_amount(int yearStats,int yearTarget);
+	public int M_amount(int monthStats,int monthTarget);
 
 	// 목표량 삭제
-
+	public int deleteStats(int monthTarget,int yearTarget);
 	// 목표량 수정
-
+	public int updateStats(int monthTarget,int yearTarget);
 	
 	
 	
