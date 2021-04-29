@@ -1,101 +1,36 @@
 package com.mvc.book.model.biz;
 
+import java.util.Date;
+import java.util.List;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
+
+import org.springframework.ui.Model;
+
+import com.mvc.book.model.dto.BkDto;
+import com.mvc.book.model.dto.BookDto;
+import com.mvc.book.model.dto.FriendDto;
 import com.mvc.book.model.dto.MemberDto;
+import com.mvc.book.model.dto.MsgDto;
+import com.mvc.book.model.dto.R_bookDto;
+import com.mvc.book.model.dto.W_bookDto;
 
 public interface BookeBiz {
-	
-	//[ 회원기능 ]
-	//회원가입
-	public void memberJoinMethod(MemberDto dto);
-	
-	//회원가입_아이디중복체크
-	
-	
-	//로그인
-	public MemberDto login(MemberDto dto);
-	
-	//로그인 아이디 찾기
-	
-	
-	//로그인 비밀번호 찾기
-	
-	//회원 정보 수정
-	
-	//회원 탈퇴
-	
-	
-	//[ 회원 친구 기능 ]
-	//친구검색
-	
-	//친구 맺기
-	
-	//친구 끊기
-	
-	//쪽지 보내기
-	
-	
-	//[ 책 검색 기능]
-	//책 검색
-
-	//책 검색_서재 담기 읽고 싶은 책
-	
-	
-	//책 검색_서재 담기 읽은 책
-	
-	
-	//[서재 기능]
-	//서재 읽고 싶은 책 리스트
-	
-	
-	//서재 읽은 책 리스트
-	
-	
-	//서재 캘린더 API에 띄우기
-	
-	
-	//내 년간 목표량 설정 > 통계분석
 
 
-		public String getMonthTarget(){
-		}
-		//월별 통계를 반환하는 메서드 
-		public String getYearTarget(){
-		}
-		//년벌통계를 반환하는 메서드 
-		public void setMonthTarget(String monthstats){ 
-		}
-		//setMonthTarget은 monthstats의 값을 전달받아 지정하는 것이기 때문에 매개변수 monthstats가 필요하다.
+	
+	
+	
+	// [ 서재 기능_통계 ]
+	// 매년간 목표량 설정 > 통계분석
+	public int Y_amount(int yearStats,int yearTarget);
+	public int M_amount(int monthStats,int monthTarget);
 
-		public void setYearTarget(String yearstats){
-		}
-		//setYearTarget은 yearstats의 값을 전달받아 지정하는 것이기 때문에 매개변수 yearstats가 필요하다 
-		
-		
-	//목표량 삭제 
-	
-	//목표량 수정
+	// 목표량 삭제
+	public int deleteStats(int monthTarget,int yearTarget);
+	// 목표량 수정
+	public int updateStats(int monthTarget,int yearTarget);
 	
 	
 	
-	//[커뮤니티 소모임]
-	//소모임 개설
-	
-	//소모임 리스트 + 정보 띄우기
-	
-	//소모임 지우기
-	
-	
-	
-	
-	
-	//관리자 기능
-	// 회원 정보 조회
-	
-	
-	// 회원 등급 조정 
-	
-	
-	//회원 강제 탈퇴
-	
-	
-}
