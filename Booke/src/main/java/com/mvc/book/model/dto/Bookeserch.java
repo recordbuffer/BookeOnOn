@@ -5,6 +5,7 @@ public class Bookeserch {
 	private int bookno;			//책번호
 	private String bookcover;	//책표지
 	private String booktitle;	//책이름
+	private String bookwriter;	//책작가
 	private String bookprice;	//책가격
 	private String bookGenre;	//책장르
 	
@@ -12,16 +13,16 @@ public class Bookeserch {
 		super();
 	}
 
-
-	public Bookeserch(int bookno, String bookcover, String booktitle, String bookprice, String bookGenre) {
+	public Bookeserch(int bookno, String bookcover, String booktitle, String bookwriter, String bookprice,
+			String bookGenre) {
 		super();
 		this.bookno = bookno;
 		this.bookcover = bookcover;
 		this.booktitle = booktitle;
+		this.bookwriter = bookwriter;
 		this.bookprice = bookprice;
 		this.bookGenre = bookGenre;
 	}
-
 
 	public int getBookno() {
 		return bookno;
@@ -47,6 +48,14 @@ public class Bookeserch {
 		this.booktitle = booktitle;
 	}
 
+	public String getBookwriter() {
+		return bookwriter;
+	}
+
+	public void setBookwriter(String bookwriter) {
+		this.bookwriter = bookwriter;
+	}
+
 	public String getBookprice() {
 		return bookprice;
 	}
@@ -63,11 +72,11 @@ public class Bookeserch {
 		this.bookGenre = bookGenre;
 	}
 
-
 	@Override
 	public String toString() {
-		return "Bookeserch [bookno=" + bookno + ", bookcover=" + bookcover + ", booktitle=" + booktitle + ", bookprice="
-				+ bookprice + ", bookGenre=" + bookGenre + "]";
+		return "Bookeserch [bookno=" + bookno + ", bookcover=" + bookcover + ", booktitle=" + booktitle
+				+ ", bookwriter=" + bookwriter + ", bookprice=" + bookprice + ", bookGenre=" + bookGenre + "]";
 	}
 	
+
 }
