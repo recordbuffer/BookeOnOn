@@ -35,6 +35,7 @@ public class MemberDto {
 	}
 
 
+
 	public int getBe_no() {
 		return be_no;
 	}
