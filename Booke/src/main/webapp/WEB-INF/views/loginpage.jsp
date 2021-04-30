@@ -63,7 +63,7 @@ a:hover{color:rgb(223, 45, 139);}
 		<br>
 		<br>
 		
-		<form action="">
+		<form action="main.do">
 			<div class="form">
 				<input type="text" class="form-control" placeholder="아이디">
 			</div>

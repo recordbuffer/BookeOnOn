@@ -4,7 +4,7 @@
   "http://mybatis.org/dtd/mybatis-3-config.dtd">
   <configuration>
   	<typeAliases>
-  		<typeAlias type="com.mvc.book.model.dto.BookeDto" alias="bookeDto"/>
+  		<typeAlias type="com.mvc.book.model.dto.BookDto" alias="bookDto"/>
   	</typeAliases>
   	
   	<mappers>

@@ -156,8 +156,8 @@
 						<div class="col-sm-12">
 							<div class="login_menu">
 								<!-- 서재 / 커뮤니티 / 내 서재 버튼 div -->
-								<input type="button" class="login_btn" value="서재" onclick="location.href='updatepage.do'">
-								<input type="button" class="login_btn" value="커뮤니티" onclick="">
+								<input type="button" class="login_btn" value="서재" onclick="location.href='bcase.do'">
+								<input type="button" class="login_btn" value="커뮤니티" onclick="location.href='communityMain.do'">
 								<input type="button" class="login_btn" value="책 소개" onclick="location.href='bookintro.do'">
 								<div class="login_img">
 									<img src="resources/images/kjh.png"
@@ -166,8 +166,8 @@
 								<div class="login_name">
 									<!-- 설정 / 쪽지 버튼, 닉네임 -->
 									<input type="button" class="login_mini_btn" value="설정"
-										onclick=""> <input type="button"
-										class="login_mini_btn" value="쪽지" onclick="">
+										onclick="location.href='setting.do'"> <input type="button"
+										class="login_mini_btn" value="쪽지" onclick="location.href='msg.do'">
 									<div class="login_nick">닉네임</div>
 								</div>
 								<div>
