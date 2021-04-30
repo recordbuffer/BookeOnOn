@@ -75,12 +75,12 @@ public interface BookeBiz {
 	
 	//관리자 기능
 	// 회원 정보 조회
-	
+	public String loginCheck(MemberDTO dto);
 	
 	// 회원 등급 조정 
-	
+	public String level(MemberDTO dto);
 	
 	//회원 강제 탈퇴
-	
+	public int deleteMember(String be_id, be_pw); 
 	
 }
