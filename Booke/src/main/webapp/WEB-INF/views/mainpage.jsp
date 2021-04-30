@@ -38,21 +38,35 @@
 	<jsp:include page="header.jsp"></jsp:include>
 	<br>
 	<br>
+<<<<<<< HEAD
 
+=======
+	
+>>>>>>> main
 	<!-- Header -->
 	<header class="bg-primary py-5 mb-5" id="mainhd">
 		<div class="container h-100">
 			<div class="row h-100 align-items-center">
 				<div class="col-lg-12" id="hddiv">
 					<h1 class="display-4 text-white mt-5 mb-2">인기 도서 BEST</h1>
+<<<<<<< HEAD
 					<p class="lead mb-5 text-white-50">광고</p>
+=======
+					<p class="lead mb-5 text-white-50">Lorem ipsum dolor sit amet,
+						consectetur adipisicing elit. Non possimus ab labore provident
+						mollitia. Id assumenda voluptate earum corporis facere quibusdam
+						quisquam iste ipsa cumque unde nisi, totam quas ipsam.</p>
+>>>>>>> main
 				</div>
 			</div>
 		</div>
 	</header>
 
+<<<<<<< HEAD
 	
 
+=======
+>>>>>>> main
 	<!-- Page Content -->
 
 	<div class="container">
@@ -60,6 +74,7 @@
 			<div class="col-sm-8">
 				<div class="container">
 					<div class="row" id="cdb">
+<<<<<<< HEAD
 						<div class="best_seller">
 							<div class="best_category text-center">
 								<div class="btn-group" role="group"
@@ -146,6 +161,36 @@
 						</div>
 						<br> <br>
 						<div class="noting">책관련 동영상이나 회원 데이터 순위</div>
+=======
+						<div class="col-sm-12">Lorem ipsum dolor sit amet,
+							consectetur adipisicing elit. Non possimus ab labore provident
+							mollitia. Id assumenda voluptate earum corporis facere quibusdam
+							quisquam iste ipsa cumque unde nisi, totam quas ipsam.Lorem ipsum
+							dolor sit amet, consectetur adipisicing elit. Non possimus ab
+							labore provident mollitia. Id assumenda voluptate earum corporis
+							facere quibusdam quisquam iste ipsa cumque unde nisi, totam quas
+							ipsam.</div>
+						<br>
+						<br>
+						<div class="col-sm-12">Lorem ipsum dolor sit amet,
+							consectetur adipisicing elit. Non possimus ab labore provident
+							mollitia. Id assumenda voluptate earum corporis facere quibusdam
+							quisquam iste ipsa cumque unde nisi, totam quas ipsam.Lorem ipsum
+							dolor sit amet, consectetur adipisicing elit. Non possimus ab
+							labore provident mollitia. Id assumenda voluptate earum corporis
+							facere quibusdam quisquam iste ipsa cumque unde nisi, totam quas
+							ipsam.</div>
+						<br>
+						<br>
+						<div class="col-sm-12">Lorem ipsum dolor sit amet,
+							consectetur adipisicing elit. Non possimus ab labore provident
+							mollitia. Id assumenda voluptate earum corporis facere quibusdam
+							quisquam iste ipsa cumque unde nisi, totam quas ipsam.Lorem ipsum
+							dolor sit amet, consectetur adipisicing elit. Non possimus ab
+							labore provident mollitia. Id assumenda voluptate earum corporis
+							facere quibusdam quisquam iste ipsa cumque unde nisi, totam quas
+							ipsam.</div>
+>>>>>>> main
 					</div>
 				</div>
 
@@ -153,6 +198,7 @@
 			<div class="col-sm-4">
 				<div class="container">
 					<div class="row">
+<<<<<<< HEAD
 						<div class="col-sm-12">
 							<div class="login_menu">
 								<!-- 서재 / 커뮤니티 / 내 서재 버튼 div -->
@@ -258,5 +304,31 @@
 	</div>
 	<br><br><br><br><br>
 		<jsp:include page="footer.jsp"></jsp:include>
+=======
+						<div class="col-sm-12">Lorem ipsum dolor sit amet,
+							consectetur adipisicing elit. Non possimus ab labore provident
+							mollitia. Id assumenda voluptate earum corporis facere quibusdam
+							quisquam iste ipsa cumque unde nisi, totam quas ipsam.Lorem ipsum
+							dolor sit amet, consectetur adipisicing elit. Non possimus ab
+							labore provident mollitia. Id assumenda voluptate earum corporis
+							facere quibusdam quisquam iste ipsa cumque unde nisi, totam quas
+							ipsam.</div>
+						<div class="col-sm-12">Lorem ipsum dolor sit amet,
+							consectetur adipisicing elit. Non possimus ab labore provident
+							mollitia. Id assumenda voluptate earum corporis facere quibusdam
+							quisquam iste ipsa cumque unde nisi, totam quas ipsam.Lorem ipsum
+							dolor sit amet, consectetur adipisicing elit. Non possimus ab
+							labore provident mollitia. Id assumenda voluptate earum corporis
+							facere quibusdam quisquam iste ipsa cumque unde nisi, totam quas
+							ipsam.</div>
+					</div>
+				</div>
+
+
+			</div>
+		</div>
+	</div>
+
+>>>>>>> main
 </body>
 </html>

@@ -29,8 +29,12 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
 <style type="text/css">
 .logo{
+<<<<<<< HEAD
 	width: 60px;
 	height: 50px;
+=======
+	width: 70px;
+>>>>>>> main
 }
 
 .brown {
@@ -58,7 +62,11 @@
 						<div class="full">
 							<div class="center-desk">
 								<div class="logo">
+<<<<<<< HEAD
 									<a href="index.html"><img src="resources/images/logo.png" alt="#" id="logo"></a>
+=======
+									<a href="index.html"><img src="resources/images/logo2.png" alt="#" id="logo"></a>
+>>>>>>> main
 								</div>
 							</div>
 						</div>
@@ -179,8 +187,15 @@
 							class="img-fluid rounded-circle w-50 mb-5">
 						<h3>John Rooster</h3>
 						<p class="position text-muted">Co-Founder, President</p>
+<<<<<<< HEAD
 						<p class="mb-4">민성수씨. test페이지<br>
 						
+=======
+						<p class="mb-4">민성수씨. Nisi at consequatur unde molestiae
+							quidem provident voluptatum deleniti quo iste error eos est
+							praesentium distinctio cupiditate tempore suscipit inventore
+							deserunt tenetur.</p>
+>>>>>>> main
 
 					</div>
 				</div>
@@ -191,8 +206,16 @@
 							class="img-fluid rounded-circle w-50 mb-5">
 						<h3>Tom Sharp</h3>
 						<p class="position text-muted">Co-Founder, COO</p>
+<<<<<<< HEAD
 						<p class="mb-4">박소미씨. test페이지<br>
 						
+=======
+						<p class="mb-4">Lorem ipsum dolor sit amet consectetur
+							adipisicing elit. Nisi at consequatur unde molestiae quidem
+							provident voluptatum deleniti quo iste error eos est praesentium
+							distinctio cupiditate tempore suscipit inventore deserunt
+							tenetur.</p>
+>>>>>>> main
 
 					</div>
 				</div>
@@ -262,7 +285,45 @@
 	<div class="chatbot">챗봇</div>
 
 <!-- footer -->
+<<<<<<< HEAD
 	<jsp:include page="footer.jsp"></jsp:include>
+=======
+	<footer>
+		<div class="footer">
+			<div class="container">
+				<div class="row pdn-top-30">
+					<div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
+						<div class="Follow">
+							<h3>Follow Us</h3>
+						</div>
+						<ul class="location_icon">
+							<li><a href="#"><img src="icon/facebook.png"></a></li>
+							<li><a href="#"><img src="icon/Twitter.png"></a></li>
+							<li><a href="#"><img src="icon/linkedin.png"></a></li>
+							<li><a href="#"><img src="icon/instagram.png"></a></li>
+						</ul>
+					</div>
+					<div class="col-xl-8 col-lg-8 col-md-8 col-sm-12">
+						<div class="Follow">
+							<h3>Newsletter</h3>
+						</div>
+						<input class="Newsletter" placeholder="Enter your email"
+							type="Enter your email">
+						<button class="Subscribe">Subscribe</button>
+					</div>
+				</div>
+			</div>
+		</div>	
+		<div class="copyright">
+			<div class="container">
+				<p>
+					Copyright 2019 All Right Reserved By <a href="https://html.design/">Free
+						html Templates</a>
+				</p>
+			</div>
+		</div>
+	</footer>
+>>>>>>> main
 	<!-- end footer -->
 	<!-- Javascript files-->
 	<script
