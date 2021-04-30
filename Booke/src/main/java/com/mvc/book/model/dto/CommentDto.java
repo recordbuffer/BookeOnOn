@@ -6,7 +6,7 @@ public class CommentDto {
 	// 책 댓글 정보
 	private int bc_no; 								// 댓글 번호
 	private int b_no; 								// 책 번호
-	private String writer_id; 						// 댓글 작성자 아이디
+	private String bc_writer_id; 					// 댓글 작성자 아이디
 	private String bc_content; 						// 댓글 내용
 	private Date bc_date; 							// 댓글 작성 날짜
 
@@ -15,11 +15,11 @@ public class CommentDto {
 		// TODO Auto-generated constructor stub
 	}
 
-	public CommentDto(int bc_no, int b_no, String writer_id, String bc_content, Date bc_date) {
+	public CommentDto(int bc_no, int b_no, String bc_writer_id, String bc_content, Date bc_date) {
 		super();
 		this.bc_no = bc_no;
 		this.b_no = b_no;
-		this.writer_id = writer_id;
+		this.bc_writer_id = bc_writer_id;
 		this.bc_content = bc_content;
 		this.bc_date = bc_date;
 	}
@@ -40,12 +40,12 @@ public class CommentDto {
 		this.b_no = b_no;
 	}
 
-	public String getWriter_id() {
-		return writer_id;
+	public String getBc_writer_id() {
+		return bc_writer_id;
 	}
 
-	public void setWriter_id(String writer_id) {
-		this.writer_id = writer_id;
+	public void setBc_writer_id(String bc_writer_id) {
+		this.bc_writer_id = bc_writer_id;
 	}
 
 	public String getBc_content() {
@@ -64,5 +64,6 @@ public class CommentDto {
 		this.bc_date = bc_date;
 	}
 
+	
 	
 }
