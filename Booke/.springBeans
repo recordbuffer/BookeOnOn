@@ -10,14 +10,7 @@
 		<config>src/main/webapp/WEB-INF/spring/appServlet/applicationContext.xml</config>
 	</configs>
 	<autoconfigs>
-<<<<<<< HEAD
 		<config>src/main/webapp/WEB-INF/spring/appServlet/servlet-context.xml</config>
-=======
-<<<<<<< HEAD:Final/.springBeans
-=======
-		<config>src/main/webapp/WEB-INF/spring/appServlet/servlet-context.xml</config>
->>>>>>> main:Booke/.springBeans
->>>>>>> main
 	</autoconfigs>
 	<configSets>
 	</configSets>
