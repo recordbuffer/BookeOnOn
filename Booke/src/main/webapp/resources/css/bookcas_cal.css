@@ -1,0 +1,168 @@
+@charset "UTF-8";
+
+.login_menu {
+	position: absolute;
+	background-color: rgb(119, 109, 097);
+	left: 1166.5px;
+	top: 78px;
+}
+
+.login_btn {
+	border: 5px solid white;
+	border-radius: 100%;
+	width: 80px;
+	height: 80px;
+	margin: 24px;
+	background-color: rgb(181, 227, 216);
+}
+
+.login_btn:hover, .login_mini_btn:hover {
+	font-weight: bold;
+}
+
+.login_img {
+	border: 5px solid white;
+	border-radius: 100%;
+	width: 130px;
+	height: 130px;
+	margin: 20px;
+}
+
+.login_name {
+	width: 200px;
+	height: 100px;
+	position: relative;
+	left: 180px;
+	top: -170px;
+}
+
+.login_mini_btn {
+	border: 5px solid white;
+	border-radius: 100%;
+	width: 50px;
+	height: 50px;
+	margin: 20px;
+	background-color: rgb(181, 227, 216);
+}
+
+.login_nick, .read_book, .want_book {
+	background-color: rgb(181, 227, 216);
+	border: 5px solid white;
+	height: 60px;
+	text-align: center;
+	vertical-align: middle;
+	line-height: 50px;
+}
+
+.read_book {
+	border: 5px solid white;
+	width: 170px;
+	height: 125px;
+	margin: 20px;
+	position: relative;
+	top: -90px;
+}
+
+.want_book {
+	border: 5px solid white;
+	width: 170px;
+	height: 125px;
+	position: relative;
+	top: -235px;
+	margin: 0px 0px 0px 210px;
+}
+
+.attainment {
+	border: 5px solid white;
+	background-color: rgb(181, 227, 216);
+	width: 360px;
+	height: 155px;
+	position: relative;
+	top: -233px;
+	margin: 20px;
+}
+
+.d1 {
+	width: 38%;
+	height: 900px;
+	border: 1px solid black;
+	position: relative;
+	border: 1px solid black;
+	left: 30%;
+	bottom: -30px;
+}
+
+.b1 {
+	height: 3%;
+	width: 30%;
+	border: 1px solid black;
+	margin: 20px 20px 20px 20px;
+	border: 1px solid black;
+	position: relative;
+	top: 1%;
+	left: 32%;
+	text-align: center;
+}
+
+.d2 {
+	width: 38%;
+	height: 470px;
+	border: 1px solid black;
+	position: relative;
+	border: 1px solid black;
+	left: 30%;
+	bottom: -50px;
+	background-color: rgb(181, 227, 216);
+}
+
+.d3 {
+	width: 400px;
+	height: 100px;
+	border: 1px solid black;
+	position: absolute;
+	left: 69%;
+	top: 980px;
+	right: 10%;
+	text-align: center;
+}
+
+.a1 {
+	height: 50%;
+	width: 92%;
+	border: 1px solid black;
+	position: relative;
+	margin: 20px 20px 20px 20px;
+	border: 1px solid black;
+	background-color: rgb(255, 255, 255);
+}
+
+.a2 {
+	height: 38%;
+	width: 92%;
+	border: 1px solid black;
+	position: relative;
+	margin: 20px 20px 20px 20px;
+	border: 1px solid black;
+	background-color: rgb(255, 255, 255);
+}
+
+.m1 {
+	height: 11%;
+	width: 20%;
+	border: 1px solid black;
+	top: 0%;
+	left: 0%;
+	margin: 0px 0px 0px 0px;
+	text-align: center;
+}
+
+.m2 {
+	height: 14%;
+	width: 20%;
+	border: 1px solid black;
+	margin: 0px 0px 0px 0px;
+	top: 0%;
+	left: 0%;
+	margin : 0px 0px 0px 0px;
+	text-align: center;
+}

@@ -1,6 +1,5 @@
 @charset "UTF-8";
 
-<<<<<<< HEAD
 #mainnav {
 	background-color: rgb(252, 252, 255) !important;
 }
@@ -29,14 +28,14 @@ body {
 
 .best_category {
 	width: 620px;
-	background-color: rgb(119, 109, 97);
+	background-color: rgb(181, 227, 216);
 }
 
 .new_category {
 	width: 620px;
 	left: 0px;
 	top: 30px;
-	background-color: rgb(119, 109, 97);
+	background-color: rgb(181, 227, 216);
 	position: relative;
 }
 
@@ -54,26 +53,26 @@ body {
 
 .bb_2 {
 	position: relative;
-	left: 100px;
-	top: -95px;
+	left: 132px;
+    top: -95px;
 }
 
 .bb_3 {
 	position: relative;
-	left: 200px;
-	top: -215px;
+	left: 265px;
+    top: -215px;
 }
 
 .bb_4 {
 	position: relative;
-	left: 300px;
-	top: -335px;
+	left: 404px;
+    top: -335px;
 }
 
 .bb_5 {
 	position: relative;
-	left: 400px;
-	top: -455px;
+    left: 539px;
+    top: -455px;
 }
 
 .bb_1_star, .bb_2_star, .bb_3_star, .bb_4_star, .bb_5_star {
@@ -93,25 +92,25 @@ body {
 
 .nb_2 {
 	position: relative;
-	left: 100px;
+	left: 132px;
 	top: -65px;
 }
 
 .nb_3 {
 	position: relative;
-	left: 200px;
+	left: 265px;
 	top: -185px;
 }
 
 .nb_4 {
 	position: relative;
-	left: 300px;
+	left: 404px;
 	top: -305px;
 }
 
 .nb_5 {
 	position: relative;
-	left: 400px;
+	left: 539px;
 	top: -425px;
 }
 
@@ -126,7 +125,7 @@ body {
 
 .login_menu {
 	position: absolute;
-    background-color: rgb(119, 109, 097);
+    background-color: rgb(119, 109, 97);
     left: -35px;
     top: -42px;
 }
@@ -159,10 +158,10 @@ body {
 }
 
 .btn-outline-primary {
-	color: white;
+	color: black;
 	font-weight: bold;
-	background-color: rgb(119, 109, 097);
-	border-color: rgb(119, 109, 097);
+	background-color: rgb(181, 227, 216);
+	border-color: rgb(181, 227, 216);
 }
 
 .noting {
@@ -286,215 +285,4 @@ body {
 .nickname{
 	position: relative;
 	top: 90px;
-=======
-.d1 {
-	width: 58%;
-	height: 1500px;
-	border: 1px solid black;
-	position: absolute;
-	border: 1px solid black;
-	left: 10%;
-}
-
-.d2 {
-	width: 400px;
-	height: 692px;
-	border: 1px solid black;
-	position: fixed;
-	left: 69%;
-	right: 10%;
-	border: 1px solid black;
-	position: fixed;
-	left: 69%;
-}
-
-.d3 {
-	width: 400px;
-	height: 200px;
-	border: 1px solid black;
-	position: fixed;
-	left: 69%;
-	top: 740px;
-	right: 10%;
-}
-
-.a1 {
-	height: 30%;
-	border: 1px solid black;
-	position: relative;
-	margin: 20px 20px 20px 20px;
-	border: 1px solid black;
-	position: relative;
-}
-
-.a2 {
-	height: 30%;
-	border: 1px solid black;
-	position: relative;
-	margin: 20px 20px 20px 20px;
-	border: 1px solid black;
-	position: relative;
-}
-
-.a3 {
-	height: 34%;
-	border: 1px solid black;
-	position: relative;
-	margin: 20px 20px 20px 20px;
-}
-
-.c1 {
-	width: 90px;
-	height: 90px;
-	border: 1px solid black;
-	border-radius: 1000px;
-	position: absolute;
-	left: 5%;
-	top: 4%;
-}
-
-.c2 {
-	width: 90px;
-	height: 90px;
-	border: 1px solid black;
-	border-radius: 100px;
-	position: absolute;
-	left: 39%;
-	top: 4%;
-}
-
-.c3 {
-	width: 90px;
-	height: 90px;
-	border: 1px solid black;
-	border-radius: 100px;
-	position: absolute;
-	left: 73%;
-	top: 4%;
-}
-
-.c4 {
-	width: 150px;
-	height: 150px;
-	border: 1px solid black;
-	border-radius: 100px;
-	position: absolute;
-	left: 5%;
-	top: 28%;
-}
-
-.c5 {
-	width: 60px;
-	height: 60px;
-	border: 1px solid black;
-	border-radius: 100px;
-	position: absolute;
-	left: 60%;
-	top: 34%;
-}
-
-.c6 {
-	width: 60px;
-	height: 60px;
-	border: 1px solid black;
-	border-radius: 100px;
-	position: absolute;
-	left: 80%;
-	top: 34%;
-}
-
-.c10 {
-	width: 90px;
-	height: 90px;
-	border: 1px solid black;
-	border-radius: 100px;
-	position: absolute;
-	left: 71%;
-	top: 83%;
-}
-
-.c11 {
-	width: 90px;
-	height: 90px;
-	border: 1px solid black;
-	border-radius: 100px;
-	position: absolute;
-	left: 78.5%;
-	top: 83%;
-}
-
-.c12 {
-	width: 90px;
-	height: 90px;
-	border: 1px solid black;
-	border-radius: 100px;
-	position: absolute;
-	left: 86%;
-	top: 83%;
-}
-
-.tri-left span {
-	position: relative;
-}
-
-.tri-left span::after {
-	content: '';
-	width: 25px;
-	height: 25px;
-	border-top: 5px solid #121212;
-	border-right: 5px solid #121212;
-	display: inline-block;
-	transform: rotate(225deg);
-	position: absolute;
-	top: 766px;
-	left: 1112px;
-}
-
-.tri-right span {
-	position: relative;
-}
-
-.tri-right span::after {
-	content: '';
-	width: 25px;
-	height: 25px;
-	border-top: 5px solid #121212;
-	border-right: 5px solid #121212;
-	display: inline-block;
-	transform: rotate(45deg);
-	position: absolute;
-	top: 84px;
-	left: 378px;
-}
-
-.content {
-	width: 350px;
-	height: 150px;
-	border: 1px solid black;
-	position: absolute;
-	left: 6%;
-	top: 75%;
-}
-
-.r1 {
-	width: 200px;
-	height: 50px;
-	border: none 10px;
-	border-radius: 100px;
-	position: absolute;
-	left: 10%;
-	top: 50%;
-	font-size: 10px;
-}
-
-.r2 {
-	width: 200px;
-	height: 50px;
-	border: none 10px;
-	border-radius: 100px;
-	position: absolute;
-	left: 70%;
-	top: 50%;
-	font-size: 10px;
->>>>>>> main
 }

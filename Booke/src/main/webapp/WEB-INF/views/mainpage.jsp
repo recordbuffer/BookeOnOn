@@ -17,7 +17,6 @@
 
 <link rel="stylesheet" href="resources/css/mainpage.css" type="text/css">
 
-<<<<<<< HEAD
 <link
 	href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css"
 	rel="stylesheet"
@@ -32,23 +31,6 @@
 	<link rel="stylesheet" href="resources/css/footer.css">
 	<link rel="stylesheet" href="resources/css/mainpage.css">
 
-=======
-
-<style type="text/css">
-#mainnav {
-	background-color: #b5e3d8 !important;
-}
-
-#mainhd {
-	background-color: #fff !important;
-}
-
-#hddiv {
-	background-color: rgb(119, 109, 97) !important;
-	margin-top: 50px;
-}
-</style>
->>>>>>> main
 </head>
 
 <body>
@@ -56,37 +38,21 @@
 	<jsp:include page="header.jsp"></jsp:include>
 	<br>
 	<br>
-<<<<<<< HEAD
 
-=======
-	
->>>>>>> main
 	<!-- Header -->
 	<header class="bg-primary py-5 mb-5" id="mainhd">
 		<div class="container h-100">
 			<div class="row h-100 align-items-center">
 				<div class="col-lg-12" id="hddiv">
-<<<<<<< HEAD
-					<h1 class="display-4 text-white mt-5 mb-2">나의 페이지</h1>
-					<p class="lead mb-5 text-white-50">개인 설정을 제공 합니다.</p>
-				</div>
-		</div>
-	</header>
-
-	
-
-=======
 					<h1 class="display-4 text-white mt-5 mb-2">인기 도서 BEST</h1>
-					<p class="lead mb-5 text-white-50">Lorem ipsum dolor sit amet,
-						consectetur adipisicing elit. Non possimus ab labore provident
-						mollitia. Id assumenda voluptate earum corporis facere quibusdam
-						quisquam iste ipsa cumque unde nisi, totam quas ipsam.</p>
+					<p class="lead mb-5 text-white-50">광고</p>
 				</div>
 			</div>
 		</div>
 	</header>
 
->>>>>>> main
+	
+
 	<!-- Page Content -->
 
 	<div class="container">
@@ -94,130 +60,104 @@
 			<div class="col-sm-8">
 				<div class="container">
 					<div class="row" id="cdb">
-<<<<<<< HEAD
-						<div class="my_setting">
-						    <div class="best_category text-center">
-                        <div class="btn-group" role="group"
-                           aria-label="Basic radio toggle button group">
-                           <input type="radio" class="btn-check" name="best_btnradio"
-                              id="btnradio1" autocomplete="off" checked> <label
-                              class="btn btn-outline-primary" for="btnradio1">전체 </label> <input
-                              type="radio" class="btn-check" name="best_btnradio"
-                              id="btnradio2" autocomplete="off"> <label
-                              class="btn btn-outline-primary" for="btnradio2">문학 </label> <input
-                              type="radio" class="btn-check" name="best_btnradio"
-                              id="btnradio3" autocomplete="off"> <label
-                              class="btn btn-outline-primary" for="btnradio3">소설 </label> <input
-                              type="radio" class="btn-check" name="best_btnradio"
-                              id="btnradio4" autocomplete="off"> <label
-                              class="btn btn-outline-primary" for="btnradio4">만화책 </label> <input
-                              type="radio" class="btn-check" name="best_btnradio"
-                              id="btnradio5" autocomplete="off"> <label
-                              class="btn btn-outline-primary" for="btnradio5">교재 </label>
-                        </div>
-                     </div>
-                     <div class="best_book bb_1 text-center">
-                      
-                        <div class="bb_1_star">별점</div>
-                     </div>
-                     <div class="best_book bb_2 text-center">
-                        <div class="bb_2_star text-center">별점</div>
-                     </div>
-                     <div class="best_book bb_3 text-center">
-                        <div class="bb_3_star text-center">별점</div>
-                     </div>
-                     <div class="best_book bb_4 text-center">
-                        <div class="bb_4_star text-center">별점</div>
-                     </div>
-                     <div class="best_book bb_5 text-center">
-                        <div class="bb_5_star text-center">별점</div>
-                     </div>
-                  </div>
-                  <div class="col-sm-12 new_seller">
-                     <div class="new_category text-center">
-                        <div class="btn-group" role="group"
-                           aria-label="Basic radio toggle button group">
-                           <input type="radio" class="btn-check" name="new_btnradio"
-                              id="btnradio6" autocomplete="off" checked> <label
-                              class="btn btn-outline-primary" for="btnradio6">전체 </label> <input
-                              type="radio" class="btn-check" name="new_btnradio"
-                              id="btnradio7" autocomplete="off"> <label
-                              class="btn btn-outline-primary" for="btnradio7">문학 </label> <input
-                              type="radio" class="btn-check" name="new_btnradio"
-                              id="btnradio8" autocomplete="off"> <label
-                              class="btn btn-outline-primary" for="btnradio8">소설 </label> <input
-                              type="radio" class="btn-check" name="new_btnradio"
-                              id="btnradio9" autocomplete="off"> <label
-                              class="btn btn-outline-primary" for="btnradio9">만화책 </label> <input
-                              type="radio" class="btn-check" name="new_btnradio"
-                              id="btnradio10" autocomplete="off"> <label
-                              class="btn btn-outline-primary" for="btnradio10">교재 </label>
-                        </div>
-                     </div>
-                     <div class="new_book nb_1 text-center">
-                        <div class="nb_1_star text-center">별점</div>
-                     </div>
-                     <div class="new_book nb_2 text-center">
-                        <div class="nb_2_star text-center">별점</div>
-                     </div>
-                     <div class="new_book nb_3 text-center">
-                        <div class="nb_3_star text-center">별점</div>
-                     </div>
-                     <div class="new_book nb_4 text-center">
-                        <div class="nb_4_star text-center">별점</div>
-                     </div>
-                     <div class="new_book nb_5 text-center">
-                        <div class="nb_5_star text-center">별점</div>
-                     </div>
-                  </div>
-                  <br> <br>
-                  <div class="noting">책관련 동영상이나 회원 데이터 순위</div>
-               </div>
-					
-				</div>
-=======
-						<div class="col-sm-12">Lorem ipsum dolor sit amet,
-							consectetur adipisicing elit. Non possimus ab labore provident
-							mollitia. Id assumenda voluptate earum corporis facere quibusdam
-							quisquam iste ipsa cumque unde nisi, totam quas ipsam.Lorem ipsum
-							dolor sit amet, consectetur adipisicing elit. Non possimus ab
-							labore provident mollitia. Id assumenda voluptate earum corporis
-							facere quibusdam quisquam iste ipsa cumque unde nisi, totam quas
-							ipsam.</div>
-						<br>
-						<br>
-						<div class="col-sm-12">Lorem ipsum dolor sit amet,
-							consectetur adipisicing elit. Non possimus ab labore provident
-							mollitia. Id assumenda voluptate earum corporis facere quibusdam
-							quisquam iste ipsa cumque unde nisi, totam quas ipsam.Lorem ipsum
-							dolor sit amet, consectetur adipisicing elit. Non possimus ab
-							labore provident mollitia. Id assumenda voluptate earum corporis
-							facere quibusdam quisquam iste ipsa cumque unde nisi, totam quas
-							ipsam.</div>
-						<br>
-						<br>
-						<div class="col-sm-12">Lorem ipsum dolor sit amet,
-							consectetur adipisicing elit. Non possimus ab labore provident
-							mollitia. Id assumenda voluptate earum corporis facere quibusdam
-							quisquam iste ipsa cumque unde nisi, totam quas ipsam.Lorem ipsum
-							dolor sit amet, consectetur adipisicing elit. Non possimus ab
-							labore provident mollitia. Id assumenda voluptate earum corporis
-							facere quibusdam quisquam iste ipsa cumque unde nisi, totam quas
-							ipsam.</div>
+						<div class="best_seller">
+							<div class="best_category text-center">
+								<div class="btn-group" role="group"
+									aria-label="Basic radio toggle button group">
+									<input type="radio" class="btn-check" name="best_btnradio"
+										id="btnradio1" autocomplete="off" checked> <label
+										class="btn btn-outline-primary" for="btnradio1">전체 </label> <input
+										type="radio" class="btn-check" name="best_btnradio"
+										id="btnradio2" autocomplete="off"> <label
+										class="btn btn-outline-primary" for="btnradio2">문학 </label> <input
+										type="radio" class="btn-check" name="best_btnradio"
+										id="btnradio3" autocomplete="off"> <label
+										class="btn btn-outline-primary" for="btnradio3">소설 </label> <input
+										type="radio" class="btn-check" name="best_btnradio"
+										id="btnradio4" autocomplete="off"> <label
+										class="btn btn-outline-primary" for="btnradio4">만화책 </label> <input
+										type="radio" class="btn-check" name="best_btnradio"
+										id="btnradio5" autocomplete="off"> <label
+										class="btn btn-outline-primary" for="btnradio5">교재 </label>
+								</div>
+							</div>
+							<div class="best_book bb_1 text-center">
+								커버
+								<div class="bb_1_star">별점</div>
+							</div>
+							<div class="best_book bb_2 text-center">
+								커버
+								<div class="bb_2_star text-center">별점</div>
+							</div>
+							<div class="best_book bb_3 text-center">
+								커버
+								<div class="bb_3_star text-center">별점</div>
+							</div>
+							<div class="best_book bb_4 text-center">
+								커버
+								<div class="bb_4_star text-center">별점</div>
+							</div>
+							<div class="best_book bb_5 text-center">
+								커버
+								<div class="bb_5_star text-center">별점</div>
+							</div>
+						</div>
+						<div class="col-sm-12 new_seller">
+							<div class="new_category text-center">
+								<div class="btn-group" role="group"
+									aria-label="Basic radio toggle button group">
+									<input type="radio" class="btn-check" name="new_btnradio"
+										id="btnradio6" autocomplete="off" checked> <label
+										class="btn btn-outline-primary" for="btnradio6">전체 </label> <input
+										type="radio" class="btn-check" name="new_btnradio"
+										id="btnradio7" autocomplete="off"> <label
+										class="btn btn-outline-primary" for="btnradio7">문학 </label> <input
+										type="radio" class="btn-check" name="new_btnradio"
+										id="btnradio8" autocomplete="off"> <label
+										class="btn btn-outline-primary" for="btnradio8">소설 </label> <input
+										type="radio" class="btn-check" name="new_btnradio"
+										id="btnradio9" autocomplete="off"> <label
+										class="btn btn-outline-primary" for="btnradio9">만화책 </label> <input
+										type="radio" class="btn-check" name="new_btnradio"
+										id="btnradio10" autocomplete="off"> <label
+										class="btn btn-outline-primary" for="btnradio10">교재 </label>
+								</div>
+							</div>
+							<div class="new_book nb_1 text-center">
+								커버
+								<div class="nb_1_star text-center">별점</div>
+							</div>
+							<div class="new_book nb_2 text-center">
+								커버
+								<div class="nb_2_star text-center">별점</div>
+							</div>
+							<div class="new_book nb_3 text-center">
+								커버
+								<div class="nb_3_star text-center">별점</div>
+							</div>
+							<div class="new_book nb_4 text-center">
+								커버
+								<div class="nb_4_star text-center">별점</div>
+							</div>
+							<div class="new_book nb_5 text-center">
+								커버
+								<div class="nb_5_star text-center">별점</div>
+							</div>
+						</div>
+						<br> <br>
+						<div class="noting">책관련 동영상이나 회원 데이터 순위</div>
 					</div>
 				</div>
 
->>>>>>> main
 			</div>
 			<div class="col-sm-4">
 				<div class="container">
 					<div class="row">
-<<<<<<< HEAD
 						<div class="col-sm-12">
 							<div class="login_menu">
 								<!-- 서재 / 커뮤니티 / 내 서재 버튼 div -->
-								<input type="button" class="login_btn" value="서재" onclick="">
-								<input type="button" class="login_btn" value="커뮤니티" onclick="">
+								<input type="button" class="login_btn" value="서재" onclick="location.href='bcase.do'">
+								<input type="button" class="login_btn" value="커뮤니티" onclick="location.href='communityMain.do'">
 								<input type="button" class="login_btn" value="책 소개" onclick="location.href='bookintro.do'">
 								<div class="login_img">
 									<img src="resources/images/kjh.png"
@@ -226,8 +166,8 @@
 								<div class="login_name">
 									<!-- 설정 / 쪽지 버튼, 닉네임 -->
 									<input type="button" class="login_mini_btn" value="설정"
-										onclick=""> <input type="button"
-										class="login_mini_btn" value="쪽지" onclick="">
+										onclick="location.href='setting.do'"> <input type="button"
+										class="login_mini_btn" value="쪽지" onclick="location.href='msg.do'">
 									<div class="login_nick">닉네임</div>
 								</div>
 								<div>
@@ -318,31 +258,5 @@
 	</div>
 	<br><br><br><br><br>
 		<jsp:include page="footer.jsp"></jsp:include>
-=======
-						<div class="col-sm-12">Lorem ipsum dolor sit amet,
-							consectetur adipisicing elit. Non possimus ab labore provident
-							mollitia. Id assumenda voluptate earum corporis facere quibusdam
-							quisquam iste ipsa cumque unde nisi, totam quas ipsam.Lorem ipsum
-							dolor sit amet, consectetur adipisicing elit. Non possimus ab
-							labore provident mollitia. Id assumenda voluptate earum corporis
-							facere quibusdam quisquam iste ipsa cumque unde nisi, totam quas
-							ipsam.</div>
-						<div class="col-sm-12">Lorem ipsum dolor sit amet,
-							consectetur adipisicing elit. Non possimus ab labore provident
-							mollitia. Id assumenda voluptate earum corporis facere quibusdam
-							quisquam iste ipsa cumque unde nisi, totam quas ipsam.Lorem ipsum
-							dolor sit amet, consectetur adipisicing elit. Non possimus ab
-							labore provident mollitia. Id assumenda voluptate earum corporis
-							facere quibusdam quisquam iste ipsa cumque unde nisi, totam quas
-							ipsam.</div>
-					</div>
-				</div>
-
-
-			</div>
-		</div>
-	</div>
-
->>>>>>> main
 </body>
 </html>

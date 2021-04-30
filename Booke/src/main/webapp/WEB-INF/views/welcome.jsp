@@ -23,135 +23,99 @@
 <!-- Responsive-->
 <link rel="stylesheet"
 	href="${pageContext.request.contextPath}/resources/css/responsive.css">
+<link rel="stylesheet" href="resources/css/header.css">
+<link rel="stylesheet" href="resources/css/footer.css">
 <!-- Tweaks for older IEs-->
 <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
-<style type="text/css">
-.logo{
-<<<<<<< HEAD
-	width: 60px;
-	height: 50px;
-=======
-	width: 70px;
->>>>>>> main
-}
 
-.brown {
-	width: 100%;
-	height: 100px;
-	background-color: rgb(119, 109, 097);
-}
-
-.chatbot {
-	width: 100%;
-	height: 400px;
-	border: 1px solid black;
-}
-</style>
 </head>
 <!-- body -->
-<body class="main-layout home_page" style="background-color: rgb(181, 227, 216);">
-	<!-- header -->
-	<header>
-		<!-- header inner -->
-		<div class="header">
-			<div class="container">
-				<div class="row">
-					<div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col logo_section">
-						<div class="full">
-							<div class="center-desk">
-								<div class="logo">
-<<<<<<< HEAD
-									<a href="index.html"><img src="resources/images/logo.png" alt="#" id="logo"></a>
-=======
-									<a href="index.html"><img src="resources/images/logo2.png" alt="#" id="logo"></a>
->>>>>>> main
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="col-xl-9 col-lg-9 col-md-9 col-sm-9">
-						<div class="menu-area">
-							<div class="limit-box">
-								<nav class="main-menu">
-									<ul class="menu-area-main">
-										<li class="mean-last"><a
-											onclick="location.href='main.do'"><img
-												src="resources/images/top-icon.png" /></a></li>
-									</ul>
-								</nav>
-							</div>
+<body class="main-layout home_page"
+	style="background-color: #f5f5f5;">
+
+	<!-- header inner -->
+	<div class="header">
+		<div class="container1">
+			<div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col logo_section">
+				<div class="full">
+					<div class="center-desk">
+						<div class="logo">
+							<a href="#"><img src="resources/images/logo1.png" alt="#"
+								style="margin: 0px 0px 0px 50px;"></a>
 						</div>
 					</div>
 				</div>
 			</div>
+			<div class="col-xl-9 col-lg-9 col-md-9 col-sm-9">
+				<div class="menu-area">
+					<div class="limit-box menu-area-main">
+						<a href="loginform.do"><img
+							src="resources/images/top-icon.png" alt="#"
+							style="margin: 0px 50px 0px 0px;" /></a>
+					</div>
+				</div>
+			</div>
 		</div>
-	</header>
-	
-	
+	</div>
+	<div class="bo"></div>
+
 	<!-- slider section -->
-	
+
 	<section class="slider_section">
 		<div id="myCarousel" class="carousel slide banner-main"
 			data-ride="carousel">
 			<div class="carousel-inner">
 				<div class="carousel-item active">
 					<img class="first-slide" src="resources/images/wellcome1.jpg"
-						alt="First slide" style="opacity: 0.5;">
+						alt="First slide" style="opacity: 0.7;">
 					<div class="container">
 						<div class="carousel-caption relative">
 							<h1>
-								The Best Libraries That<br> Every Book Lover Must<br>
-								Visit!
+								양서는 처음 읽은 때에는<br>
+								새 친구를 얻은 것과 같고,<br>
+								전에 정독했던 책을 다시 읽을 때에는<br>
+								옛날 친구를 만나는 것과 같다.<br><br>
+								-골드 스미스
 							</h1>
-							<p>
-								adipiscing elit, sed do eiusmod tempor incididunt ut<br>
-								labore et dolore magna aliqua. Ut enim ad minim<br> veniam,
-								quis nostrud exercitation
-							</p>
 							<div class="button_section">
-								<a class="main_bt" href="#">Read More</a>
+								<a class="main_bt" href="#">뭘 넣지?</a>
 							</div>
 						</div>
 					</div>
 				</div>
 				<div class="carousel-item">
 					<img class="second-slide" src="resources/images/wellcome2.jpg"
-						alt="Second slide" style="opacity: 0.5;">
+						alt="Second slide" style="opacity: 0.7;">
 					<div class="container">
 						<div class="carousel-caption relative">
 							<h1>
-								The Best Libraries That<br> Every Book Lover Must<br>
-								Visit!
+								책은 인생의 험준한 바다를<br>
+								항해하는데 도움이 되게끔<br>
+								남들이 마련해 준 나침반이요,<br>
+								망원경이요, 육분의요, 도표이다.<br><br>
+								-제시 리 베넷
 							</h1>
-							<p>
-								adipiscing elit, sed do eiusmod tempor incididunt ut<br>
-								labore et dolore magna aliqua. Ut enim ad minim<br> veniam,
-								quis nostrud exercitation
-							</p>
 							<div class="button_section">
-								<a class="main_bt" href="#">Read More</a>
+								<a class="main_bt" href="#">뭘 넣지?</a>
 							</div>
 						</div>
 					</div>
 				</div>
 				<div class="carousel-item">
 					<img class="third-slide" src="resources/images/wellcome3.jpg"
-						alt="Third slide" style="opacity: 0.5;">
+						alt="Third slide" style="opacity: 0.7;">
 					<div class="container">
 						<div class="carousel-caption relative">
 							<h1>
-								The Best Libraries That<br> Every Book Lover Must<br>
-								Visit!
+								내가 인생을 안 것은<br>
+								사람과 접촉했기 때문이 아니라<br>
+								책과 접촉했기 때문이다.<br><br>
+								-아나톨 프랑스
 							</h1>
-							<p>
-								adipiscing elit, sed do eiusmod tempor incididunt ut<br>
-								labore et dolore magna aliqua. Ut enim ad minim<br> veniam,
-								quis nostrud exercitation
-							</p>
 							<div class="button_section">
-								<a class="main_bt" href="#">Read More</a>
+								<a class="main_bt" href="#">뭘 넣지?</a>
 							</div>
 						</div>
 					</div>
@@ -166,16 +130,14 @@
 			</a>
 		</div>
 	</section>
-	
+
 	<!-- team-section -->
 	<div class="brown"></div>
 	<div class="site-section border-bottom" id="team-section">
 		<div class="container">
 			<div class="row justify-content-center mb-5">
 				<div class="col-md-7 text-center">
-					<br>
-					<br>
-					<br>
+					<br> <br> <br>
 					<h2 class="text-black h1 site-section-heading">Our Team</h2>
 				</div>
 			</div>
@@ -183,89 +145,66 @@
 				<div class="col-md-6 col-lg-4 mb-5 mb-lg-0" data-aos="fade"
 					data-aos-delay="100">
 					<div class="person text-center">
-						<img src="resources/images/person_12.jpg" alt="Image"
+						<img src="resources/images/psm.png" alt="Image"
 							class="img-fluid rounded-circle w-50 mb-5">
-						<h3>John Rooster</h3>
-						<p class="position text-muted">Co-Founder, President</p>
-						<p class="mb-4">민성수씨. Nisi at consequatur unde molestiae
-							quidem provident voluptatum deleniti quo iste error eos est
-							praesentium distinctio cupiditate tempore suscipit inventore
-							deserunt tenetur.</p>
+						<h3>팀장 박소미</h3>
+						<p class="position text-muted">구현 기능 소개</p>
+						<p class="mb-4">코멘트</p>
 
 					</div>
 				</div>
 				<div class="col-md-6 col-lg-4 mb-5 mb-lg-0" data-aos="fade"
 					data-aos-delay="200">
 					<div class="person text-center">
-						<img src="resources/images/person_12.jpg" alt="Image"
+						<img src="resources/images/cjw.png" alt="Image"
 							class="img-fluid rounded-circle w-50 mb-5">
-						<h3>Tom Sharp</h3>
-						<p class="position text-muted">Co-Founder, COO</p>
-						<p class="mb-4">Lorem ipsum dolor sit amet consectetur
-							adipisicing elit. Nisi at consequatur unde molestiae quidem
-							provident voluptatum deleniti quo iste error eos est praesentium
-							distinctio cupiditate tempore suscipit inventore deserunt
-							tenetur.</p>
+						<h3>최정우</h3>
+						<p class="position text-muted">구현 기능 소개</p>
+						<p class="mb-4">코멘트</p>
 
 					</div>
 				</div>
 				<div class="col-md-6 col-lg-4 mb-5 mb-lg-0" data-aos="fade"
 					data-aos-delay="300">
 					<div class="person text-center">
-						<img src="resources/images/person_12.jpg" alt="Image"
+						<img src="resources/images/csw.png" alt="Image"
 							class="img-fluid rounded-circle w-50 mb-5">
-						<h3>Winston Hodson</h3>
-						<p class="position text-muted">Marketing</p>
-						<p class="mb-4">Lorem ipsum dolor sit amet consectetur
-							adipisicing elit. Nisi at consequatur unde molestiae quidem
-							provident voluptatum deleniti quo iste error eos est praesentium
-							distinctio cupiditate tempore suscipit inventore deserunt
-							tenetur.</p>
+						<h3>채승원</h3>
+						<p class="position text-muted">구현 기능 소개</p>
+						<p class="mb-4">코멘트</p>
 
 					</div>
 				</div>
 				<div class="col-md-6 col-lg-4 mb-5 mb-lg-0" data-aos="fade"
 					data-aos-delay="100">
 					<div class="person text-center">
-						<img src="resources/images/person_12.jpg" alt="Image"
+						<img src="resources/images/kjh.png" alt="Image"
 							class="img-fluid rounded-circle w-50 mb-5">
-						<h3>John Rooster</h3>
-						<p class="position text-muted">Co-Founder, President</p>
-						<p class="mb-4">Lorem ipsum dolor sit amet consectetur
-							adipisicing elit. Nisi at consequatur unde molestiae quidem
-							provident voluptatum deleniti quo iste error eos est praesentium
-							distinctio cupiditate tempore suscipit inventore deserunt
-							tenetur.</p>
+						<h3>김주현</h3>
+						<p class="position text-muted">구현 기능 소개</p>
+						<p class="position text-muted">코멘트</p>
 
 					</div>
 				</div>
 				<div class="col-md-6 col-lg-4 mb-5 mb-lg-0" data-aos="fade"
 					data-aos-delay="200">
 					<div class="person text-center">
-						<img src="resources/images/person_12.jpg" alt="Image"
+						<img src="resources/images/msj.png" alt="Image"
 							class="img-fluid rounded-circle w-50 mb-5">
-						<h3>John Rooster</h3>
-						<p class="position text-muted">Co-Founder, President</p>
-						<p class="mb-4">Lorem ipsum dolor sit amet consectetur
-							adipisicing elit. Nisi at consequatur unde molestiae quidem
-							provident voluptatum deleniti quo iste error eos est praesentium
-							distinctio cupiditate tempore suscipit inventore deserunt
-							tenetur.</p>
+						<h3>문서정</h3>
+						<p class="position text-muted">구현 기능 소개</p>
+						<p class="position text-muted">코멘트</p>
 
 					</div>
 				</div>
 				<div class="col-md-6 col-lg-4 mb-5 mb-lg-0" data-aos="fade"
 					data-aos-delay="300">
 					<div class="person text-center">
-						<img src="resources/images/person_12.jpg" alt="Image"
+						<img src="resources/images/mss.png" alt="Image"
 							class="img-fluid rounded-circle w-50 mb-5">
-						<h3>John Rooster</h3>
-						<p class="position text-muted">Co-Founder, President</p>
-						<p class="mb-4">Lorem ipsum dolor sit amet consectetur
-							adipisicing elit. Nisi at consequatur unde molestiae quidem
-							provident voluptatum deleniti quo iste error eos est praesentium
-							distinctio cupiditate tempore suscipit inventore deserunt
-							tenetur.</p>
+						<h3>민성수</h3>
+						<p class="position text-muted">구현 기능 소개</p>
+						<p class="position text-muted">코멘트</p>
 
 					</div>
 				</div>
@@ -274,43 +213,8 @@
 	</div>
 	<div class="chatbot">챗봇</div>
 
-<!-- footer -->
-	<footer>
-		<div class="footer">
-			<div class="container">
-				<div class="row pdn-top-30">
-					<div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
-						<div class="Follow">
-							<h3>Follow Us</h3>
-						</div>
-						<ul class="location_icon">
-							<li><a href="#"><img src="icon/facebook.png"></a></li>
-							<li><a href="#"><img src="icon/Twitter.png"></a></li>
-							<li><a href="#"><img src="icon/linkedin.png"></a></li>
-							<li><a href="#"><img src="icon/instagram.png"></a></li>
-						</ul>
-					</div>
-					<div class="col-xl-8 col-lg-8 col-md-8 col-sm-12">
-						<div class="Follow">
-							<h3>Newsletter</h3>
-						</div>
-						<input class="Newsletter" placeholder="Enter your email"
-							type="Enter your email">
-						<button class="Subscribe">Subscribe</button>
-					</div>
-				</div>
-			</div>
-		</div>	
-		<div class="copyright">
-			<div class="container">
-				<p>
-					Copyright 2019 All Right Reserved By <a href="https://html.design/">Free
-						html Templates</a>
-				</p>
-			</div>
-		</div>
-	</footer>
-	<!-- end footer -->
+	<jsp:include page="footer.jsp"></jsp:include>
+
 	<!-- Javascript files-->
 	<script
 		src="${pageContext.request.contextPath}/resources/js/jquery.min.js"></script>

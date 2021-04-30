@@ -10,39 +10,56 @@
 <body>
 <!-- footer -->
 	<footer>
-		<div class="footer">
+		<div class="footer text-center">
 			<div class="container">
 				<div class="row pdn-top-30">
-					<div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
+					<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 text_align_center">
 						<div class="Follow">
-							<h3>Checkin</h3>
+							<h3>Checkin</h3><br>
+							<p class="p1">book e on & on</p>
 						</div>
-						<ul class="location_icon">
-							<li><a href="#"><img src="resources/icon/facebook.png"></a></li>
-							<li><a href="#"><img src="resources/icon/Twitter.png"></a></li>
-							<li><a href="#"><img src="resources/icon/linkedin.png"></a></li>
-							<li><a href="#"><img src="resources/icon/instagram.png"></a></li>
-						</ul>
 					</div>
-					<div class="col-xl-8 col-lg-8 col-md-8 col-sm-12">
-						<div class="Follow">
-							<h3>Book e On & On</h3>
-						</div>
-						<input class="Newsletter" placeholder="Search for what you want."
-							type="Search for what you want.">
-						<button class="Subscribe">검색</button>
-					</div>
+					
+					<br>
+					
+					<div class="margin-top_30 col-md-8 offset-md-2 white_fonts">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="full icon text_align_center">
+                                <img src="resources/icon/위치.png">
+                            </div>
+                            <div class="full white_fonts text_align_center">
+                                <p>서울특별시 강남구 역삼동<br>테헤란로14길 6</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="full icon text_align_center">
+                                <img src="resources/icon/전화.png">
+                            </div>
+                            <div class="full white_fonts text_align_center">
+                                <p>010-123-456</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="full icon text_align_center">
+                                <img src="resources/icon/편지.png">
+                            </div>
+                            <div class="full white_fonts text_align_center">
+                                <p>naver.com</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+				</div>
+				<div><br>
+				<p class="text_align_center">
+					Copyright 2021 All Right Reserved By 
+					<a href="welcome.do">BooKe On & On html Templates</a>
+				</p><br>
 				</div>
 			</div>
 		</div>	
-		<div class="copyright">
-			<div class="container">
-				<p>
-					Copyright 2021 All Right Reserved By <a href="https://html.design/">BooK e On & On
-						html Templates</a>
-				</p>
-			</div>
-		</div>
 	</footer>
 </body>
 </html>
