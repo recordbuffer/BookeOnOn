@@ -10,7 +10,7 @@
 <body>
 <!-- footer -->
 	<footer>
-		<div class="footer">
+		<div class="footer text-center">
 			<div class="container">
 				<div class="row pdn-top-30">
 					<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 text_align_center">

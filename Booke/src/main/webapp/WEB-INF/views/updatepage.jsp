@@ -20,34 +20,38 @@
 
 <style type="text/css">
 body {
-	display: flex;
 	align-items: center;
 	padding-top: 80px;
-	padding-bottom: 40px;
 	background-color: #f5f5f5;
-	padding-bottom: 40px;
 }
+
 .text-center {
 	text-align: center !important;
 }
+
 .form-signup {
 	width: 100%;
 	max-width: 400px;
 	padding: 15px;
 	margin: auto;
+	margin-bottom: 100px;
 }
+
 .form-control {
 	padding: 0.5rem;
 	border: 1px solid;
 	color : black !important;
 }
+
 th {
 	width: 100px;
 	font-weight: 400;
 }
+
 td {
 	padding: 0.5rem;
 }
+
 td>#btn {
 	height : 60px;
 	background-color: rgb(181, 227, 216);
@@ -106,8 +110,8 @@ td>#btn {
 				</tr>
 			</table>
 		</form>
-	</main>
-
-	<!-- footer -->
+	</main>	
 </body>
+	<jsp:include page="footer.jsp"></jsp:include>
+
 </html>
