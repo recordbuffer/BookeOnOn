@@ -53,9 +53,6 @@ public interface BookBiz {
 
 	// 도서 별점
 	public int starRate(BookDto dto, int rate);
-	// 지도api에 서점 위치 출력
-	// List<StoreDto> storeMapping(StoreDto dto);
-	// 지도api에 도서관 위치 출력
-	// public List<LibraryDto> libraryMapping(LibraryDto dto);
+
 
 }
