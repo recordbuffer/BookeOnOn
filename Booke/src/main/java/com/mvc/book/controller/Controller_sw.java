@@ -42,14 +42,14 @@ public class Controller_sw {
 		return "mainpage";
 	}
 	
-	@RequestMapping("/community.do")
-	public String community() {
-		return "community_2";
+	@RequestMapping("/communityMain.do")
+	public String communityMain() {
+		return "communityMain";
 	}
 	
-	@RequestMapping("/community2.do")
-	public String community2() {
-		return "community_1";
+	@RequestMapping("/communityChat.do")
+	public String communityChat() {
+		return "communityChat";
 	}
 	
 	@RequestMapping("/communityModal.do")

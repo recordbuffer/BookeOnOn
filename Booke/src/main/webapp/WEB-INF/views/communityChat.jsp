@@ -75,7 +75,7 @@
 
 							<button type="button" class="btn"
 								style="background-color: rgb(119, 109, 097)"
-								onclick="location.href='community2.do'">커뮤니티 홈</button>
+								onclick="location.href='communityMain.do'">커뮤니티 홈</button>
 							<button type="button" class="btn"
 								style="background-color: rgb(119, 109, 097)">설정</button>
 							<button type="button" class="btn"

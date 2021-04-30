@@ -180,7 +180,7 @@
 						<h3>John Rooster</h3>
 						<p class="position text-muted">Co-Founder, President</p>
 						<p class="mb-4">민성수씨. test페이지<br>
-						<a href="community.do">커뮤니티페이지</a></p>
+						
 
 					</div>
 				</div>
@@ -192,7 +192,7 @@
 						<h3>Tom Sharp</h3>
 						<p class="position text-muted">Co-Founder, COO</p>
 						<p class="mb-4">박소미씨. test페이지<br>
-						<a href="updatepage.do">회원정보수정</a></p>
+						
 
 					</div>
 				</div>
