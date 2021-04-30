@@ -116,7 +116,7 @@
 
 										<div class="chat-message left">
 											<img class="message-avatar"
-												src="resources/images/박소미.png"
+												src="resources/images/psm.png"
 												alt="">
 											<div class="message">
 												<a class="message-author" href="#"> 박소미 님 </a> <span
@@ -128,7 +128,7 @@
 										</div>
 										<div class="chat-message right">
 											<img class="message-avatar"
-												src="resources/images/승원님.png"
+												src="resources/images/csw.png"
 												alt="">
 											<div class="message">
 												<a class="message-author" href="#"> 채승원 님 </a> <span
@@ -141,7 +141,7 @@
 										</div>
 										<div class="chat-message right">
 											<img class="message-avatar"
-												src="resources/images/주현님.png"
+												src="resources/images/kjh.png"
 												alt="">
 											<div class="message">
 												<a class="message-author" href="#"> 김주현 님 </a> <span
@@ -153,7 +153,7 @@
 										</div>
 										<div class="chat-message left">
 											<img class="message-avatar"
-												src="resources/images/박소미.png"
+												src="resources/images/psm.png"
 												alt="">
 											<div class="message">
 												<a class="message-author" href="#"> 박소미 님 </a> <span
@@ -166,7 +166,7 @@
 										</div>
 										<div class="chat-message right">
 											<img class="message-avatar"
-												src="resources/images/성수님2.png"
+												src="resources/images/mss.png"
 												alt="">
 											<div class="message">
 												<a class="message-author" href="#"> 민성수 님 </a> <span
@@ -189,7 +189,7 @@
 										<div class="users-list">
 											<div class="chat-user">
 												<img class="chat-avatar"
-													src="resources/images/박소미.png"
+													src="resources/images/psm.png"
 													alt="">
 												<div class="chat-user-name">
 													<a href="#">박소미 님</a>
@@ -197,7 +197,7 @@
 											</div>
 											<div class="chat-user">
 												<img class="chat-avatar"
-													src="resources/images/서정님.png"
+													src="resources/images/msj.png"
 													alt="">
 												<div class="chat-user-name">
 													<a href="#">문서정 님</a>
@@ -206,7 +206,7 @@
 											<div class="chat-user">
 												<span class="pull-right label label-primary">Online</span> <img
 													class="chat-avatar"
-													src="resources/images/성수님2.png"
+													src="resources/images/mss.png"
 													alt="">
 												<div class="chat-user-name">
 													<a href="#">민성수 님</a>
@@ -215,7 +215,7 @@
 											<div class="chat-user">
 												<span class="pull-right label label-primary">Online</span> <img
 													class="chat-avatar"
-													src="resources/images/승원님.png"
+													src="resources/images/csw.png"
 													alt="">
 												<div class="chat-user-name">
 													<a href="#">채승원 님</a>
@@ -223,7 +223,7 @@
 											</div>
 											<div class="chat-user">
 												<img class="chat-avatar"
-													src="resources/images/정우님.png"
+													src="resources/images/cjw.png"
 													alt="">
 												<div class="chat-user-name">
 													<a href="#">최정우 님</a>
@@ -231,7 +231,7 @@
 											</div>
 											<div class="chat-user">
 												<img class="chat-avatar"
-													src="resources/images/주현님.png"
+													src="resources/images/kjh.png"
 													alt="">
 												<div class="chat-user-name">
 													<a href="#">김주현 님</a>
@@ -239,7 +239,7 @@
 											</div>
 											<div class="chat-user">
 												<img class="chat-avatar"
-													src="resources/images/박소미.png"
+													src="resources/images/psm.png"
 													alt="">
 												<div class="chat-user-name">
 													<a href="#">안소미 님</a>
@@ -248,7 +248,7 @@
 											<div class="chat-user">
 												<span class="pull-right label label-primary">Online</span> <img
 													class="chat-avatar"
-													src="resources/images/박소미.png"
+													src="resources/images/psm.png"
 													alt="">
 												<div class="chat-user-name">
 													<a href="#">강소미 님</a>
