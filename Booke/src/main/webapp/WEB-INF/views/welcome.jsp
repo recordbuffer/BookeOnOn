@@ -29,8 +29,12 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
 <style type="text/css">
 .logo{
+<<<<<<< HEAD
 	width: 60px;
 	height: 50px;
+=======
+	width: 70px;
+>>>>>>> main
 }
 
 .brown {
@@ -58,7 +62,11 @@
 						<div class="full">
 							<div class="center-desk">
 								<div class="logo">
+<<<<<<< HEAD
 									<a href="index.html"><img src="resources/images/logo.png" alt="#" id="logo"></a>
+=======
+									<a href="index.html"><img src="resources/images/logo2.png" alt="#" id="logo"></a>
+>>>>>>> main
 								</div>
 							</div>
 						</div>

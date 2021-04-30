@@ -1,5 +1,6 @@
 package com.mvc.book.model.biz;
 
+<<<<<<< HEAD
 import com.mvc.book.model.dto.MemberDto;
 
 public interface BookeBiz {
@@ -84,3 +85,8 @@ public interface BookeBiz {
 	public int deleteMember(String be_id, be_pw); 
 	
 }
+=======
+public interface Bookebiz {
+
+}
+>>>>>>> main

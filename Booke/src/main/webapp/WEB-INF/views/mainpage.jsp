@@ -17,6 +17,7 @@
 
 <link rel="stylesheet" href="resources/css/mainpage.css" type="text/css">
 
+<<<<<<< HEAD
 <link
 	href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css"
 	rel="stylesheet"
@@ -31,6 +32,23 @@
 	<link rel="stylesheet" href="resources/css/footer.css">
 	<link rel="stylesheet" href="resources/css/mainpage.css">
 
+=======
+
+<style type="text/css">
+#mainnav {
+	background-color: #b5e3d8 !important;
+}
+
+#mainhd {
+	background-color: #fff !important;
+}
+
+#hddiv {
+	background-color: rgb(119, 109, 97) !important;
+	margin-top: 50px;
+}
+</style>
+>>>>>>> main
 </head>
 
 <body>
@@ -38,12 +56,17 @@
 	<jsp:include page="header.jsp"></jsp:include>
 	<br>
 	<br>
+<<<<<<< HEAD
 
+=======
+	
+>>>>>>> main
 	<!-- Header -->
 	<header class="bg-primary py-5 mb-5" id="mainhd">
 		<div class="container h-100">
 			<div class="row h-100 align-items-center">
 				<div class="col-lg-12" id="hddiv">
+<<<<<<< HEAD
 					<h1 class="display-4 text-white mt-5 mb-2">나의 페이지</h1>
 					<p class="lead mb-5 text-white-50">개인 설정을 제공 합니다.</p>
 				</div>
@@ -52,6 +75,18 @@
 
 	
 
+=======
+					<h1 class="display-4 text-white mt-5 mb-2">인기 도서 BEST</h1>
+					<p class="lead mb-5 text-white-50">Lorem ipsum dolor sit amet,
+						consectetur adipisicing elit. Non possimus ab labore provident
+						mollitia. Id assumenda voluptate earum corporis facere quibusdam
+						quisquam iste ipsa cumque unde nisi, totam quas ipsam.</p>
+				</div>
+			</div>
+		</div>
+	</header>
+
+>>>>>>> main
 	<!-- Page Content -->
 
 	<div class="container">
@@ -59,6 +94,7 @@
 			<div class="col-sm-8">
 				<div class="container">
 					<div class="row" id="cdb">
+<<<<<<< HEAD
 						<div class="my_setting">
 						    <div class="best_category text-center">
                         <div class="btn-group" role="group"
@@ -139,10 +175,44 @@
                </div>
 					
 				</div>
+=======
+						<div class="col-sm-12">Lorem ipsum dolor sit amet,
+							consectetur adipisicing elit. Non possimus ab labore provident
+							mollitia. Id assumenda voluptate earum corporis facere quibusdam
+							quisquam iste ipsa cumque unde nisi, totam quas ipsam.Lorem ipsum
+							dolor sit amet, consectetur adipisicing elit. Non possimus ab
+							labore provident mollitia. Id assumenda voluptate earum corporis
+							facere quibusdam quisquam iste ipsa cumque unde nisi, totam quas
+							ipsam.</div>
+						<br>
+						<br>
+						<div class="col-sm-12">Lorem ipsum dolor sit amet,
+							consectetur adipisicing elit. Non possimus ab labore provident
+							mollitia. Id assumenda voluptate earum corporis facere quibusdam
+							quisquam iste ipsa cumque unde nisi, totam quas ipsam.Lorem ipsum
+							dolor sit amet, consectetur adipisicing elit. Non possimus ab
+							labore provident mollitia. Id assumenda voluptate earum corporis
+							facere quibusdam quisquam iste ipsa cumque unde nisi, totam quas
+							ipsam.</div>
+						<br>
+						<br>
+						<div class="col-sm-12">Lorem ipsum dolor sit amet,
+							consectetur adipisicing elit. Non possimus ab labore provident
+							mollitia. Id assumenda voluptate earum corporis facere quibusdam
+							quisquam iste ipsa cumque unde nisi, totam quas ipsam.Lorem ipsum
+							dolor sit amet, consectetur adipisicing elit. Non possimus ab
+							labore provident mollitia. Id assumenda voluptate earum corporis
+							facere quibusdam quisquam iste ipsa cumque unde nisi, totam quas
+							ipsam.</div>
+					</div>
+				</div>
+
+>>>>>>> main
 			</div>
 			<div class="col-sm-4">
 				<div class="container">
 					<div class="row">
+<<<<<<< HEAD
 						<div class="col-sm-12">
 							<div class="login_menu">
 								<!-- 서재 / 커뮤니티 / 내 서재 버튼 div -->
@@ -248,5 +318,31 @@
 	</div>
 	<br><br><br><br><br>
 		<jsp:include page="footer.jsp"></jsp:include>
+=======
+						<div class="col-sm-12">Lorem ipsum dolor sit amet,
+							consectetur adipisicing elit. Non possimus ab labore provident
+							mollitia. Id assumenda voluptate earum corporis facere quibusdam
+							quisquam iste ipsa cumque unde nisi, totam quas ipsam.Lorem ipsum
+							dolor sit amet, consectetur adipisicing elit. Non possimus ab
+							labore provident mollitia. Id assumenda voluptate earum corporis
+							facere quibusdam quisquam iste ipsa cumque unde nisi, totam quas
+							ipsam.</div>
+						<div class="col-sm-12">Lorem ipsum dolor sit amet,
+							consectetur adipisicing elit. Non possimus ab labore provident
+							mollitia. Id assumenda voluptate earum corporis facere quibusdam
+							quisquam iste ipsa cumque unde nisi, totam quas ipsam.Lorem ipsum
+							dolor sit amet, consectetur adipisicing elit. Non possimus ab
+							labore provident mollitia. Id assumenda voluptate earum corporis
+							facere quibusdam quisquam iste ipsa cumque unde nisi, totam quas
+							ipsam.</div>
+					</div>
+				</div>
+
+
+			</div>
+		</div>
+	</div>
+
+>>>>>>> main
 </body>
 </html>

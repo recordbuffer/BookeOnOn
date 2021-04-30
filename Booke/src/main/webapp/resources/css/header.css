@@ -1,6 +1,7 @@
 @charset "UTF-8";
 
 .header {
+<<<<<<< HEAD
 	padding: 0px 0px;
 	position: fixed;
 	width: 100%;
@@ -52,3 +53,40 @@
 	height: 400px;
 	border: 1px solid black;
 }
+=======
+    padding: 0px 0px;
+    position: fixed;
+    width: 100%;
+    left: 0;
+    top: 0;
+    z-index: 1;
+}
+
+.logo {
+     float: left;
+}
+
+.container1{
+    background-color: rgb(181, 227, 216);
+    width: 100%;
+    position: fixed;
+    justify-content: space-between;
+    display: flex;
+}
+.bo {
+    background-color: rgb(119, 109, 097);
+    position: fixed;
+    width: 100%;
+    top: 57px;
+    height: 5px;
+    left: 0px;
+    z-index: 1;
+}
+
+.menu-area-main{
+    position: fixed;
+    left: 90%;
+    z-index: 1;
+    top: 1.4%;
+}
+>>>>>>> main
