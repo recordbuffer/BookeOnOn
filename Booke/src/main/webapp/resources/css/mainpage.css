@@ -18,7 +18,7 @@ body {
 }
 
 .col-lg-12 {
-	flex: 0 0 68%;
+	flex: 1 0 68%;
 	width: 100%;
 }
 
