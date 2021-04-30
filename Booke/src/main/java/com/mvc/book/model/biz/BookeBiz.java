@@ -3,24 +3,18 @@ package com.mvc.book.model.biz;
 import java.util.List;
 
 import com.mvc.book.model.dto.BookDto;
-import com.mvc.book.model.dto.FriendDto;
 import com.mvc.book.model.dto.LibraryDto;
-import com.mvc.book.model.dto.MemberDto;
-import com.mvc.book.model.dto.MsgDto;
-import com.mvc.book.model.dto.R_bookDto;
 import com.mvc.book.model.dto.StoreDto;
 
 public interface BookeBiz {
 	
 	//[ 회원기능 ]
 	//회원가입
-	public void memberJoinMethod(MemberDto dto);
 	
 	//회원가입_아이디중복체크
 	
 	
 	//로그인
-	public MemberDto login(MemberDto dto);
 	
 	//로그인 아이디 찾기
 	
@@ -34,27 +28,20 @@ public interface BookeBiz {
 	
 	//[ 회원 친구 기능 ]
 	//친구검색
-	public List<MemberDto> searchMember(String bd_id, String bd_nn);
 
 	//친구 목록 조회
-	public List<FriendDto> selectFList(); 
 	
 	//친구 맺기
-	public int insertFriend(FriendDto dto);
 	
 	//친구 끊기
-	public int deleteFriend(int flist_no);
 	
 	
 	//[ 쪽지 기능 ]
 	//쪽지 보내기
-	public int insertMsg(MsgDto	dto);
 	
 	//쪽지 목록 조회
-	public List<MsgDto> selectMsgList();
 	
 	//쪽지 하나 상세 조회
-	public MsgDto selectMsg(int msg_no);
 	
 	//쪽지 삭제
 	public int deleteMsg(int msg_no);
@@ -118,7 +105,6 @@ public interface BookeBiz {
 	
 	//[ 서재 기능_캘린더]
 	//캘린더 API에서 읽은 책 리스트 조회
-	public List<R_bookDto> selectRList();
 	
 	
 	
