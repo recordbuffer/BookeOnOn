@@ -14,189 +14,189 @@ import org.springframework.web.bind.annotation.RequestMethod;
 @Controller
 public class MainController {
 
-	private static final Logger logger = LoggerFactory.getLogger(MainController.class);
+   private static final Logger logger = LoggerFactory.getLogger(MainController.class);
 
-	@RequestMapping(value = "/", method = RequestMethod.GET)
-	public String home(Locale locale, Model model) {
-		logger.info("Welcome home! The client locale is {}.", locale);
+   @RequestMapping(value = "/", method = RequestMethod.GET)
+   public String home(Locale locale, Model model) {
+      logger.info("Welcome home! The client locale is {}.", locale);
 
-		Date date = new Date();
-		DateFormat dateFormat = DateFormat.getDateTimeInstance(DateFormat.LONG, DateFormat.LONG, locale);
+      Date date = new Date();
+      DateFormat dateFormat = DateFormat.getDateTimeInstance(DateFormat.LONG, DateFormat.LONG, locale);
 
-		String formattedDate = dateFormat.format(date);
+      String formattedDate = dateFormat.format(date);
 
-		model.addAttribute("serverTime", formattedDate);
+      model.addAttribute("serverTime", formattedDate);
 
-		return "home";
-	}
+      return "home";
+   }
 
-	// [ì‹œì‘ > ë©”ì¸]
-	// ì›°ì»´í˜ì´ì§€ë¡œ ì´ë™
-	@RequestMapping("/welcome.do")
-	public String index() {
-		logger.info("WELCOME PAGE");
+   // [½ÃÀÛ > ¸ŞÀÎ]
+   // À£ÄÄÆäÀÌÁö·Î ÀÌµ¿
+   @RequestMapping("/welcome.do")
+   public String index() {
+      logger.info("WELCOME PAGE");
 
-		return "welcome";
-	}
+      return "welcome";
+   }
 
-	// ë©”ì¸ í˜ì´ì§€ë¡œ ì´ë™
-	@RequestMapping("/main.do")
-	public String main() {
-		logger.info("MAIN PAGE");
+   // ¸ŞÀÎ ÆäÀÌÁö·Î ÀÌµ¿
+   @RequestMapping("/main.do")
+   public String main() {
+      logger.info("MAIN PAGE");
 
-		return "mainpage";
-	}
+      return "mainpage";
+   }
 
-	// [íšŒì› ë¡œê·¸ì¸]
-	// ë¡œê·¸ì¸ í˜ì´ì§€ë¡œ ì´ë™
-	@RequestMapping("/loginform.do")
-	public String loginForm() {
-		logger.info("LOGIN FORM");
+   // [È¸¿ø ·Î±×ÀÎ]
+   // ·Î±×ÀÎ ÆäÀÌÁö·Î ÀÌµ¿
+   @RequestMapping("/loginform.do")
+   public String loginForm() {
+      logger.info("LOGIN FORM");
 
-		return "loginpage";
-	}
+      return "loginpage";
+   }
 
-	// íšŒì›ê°€ì… í˜ì´ì§€ë¡œ ì´ë™
-	@RequestMapping("/signup.do")
-	public String signupform() {
-		logger.info("SIGN UP FORM");
+   // È¸¿ø°¡ÀÔ ÆäÀÌÁö·Î ÀÌµ¿
+   @RequestMapping("/signup.do")
+   public String signupform() {
+      logger.info("SIGN UP FORM");
 
-		return "signuppage";
-	}
+      return "signuppage";
+   }
 
-	// íšŒì›ê°€ì…_ì•„ì´ë”” ì¤‘ë³µ ì²´í¬ í˜ì´ì§€ë¡œ ì´ë™
-	@RequestMapping(value = "/idChk.do")
-	public String signup_idChk() {
-		logger.info("SIGNUP ID CHECK POP UP");
+   // È¸¿ø°¡ÀÔ_¾ÆÀÌµğ Áßº¹ Ã¼Å© ÆäÀÌÁö·Î ÀÌµ¿
+   @RequestMapping(value = "/idChk.do")
+   public String signup_idChk() {
+      logger.info("SIGNUP ID CHECK POP UP");
 
-		return "signuppage_idchk";
-	}
+      return "signuppage_idchk";
+   }
 
-	// [ë©”ì¸ í˜ì´ì§€]
-	// ë©”ì¸_ì§€ë„ ìœ„ì¹˜ íŒì—…
-	@RequestMapping("/detailmap.do")
-	public String detailmap() {
-		return "detailmap";
-	}
+   // [¸ŞÀÎ ÆäÀÌÁö]
+   // ¸ŞÀÎ_Áöµµ À§Ä¡ ÆË¾÷
+   @RequestMapping("/detailmap.do")
+   public String detailmap() {
+      return "detailmap";
+   }
 
-	// ì±… ì†Œê°œ í˜ì´ì§€ë¡œ ì´ë™
-	@RequestMapping("/bookintro.do")
-	public String bookintro() {
-		return "bookintro";
-	}
+   // Ã¥ ¼Ò°³ ÆäÀÌÁö·Î ÀÌµ¿
+   @RequestMapping("/bookintro.do")
+   public String bookintro() {
+      return "bookintro";
+   }
 
-	// ì±… ì†Œê°œ í˜ì´ì§€_íŒì—… ìƒì„¸ ì •ë³´
-	@RequestMapping("/detailpopup.do")
-	public String detailpopup() {
-		return "detailpopup";
-	}
-	
-	
-	// [ ì¹œêµ¬ ê²€ìƒ‰ ]
-	// ì¹œêµ¬ ê²€ìƒ‰ í˜ì´ì§€ë¡œ ì´ë™
-	@RequestMapping("/fsearch.do")
-	public String fsearch() {
-		logger.info("FRIEND SEARCH PAGE");
+   // Ã¥ ¼Ò°³ ÆäÀÌÁö_ÆË¾÷ »ó¼¼ Á¤º¸
+   @RequestMapping("/detailpopup.do")
+   public String detailpopup() {
+      return "detailpopup";
+   }
+   
+   
+   // [ Ä£±¸ °Ë»ö ]
+   // Ä£±¸ °Ë»ö ÆäÀÌÁö·Î ÀÌµ¿
+   @RequestMapping("/fsearch.do")
+   public String fsearch() {
+      logger.info("FRIEND SEARCH PAGE");
 
-		return "fsearchpage";
-	}
+      return "fsearchpage";
+   }
 
-	// ì¹œêµ¬ ê²€ìƒ‰ í˜ì´ì§€ > ê²€ìƒ‰ ê²°ê³¼ í˜ì´ì§€ë¡œ ì´ë™
-	@RequestMapping("/fres.do")
-	public String fres() {
-		logger.info("FRIEND SEARCH RES PAGE");
+   // Ä£±¸ °Ë»ö ÆäÀÌÁö > °Ë»ö °á°ú ÆäÀÌÁö·Î ÀÌµ¿
+   @RequestMapping("/fres.do")
+   public String fres() {
+      logger.info("FRIEND SEARCH RES PAGE");
 
-		return "fsearchpage_res";
-	}
+      return "fsearchpage_res";
+   }
 
-	
-	//[ ìª½ì§€ ê¸°ëŠ¥]
-	// ìª½ì§€ ë³´ë‚´ê¸° 
-	@RequestMapping("/msg.do")
-	public String msg() {
-		return "msg";
-	}
-	
-	
-	// [ ì±… ê²€ìƒ‰ ]
-	// ì±… ê²€ìƒ‰ í˜ì´ì§€ë¡œ ì´ë™
-	@RequestMapping("/bsearch.do")
-	public String bsearch() {
-		return "bsearchpage";
-	}
+   
+   //[ ÂÊÁö ±â´É]
+   // ÂÊÁö º¸³»±â 
+   @RequestMapping("/msg.do")
+   public String msg() {
+      return "msg";
+   }
+   
+   
+   // [ Ã¥ °Ë»ö ]
+   // Ã¥ °Ë»ö ÆäÀÌÁö·Î ÀÌµ¿
+   @RequestMapping("/bsearch.do")
+   public String bsearch() {
+      return "bsearchpage";
+   }
 
-	// ì±… ê²€ìƒ‰ ê²°ê³¼ í˜ì´ì§€ë¡œ ì´ë™
-	@RequestMapping("/bres.do")
-	public String bres() {
-		return "bsearchpage_res";
-	}
+   // Ã¥ °Ë»ö °á°ú ÆäÀÌÁö·Î ÀÌµ¿
+   @RequestMapping("/bres.do")
+   public String bres() {
+      return "bsearchpage_res";
+   }
 
-	// [ ì„œì¬ ]
-	// ì„œì¬ í˜ì´ì§€ë¡œ ì´ë™
-	@RequestMapping("/bcase.do")
-	public String bcase() {
-		return "bookcase";
-	}
+   // [ ¼­Àç ]
+   // ¼­Àç ÆäÀÌÁö·Î ÀÌµ¿
+   @RequestMapping("/bcase.do")
+   public String bcase() {
+      return "bookcase";
+   }
 
-	// ì„œì¬ í˜ì´ì§€_ìº˜ë¦°ë”ë¡œ ì´ë™
-	@RequestMapping("/bcaseCal.do")
-	public String bcaseCal() {
-		return "bookcase_cal";
-	}
+   // ¼­Àç ÆäÀÌÁö_Ä¶¸°´õ·Î ÀÌµ¿
+   @RequestMapping("/bcaseCal.do")
+   public String bcaseCal() {
+      return "bookcase_cal";
+   }
 
-	// [ì„¤ì •]
-	// ì„¤ì • í˜ì´ì§€ë¡œ ì´ë™
-	@RequestMapping("/setting.do")
-	public String setting() {
-		return "setting";
-	}
+   // [¼³Á¤]
+   // ¼³Á¤ ÆäÀÌÁö·Î ÀÌµ¿
+   @RequestMapping("/setting.do")
+   public String setting() {
+      return "setting";
+   }
 
-	// íšŒì› ì •ë³´ ìˆ˜ì • í˜ì´ì§€ë¡œ ì´ë™
-	@RequestMapping("/updateform.do")
-	public String updateform() {
-		logger.info("UPDATE MEMBER INFO PAGE");
+   // È¸¿ø Á¤º¸ ¼öÁ¤ ÆäÀÌÁö·Î ÀÌµ¿
+   @RequestMapping("/updateform.do")
+   public String updateform() {
+      logger.info("UPDATE MEMBER INFO PAGE");
 
-		return "updatepage";
-	}
+      return "updatepage";
+   }
 
-	// íšŒì› íƒˆí‡´ í˜ì´ì§€ë¡œ ì´ë™
-	@RequestMapping("/md_aks.do")
-	public String mdelete() {
-		logger.info("MEMBER DELETE PAGE");
+   // È¸¿ø Å»Åğ ÆäÀÌÁö·Î ÀÌµ¿
+   @RequestMapping("/md_aks.do")
+   public String mdelete() {
+      logger.info("MEMBER DELETE PAGE");
 
-		return "mdeletepage";
-	}
+      return "mdeletepage";
+   }
 
-	// íšŒì› íƒˆí‡´ í™•ì¸ í˜ì´ì§€ë¡œ ì´ë™
-	@RequestMapping(value = "/deleteChk.do")
-	public String mdelete_Chk() {
-		logger.info("MEMBER DELETE CHECK POP UP");
+   // È¸¿ø Å»Åğ È®ÀÎ ÆäÀÌÁö·Î ÀÌµ¿
+   @RequestMapping(value = "/deleteChk.do")
+   public String mdelete_Chk() {
+      logger.info("MEMBER DELETE CHECK POP UP");
 
-		return "mdeletepage_Chk";
-	}
+      return "mdeletepage_Chk";
+   }
 
-	// ì¹œêµ¬ ê´€ë¦¬ í˜ì´ì§€ë¡œ ì´ë™
-	@RequestMapping("/friend.do")
-	public String friend() {
-		logger.info("FRIEND PAGE");
+   // Ä£±¸ °ü¸® ÆäÀÌÁö·Î ÀÌµ¿
+   @RequestMapping("/friend.do")
+   public String friend() {
+      logger.info("FRIEND PAGE");
 
-		return "friendpage";
-	}
+      return "friendpage";
+   }
 
-	// ìª½ì§€ ê´€ë¦¬ í˜ì´ì§€ë¡œ ì´ë™
+   // ÂÊÁö °ü¸® ÆäÀÌÁö·Î ÀÌµ¿
 
-	
-	//[ ì»¤ë®¤ë‹ˆí‹° ]
-	//ì»¤ë®¤ë‹ˆí‹° í˜ì´ì§€ë¡œ ì´ë™
-	@RequestMapping("/communityMain.do")
-	public String communityMain() {
-		return "communityMain";
-	}
-	
-	//ì»¤ë®¤ë‹ˆí‹° ì±„íŒ…ë°©ìœ¼ë¡œ ì´ë™
-	@RequestMapping("/communityChat.do")
-	public String communityChat() {
-		return "communityChat";
-	}
+   
+   //[ Ä¿¹Â´ÏÆ¼ ]
+   //Ä¿¹Â´ÏÆ¼ ÆäÀÌÁö·Î ÀÌµ¿
+   @RequestMapping("/communityMain.do")
+   public String communityMain() {
+      return "communityMain";
+   }
+   
+   //Ä¿¹Â´ÏÆ¼ Ã¤ÆÃ¹æÀ¸·Î ÀÌµ¿
+   @RequestMapping("/communityChat.do")
+   public String communityChat() {
+      return "communityChat";
+   }
 
 }
