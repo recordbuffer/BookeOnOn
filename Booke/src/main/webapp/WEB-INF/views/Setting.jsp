@@ -74,16 +74,16 @@ th, td {
 
 <table style="width:70%">
   <tr>
-    <th>개인정보수정</th>
-    <th>쪽지관리</th> 
-    <th>친구관리</th>
+    <th><input type="button" value="개인정보수정" onclick="location.href='updateform.do'"></th>
+    <th><input type="button" value="쪽지관리" onclick="location.href=''"></th> 
+    <th><input type="button" value="친구관리" onclick="location.href='friend.do'"></th>
   </tr>
 </table>
 <table style="width:70%">
   <tr>
-    <td><strong>감성 이   미 지</strong></td>
+    <td><strong>감성 이 미 지</strong></td>
     <td><strong>홀  룰  루</strong></td>
-    <td><strong>회원탈퇴</strong></td>
+    <td><strong><input type="button" value="회원탈퇴" onclick="location.href='md_aks.do'"></strong></td>
   </tr>
 </table>
 
