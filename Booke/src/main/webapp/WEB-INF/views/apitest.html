@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h1>검색 Test</h1>
+    <input id="bookName" value="" type="text">
+    <button id="search">검색</button>
+	<script src="https://code.jquery.com/jquery-3.4.1.js" type="text/javascript"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+	 <script type="text/javascript">
+        $(document).ready(function () {
+            $("#search").click(function () {
+                $.ajax({
+                    method: "GET",
+                    url: "https://dapi.kakao.com/v3/search/book?target=title",
+                    data: { query: "미움받을 용기" },
+                    headers: { Authorization: "KakaoAK 7454d95d609df58bfc2bf0407895a1c0" },
+                    error: function(){
+                    	alert("실패");
+                    },
+                    success: function(){
+                    	alert("성공");
+                    }
+                })
+                    
+            });
+        });
+    </script>
+</body>
+</html>

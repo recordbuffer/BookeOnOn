@@ -17,20 +17,22 @@
 
 <link rel="stylesheet" href="resources/css/mainpage.css" type="text/css">
 
+<!-- CSS only -->
 <link
-	href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css"
-	rel="stylesheet"
-	integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6"
-	crossorigin="anonymous">
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1"
+    crossorigin="anonymous">
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css">
+<!-- JavaScript Bundle with Popper -->
+<script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+    crossorigin="anonymous"></script>
 
-<link rel="stylesheet"
-	href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-	integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
-	crossorigin="anonymous">
-	
-	<link rel="stylesheet" href="resources/css/footer.css">
-	<link rel="stylesheet" href="resources/css/mainpage.css">
-
+<link rel="stylesheet" href="resources/css/footer.css">
+<link rel="stylesheet" href="resources/css/mainpage.css">
 </head>
 
 <body>
@@ -50,12 +52,44 @@
 			</div>
 		</div>
 	</header>
-  
+
+	<!-- API 연습 -->
+	<script src="https://code.jquery.com/jquery-3.4.1.js" type="text/javascript"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+	 <script type="text/javascript">
+	 $.ajax({
+         method: "GET",
+         url: "https://dapi.kakao.com/v3/search/book?target=title",
+         data: { 
+             query: "문학",
+             sort: "accuracy",
+             page: 3,
+             size: 50       
+         },
+         headers: { Authorization: "KakaoAK 7454d95d609df58bfc2bf0407895a1c0" }
+     })
+         .done(function (msg){
+             console.log(msg);
+             $("#best1").append("<img src = '" + msg.documents[0].thumbnail + "'/>");
+             $("#best2").append("<img src = '" + msg.documents[1].thumbnail + "'/>");
+             $("#best3").append("<img src = '" + msg.documents[2].thumbnail + "'/>");
+             $("#best4").append("<img src = '" + msg.documents[3].thumbnail + "'/>");
+             $("#best5").append("<img src = '" + msg.documents[4].thumbnail + "'/>");
+             $("#new1").append("<img src = '" + msg.documents[5].thumbnail + "'/>");
+             $("#new2").append("<img src = '" + msg.documents[6].thumbnail + "'/>");
+             $("#new3").append("<img src = '" + msg.documents[7].thumbnail + "'/>");
+             $("#new4").append("<img src = '" + msg.documents[8].thumbnail + "'/>");
+             $("#new5").append("<img src = '" + msg.documents[9].thumbnail + "'/>");
+         });
+         
+     
+</script>
+
 	<!-- Page Content -->
 
-	<div class="container">
+	<div class="container-fluid">
 		<div class="row">
-			<div class="col-sm-8">
+			<div class="col-md-7 offset-md-1">
 				<div class="container">
 					<div class="row" id="cdb">
 						<div class="best_seller">
@@ -79,24 +113,19 @@
 										class="btn btn-outline-primary" for="btnradio5">교재 </label>
 								</div>
 							</div>
-							<div class="best_book bb_1 text-center">
-								커버
-								<div class="bb_1_star">별점</div>
+							<div class="best_book bb_1 text-center" id="best1">
+								<div class="bb_1_star text-center">별점</div>
 							</div>
-							<div class="best_book bb_2 text-center">
-								커버
+							<div class="best_book bb_2 text-center"  id="best2">
 								<div class="bb_2_star text-center">별점</div>
 							</div>
-							<div class="best_book bb_3 text-center">
-								커버
+							<div class="best_book bb_3 text-center"  id="best3">
 								<div class="bb_3_star text-center">별점</div>
 							</div>
-							<div class="best_book bb_4 text-center">
-								커버
+							<div class="best_book bb_4 text-center"  id="best4">
 								<div class="bb_4_star text-center">별점</div>
 							</div>
-							<div class="best_book bb_5 text-center">
-								커버
+							<div class="best_book bb_5 text-center"  id="best5">
 								<div class="bb_5_star text-center">별점</div>
 							</div>
 						</div>
@@ -121,24 +150,19 @@
 										class="btn btn-outline-primary" for="btnradio10">교재 </label>
 								</div>
 							</div>
-							<div class="new_book nb_1 text-center">
-								커버
+							<div class="new_book nb_1 text-center"  id="new1">
 								<div class="nb_1_star text-center">별점</div>
 							</div>
-							<div class="new_book nb_2 text-center">
-								커버
+							<div class="new_book nb_2 text-center" id="new2">
 								<div class="nb_2_star text-center">별점</div>
 							</div>
-							<div class="new_book nb_3 text-center">
-								커버
+							<div class="new_book nb_3 text-center" id="new3">
 								<div class="nb_3_star text-center">별점</div>
 							</div>
-							<div class="new_book nb_4 text-center">
-								커버
+							<div class="new_book nb_4 text-center" id="new4">
 								<div class="nb_4_star text-center">별점</div>
 							</div>
-							<div class="new_book nb_5 text-center">
-								커버
+							<div class="new_book nb_5 text-center" id="new5">
 								<div class="nb_5_star text-center">별점</div>
 							</div>
 						</div>
@@ -148,24 +172,20 @@
 				</div>
 
 			</div>
-			<div class="col-sm-4">
+			<div class="col-md-2">
 				<div class="container">
 					<div class="row">
 						<div class="col-sm-12">
 							<div class="login_menu">
 								<!-- 서재 / 커뮤니티 / 내 서재 버튼 div -->
-								<input type="button" class="login_btn" value="서재" onclick="location.href='bcase.do'">
-								<input type="button" class="login_btn" value="커뮤니티" onclick="location.href='communityMain.do'">
-								<input type="button" class="login_btn" value="책 소개" onclick="location.href='bookintro.do'">
 								<div class="login_img">
 									<img src="resources/images/kjh.png"
 										style="border-radius: 100%;">
 								</div>
 								<div class="login_name">
 									<!-- 설정 / 쪽지 버튼, 닉네임 -->
-									<input type="button" class="login_mini_btn" value="설정"
-										onclick="location.href='setting.do'"> <input type="button"
-										class="login_mini_btn" value="쪽지" onclick="location.href='msg.do'">
+									<a href="setting.do"><i class="bi bi-gear-fill" style="font-size: 2.5rem; color: white; position: absolute; left: 160px;"></i></a>
+									<a href="msg.do"><i class="bi bi-chat-text-fill" style="font-size: 2.5rem; color: white; position: relative; left: 110px;"></i></a>
 									<div class="login_nick">닉네임</div>
 								</div>
 								<div>
@@ -202,27 +222,45 @@
 											<img class="d-block w-100" src="resources/images/slide.jpg"
 												alt="First slide">
 											<div class="carousel-caption d-none d-md-block">
-												<div class="circle friend1"><h6 class="nickname">친구1</h6></div>
-												<div class="circle friend2"><h6 class="nickname">친구2</h6></div>
-												<div class="circle friend3"><h6 class="nickname">친구3</h6></div>
+												<div class="circle friend1">
+													<h6 class="nickname">친구1</h6>
+												</div>
+												<div class="circle friend2">
+													<h6 class="nickname">친구2</h6>
+												</div>
+												<div class="circle friend3">
+													<h6 class="nickname">친구3</h6>
+												</div>
 											</div>
 										</div>
 										<div class="carousel-item">
 											<img class="d-block w-100" src="resources/images/slide.jpg"
 												alt="Second slide">
 											<div class="carousel-caption d-none d-md-block">
-												<div class="circle friend4"><h6 class="nickname">친구4</h6></div>
-												<div class="circle friend5"><h6 class="nickname">친구5</h6></div>
-												<div class="circle friend6"><h6 class="nickname">친구6</h6></div>
+												<div class="circle friend4">
+													<h6 class="nickname">친구4</h6>
+												</div>
+												<div class="circle friend5">
+													<h6 class="nickname">친구5</h6>
+												</div>
+												<div class="circle friend6">
+													<h6 class="nickname">친구6</h6>
+												</div>
 											</div>
 										</div>
 										<div class="carousel-item">
 											<img class="d-block w-100" src="resources/images/slide.jpg"
 												alt="Third slide">
 											<div class="carousel-caption d-none d-md-block">
-												<div class="circle friend7"><h6 class="nickname">친구7</h6></div>
-												<div class="circle friend8"><h6 class="nickname">친구8</h6></div>
-												<div class="circle friend9"><h6 class="nickname">친구9</h6></div>
+												<div class="circle friend7">
+													<h6 class="nickname">친구7</h6>
+												</div>
+												<div class="circle friend8">
+													<h6 class="nickname">친구8</h6>
+												</div>
+												<div class="circle friend9">
+													<h6 class="nickname">친구9</h6>
+												</div>
 											</div>
 										</div>
 										<!-- / 슬라이드 쇼 끝 -->
@@ -253,8 +291,9 @@
 				</div>
 			</div>
 		</div>
-	</div>
-	<br><br><br><br><br>
+		<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 		<jsp:include page="footer.jsp"></jsp:include>
+	</div>
+	
 </body>
 </html>
