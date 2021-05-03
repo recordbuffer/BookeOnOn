@@ -27,12 +27,12 @@ body {
 }
 
 .best_category {
-	width: 620px;
+	width: 888px;
 	background-color: rgb(181, 227, 216);
 }
 
 .new_category {
-	width: 620px;
+	width: 888px;
     left: 0px;
     top: 180px;
     background-color: rgb(181, 227, 216);
@@ -146,6 +146,7 @@ body {
 	display: inline-flex;
 	vertical-align: middle;
 	z-index: 0;
+	right: 20px;
 }
 
 .btn:hover {

@@ -82,18 +82,31 @@
              $("#new5").append("<img src = '" + msg.documents[9].thumbnail + "'/>");
          });
          
-     
+	 $.ajax({
+         method: "GET",
+         url: "http://www.aladin.co.kr/ttb/api/ItemList.aspx",
+         dataType : "json",
+         data: { 
+             TTBKey : "ttbwngysnl1010004", 
+             QueryType : "Bestseller",
+             SearchTarget : "Book"
+         }
+     })
+         .done(function (msg) {
+             console.log(msg);
+         });	
 </script>
 
 	<!-- Page Content -->
-
+	<input type="button" onclick="location.href='bookintro.do'">
 	<div class="container-fluid">
 		<div class="row">
 			<div class="col-md-7 offset-md-1">
 				<div class="container">
 					<div class="row" id="cdb">
 						<div class="best_seller">
-							<div class="best_category text-center">
+							<div class="best_category text-right">
+							<div class="text-left" style="position: absolute; font-size: 30px; margin: 8px;">베스트셀러</div>
 								<div class="btn-group" role="group"
 									aria-label="Basic radio toggle button group">
 									<input type="radio" class="btn-check" name="best_btnradio"
@@ -130,7 +143,8 @@
 							</div>
 						</div>
 						<div class="col-sm-12 new_seller">
-							<div class="new_category text-center">
+							<div class="new_category text-right">
+							<div class="text-left" style="position: absolute; font-size: 30px; margin: 8px;">신간</div>
 								<div class="btn-group" role="group"
 									aria-label="Basic radio toggle button group">
 									<input type="radio" class="btn-check" name="new_btnradio"
