@@ -50,7 +50,7 @@ public class MemberDaoImpl implements MemberDao{
 	}
 
 	@Override
-	public String updateGET(HttpSession session, Model model) throws Exception {
+	public String updateGET(HttpSession session, Model model) {
 		// TODO Auto-generated method stub
 		return null;
 	}
@@ -59,6 +59,24 @@ public class MemberDaoImpl implements MemberDao{
 	public int deleteMember(String be_id, String be_pw) {
 		// TODO Auto-generated method stub
 		return 0;
+	}
+
+	@Override
+	public String loginCheck(MemberDto dto) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public String level(MemberDto dto) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public String forced_Admin(String be_id, String be_pw) {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 }

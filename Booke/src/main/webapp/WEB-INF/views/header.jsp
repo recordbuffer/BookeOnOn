@@ -15,7 +15,7 @@
                 <div class="full">
                     <div class="center-desk">
                         <div class="logo">
-                            <a href="#"><img src="resources/images/logo1.png" alt="#" style="margin: 0px 0px 0px 50px;"></a>
+                            <a href="main.do"><img src="resources/images/logo1.png" alt="#" style="margin: 0px 0px 0px 50px;"></a>
                         </div>
                     </div>
                 </div>
@@ -23,7 +23,7 @@
             <div class="col-xl-9 col-lg-9 col-md-9 col-sm-9">
                 <div class="menu-area">
                     <div class="limit-box menu-area-main">
-                            <a href="mainpage.do"><img src="resources/images/search_icon.png" alt="#'" style="margin: 0px 50px 0px 0px;"/></a>
+                            <a href="bsearch.do"><img src="resources/images/search_icon.png" alt="#'" style="margin: 0px 50px 0px 0px;"/></a>
                     </div>
                 </div>
             </div>

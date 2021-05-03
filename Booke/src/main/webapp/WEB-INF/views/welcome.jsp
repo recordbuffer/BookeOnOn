@@ -30,6 +30,14 @@
       <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
 
+<script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
+<df-messenger
+  intent="WELCOME"
+  chat-title="Apple_"
+  agent-id="21f2031b-ff99-4800-aa0c-82f504f2d9c8"
+  language-code="ko"
+></df-messenger>
+
 </head>
 <!-- body -->
 <body class="main-layout home_page"
@@ -211,8 +219,6 @@
 			</div>
 		</div>
 	</div>
-	<div class="chatbot">챗봇</div>
-
 	<jsp:include page="footer.jsp"></jsp:include>
 
 	<!-- Javascript files-->

@@ -24,11 +24,11 @@
 }
 
 #mainhd {
-	background-color: #fff !important;
+	background-color: #f5f5f5 !important;
 }
 
 #mainbody {
-	background-color: #fff !important;
+	background-color: #f5f5f5 !important;
 }
 
 #hddiv {
@@ -40,10 +40,14 @@
 	background-color: rgb(119, 109, 97) !important;
 	padding: 0.5rem;
 }
+
+p>button{
+	background-color: rgb(181, 227, 216) !important;
+}
 </style>
 </head>
 
-<body>
+<body style="background-color: #f5f5f5;">
 
 	<jsp:include page="header.jsp"></jsp:include>
 	<br>
@@ -85,9 +89,9 @@
 				</div>
 				<div class="col-lg-2">
 					<br>
-					<p><button type="button" class="btn btn-danger btn-block">읽고 싶어요</button></p>
+					<p><button type="button" class="btn btn-block">읽고 싶어요</button></p>
 					<br>
-					<p><button type="button" class="btn btn-danger btn-block">읽었어요</button></p>
+					<p><button type="button" class="btn btn-block">읽었어요</button></p>
 				</div>
 				<br>
 				
@@ -99,9 +103,9 @@
 				</div>
 				<div class="col-lg-2">
 					<br>
-					<p><button type="button" class="btn btn-danger btn-block">읽고 싶어요</button></p>
+					<p><button type="button" class="btn btn-block">읽고 싶어요</button></p>
 					<br>
-					<p><button type="button" class="btn btn-danger btn-block">읽었어요</button></p>
+					<p><button type="button" class="btn btn-block">읽었어요</button></p>
 				</div>
 				<br>
 				<div class="col-lg-3"><img src="resources/images/bookimg3.png"></div>
@@ -115,9 +119,9 @@
 				</div>
 				<div class="col-lg-2">
 					<br>
-					<p><button type="button" class="btn btn-danger btn-block">읽고 싶어요</button></p>
+					<p><button type="button" class="btn btn-block">읽고 싶어요</button></p>
 					<br>
-					<p><button type="button" class="btn btn-danger btn-block">읽었어요</button></p>
+					<p><button type="button" class="btn btn-block">읽었어요</button></p>
 				</div>
 				<br>
 			</div>
