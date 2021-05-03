@@ -16,7 +16,6 @@
 	href="${pageContext.request.contextPath}/resources/css/responsive.css">
 
 <link rel="stylesheet" href="resources/css/mainpage.css" type="text/css">
-
 <link
 	href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css"
 	rel="stylesheet"
@@ -39,6 +38,7 @@
 	}
 </script>
 <link rel="stylesheet" href="resources/css/bookintro.css">
+<link rel="stylesheet" href="resources/css/footer.css">
 <style type="text/css">
 .like{
 	display: none;

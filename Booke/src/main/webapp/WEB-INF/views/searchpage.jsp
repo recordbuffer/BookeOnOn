@@ -17,7 +17,7 @@
 
 <link rel="stylesheet" href="resources/css/searchpage.css" type="text/css">
 
-
+<link rel="stylesheet" href="resources/css/footer.css">
 <style type="text/css">
 #mainnav {
 	background-color: #b5e3d8 !important;
