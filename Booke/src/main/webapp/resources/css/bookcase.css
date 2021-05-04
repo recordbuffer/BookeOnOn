@@ -1,95 +1,13 @@
 @charset "UTF-8";
 
-.login_menu {
-	position: absolute;
-	background-color: rgb(119, 109, 097);
-	left: 1166.5px;
-	top: 78px;
-}
-
-.login_btn {
-	border: 5px solid white;
-	border-radius: 100%;
-	width: 80px;
-	height: 80px;
-	margin: 24px;
-	background-color: rgb(181, 227, 216);
-}
-
-.login_btn:hover, .login_mini_btn:hover {
-	font-weight: bold;
-}
-
-.login_img {
-	border: 5px solid white;
-	border-radius: 100%;
-	width: 130px;
-	height: 130px;
-	margin: 20px;
-}
-
-.login_name {
-	width: 200px;
-	height: 100px;
-	position: relative;
-	left: 180px;
-	top: -170px;
-}
-
-.login_mini_btn {
-	border: 5px solid white;
-	border-radius: 100%;
-	width: 50px;
-	height: 50px;
-	margin: 20px;
-	background-color: rgb(181, 227, 216);
-}
-
-.login_nick, .read_book, .want_book {
-	background-color: rgb(181, 227, 216);
-	border: 5px solid white;
-	height: 60px;
-	text-align: center;
-	vertical-align: middle;
-	line-height: 50px;
-}
-
-.read_book {
-	border: 5px solid white;
-	width: 170px;
-	height: 125px;
-	margin: 20px;
-	position: relative;
-	top: -90px;
-}
-
-.want_book {
-	border: 5px solid white;
-	width: 170px;
-	height: 125px;
-	position: relative;
-	top: -235px;
-	margin: 0px 0px 0px 210px;
-}
-
-.attainment {
-	border: 5px solid white;
-	background-color: rgb(181, 227, 216);
-	width: 360px;
-	height: 155px;
-	position: relative;
-	top: -233px;
-	margin: 20px;
-}
-
 .d1 {
-	width: 38%;
-	height: 900px;
+	width: 100%;
+	height: 1200px;
 	border: 1px solid black;
 	position: relative;
 	border: 1px solid black;
-	left: 30%;
-	bottom: -30px;
+	left: 0%;
+	bottom: 40px;
 	background-color: rgb(119, 109, 097);
 }
 
@@ -112,22 +30,22 @@
 }
 
 .n1 {
-	height: 13%;
-	width: 15%;
+	height: 18%;
+	width: 18%;
 	border: 1px solid black;
-	margin: 20px 20px 20px 20px;
+	margin: 0px 0px 0px 10px;
 	border: 1px solid black;
 	position: absolute;
 	top: 18%;
-	left: 2%;
+	left: 0%;
 	background-color: rgb(255, 255, 255);
 }
 
 .n2 {
-	height: 13%;
-	width: 15%;
+	height: 18%;
+	width: 18%;
 	border: 1px solid black;
-	margin: 20px 20px 20px 20px;
+	margin: 0px 0px 0px 9px;
 	border: 1px solid black;
 	position: absolute;
 	top: 18%;
@@ -136,10 +54,10 @@
 }
 
 .n3 {
-	height: 13%;
-	width: 15%;
+	height: 18%;
+	width: 18%;
 	border: 1px solid black;
-	margin: 20px 20px 20px 20px;
+	margin: 0px 0px 0px 27px;
 	border: 1px solid black;
 	position: absolute;
 	top: 18%;
@@ -148,10 +66,10 @@
 }
 
 .n4 {
-	height: 13%;
-	width: 15%;
+	height: 18%;
+	width: 18%;
 	border: 1px solid black;
-	margin: 20px 20px 20px 20px;
+	margin: 0px 0px 0px 45px;
 	border: 1px solid black;
 	position: absolute;
 	top: 18%;
@@ -160,10 +78,10 @@
 }
 
 .n5 {
-	height: 13%;
-	width: 15%;
+	height: 18%;
+	width: 18%;
 	border: 1px solid black;
-	margin: 20px 20px 20px 20px;
+	margin: 0px 0px 0px 60px;
 	border: 1px solid black;
 	position: absolute;
 	top: 18%;
@@ -172,22 +90,22 @@
 }
 
 .n6 {
-	height: 13%;
-	width: 15%;
+	height: 18%;
+	width: 18%;
 	border: 1px solid black;
-	margin: 20px 20px 20px 20px;
+	margin: 0px 0px 0px 10px;
 	border: 1px solid black;
 	position: absolute;
 	top: 43%;
-	left: 2%;
+	left: %;
 	background-color: rgb(255, 255, 255);
 }
 
 .n7 {
-	height: 13%;
-	width: 15%;
+	height: 18%;
+	width: 18%;
 	border: 1px solid black;
-	margin: 20px 20px 20px 20px;
+	margin: 0px 0px 0px 9px;
 	border: 1px solid black;
 	position: absolute;
 	top: 43%;
@@ -196,10 +114,10 @@
 }
 
 .n8 {
-	height: 13%;
-	width: 15%;
+	height: 18%;
+	width: 18%;
 	border: 1px solid black;
-	margin: 20px 20px 20px 20px;
+	margin: 0px 0px 0px 27px;
 	border: 1px solid black;
 	position: absolute;
 	top: 43%;
@@ -208,10 +126,10 @@
 }
 
 .n9 {
-	height: 13%;
-	width: 15%;
+	height: 18%;
+	width: 18%;
 	border: 1px solid black;
-	margin: 20px 20px 20px 20px;
+	margin: 0px 0px 0px 45px;
 	border: 1px solid black;
 	position: absolute;
 	top: 43%;
@@ -220,10 +138,10 @@
 }
 
 .n10 {
-	height: 13%;
-	width: 15%;
+	height: 18%;
+	width: 18%;
 	border: 1px solid black;
-	margin: 20px 20px 20px 20px;
+	margin: 0px 0px 0px 60px;
 	border: 1px solid black;
 	position: absolute;
 	top: 43%;
@@ -232,22 +150,22 @@
 }
 
 .n11 {
-	height: 13%;
-	width: 15%;
+	height: 18%;
+	width: 18%;
 	border: 1px solid black;
-	margin: 20px 20px 20px 20px;
+	margin: 0px 0px 0px 10px;
 	border: 1px solid black;
 	position: absolute;
 	top: 68%;
-	left: 2%;
+	left: 0%;
 	background-color: rgb(255, 255, 255);
 }
 
 .n12 {
-	height: 13%;
-	width: 15%;
+	height: 18%;
+	width: 18%;
 	border: 1px solid black;
-	margin: 20px 20px 20px 20px;
+	margin: 0px 0px 0px 9px;
 	border: 1px solid black;
 	position: absolute;
 	top: 68%;
@@ -256,10 +174,10 @@
 }
 
 .n13 {
-	height: 13%;
-	width: 15%;
+	height: 18%;
+	width: 18%;
 	border: 1px solid black;
-	margin: 20px 20px 20px 20px;
+	margin: 0px 0px 0px 27px;
 	border: 1px solid black;
 	position: absolute;
 	top: 68%;
@@ -268,10 +186,10 @@
 }
 
 .n14 {
-	height: 13%;
-	width: 15%;
+	height: 18%;
+	width: 18%;
 	border: 1px solid black;
-	margin: 20px 20px 20px 20px;
+	margin: 0px 0px 0px 45px;
 	border: 1px solid black;
 	position: absolute;
 	top: 68%;
@@ -280,10 +198,10 @@
 }
 
 .n15 {
-	height: 13%;
-	width: 15%;
+	height: 18%;
+	width: 18%;
 	border: 1px solid black;
-	margin: 20px 20px 20px 20px;
+	margin: 0px 0px 0px 60px;
 	border: 1px solid black;
 	position: absolute;
 	top: 68%;
@@ -293,48 +211,48 @@
 
 .b1 {
 	height: 3%;
-	width: 90%;
+	width: 97.5%;
 	border: 1px solid black;
 	margin: 20px 20px 20px 20px;
 	border: 1px solid black;
 	position: relative;
-	top: 20%;
-	left: 1%;
+	top: 26%;
+	left: -1%;
 	background-color: rgb(181, 227, 216);
 }
 
 .b2 {
 	height: 3%;
-	width: 90%;
+	width: 97.5%;
 	border: 1px solid black;
 	margin: 20px 20px 20px 20px;
 	border: 1px solid black;
 	position: relative;
-	top: 40%;
-	left: 1%;
+	top: 46%;
+	left: -1%;
 	background-color: rgb(181, 227, 216);
 }
 
 .b3 {
 	height: 3%;
-	width: 90%;
+	width: 97.5%;
 	border: 1px solid black;
 	margin: 20px 20px 20px 20px;
 	border: 1px solid black;
 	position: relative;
-	top: 60%;
-	left: 1%;
+	top: 66%;
+	left: -1%;
 	background-color: rgb(181, 227, 216);
 }
 
 .d2 {
-	width: 38%;
-	height: 470px;
+	width: 100%;
+	height: 650px;
 	border: 1px solid black;
 	position: relative;
 	border: 1px solid black;
-	left: 30%;
-	bottom: -50px;
+	left: 0%;
+	bottom: 20px;
 	background-color: rgb(181, 227, 216);
 }
 
@@ -343,15 +261,15 @@
 	height: 100px;
 	border: 1px solid black;
 	position: absolute;
-	left: 69%;
-	top: 980px;
-	right: 10%;
+	left: -15%;
+	top: 490px;
+	right: 0%;
 	text-align: center;
 }
 
 .a1 {
 	height: 50%;
-	width: 92%;
+	width: 95%;
 	border: 1px solid black;
 	position: relative;
 	margin: 20px 20px 20px 20px;
@@ -361,7 +279,7 @@
 
 .a2 {
 	height: 38%;
-	width: 92%;
+	width: 95%;
 	border: 1px solid black;
 	position: relative;
 	margin: 20px 20px 20px 20px;
@@ -370,22 +288,24 @@
 }
 
 .m1 {
-	height: 11%;
+	height: 12%;
 	width: 20%;
-	border: 1px solid black;
+	border: 5px solid beige;
 	top: 0%;
 	left: 0%;
 	margin: 0px 0px 0px 0px;
 	text-align: center;
+	background-color: rgb(181, 227, 216);
 }
 
 .m2 {
-	height: 14%;
+	height: 16%;
 	width: 20%;
-	border: 1px solid black;
+	border: 5px solid beige;
 	margin: 0px 0px 0px 0px;
 	top: 0%;
 	left: 0%;
-	margin: 0px 0px 0px 0px;
 	text-align: center;
+	background-color: rgb(181, 227, 216);
 }
+
