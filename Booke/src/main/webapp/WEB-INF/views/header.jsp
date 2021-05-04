@@ -5,8 +5,37 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+
+<style type="text/css">
+
+#name:hover {
+	color: rgb(119, 109, 097); 
+}
+
+#name {
+	font-weight: bold ;
+}
+
+</style>
+
+
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css">
 <link rel="stylesheet" href="resources/css/header.css">
+
+<!-- CSS only -->
+<link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1"
+    crossorigin="anonymous">
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css">
+<!-- JavaScript Bundle with Popper -->
+<script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+    crossorigin="anonymous"></script>
+
 </head>
 <body>
     <!-- header inner -->
@@ -21,33 +50,33 @@
                     </div>
                 </div>
             </div>
-            <div class="col-xl-2 col-lg-2 col-md-2 col-sm-2">
-                <div class="menu-area">
-                    <div class="limit-box menu-area-main">
-						<div class="dropdown">
-							<button class="btn btn-default dropdown-toggle" type="button"
-								id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true" style="margin: 5px 0px 0px 30px;" >
-								메뉴 <span class="caret"></span>
-							</button>
-							<ul class="dropdown-menu" role="menu"
-								aria-labelledby="dropdownMenu1">
-								<li role="presentation"><a role="menuitem" tabindex="-1"
-									href="#">서재</a></li>
-								<li role="presentation"><a role="menuitem" tabindex="-1"
-									href="#">커뮤니티</a></li>
-								<li role="presentation"><a role="menuitem" tabindex="-1"
-									href="#">책소개</a></li>
-							</ul>
-						</div>
+            <div class="col-xl-1 col-lg-1 col-md-1 col-sm-1">
+                <div class="menu-area1">
+                    <div class="limit-box menu-area-main"  style="margin: 10px 0px 0px -200px;">
+						<a id="name" href="bsearch.do" font size="15px">서재</a>
 					</div>
                 </div>
             </div>
-            <div class="col-xl-7 col-lg-7 col-md-7 col-sm-7">
+            <div class="col-xl-1 col-lg-1 col-md-1 col-sm-1" >
+                <div class="menu-area2">
+                    <div class="limit-box menu-area-main" style="margin: 10px 0px 0px -110px;">
+						<a id="name" href="bsearch.do">커뮤니티</a>
+					</div>
+                </div>
+            </div>
+            <div class="col-xl-1 col-lg-1 col-md-1 col-sm-1">
+                <div class="menu-area3">
+                    <div class="limit-box menu-area-main" style="margin: 10px 0px 0px 0px;">
+						<a id="name" href="bsearch.do">책 소개</a>
+					</div>
+                </div>
+            </div>
+            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
                 <div class="menu-area">
                     <div class="limit-box menu-area-main1">
-                    		<a href="mainpage.do"><i class="bi bi-search" style="font-size: 2rem;" ></i></a>
-                            <a href="mainpage.do"><i class="bi bi-person-badge-fill"  style="font-size: 2rem;"></i></a>
-                            <a href="mainpage.do"><i class="bi bi-power" style="font-size: 2rem;" ></i></a>
+                    		<a id="name" href="bsearch.do"><i class="bi bi-search" style="font-size: 2rem;" ></i></a>
+                            <a id="name" href="mainpage.do"><i class="bi bi-person-badge-fill"  style="font-size: 2rem;"></i></a>
+                            <a id="name" href="mainpage.do"><i class="bi bi-power" style="font-size: 2rem;" ></i></a>
                     </div>
                 </div>
             </div>
