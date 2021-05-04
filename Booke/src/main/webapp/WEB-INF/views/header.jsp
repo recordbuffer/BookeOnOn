@@ -26,7 +26,7 @@
                     <div class="limit-box menu-area-main">
 						<div class="dropdown">
 							<button class="btn btn-default dropdown-toggle" type="button"
-								id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
+								id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true" style="margin: 5px 0px 0px 30px;" >
 								메뉴 <span class="caret"></span>
 							</button>
 							<ul class="dropdown-menu" role="menu"
@@ -45,13 +45,13 @@
             <div class="col-xl-7 col-lg-7 col-md-7 col-sm-7">
                 <div class="menu-area">
                     <div class="limit-box menu-area-main1">
-                    		<i class="bi bi-gem" style="font-size: 2rem;"></i>
-                            <a href="mainpage.do"><i class="bi bi-file-earmark-person-fill"  style="font-size: 2rem;"></i></a>
+                    		<a href="mainpage.do"><i class="bi bi-search" style="font-size: 2rem;" ></i></a>
+                            <a href="mainpage.do"><i class="bi bi-person-badge-fill"  style="font-size: 2rem;"></i></a>
+                            <a href="mainpage.do"><i class="bi bi-power" style="font-size: 2rem;" ></i></a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <div class="bo"></div>
 </body>
 </html>
