@@ -45,7 +45,7 @@
                 <div class="full">
                     <div class="center-desk">
                         <div class="logo">
-                            <a href="#"><img src="resources/images/logo1.png" alt="#" style="margin: 0px 0px 0px 50px;"></a>
+                            <a href="#"><img src="resources/images/logo1.png" alt="#" style="margin: 0px 0px 0px -150px;"></a>
                         </div>
                     </div>
                 </div>
