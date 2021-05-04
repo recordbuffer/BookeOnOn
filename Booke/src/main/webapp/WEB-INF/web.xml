@@ -47,6 +47,14 @@
 		<filter-name>encodingFilter</filter-name>
 		<url-pattern>/*</url-pattern>
 	</filter-mapping>
+	</insert>
+	<!-- 로긴 -->
+	<select id="login" resultType="">
+	  SELECT BEID, BEPASS
+	  FROM BE_NO
+	  WHERE BEID = #{beId}
+	   AND BEPW = #{bePw}
+	</select>
 
 
 

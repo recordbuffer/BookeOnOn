@@ -30,8 +30,8 @@ public class MainController {
       return "home";
    }
 
-   // [½ÃÀÛ > ¸ŞÀÎ]
-   // À£ÄÄÆäÀÌÁö·Î ÀÌµ¿
+// [ì‹œì‘ > ë©”ì¸]
+	// ì›°ì»´í˜ì´ì§€ë¡œ ì´ë™
    @RequestMapping("/welcome.do")
    public String index() {
       logger.info("WELCOME PAGE");
@@ -39,7 +39,7 @@ public class MainController {
       return "welcome";
    }
 
-   // ¸ŞÀÎ ÆäÀÌÁö·Î ÀÌµ¿
+// ë©”ì¸ í˜ì´ì§€ë¡œ ì´ë™
    @RequestMapping("/main.do")
    public String main() {
       logger.info("MAIN PAGE");
@@ -47,8 +47,8 @@ public class MainController {
       return "mainpage";
    }
 
-   // [È¸¿ø ·Î±×ÀÎ]
-   // ·Î±×ÀÎ ÆäÀÌÁö·Î ÀÌµ¿
+// [íšŒì› ë¡œê·¸ì¸]
+	// ë¡œê·¸ì¸ í˜ì´ì§€ë¡œ ì´ë™
    @RequestMapping("/loginform.do")
    public String loginForm() {
       logger.info("LOGIN FORM");
@@ -56,7 +56,7 @@ public class MainController {
       return "loginpage";
    }
 
-   // È¸¿ø°¡ÀÔ ÆäÀÌÁö·Î ÀÌµ¿
+// íšŒì›ê°€ì… í˜ì´ì§€ë¡œ ì´ë™
    @RequestMapping("/signup.do")
    public String signupform() {
       logger.info("SIGN UP FORM");
@@ -64,36 +64,42 @@ public class MainController {
       return "signuppage";
    }
 
-   // È¸¿ø°¡ÀÔ_¾ÆÀÌµğ Áßº¹ Ã¼Å© ÆäÀÌÁö·Î ÀÌµ¿
+// íšŒì›ê°€ì…_ì•„ì´ë”” ì¤‘ë³µ ì²´í¬ í˜ì´ì§€ë¡œ ì´ë™
    @RequestMapping(value = "/idChk.do")
    public String signup_idChk() {
       logger.info("SIGNUP ID CHECK POP UP");
 
       return "signuppage_idchk";
    }
+// íšŒì›ê°€ì…_ë‹‰ë„¤ì„ ì¤‘ë³µ ì²´í¬ í˜ì´ì§€ë¡œ ì´ë™
+   @RequestMapping(value = "/nick_chk.do")
+   public String signup_nickChk() {
+      logger.info("SIGNUP NICK_CHK POP UP");
 
-   // [¸ŞÀÎ ÆäÀÌÁö]
-   // ¸ŞÀÎ_Áöµµ À§Ä¡ ÆË¾÷
+      return "nick_chk";
+   }
+// [ë©”ì¸ í˜ì´ì§€]
+	// ë©”ì¸_ì§€ë„ ìœ„ì¹˜ íŒì—…
    @RequestMapping("/detailmap.do")
    public String detailmap() {
       return "detailmap";
    }
 
-   // Ã¥ ¼Ò°³ ÆäÀÌÁö·Î ÀÌµ¿
+// ì±… ì†Œê°œ í˜ì´ì§€ë¡œ ì´ë™
    @RequestMapping("/bookintro.do")
    public String bookintro() {
       return "bookintro";
    }
 
-   // Ã¥ ¼Ò°³ ÆäÀÌÁö_ÆË¾÷ »ó¼¼ Á¤º¸
+// ì±… ì†Œê°œ í˜ì´ì§€_íŒì—… ìƒì„¸ ì •ë³´
    @RequestMapping("/detailpopup.do")
    public String detailpopup() {
       return "detailpopup";
    }
    
    
-   // [ Ä£±¸ °Ë»ö ]
-   // Ä£±¸ °Ë»ö ÆäÀÌÁö·Î ÀÌµ¿
+// [ ì¹œêµ¬ ê²€ìƒ‰ ]
+	// ì¹œêµ¬ ê²€ìƒ‰ í˜ì´ì§€ë¡œ ì´ë™
    @RequestMapping("/fsearch.do")
    public String fsearch() {
       logger.info("FRIEND SEARCH PAGE");
@@ -101,7 +107,7 @@ public class MainController {
       return "fsearchpage";
    }
 
-   // Ä£±¸ °Ë»ö ÆäÀÌÁö > °Ë»ö °á°ú ÆäÀÌÁö·Î ÀÌµ¿
+// ì¹œêµ¬ ê²€ìƒ‰ í˜ì´ì§€ > ê²€ìƒ‰ ê²°ê³¼ í˜ì´ì§€ë¡œ ì´ë™
    @RequestMapping("/fres.do")
    public String fres() {
       logger.info("FRIEND SEARCH RES PAGE");
@@ -110,48 +116,48 @@ public class MainController {
    }
 
    
-   //[ ÂÊÁö ±â´É]
-   // ÂÊÁö º¸³»±â 
+ //[ ìª½ì§€ ê¸°ëŠ¥]
+ 	// ìª½ì§€ ë³´ë‚´ê¸°
    @RequestMapping("/msg.do")
    public String msg() {
       return "msg";
    }
    
    
-   // [ Ã¥ °Ë»ö ]
-   // Ã¥ °Ë»ö ÆäÀÌÁö·Î ÀÌµ¿
+// [ ì±… ê²€ìƒ‰ ]
+	// ì±… ê²€ìƒ‰ í˜ì´ì§€ë¡œ ì´ë™
    @RequestMapping("/bsearch.do")
    public String bsearch() {
       return "bsearchpage";
    }
 
-   // Ã¥ °Ë»ö °á°ú ÆäÀÌÁö·Î ÀÌµ¿
+// ì±… ê²€ìƒ‰ ê²°ê³¼ í˜ì´ì§€ë¡œ ì´ë™
    @RequestMapping("/bres.do")
    public String bres() {
       return "bsearchpage_res";
    }
 
-   // [ ¼­Àç ]
-   // ¼­Àç ÆäÀÌÁö·Î ÀÌµ¿
+// [ ì„œì¬ ]
+	// ì„œì¬ í˜ì´ì§€ë¡œ ì´ë™
    @RequestMapping("/bcase.do")
    public String bcase() {
       return "bookcase";
    }
 
-   // ¼­Àç ÆäÀÌÁö_Ä¶¸°´õ·Î ÀÌµ¿
+// ì„œì¬ í˜ì´ì§€_ìº˜ë¦°ë”ë¡œ ì´ë™
    @RequestMapping("/bcaseCal.do")
    public String bcaseCal() {
       return "bookcase_cal";
    }
 
-   // [¼³Á¤]
-   // ¼³Á¤ ÆäÀÌÁö·Î ÀÌµ¿
+// [ì„¤ì •]
+	// ì„¤ì • í˜ì´ì§€ë¡œ ì´ë™
    @RequestMapping("/setting.do")
    public String setting() {
       return "setting";
    }
 
-   // È¸¿ø Á¤º¸ ¼öÁ¤ ÆäÀÌÁö·Î ÀÌµ¿
+// íšŒì› ì •ë³´ ìˆ˜ì • í˜ì´ì§€ë¡œ ì´ë™
    @RequestMapping("/updateform.do")
    public String updateform() {
       logger.info("UPDATE MEMBER INFO PAGE");
@@ -159,7 +165,7 @@ public class MainController {
       return "updatepage";
    }
 
-   // È¸¿ø Å»Åğ ÆäÀÌÁö·Î ÀÌµ¿
+// íšŒì› íƒˆí‡´ í˜ì´ì§€ë¡œ ì´ë™
    @RequestMapping("/md_aks.do")
    public String mdelete() {
       logger.info("MEMBER DELETE PAGE");
@@ -167,7 +173,7 @@ public class MainController {
       return "mdeletepage";
    }
 
-   // È¸¿ø Å»Åğ È®ÀÎ ÆäÀÌÁö·Î ÀÌµ¿
+// ì¹œêµ¬ ê´€ë¦¬ í˜ì´ì§€ë¡œ ì´ë™
    @RequestMapping(value = "/deleteChk.do")
    public String mdelete_Chk() {
       logger.info("MEMBER DELETE CHECK POP UP");
@@ -175,7 +181,7 @@ public class MainController {
       return "mdeletepage_Chk";
    }
 
-   // Ä£±¸ °ü¸® ÆäÀÌÁö·Î ÀÌµ¿
+// ìª½ì§€ ê´€ë¦¬ í˜ì´ì§€ë¡œ ì´ë™
    @RequestMapping("/friend.do")
    public String friend() {
       logger.info("FRIEND PAGE");
@@ -183,17 +189,17 @@ public class MainController {
       return "friendpage";
    }
 
-   // ÂÊÁö °ü¸® ÆäÀÌÁö·Î ÀÌµ¿
+// ìª½ì§€ ê´€ë¦¬ í˜ì´ì§€ë¡œ ì´ë™
 
-   
-   //[ Ä¿¹Â´ÏÆ¼ ]
-   //Ä¿¹Â´ÏÆ¼ ÆäÀÌÁö·Î ÀÌµ¿
+	
+	//[ ì»¤ë®¤ë‹ˆí‹° ]
+	//ì»¤ë®¤ë‹ˆí‹° í˜ì´ì§€ë¡œ ì´ë™
    @RequestMapping("/communityMain.do")
    public String communityMain() {
       return "communityMain";
    }
    
-   //Ä¿¹Â´ÏÆ¼ Ã¤ÆÃ¹æÀ¸·Î ÀÌµ¿
+ //ì»¤ë®¤ë‹ˆí‹° ì±„íŒ…ë°©ìœ¼ë¡œ ì´ë™
    @RequestMapping("/communityChat.do")
    public String communityChat() {
       return "communityChat";

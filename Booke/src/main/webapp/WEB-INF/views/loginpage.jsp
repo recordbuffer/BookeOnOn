@@ -57,6 +57,7 @@ a:hover{color:rgb(223, 45, 139);}
 
 
 	<main class="form-signin">
+	 <from method="post" action="loginAction.jsp">
 		<img class="mb-4" src="resources/images/logo.png" alt="#" width="130">
 		<br> <br>
 		<hr>
@@ -69,7 +70,7 @@ a:hover{color:rgb(223, 45, 139);}
 			</div>
 			<br>
 			<div class="form">
-				<input type="text" class="form-control" placeholder="비밀번호">
+				<input type="password" class="form-control" placeholder="비밀번호">
 			</div>
 			<br>
 			<div class="form">
@@ -81,6 +82,8 @@ a:hover{color:rgb(223, 45, 139);}
 		<br><br><br>
 		<a href="">아이디 or 비밀번호 찾기</a>&nbsp;&nbsp;<span>/</span>&nbsp;
 		<a href="signup.do">회원가입</a>
+		<a href="loginAction.jsp"></a>
+		
 
 	</main>
 

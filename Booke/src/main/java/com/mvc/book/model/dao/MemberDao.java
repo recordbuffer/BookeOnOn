@@ -17,7 +17,7 @@ public interface MemberDao {
 
 		// 로그인
 		public MemberDto login(MemberDto dto);
-
+		
 		// 로그인 아이디 찾기
 		public String get_searchId(String be_name, String be_email);
 
@@ -27,7 +27,7 @@ public interface MemberDao {
 		// 회원 정보 수정
 		public String updateGET(HttpSession session, Model model) throws Exception;
 
-		// 회원 탈퇴
+		// 회원 탈퇴 
 		public int deleteMember(String be_id, String be_pw);
-
+ 
 }

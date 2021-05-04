@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>프로젝트 만들기</title>
+</head>
+<style>
+	#pr_title{
+		width: 425px;
+        height: 50px;
+        margin: 0 auto;
+        position: relative;
+	}
+	#pr_content{
+		width: 425px;
+        height: 100px;
+        margin: 0 auto;
+        position: relative;
+	}
+	#popup{
+		width: 450px;
+        height: 250px;
+        margin: 0 auto;
+        position: relative;
+	}
+	#pr_button{
+		position: center;
+		border-radius: 5px, 5px, 5px, 5px;
+		border: 1px solid black;
+		color: black;
+	}
+	#pr_button:hover{
+		color: blue;
+	}
+</style>
+<body>
+	<form action="GroupController.do?command=createNewGroup" method="post">
+		<div id="popup">
+			<br>
+			<input type="text" id="pr_title" name="group_title" size="16" placeholder="프로젝트 제목을 입력하세요">
+			<br><br>
+			<input type="text" id="pr_content" name="group_content" size="60" placeholder="설명글을 입력할 수 있습니다">
+			<br><br>
+			<input type="submit" id="pr_button" value="프로젝트 생성">
+		</div>
+	</form>
+	
+</body>
+</html>

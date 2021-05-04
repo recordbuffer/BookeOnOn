@@ -17,11 +17,8 @@ public class MemberDaoImpl implements MemberDao{
 	@Autowired
 	private SqlSessionTemplate sqlSession;
 	
-	
-	
 	@Override
 	public void memberJoinMethod(MemberDto dto) {
-		// TODO Auto-generated method stub
 		
 	}
 
