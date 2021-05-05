@@ -30,6 +30,7 @@
     src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
     crossorigin="anonymous"></script>
+    
 
 <link rel="stylesheet" href="resources/css/footer.css">
 <link rel="stylesheet" href="resources/css/mainpage.css">
@@ -40,7 +41,6 @@
 	<jsp:include page="header.jsp"></jsp:include>
 	<br>
 	<br>
-
 	<!-- Header -->
 	<header class="bg-primary py-5 mb-5" id="mainhd">
 		<div class="container h-100">
@@ -81,20 +81,6 @@
              $("#new4").append("<img src = '" + msg.documents[8].thumbnail + "'/>");
              $("#new5").append("<img src = '" + msg.documents[9].thumbnail + "'/>");
          });
-         
-	 $.ajax({
-         method: "GET",
-         url: "http://www.aladin.co.kr/ttb/api/ItemList.aspx",
-         dataType : "json",
-         data: { 
-             TTBKey : "ttbwngysnl1010004", 
-             QueryType : "Bestseller",
-             SearchTarget : "Book"
-         }
-     })
-         .done(function (msg) {
-             console.log(msg);
-         });	
 </script>
 
 	<!-- Page Content -->
