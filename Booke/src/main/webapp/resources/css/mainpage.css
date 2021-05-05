@@ -157,18 +157,18 @@ body {
 }
 
 .btn-check:checked+.btn-outline-primary {
-	color: black;
-	background-color: rgb(181, 227, 216);
-	border-color: rgb(181, 227, 216);
-	border: 3px solid white;
-	z-index: 1;
+	color: black !important;
+	background-color: rgb(181, 227, 216) !important;
+	border-color: rgb(181, 227, 216) !important;
+	border: 3px solid white !important;
+	z-index: 1 !important;
 }
 
 .btn-outline-primary {
-	color: black;
-	font-weight: bold;
-	background-color: rgb(181, 227, 216);
-	border-color: rgb(181, 227, 216);
+	color: black !important;
+	font-weight: bold !important;
+	background-color: rgb(181, 227, 216) !important;
+	border-color: rgb(181, 227, 216) !important;
 }
 
 .noting {
@@ -184,9 +184,9 @@ body {
 	position: absolute;
     width: 400px;
     height: 225px;
+    background-color: rgb(198, 198, 198);
     top: 478px;
     left: -35px;
-    background-color: rgb(198, 198, 198);
 }
 
 .login_img {
