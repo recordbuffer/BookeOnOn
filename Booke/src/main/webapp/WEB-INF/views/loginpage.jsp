@@ -73,8 +73,7 @@ a:hover{color:rgb(223, 45, 139);}
 			</div>
 			<br>
 			<div class="form">
-				<input type="submit" value="로그인" class="form-control" id="btn"
-					onclick="">
+				<input type="submit" value="로그인" class="form-control" id="btn">
 			</div>
 		</form>
 		

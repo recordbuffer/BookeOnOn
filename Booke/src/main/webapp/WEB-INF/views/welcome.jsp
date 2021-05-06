@@ -30,6 +30,7 @@
       <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
 
+
 </head>
 <!-- body -->
 <body class="main-layout home_page"
@@ -43,7 +44,7 @@
 					<div class="center-desk">
 						<div class="logo">
 							<a href="#"><img src="resources/images/logo1.png" alt="#"
-								style="margin: 0px 0px 0px 50px;"></a>
+								style="margin: 0px 0px 0px 100px;"></a>
 						</div>
 					</div>
 				</div>
@@ -53,13 +54,12 @@
 					<div class="limit-box menu-area-main">
 						<a href="loginform.do"><img
 							src="resources/images/top-icon.png" alt="#"
-							style="margin: 0px 50px 0px 0px;" /></a>
+							style="margin: 5px 50px 0px 100px;" /></a>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
-	<div class="bo"></div>
 
 	<!-- slider section -->
 
@@ -211,8 +211,6 @@
 			</div>
 		</div>
 	</div>
-	<div class="chatbot">챗봇</div>
-
 	<jsp:include page="footer.jsp"></jsp:include>
 
 	<!-- Javascript files-->
