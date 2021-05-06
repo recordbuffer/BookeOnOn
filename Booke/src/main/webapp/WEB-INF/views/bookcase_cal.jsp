@@ -15,7 +15,7 @@
 <link rel="stylesheet"
 	href="${pageContext.request.contextPath}/resources/css/responsive.css">
 
-<link rel="stylesheet" href="resources/css/mainpage.css" type="text/css">
+<link rel="stylesheet" href="resources/css/bookcase_cal.css" type="text/css">
 
 
 <style type="text/css">

@@ -75,38 +75,20 @@
              $("#best3").append("<img src = '" + msg.documents[2].thumbnail + "'/>");
              $("#best4").append("<img src = '" + msg.documents[3].thumbnail + "'/>");
              $("#best5").append("<img src = '" + msg.documents[4].thumbnail + "'/>");
-             $("#new1").append("<img src = '" + msg.documents[5].thumbnail + "'/>");
-             $("#new2").append("<img src = '" + msg.documents[6].thumbnail + "'/>");
-             $("#new3").append("<img src = '" + msg.documents[7].thumbnail + "'/>");
-             $("#new4").append("<img src = '" + msg.documents[8].thumbnail + "'/>");
-             $("#new5").append("<img src = '" + msg.documents[9].thumbnail + "'/>");
          });
          
-	 $.ajax({
-         method: "GET",
-         url: "http://www.aladin.co.kr/ttb/api/ItemList.aspx",
-         dataType : "json",
-         data: { 
-             TTBKey : "ttbwngysnl1010004", 
-             QueryType : "Bestseller",
-             SearchTarget : "Book"
-         }
-     })
-         .done(function (msg) {
-             console.log(msg);
-         });	
+     
 </script>
 
 	<!-- Page Content -->
-	<input type="button" onclick="location.href='bookintro.do'">
+
 	<div class="container-fluid">
 		<div class="row">
 			<div class="col-md-7 offset-md-1">
 				<div class="container">
 					<div class="row" id="cdb">
 						<div class="best_seller">
-							<div class="best_category text-right">
-							<div class="text-left" style="position: absolute; font-size: 30px; margin: 8px;">베스트셀러</div>
+							<div class="best_category text-center">
 								<div class="btn-group" role="group"
 									aria-label="Basic radio toggle button group">
 									<input type="radio" class="btn-check" name="best_btnradio"
@@ -127,7 +109,7 @@
 								</div>
 							</div>
 							<div class="best_book bb_1 text-center" id="best1">
-								<div class="bb_1_star text-center">별점</div>
+								<div class="bb_1_star">별점</div>
 							</div>
 							<div class="best_book bb_2 text-center"  id="best2">
 								<div class="bb_2_star text-center">별점</div>
@@ -143,8 +125,7 @@
 							</div>
 						</div>
 						<div class="col-sm-12 new_seller">
-							<div class="new_category text-right">
-							<div class="text-left" style="position: absolute; font-size: 30px; margin: 8px;">신간</div>
+							<div class="new_category text-center">
 								<div class="btn-group" role="group"
 									aria-label="Basic radio toggle button group">
 									<input type="radio" class="btn-check" name="new_btnradio"
@@ -164,19 +145,24 @@
 										class="btn btn-outline-primary" for="btnradio10">교재 </label>
 								</div>
 							</div>
-							<div class="new_book nb_1 text-center"  id="new1">
+							<div class="new_book nb_1 text-center">
+								커버
 								<div class="nb_1_star text-center">별점</div>
 							</div>
-							<div class="new_book nb_2 text-center" id="new2">
+							<div class="new_book nb_2 text-center">
+								커버
 								<div class="nb_2_star text-center">별점</div>
 							</div>
-							<div class="new_book nb_3 text-center" id="new3">
+							<div class="new_book nb_3 text-center">
+								커버
 								<div class="nb_3_star text-center">별점</div>
 							</div>
-							<div class="new_book nb_4 text-center" id="new4">
+							<div class="new_book nb_4 text-center">
+								커버
 								<div class="nb_4_star text-center">별점</div>
 							</div>
-							<div class="new_book nb_5 text-center" id="new5">
+							<div class="new_book nb_5 text-center">
+								커버
 								<div class="nb_5_star text-center">별점</div>
 							</div>
 						</div>
@@ -305,9 +291,12 @@
 				</div>
 			</div>
 		</div>
-		<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-		<jsp:include page="footer.jsp"></jsp:include>
 	</div>
-	
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<jsp:include page="footer.jsp"></jsp:include>
 </body>
 </html>

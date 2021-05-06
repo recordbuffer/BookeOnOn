@@ -39,7 +39,7 @@
 
 <body>
 
-	<jsp:include page="header.jsp"></jsp:include>
+	<jsp:include page="headerCommunity.jsp"></jsp:include>
 
 
 	<header class="bg-primary py-5 mb-5" id="mainhd">
@@ -58,7 +58,7 @@
 
 	<div class="container-fluid">
 		<div class="row">
-			<div class="col-sm-9">
+			<div class="col-md-7 offset-md-1">
 				<div class="container" id="img-thumbnaail_border">
 					<div class="row" id="cdb">
 						<div class="col-sm-12">
@@ -77,7 +77,7 @@
 							</h1>
 
 							<div class="col-mb-12">
-								<div class="row row-cols-1 row-cols-md-5 g-4">
+								<div class="row row-cols-1 row-cols-md-4 g-4">
 									<div class="col">
 										<div class="card border-success mb-3 "
 											style="width: 15rem; height: 18rem">
@@ -180,7 +180,7 @@
 				</div>
 			</div>
 
-			<div class="col-sm-3">
+			<div class="col-md-2">
 				<div class="container">
 					<div class="row">
 						<div class="col-sm-12">
@@ -475,6 +475,6 @@
 	<br>
 	<br>
 	<br>
-	<jsp:include page="footer.jsp"></jsp:include>
+	<jsp:include page="footerCommunity.jsp"></jsp:include>
 </body>
 </html>

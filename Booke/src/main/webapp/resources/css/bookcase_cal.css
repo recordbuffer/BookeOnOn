@@ -3,8 +3,8 @@
 .login_menu {
 	position: absolute;
 	background-color: rgb(119, 109, 097);
-	left: 1166.5px;
-	top: 78px;
+	left: 1015px;
+	top: 409px;
 }
 
 .login_btn {
@@ -88,243 +88,20 @@
 	border: 1px solid black;
 	position: relative;
 	border: 1px solid black;
-	left: 30%;
-	bottom: -30px;
-	background-color: rgb(119, 109, 097);
-}
-
-.w_book {
-	border: 5px solid white;
-	width: 100px;
-	height: 35px;
-	margin: 24px;
-	position: relative;
-	background-color: rgb(181, 227, 216);
-}
-
-.n_book {
-	border: 5px solid white;
-	width: 100px;
-	height: 35px;
-	margin: 24px;
-	position: relative;
-	background-color: rgb(181, 227, 216);
-}
-
-.n1 {
-	height: 13%;
-	width: 15%;
-	border: 1px solid black;
-	margin: 20px 20px 20px 20px;
-	border: 1px solid black;
-	position: absolute;
-	top: 18%;
-	left: 2%;
-	background-color: rgb(255, 255, 255);
-}
-
-.n2 {
-	height: 13%;
-	width: 15%;
-	border: 1px solid black;
-	margin: 20px 20px 20px 20px;
-	border: 1px solid black;
-	position: absolute;
-	top: 18%;
 	left: 20%;
-	background-color: rgb(255, 255, 255);
-}
-
-.n3 {
-	height: 13%;
-	width: 15%;
-	border: 1px solid black;
-	margin: 20px 20px 20px 20px;
-	border: 1px solid black;
-	position: absolute;
-	top: 18%;
-	left: 38%;
-	background-color: rgb(255, 255, 255);
-}
-
-.n4 {
-	height: 13%;
-	width: 15%;
-	border: 1px solid black;
-	margin: 20px 20px 20px 20px;
-	border: 1px solid black;
-	position: absolute;
-	top: 18%;
-	left: 56%;
-	background-color: rgb(255, 255, 255);
-}
-
-.n5 {
-	height: 13%;
-	width: 15%;
-	border: 1px solid black;
-	margin: 20px 20px 20px 20px;
-	border: 1px solid black;
-	position: absolute;
-	top: 18%;
-	left: 74%;
-	background-color: rgb(255, 255, 255);
-}
-
-.n6 {
-	height: 13%;
-	width: 15%;
-	border: 1px solid black;
-	margin: 20px 20px 20px 20px;
-	border: 1px solid black;
-	position: absolute;
-	top: 43%;
-	left: 2%;
-	background-color: rgb(255, 255, 255);
-}
-
-.n7 {
-	height: 13%;
-	width: 15%;
-	border: 1px solid black;
-	margin: 20px 20px 20px 20px;
-	border: 1px solid black;
-	position: absolute;
-	top: 43%;
-	left: 20%;
-	background-color: rgb(255, 255, 255);
-}
-
-.n8 {
-	height: 13%;
-	width: 15%;
-	border: 1px solid black;
-	margin: 20px 20px 20px 20px;
-	border: 1px solid black;
-	position: absolute;
-	top: 43%;
-	left: 38%;
-	background-color: rgb(255, 255, 255);
-}
-
-.n9 {
-	height: 13%;
-	width: 15%;
-	border: 1px solid black;
-	margin: 20px 20px 20px 20px;
-	border: 1px solid black;
-	position: absolute;
-	top: 43%;
-	left: 56%;
-	background-color: rgb(255, 255, 255);
-}
-
-.n10 {
-	height: 13%;
-	width: 15%;
-	border: 1px solid black;
-	margin: 20px 20px 20px 20px;
-	border: 1px solid black;
-	position: absolute;
-	top: 43%;
-	left: 74%;
-	background-color: rgb(255, 255, 255);
-}
-
-.n11 {
-	height: 13%;
-	width: 15%;
-	border: 1px solid black;
-	margin: 20px 20px 20px 20px;
-	border: 1px solid black;
-	position: absolute;
-	top: 68%;
-	left: 2%;
-	background-color: rgb(255, 255, 255);
-}
-
-.n12 {
-	height: 13%;
-	width: 15%;
-	border: 1px solid black;
-	margin: 20px 20px 20px 20px;
-	border: 1px solid black;
-	position: absolute;
-	top: 68%;
-	left: 20%;
-	background-color: rgb(255, 255, 255);
-}
-
-.n13 {
-	height: 13%;
-	width: 15%;
-	border: 1px solid black;
-	margin: 20px 20px 20px 20px;
-	border: 1px solid black;
-	position: absolute;
-	top: 68%;
-	left: 38%;
-	background-color: rgb(255, 255, 255);
-}
-
-.n14 {
-	height: 13%;
-	width: 15%;
-	border: 1px solid black;
-	margin: 20px 20px 20px 20px;
-	border: 1px solid black;
-	position: absolute;
-	top: 68%;
-	left: 56%;
-	background-color: rgb(255, 255, 255);
-}
-
-.n15 {
-	height: 13%;
-	width: 15%;
-	border: 1px solid black;
-	margin: 20px 20px 20px 20px;
-	border: 1px solid black;
-	position: absolute;
-	top: 68%;
-	left: 74%;
-	background-color: rgb(255, 255, 255);
+	bottom: -360px;
 }
 
 .b1 {
 	height: 3%;
-	width: 90%;
+	width: 30%;
 	border: 1px solid black;
 	margin: 20px 20px 20px 20px;
 	border: 1px solid black;
 	position: relative;
-	top: 20%;
-	left: 1%;
-	background-color: rgb(181, 227, 216);
-}
-
-.b2 {
-	height: 3%;
-	width: 90%;
-	border: 1px solid black;
-	margin: 20px 20px 20px 20px;
-	border: 1px solid black;
-	position: relative;
-	top: 40%;
-	left: 1%;
-	background-color: rgb(181, 227, 216);
-}
-
-.b3 {
-	height: 3%;
-	width: 90%;
-	border: 1px solid black;
-	margin: 20px 20px 20px 20px;
-	border: 1px solid black;
-	position: relative;
-	top: 60%;
-	left: 1%;
-	background-color: rgb(181, 227, 216);
+	top: 1%;
+	left: 32%;
+	text-align: center;
 }
 
 .d2 {
@@ -333,8 +110,8 @@
 	border: 1px solid black;
 	position: relative;
 	border: 1px solid black;
-	left: 30%;
-	bottom: -50px;
+	left: 20%;
+	bottom: -400px;
 	background-color: rgb(181, 227, 216);
 }
 
@@ -343,8 +120,8 @@
 	height: 100px;
 	border: 1px solid black;
 	position: absolute;
-	left: 69%;
-	top: 980px;
+	left: 60%;
+	top: 1300px;
 	right: 10%;
 	text-align: center;
 }

@@ -5,7 +5,8 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
-<link rel="stylesheet" href="resources/css/header.css">
+<link rel="stylesheet" href="resources/css/headerCommunity.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css">
 </head>
 <body>
     <!-- header inner -->
@@ -23,12 +24,15 @@
             <div class="col-xl-9 col-lg-9 col-md-9 col-sm-9">
                 <div class="menu-area">
                     <div class="limit-box menu-area-main">
-                            <a href="mainpage.do"><img src="resources/images/search_icon.png" alt="#'" style="margin: 0px 50px 0px 0px;"/></a>
+                    		<a href="communityMain.do"><i class="bi bi-github" style="font-size: 2rem; color: white;"></i></a>
+                    		<a href="communityChat.do"><i class="bi bi-gear-fill" style="font-size: 2rem; color: cornflowerblue;"></i></a>
+                            <a href="bsearch.do"><i class="bi bi-search" style="font-size: 2rem; color: red;"></i></a>
+                            
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <div class="bo"></div>
+    
 </body>
 </html>
