@@ -1,0 +1,52 @@
+index > welcomepage
+
+a_layout : 메인페이지 기본 틀
+header + css
+footer + css
+
+
+welcomepage : 웰컴페이지
+mainpage : 메인페이지 + css
+
+[회원 기능]
+loginpage : 로그인
+signuppage : 회원가입
+signuppage_idchk : 회원가입 아이디 중복 팝업
+
+[쪽지 기능]
+msg : 쪽지 보내는 페이지
+
+
+[친구 기능]
+fsearchpage : 친구 검색 페이지
+fsearchpage_res : 친구 검색 결과 페이지 
+
+[책 소개 기능]
+bookintro : 책소개 + css
+detailmap : 지도 팝업 
+detailpopup : 책 소개 상세 
+
+
+[책 검색 기능]
+bsearchpage : 책 검색 
+bsearchpage_res : 책 검색 결과
+
+
+[서재 기능]
+bookcase : 서재   + css
+bookcase_cal : 서재 + 캘린더 + css
+
+[설정 기능]
+setting : 설정 페이지
+friendpage : 친구 관리 페이지 
+mdeletepage : 회원 탈퇴 페이지
+mdeletepage_Chk : 회원 탈퇴 확인 팝업
+
+
+[커뮤니티 기능]
+communityMain : 커뮤니티 메인   + community.css
+communityChat : 커뮤니티 채팅   + community.css
+headerCommunity : 커뮤니티의 헤더 
+
+
+

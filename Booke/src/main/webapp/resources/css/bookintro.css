@@ -68,18 +68,18 @@ body {
 }
 
 .btn-check:checked+.btn-outline-primary {
-	color: black;
-	background-color: rgb(181, 227, 216);
-	border-color: rgb(181, 227, 216);
-	border: 3px solid white;
-	z-index: 1;
+	color: black !important;
+	background-color: rgb(181, 227, 216) !important;
+	border-color: rgb(181, 227, 216) !important;
+	border: 3px solid white !important;
+	z-index: 1 !important;
 }
 
 .btn-outline-primary {
-	color: white;
-	font-weight: bold;
-	background-color: rgb(119, 109, 097);
-	border-color: rgb(119, 109, 097);
+	color: white !important;
+	font-weight: bold !important;
+	background-color: rgb(119, 109, 097) !important;
+	border-color: rgb(119, 109, 097) !important;
 }
 
 .library_map {
