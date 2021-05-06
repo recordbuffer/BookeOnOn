@@ -11,7 +11,7 @@ import com.mvc.book.model.dto.MemberDto;
 public class BkBizImpl implements BkBiz{
 
 	@Override
-	public int makeCommunityRoom(BkDto no) {
+	public int makeCommunityRoom(BkDto dto) {
 		// TODO Auto-generated method stub
 		return 0;
 	}
@@ -52,22 +52,5 @@ public class BkBizImpl implements BkBiz{
 		return null;
 	}
 
-	@Override
-	public String loginCheck(MemberDto dto) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public String level(MemberDto dto) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public String forced_Admin(String be_id, String be_pw) {
-		// TODO Auto-generated method stub
-		return null;
-	}
 
 }

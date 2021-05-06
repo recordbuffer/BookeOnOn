@@ -16,16 +16,20 @@
 	href="${pageContext.request.contextPath}/resources/css/responsive.css">
 
 <link rel="stylesheet" href="resources/css/mainpage.css" type="text/css">
-<link
-	href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css"
-	rel="stylesheet"
-	integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6"
-	crossorigin="anonymous">
 
-<link rel="stylesheet"
-	href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-	integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
-	crossorigin="anonymous">
+<!-- CSS only -->
+<link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1"
+    crossorigin="anonymous">
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css">
+<!-- JavaScript Bundle with Popper -->
+<script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+    crossorigin="anonymous"></script>
 
 <link rel="stylesheet" href="resources/css/footer.css">
 <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -38,18 +42,15 @@
 	}
 </script>
 <link rel="stylesheet" href="resources/css/bookintro.css">
-<link rel="stylesheet" href="resources/css/footer.css">
 <style type="text/css">
 .like{
 	display: none;
 }
-
 .check{
 	position: absolute;
     left: 95px;
     top: 5px;
 	}
-
 input[id="chk1"] + label {
 	display: inline-block;
 	width: 30px;
@@ -57,7 +58,6 @@ input[id="chk1"] + label {
 	background: url("resources/images/default.png") 0 0 no-repeat;
 	vertical-align: middle;
 }
-
 input[id="chk1"]:checked + .check {
 	display: inline-block;
 	width: 30px;
@@ -90,9 +90,9 @@ input[id="chk1"]:checked + .check {
 
 	<!-- Page Content -->
 
-	<div class="container">
+	<div class="container-fluid">
 		<div class="row">
-			<div class="col-sm-8">
+			<div class="col-md-7 offset-md-1">
 				<div class="container">
 					<div class="row" id="cdb">
 						<div class="category">
@@ -140,7 +140,6 @@ input[id="chk1"]:checked + .check {
 										<div class="intro1_star"></div>
 									</div>
 									<div class="detail_intro2">
-
 										<div class="intro2_star"></div>
 									</div>
 									<div class="detail_intro3">
@@ -148,6 +147,9 @@ input[id="chk1"]:checked + .check {
 									</div>
 									<div class="detail_intro4">
 										<div class="intro4_star"></div>
+									</div>
+									<div class="detail_intro5">
+										<div class="intro5_star"></div>
 									</div>
 								</div>
 								<div class="intro_2">
@@ -163,6 +165,9 @@ input[id="chk1"]:checked + .check {
 									<div class="detail_intro4">
 										<div class="intro4_star"></div>
 									</div>
+									<div class="detail_intro5">
+										<div class="intro5_star"></div>
+									</div>
 								</div>
 								<div class="intro_3">
 									<div class="detail_intro1">
@@ -176,6 +181,9 @@ input[id="chk1"]:checked + .check {
 									</div>
 									<div class="detail_intro4">
 										<div class="intro4_star"></div>
+									</div>
+									<div class="detail_intro5">
+										<div class="intro5_star"></div>
 									</div>
 								</div>
 								<div class="intro_4">
@@ -191,6 +199,9 @@ input[id="chk1"]:checked + .check {
 									<div class="detail_intro4">
 										<div class="intro4_star"></div>
 									</div>
+									<div class="detail_intro5">
+										<div class="intro5_star"></div>
+									</div>
 								</div>
 							</div>
 						</div>
@@ -198,24 +209,20 @@ input[id="chk1"]:checked + .check {
 				</div>
 
 			</div>
-			<div class="col-sm-4">
+			<div class="col-sm-2">
 				<div class="container">
 					<div class="row">
 						<div class="col-sm-12">
 							<div class="login_menu">
 								<!-- 서재 / 커뮤니티 / 내 서재 버튼 div -->
-								<input type="button" class="login_btn" value="서재" onclick="location.href='map.do'">
-								<input type="button" class="login_btn" value="커뮤니티" onclick="">
-								<input type="button" class="login_btn" value="책 소개" onclick="">
 								<div class="login_img">
 									<img src="resources/images/kjh.png"
 										style="border-radius: 100%;">
 								</div>
 								<div class="login_name">
 									<!-- 설정 / 쪽지 버튼, 닉네임 -->
-									<input type="button" class="login_mini_btn" value="설정"
-										onclick=""> <input type="button"
-										class="login_mini_btn" value="쪽지" onclick="">
+									<a href="setting.do"><i class="bi bi-gear-fill" style="font-size: 2.5rem; color: white; position: absolute; left: 160px;"></i></a>
+									<a href="msg.do"><i class="bi bi-chat-text-fill" style="font-size: 2.5rem; color: white; position: relative; left: 110px;"></i></a>
 									<div class="login_nick">닉네임</div>
 								</div>
 								<div>
@@ -241,7 +248,6 @@ input[id="chk1"]:checked + .check {
 									center: new kakao.maps.LatLng(33.450701, 126.570667), //지도의 중심좌표.
 									level: 3 //지도의 레벨(확대, 축소 정도)
 								};
-
 								var map = new kakao.maps.Map(container, options); //지도 생성 및 객체 리턴
 								</script>
 							</div>

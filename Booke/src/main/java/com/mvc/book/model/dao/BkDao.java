@@ -10,7 +10,7 @@ public interface BkDao {
 	
 		// [커뮤니티 소모임]
 		// 소모임 개설
-		public int makeCommunityRoom(BkDto no);
+		public int makeCommunityRoom(BkDto dto);
 
 		// 소모임 리스트 + 정보 띄우기
 		public List<BkDto> communityListAll();

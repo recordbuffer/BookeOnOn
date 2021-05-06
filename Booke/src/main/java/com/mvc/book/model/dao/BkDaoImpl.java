@@ -17,7 +17,7 @@ public class BkDaoImpl implements BkDao{
 	
 	
 	@Override
-	public int makeCommunityRoom(BkDto no) {
+	public int makeCommunityRoom(BkDto dto) {
 		// TODO Auto-generated method stub
 		return 0;
 	}

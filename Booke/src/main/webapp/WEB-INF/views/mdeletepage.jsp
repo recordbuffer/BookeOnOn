@@ -54,9 +54,6 @@ h2 {
 	padding: 20px;
 }
 
-#btn:hover{
-	background-color: rgb(119, 109, 097);
-}
 </style>
 <script type="text/javascript">
 	function deleteChk(){
@@ -87,7 +84,7 @@ h2 {
 		<h2>17 명의 친구들이 있어요.</h2>
 		<br>
 		<br>
-		<h3>정말 탈퇴하시겠어요? &#128557;</h3><br><br>
+		<h3>정말 탈퇴하시겠어요? </h3><h1>&#128557; &#128557;</h1><br><br>
 		<button type="button" class="btn btn-secondary btn-lg btn-block" id="btn" onclick="deleteChk();">네, 탈퇴할래요.</button>
 
 	</main>
