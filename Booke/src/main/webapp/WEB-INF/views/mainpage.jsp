@@ -84,7 +84,6 @@
 </script>
 
 	<!-- Page Content -->
-	<input type="button" onclick="location.href='bookintro.do'">
 	<div class="container-fluid">
 		<div class="row">
 			<div class="col-md-7 offset-md-1">
@@ -291,9 +290,10 @@
 				</div>
 			</div>
 		</div>
+		</div>
 		<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 		<jsp:include page="footer.jsp"></jsp:include>
-	</div>
+	
 	
 </body>
 </html>
