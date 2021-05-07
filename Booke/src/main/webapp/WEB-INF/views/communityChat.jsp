@@ -17,7 +17,7 @@
 
 <link rel="stylesheet" href="resources/css/mainpage.css" type="text/css">
 
-<link rel="stylesheet" href="resources/css/community.css"
+<link rel="stylesheet" href="resources/css/communityChat.css"
 	type="text/css">
 
 <!-- CSS only -->

@@ -5,11 +5,11 @@
 }
 
 #mainhd {
-	background-color: rgb(119, 109, 97) !important;
+	background-color: rgb(178, 138, 135) !important;
 }
 
 #hddiv {
-	background-color: rgb(119, 109, 97) !important;
+	background-color: rgb(178, 138, 135) !important;
 	margin-top: 50px;
 }
 
@@ -27,107 +27,113 @@ body {
 }
 
 .best_category {
-	width: 620px;
+	width: 888px;
 	background-color: rgb(181, 227, 216);
 }
 
 .new_category {
-	width: 620px;
-	left: 0px;
-	top: 30px;
-	background-color: rgb(181, 227, 216);
-	position: relative;
+	width: 888px;
+    left: 0px;
+    top: 180px;
+    background-color: rgb(181, 227, 216);
+    position: relative;
 }
 
 .best_book, .new_book {
-	border: 1px solid black;
-	width: 80px;
-	height: 120px;
-	position: relative;
+    width: 170px;
+    height: 235px;
+    
+}
+
+.best_book > img, .new_book > img{
+	width: 100%;
+	height: 100%;
+	
 }
 
 .bb_1 {
 	position: relative;
-	top: 25px;
+    top: 25px;
 }
 
 .bb_2 {
 	position: relative;
-	left: 132px;
-    top: -95px;
+    left: 180px;
+    top: -210px;
 }
 
 .bb_3 {
 	position: relative;
-	left: 265px;
-    top: -215px;
+    left: 359px;
+    top: -445px;
 }
 
 .bb_4 {
 	position: relative;
-	left: 404px;
-    top: -335px;
+    left: 539px;
+    top: -680px;
 }
 
 .bb_5 {
 	position: relative;
-    left: 539px;
-    top: -455px;
+    left: 719px;
+    top: -915px;
 }
 
 .bb_1_star, .bb_2_star, .bb_3_star, .bb_4_star, .bb_5_star {
 	position: absolute;
-	border: 1px solid black;
-	width: 80px;
-	height: 20px;
-	left: -1px;
-	top: 99px;
+    border: 1px solid black;
+    width: 170px;
+    height: 35px;
+    left: -1px;
+    top: 233px;
 }
 
 .nb_1 {
 	position: relative;
-	top: 55px;
-	left: 0px;
+    top: 205px;
+    left: 0px;
 }
 
 .nb_2 {
 	position: relative;
-	left: 132px;
-	top: -65px;
+    left: 179px;
+    top: -30px;
 }
 
 .nb_3 {
 	position: relative;
-	left: 265px;
-	top: -185px;
+    left: 359px;
+    top: -265px;
 }
 
 .nb_4 {
 	position: relative;
-	left: 404px;
-	top: -305px;
+    left: 538px;
+    top: -500px;
 }
 
 .nb_5 {
 	position: relative;
-	left: 539px;
-	top: -425px;
+    left: 717px;
+    top: -735px;
 }
 
 .nb_1_star, .nb_2_star, .nb_3_star, .nb_4_star, .nb_5_star {
 	position: absolute;
-	border: 1px solid black;
-	width: 80px;
-	height: 20px;
-	left: -1px;
-	top: 99px;
+    border: 1px solid black;
+    width: 170px;
+    height: 35px;
+    left: -1px;
+    top: 233px;
 }
 
 .login_menu {
 	position: absolute;
-    background-color: rgb(119, 109, 97);
+    background-color: rgb(178, 138, 135);
     left: -35px;
     top: -42px;
+    height: 520px;
 }
 
 .btn {
@@ -140,6 +146,7 @@ body {
 	display: inline-flex;
 	vertical-align: middle;
 	z-index: 0;
+	right: 20px;
 }
 
 .btn:hover {
@@ -150,49 +157,36 @@ body {
 }
 
 .btn-check:checked+.btn-outline-primary {
-	color: black;
-	background-color: rgb(181, 227, 216);
-	border-color: rgb(181, 227, 216);
-	border: 3px solid white;
-	z-index: 1;
+	color: black !important;
+	background-color: rgb(181, 227, 216) !important;
+	border-color: rgb(181, 227, 216) !important;
+	border: 3px solid white !important;
+	z-index: 1 !important;
 }
 
 .btn-outline-primary {
-	color: black;
-	font-weight: bold;
-	background-color: rgb(181, 227, 216);
-	border-color: rgb(181, 227, 216);
+	color: black !important;
+	font-weight: bold !important;
+	background-color: rgb(181, 227, 216) !important;
+	border-color: rgb(181, 227, 216) !important;
 }
 
 .noting {
 	position: relative;
-    width: 620px;
+    width: 886px;
     height: 500px;
     border: 1px solid black;
     left: 12px;
-    top: 100px;
+    top: 340px;
 }
 
 .friend {
 	position: absolute;
     width: 400px;
     height: 225px;
-    background-color: rgb(119, 109, 097);
-    top: 616px;
+    background-color: rgb(196, 175, 173);
+    top: 478px;
     left: -35px;
-}
-
-.login_btn {
-	border: 5px solid white;
-	border-radius: 100%;
-	width: 80px;
-	height: 80px;
-	margin: 24px;
-	background-color: rgb(181, 227, 216);
-}
-
-.login_btn:hover, .login_mini_btn:hover {
-	font-weight: bold;
 }
 
 .login_img {
@@ -221,7 +215,7 @@ body {
 }
 
 .login_nick, .read_book, .want_book {
-	background-color: rgb(181, 227, 216);
+	background-color: rgb(243, 193, 188);
 	border: 5px solid white;
 	height: 60px;
 	text-align: center;
@@ -249,7 +243,7 @@ body {
 
 .attainment {
 	border: 5px solid white;
-	background-color: rgb(181, 227, 216);
+	background-color: rgb(243, 193, 188);
 	width: 360px;
 	height: 155px;
 	position: relative;
@@ -285,4 +279,14 @@ body {
 .nickname{
 	position: relative;
 	top: 90px;
+}
+#community-name-name{
+	text-align: left;
+	font-weight: bold;
+	font-size: 25px;	
+}
+#message-text-text{
+	text-align: left;
+	font-weight: bold;
+	font-size: 20px;
 }

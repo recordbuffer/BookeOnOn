@@ -16,14 +16,14 @@
 					<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 text_align_center">
 						<div class="Follow">
 							<h3>Checkin</h3><br>
-							<p class="p1">book e on & on</p>
+							<p class="p1" style="color: white;">book e on & on</p>
 						</div>
 					</div>
 					
 					<br>
 					
 					<div class="margin-top_30 col-md-8 offset-md-2 white_fonts">
-                    <div class="row">
+                    <div class="row" style="color: white;">
                         <div class="col-md-4">
                             <div class="full icon text_align_center">
                                 <img src="resources/icon/위치.png">
@@ -53,9 +53,9 @@
                 
 				</div>
 				<div><br>
-				<p class="text_align_center">
+				<p class="text_align_center" style="color: white;">
 					Copyright 2021 All Right Reserved By 
-					<a href="welcome.do">BooKe On & On html Templates</a>
+					<a href="welcome.do" style="color: white;">BooKe On & On html Templates</a>
 				</p><br>
 				</div>
 			</div>

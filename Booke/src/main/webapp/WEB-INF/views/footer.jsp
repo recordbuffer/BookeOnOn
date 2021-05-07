@@ -53,9 +53,9 @@
                 
 				</div>
 				<div><br>
-				<p class="text_align_center">
+				<p class="text_align_center" style="color: white;">
 					Copyright 2021 All Right Reserved By 
-					<a href="welcome.do">BooKe On & On html Templates</a>
+					<a href="welcome.do" style="color: white;">BooKe On & On html Templates</a>
 				</p><br>
 				</div>
 			</div>
