@@ -15,10 +15,10 @@
 <link rel="stylesheet"
 	href="${pageContext.request.contextPath}/resources/css/responsive.css">
 
-<link rel="stylesheet" href="resources/css/mainpage.css" type="text/css">
+<link rel="stylesheet" href="resources/css/communityMain.css" type="text/css">
 
-<link rel="stylesheet" href="resources/css/communityChat.css"
-	type="text/css">
+<link rel="stylesheet" href="resources/css/communityChat.css" type="text/css">
+
 
 <!-- CSS only -->
 <link
@@ -31,11 +31,6 @@
 	src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
 	integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
 	crossorigin="anonymous"></script>
-	
-
-
-<link rel="stylesheet" href="resources/css/footer.css">
-
 
 
 
@@ -69,17 +64,17 @@
 
 					<h1>
 						&nbsp;&nbsp;<span class="badge"
-							style="font-size: 120%; background-color: rgb(181, 227, 216);">책마루</span>
+							style="font-size: 120%; background-color: rgb(243, 193, 188);">Study</span>
 						<span class="btn-group" role="group" aria-label="Basic example"
 							style="left: 60%;">
 
 							<button type="button" class="btn"
-								style="background-color: rgb(119, 109, 097)"
+								style="background-color: rgb(196, 175, 173)"
 								onclick="location.href='communityMain.do'">커뮤니티 홈</button>
 							<button type="button" class="btn"
-								style="background-color: rgb(119, 109, 097)">설정</button>
+								style="background-color: rgb(196, 175, 173)">설정</button>
 							<button type="button" class="btn"
-								style="background-color: rgb(119, 109, 097)">편집</button>
+								style="background-color: rgb(196, 175, 173)">편집</button>
 						</span>
 					</h1>
 				</div>
@@ -105,12 +100,12 @@
 			<div class="col-lg-12">
 				<div class="ibox chat-view">
 					<div class="ibox-title">
-						<small class="pull-right text-muted">Last message: Mon Apl
+						<small class="float-right text-muted">Last message: Mon Apl
 							29 2021 - 18:39:23</small> Chat room panel
 					</div>
 					<div class="ibox-content">
 						<div class="container">
-							<div class="row">
+							<div class="row justify-content-center">
 								<div class="col-lg-8 ">
 									<div class="chat-discussion">
 
@@ -182,7 +177,7 @@
 
 								</div>
 
-								<div class="col-lg-3 offset-col-lg-0">
+								<div class="col-lg-4">
 									<div class="chat-users">
 
 
@@ -279,16 +274,11 @@
 		</div>
 	</div>
 
-
-
-
-
-
 	<br>
 	<br>
 	<br>
 	<br>
 	<br>
-	<jsp:include page="footer.jsp"></jsp:include>
+	<jsp:include page="footerCommunity.jsp"></jsp:include>
 </body>
 </html>
