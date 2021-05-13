@@ -62,7 +62,7 @@ td>#btn {
 
 <body class="text-center">
 
-	<jsp:include page="header.jsp"></jsp:include>
+	<jsp:include page="../header.jsp"></jsp:include>
 	<br>
 	<br>
 
@@ -112,6 +112,6 @@ td>#btn {
 		</form>
 	</main>	
 </body>
-	<jsp:include page="footer.jsp"></jsp:include>
+	<jsp:include page="../footer.jsp"></jsp:include>
 
 </html>

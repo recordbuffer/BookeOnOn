@@ -1,5 +1,6 @@
 package com.mvc.book.model.dao;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import org.mybatis.spring.SqlSessionTemplate;
@@ -11,10 +12,10 @@ import com.mvc.book.model.dto.MemberDto;
 
 @Repository
 public class BkDaoImpl implements BkDao{
+	
 
 	@Autowired
 	private SqlSessionTemplate sqlSession;
-	
 	
 	@Override
 	public int makeCommunityRoom(BkDto dto) {
@@ -75,5 +76,6 @@ public class BkDaoImpl implements BkDao{
 		// TODO Auto-generated method stub
 		return null;
 	}
+
 
 }

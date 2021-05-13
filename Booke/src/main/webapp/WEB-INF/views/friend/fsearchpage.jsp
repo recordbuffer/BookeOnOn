@@ -44,11 +44,16 @@ body {
 	height: 270px;
 }
 </style>
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script type="text/javascript">
+
+</script>
 </head>
 
-<body>
+<body> 
 
-	<jsp:include page="header.jsp"></jsp:include>
+	<jsp:include page="../header.jsp"></jsp:include>
 	<br>
 	<br>
 
@@ -57,9 +62,10 @@ body {
 
 		<!-- 검색 창 -->
 		<div id="hddiv">
-			<form class="d-flex" action="">
-					<input class="form-control me-2" type="text" placeholder="Search" aria-label="Search">&nbsp; 
-					<input class="btn btn-outline-dark" type="submit" value="Search">
+			<form class="d-flex" action="fres.do" method="post">
+				<input type="hidden" value="searchid">
+				<input class="form-control me-2" type="text" placeholder="Search" id="searchid" name="searchid">&nbsp; 
+				<input class="btn btn-outline-dark" type="submit" id="searchbtn" name="searchbtn" value="Search">
 			</form>
 		</div>
 
@@ -69,7 +75,7 @@ body {
 		</section>
 
 	</main>
-	<jsp:include page="footer.jsp"></jsp:include>
+	<jsp:include page="../footer.jsp"></jsp:include>
 
 
 </body>

@@ -1,5 +1,12 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+
+<%@ page import="com.mvc.book.model.dto.MemberDto" %>
+<%@ page import="java.util.List" %>	
+
+<% List<MemberDto> list = (List<MemberDto>)request.getAttribute("list"); %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -40,28 +47,30 @@ body {
 	padding: 0.5rem;
 }
 
-td>img{
+td>img {
 	margin-left: 20px;
-    height: 30px;
+	height: 30px;
 }
-
 </style>
 </head>
 
 <body>
 
-	<jsp:include page="header.jsp"></jsp:include>
+	<jsp:include page="../header.jsp"></jsp:include>
 	<br>
 	<br>
 
 	<main class="form-signup">
-		<h1 style="margin-bottom: 20px;">내 친구 목록</h1>
+		<h1 style="margin-bottom: 20px;">회원 검색</h1>
 
 		<!-- 검색 창 -->
 		<div id="hddiv">
-			<form class="d-flex" action="">
-					<input class="form-control me-2" type="text" placeholder="Search" aria-label="Search">&nbsp; 
-					<input class="btn btn-outline-dark" type="submit" value="Search">
+			<form class="d-flex" action="fres.do" method="post">
+				<input type="hidden" value="searchid"> <input
+					class="form-control me-2" type="text" placeholder="Search"
+					id="searchid" name="searchid">&nbsp; <input
+					class="btn btn-outline-dark" type="submit" id="searchbtn"
+					name="searchbtn" value="Search">
 			</form>
 		</div>
 
@@ -69,7 +78,7 @@ td>img{
 
 		<!-- 결과 테이블 -->
 		<section>
-			<div style="height: 270px" >
+			<div style="height: 100%">
 				<table class="table table-hover">
 					<col width="100">
 					<col width="100">
@@ -83,28 +92,29 @@ td>img{
 						<th>친구 상태</th>
 						<th>쪽지 보내기</th>
 					</tr>
-					<!-- 여기서 부턴 예시로 넣은 거니 나중에 지우고 코드 넣으시면 될 것 같습니다. -->
 					<tr>
-						<td>wjddn99</td>
-						<td>수박</td>
-						<td>L1</td>
-						<td><button class="btn btn-outline-dark" type="submit">친구</button></td>
-						<td><img src="resources/images/mail.png" ></td>
+						<%
+							for (MemberDto dto : list) {
+						%>
 					</tr>
 					<tr>
-						<td>tjdtn44</td>
-						<td>옥수수</td>
-						<td>L1</td>
-						<td><button class="btn btn-outline-dark" type="submit">친구</button></td>
-						<td><img src="resources/images/mail.png"></td>
+						<td><%=dto.getBe_id()%></td>
+						<td><%=dto.getBe_nn()%></td>
+						<td><%=dto.getBe_role() %></td>
+						<td><button class="btn btn-outline-dark btn-sm" type="submit" style="margin: 0px;">친구</button></td>
+						<td><img src="resources/images/mail.png" alt="#"></td>
 					</tr>
+					<%
+						}
+					%>
 				</table>
 			</div>
 		</section>
 
+		<div style="height: 60px"></div>
 	</main>
 
-	<jsp:include page="footer.jsp"></jsp:include>
+	<jsp:include page="../footer.jsp"></jsp:include>
 
 
 </body>

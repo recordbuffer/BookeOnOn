@@ -6,8 +6,8 @@ import com.mvc.book.model.dto.BkDto;
 import com.mvc.book.model.dto.MemberDto;
 
 public interface BkDao {
-		String NAMESPACE = "";
-	
+		String NAMESPACE = "mybooke.";
+		
 		// [커뮤니티 소모임]
 		// 소모임 개설
 		public int makeCommunityRoom(BkDto dto);

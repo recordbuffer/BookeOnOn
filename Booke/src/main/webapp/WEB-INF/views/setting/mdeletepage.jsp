@@ -64,7 +64,7 @@ h2 {
 
 <body class="text-center">
 
-	<jsp:include page="header.jsp"></jsp:include>
+	<jsp:include page="../header.jsp"></jsp:include>
 	<br>
 	<br>
 
@@ -88,7 +88,7 @@ h2 {
 		<button type="button" class="btn btn-secondary btn-lg btn-block" id="btn" onclick="deleteChk();">네, 탈퇴할래요.</button>
 
 	</main>
-		<jsp:include page="footer.jsp"></jsp:include>
+		<jsp:include page="../footer.jsp"></jsp:include>
 	
 	
 </body>

@@ -1,5 +1,6 @@
 package com.mvc.book.model.dao;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import org.mybatis.spring.SqlSessionTemplate;
@@ -16,9 +17,16 @@ public class FriendDaoImpl implements FriendDao{
 	private SqlSessionTemplate sqlSession;
 	
 	@Override
-	public List<MemberDto> searchMember(String bd_id, String bd_nn) {
-		// TODO Auto-generated method stub
-		return null;
+	public List<MemberDto> searchMember(String searchid) {
+		List<MemberDto> list = new ArrayList<MemberDto>();
+		
+		try {
+			list = sqlSession.selectList(NAMESPACE+"searchMember",searchid);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+		return list;
 	}
 
 	@Override

@@ -30,6 +30,14 @@
       <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
 
+<script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
+<df-messenger
+  intent="WELCOME"
+  chat-title="Book_e"
+  agent-id="8d5764d9-775f-4a1e-b9d7-5827de9246a1"
+  language-code="ko"
+></df-messenger>
+
 
 </head>
 <!-- body -->

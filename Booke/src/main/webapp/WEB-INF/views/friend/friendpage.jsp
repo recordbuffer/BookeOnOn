@@ -46,16 +46,20 @@ td>img{
 }
 
 </style>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script type="text/javascript">
+
+</script>
 </head>
 
 <body>
 
-	<jsp:include page="header.jsp"></jsp:include>
+	<jsp:include page="../header.jsp"></jsp:include>
 	<br>
 	<br>
 
 	<main class="form-signup">
-		<h1 style="margin-bottom: 20px;">회원 검색</h1>
+		<h1 style="margin-bottom: 20px;">내 친구 목록</h1>
 
 		<!-- 검색 창 -->
 		<div id="hddiv">
@@ -104,7 +108,7 @@ td>img{
 
 	</main>
 
-	<jsp:include page="footer.jsp"></jsp:include>
+	<jsp:include page="../footer.jsp"></jsp:include>
 
 
 </body>

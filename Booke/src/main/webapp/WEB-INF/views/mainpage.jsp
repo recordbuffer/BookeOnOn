@@ -200,7 +200,7 @@
 									<!-- 목표 달성도 -->
 									목표달성도
 								</div>
-							</div>
+							</div>							
 							<div class="friend">
 								<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
 									integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
@@ -284,6 +284,12 @@
 										<!-- 인디케이터 끝 -->
 									</div>
 								</div>
+								<div style="background-color:rgb(119, 109, 97);">
+								<form class="d-flex" action="fsearch.do" style="padding:5px">
+									<input class="form-control me-2" type="text" placeholder="친구 찾기" aria-label="Search">&nbsp; 
+									<input class="btn btn-outline-dark" type="submit" value="Search">
+								</form>
+							</div>
 							</div>
 						</div>
 					</div>

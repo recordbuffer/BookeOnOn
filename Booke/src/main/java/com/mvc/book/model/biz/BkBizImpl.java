@@ -2,13 +2,18 @@ package com.mvc.book.model.biz;
 
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.mvc.book.model.dao.BkDao;
 import com.mvc.book.model.dto.BkDto;
 import com.mvc.book.model.dto.MemberDto;
 
 @Service
 public class BkBizImpl implements BkBiz{
+	
+	@Autowired
+	private BkDao bkdao;
 
 	@Override
 	public int makeCommunityRoom(BkDto dto) {
@@ -51,6 +56,7 @@ public class BkBizImpl implements BkBiz{
 		// TODO Auto-generated method stub
 		return null;
 	}
+
 
 
 }

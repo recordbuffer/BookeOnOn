@@ -4,10 +4,12 @@
   "http://mybatis.org/dtd/mybatis-3-config.dtd">
   <configuration>
   	<typeAliases>
-  		<typeAlias type="com.mvc.book.model.dto.BookDto" alias="bookDto"/>
+  		<typeAlias type="com.mvc.book.model.dto.MemberDto" alias="memberDto"/>	
+  		
   	</typeAliases>
   	
   	<mappers>
   		<mapper resource="/mybatis/board-mapper.xml"/>
   	</mappers>
+  	
   </configuration>

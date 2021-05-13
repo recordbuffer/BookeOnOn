@@ -70,7 +70,7 @@ input[id="chk1"]:checked + .check {
 
 <body>
 
-	<jsp:include page="header.jsp"></jsp:include>
+	<jsp:include page="../header.jsp"></jsp:include>
 	<br>
 	<br>
 
@@ -259,7 +259,7 @@ input[id="chk1"]:checked + .check {
 		</div>
 	</div>
 	<footer style="position: relative; top: 1000px;">
-	<jsp:include page="footer.jsp"></jsp:include>
+	<jsp:include page="../footer.jsp"></jsp:include>
 	</footer>
 </body>
 </html>

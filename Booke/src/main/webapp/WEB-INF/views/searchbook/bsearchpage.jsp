@@ -44,7 +44,7 @@ p>button{
 
 <body style="background-color: #f5f5f5;">
 
-	<jsp:include page="header.jsp"></jsp:include>
+	<jsp:include page="../header.jsp"></jsp:include>
 	<br>
 	<br>
 	
@@ -85,6 +85,6 @@ p>button{
 	
 		
 	</main>
-	<jsp:include page="footer.jsp"></jsp:include>
+	<jsp:include page="../footer.jsp"></jsp:include>
 </body>
 </html>

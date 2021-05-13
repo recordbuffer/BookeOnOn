@@ -32,6 +32,22 @@
 	integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
 	crossorigin="anonymous"></script>
 
+<!-- calendar css -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/css/bootstrap.css" rel="stylesheet" />
+<link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.13.1/css/all.css" rel="stylesheet">
+<link href="resources/fullcalendar/main.css" rel="stylesheet" />
+<script src="resources/fullcalendar/main.js"></script>
+<script type="text/javascript">
+	document.addEventListener('DOMContentLoaded', function() {
+    var calendarEl = document.getElementById('calendar');
+    var calendar = new FullCalendar.Calendar(calendarEl, {
+      	initialView: 'dayGridMonth',
+    });
+    calendar.render();
+  });
+
+</script>
+
 <link rel="stylesheet" href="resources/css/footer.css">
 <link rel="stylesheet" href="resources/css/mainpage.css">
 <link rel="stylesheet" href="resources/css/bookcase_cal.css">
@@ -39,7 +55,7 @@
 
 <body>
 
-	<jsp:include page="header.jsp"></jsp:include>
+	<jsp:include page="../header.jsp"></jsp:include>
 	<br>
 	<br>
 
@@ -66,9 +82,8 @@
 				<div class="container">
 					<div class="row" id="cdb">
 						<div class="bcaseframe">
-							<div class="d1">
-				
-									<div class="c1">캘린더</div>
+							<div class="d1" id="calendar">
+								
 					
 							</div>
 						</div>
@@ -148,6 +163,6 @@
 	<br>
 	<br>
 	<br>
-	<jsp:include page="footer.jsp"></jsp:include>
+	<jsp:include page="../footer.jsp"></jsp:include>
 </body>
 </html>
