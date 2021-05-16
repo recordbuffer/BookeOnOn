@@ -4,6 +4,7 @@
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
   <mapper namespace="mybooke">
 
+	<!-- 친구 검색 -->
 	<select id="searchMember" parameterType="memberDto" resultType="memberDto">
 		SELECT BE_ID, BE_NN, BE_ROLE
 		FROM BE_MEMBER
@@ -13,5 +14,18 @@
   
   
   
+  
+  
+  	<!-- 공지사항  -->
+	<select id="selectList" resultType="noticeDto">
+		SELECT BD_NO, BD_TITLE, BD_NN, BD_DATE
+		FROM NOTICEBOARD 
+	</select>
+	
+	<select id="selectOne" resultType="noticeDto">
+		SELECT BD_NN, BD_TITLE, BD_CONTENT
+		FROM NOTICEBOARD
+		WHERE BD_NO = #{bd_no}
+	</select>  
   
   </mapper>

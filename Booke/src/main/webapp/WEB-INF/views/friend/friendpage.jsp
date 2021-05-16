@@ -92,14 +92,14 @@ td>img{
 						<td>wjddn99</td>
 						<td>수박</td>
 						<td>L1</td>
-						<td><button class="btn btn-outline-dark" type="submit">친구</button></td>
+						<td><button class="btn btn-outline-dark" type="submit" style="margin: 0px;">친구</button></td>
 						<td><img src="resources/images/mail.png" ></td>
 					</tr>
 					<tr>
 						<td>tjdtn44</td>
 						<td>옥수수</td>
 						<td>L1</td>
-						<td><button class="btn btn-outline-dark" type="submit">친구</button></td>
+						<td><button class="btn btn-outline-dark" type="submit" style="margin: 0px;">친구</button></td>
 						<td><img src="resources/images/mail.png"></td>
 					</tr>
 				</table>

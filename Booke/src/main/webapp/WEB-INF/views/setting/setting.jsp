@@ -22,7 +22,7 @@
 body {
 	align-items: center !important;
 	padding-top: 80px;
-	background-color: #f5f5f5;
+	background-color: #f5f5f5 !important;
 }
 
 .text-center {
@@ -74,7 +74,7 @@ td>#btn {
 		<table>
 			<tr>
 				<td><input type="button" value="공지사항" class="form-control" id="btn" style="width: 170px; margin-top: 20px; font-size: 14pt;"
-							 onclick="location.href=''"></td>
+							 onclick="location.href='notice.do'"></td>
 				<td><input type="button" value="쪽지관리" class="form-control" id="btn" style="width: 170px; margin-top: 20px; font-size: 14pt;"
 							onclick="location.href=''"></td>
 				<td><input type="button" value="친구관리" class="form-control" id="btn" style="width: 170px; margin-top: 20px; font-size: 14pt;"

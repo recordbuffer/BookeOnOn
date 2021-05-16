@@ -8,10 +8,11 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import com.mvc.book.model.biz.BkBiz;
 import com.mvc.book.model.biz.FriendBiz;
+import com.mvc.book.model.biz.NoticeBiz;
 import com.mvc.book.model.dto.MemberDto;
 
 @Controller
@@ -23,7 +24,7 @@ public class MainController {
 	private FriendBiz fbiz;
 	
 	@Autowired
-	private BkBiz bkbiz;
+	private NoticeBiz nbiz;
 	
 	// [시작 > 메인]
 	// 웰컴페이지로 이동
@@ -152,6 +153,27 @@ public class MainController {
 		return "setting/setting";
 	}
 
+	// 공지사항 페이지로 이동
+	@RequestMapping("/notice.do")
+	public String noticepage(Model model) {
+		logger.info("NOTICE PAGE");
+		
+		model.addAttribute("list",nbiz.selectList());
+
+		return "setting/notice";
+	}
+	
+	//공지사항 하나 보기
+	@RequestMapping("/noticeOne.do")
+	public String noticeOne(Model model, int bd_no) {
+		logger.info("NOTICE SELECT ONE");
+		
+		model.addAttribute("dto",nbiz.selectOne(bd_no));
+		
+		return "setting/noticeOne";
+	}
+	
+	
 	// 회원 정보 수정 페이지로 이동
 	@RequestMapping("/updateform.do")
 	public String updateform() {

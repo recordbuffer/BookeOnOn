@@ -41,6 +41,10 @@ setting : 설정 페이지
 friendpage : 친구 관리 페이지 
 mdeletepage : 회원 탈퇴 페이지
 mdeletepage_Chk : 회원 탈퇴 확인 팝업
+notice : 공지사항 페이지
+noticeOne : 공지사항 글 보기 
+noticeInsert : 공지사항 글쓰기 
+noticeUpdate : 공지사항 글수정
 
 
 [커뮤니티 기능]
