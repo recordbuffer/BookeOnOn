@@ -1,6 +1,9 @@
 package com.mvc.book.model.dto;
 
-public class MemberDto {
+import javax.servlet.http.HttpSession;
+
+public class MemberDto {//이게 jsp에서는 자바빈즈인데... 내가 이거를 다오랑 묶어서 jsp에 연결을 하면 왜  안될까.. 이걸해야 관리자모드로도 
+	                    // 관리자용 admin 따로 만들어서 no로 관리해서 회원 엮을수 있는데 ... 후 ... 
 	//회원 정보
 	private int be_no;			//회원 번호
 	private String be_id;		//회원 아이디
@@ -134,6 +137,7 @@ public class MemberDto {
 	public void setBe_role(String be_role) {
 		this.be_role = be_role;
 	}
-	
-	
+
+
 }
+

@@ -3,14 +3,18 @@ package com.mvc.book.model.biz;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.ui.Model;
 
+import com.mvc.book.model.dao.MemberDao;
 import com.mvc.book.model.dto.MemberDto;
 
 @Service
-public class MemberBizImpl implements MemberBiz{
-
+public class MemberBizImpl implements MemberBiz{//로긴 넘겨준다고 다오로 연결
+    @Autowired
+    private MemberDao dao;
+	
 	@Override
 	public void memberJoinMethod(MemberDto dto) {
 		// TODO Auto-generated method stub
@@ -25,8 +29,7 @@ public class MemberBizImpl implements MemberBiz{
 
 	@Override
 	public MemberDto login(MemberDto dto) {
-		// TODO Auto-generated method stub
-		return null;
+		return dao.login(dto);
 	}
 
 	@Override
@@ -42,7 +45,7 @@ public class MemberBizImpl implements MemberBiz{
 	}
 
 	@Override
-	public String updateGET(HttpSession session, Model model) throws Exception {
+	public String updateGET(HttpSession session, Model model) {
 		// TODO Auto-generated method stub
 		return null;
 	}
@@ -51,6 +54,24 @@ public class MemberBizImpl implements MemberBiz{
 	public int deleteMember(String be_id, String be_pw) {
 		// TODO Auto-generated method stub
 		return 0;
+	}
+
+	@Override
+	public String loginCheck(MemberDto dto) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public String level(MemberDto dto) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public String forced_Admin(String be_id, String be_pw) {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 }

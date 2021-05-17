@@ -19,6 +19,7 @@ public class MemberDaoImpl implements MemberDao{
 	
 	@Override
 	public void memberJoinMethod(MemberDto dto) {
+		// TODO Auto-generated method stub
 		
 	}
 
@@ -30,8 +31,16 @@ public class MemberDaoImpl implements MemberDao{
 
 	@Override
 	public MemberDto login(MemberDto dto) {
-		// TODO Auto-generated method stub
-		return null;
+		MemberDto res = null;
+		
+		try {//알트 쉬프트 z 트라이 캐취
+			res = sqlSession.selectOne(NAMESPACE+"login",dto);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+				
+		return res;
 	}
 
 	@Override
@@ -47,7 +56,7 @@ public class MemberDaoImpl implements MemberDao{
 	}
 
 	@Override
-	public String updateGET(HttpSession session, Model model) throws Exception {
+	public String updateGET(HttpSession session, Model model) {
 		// TODO Auto-generated method stub
 		return null;
 	}
@@ -56,6 +65,24 @@ public class MemberDaoImpl implements MemberDao{
 	public int deleteMember(String be_id, String be_pw) {
 		// TODO Auto-generated method stub
 		return 0;
+	}
+
+	@Override
+	public String loginCheck(MemberDto dto) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public String level(MemberDto dto) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public String forced_Admin(String be_id, String be_pw) {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 }

@@ -79,11 +79,7 @@ td>#btn {
 				</tr>
 				<tr>
 					<th>비밀번호</th>
-					<td><input type="password" class="form-control" name="be_pw"></td>
-				</tr>
-				<tr>
-					<th>비밀번호 재확인</th>
-					<td><input type="password" class="form-control" name="be_pw"></td>
+					<td><input type="text" class="form-control" name="be_pw"></td>
 				</tr>
 				<tr>
 					<th>이름</th>
@@ -92,8 +88,6 @@ td>#btn {
 				<tr>
 					<th>닉네임</th>
 					<td><input type="text" class="form-control" name="be_nn"></td>
-					<td><input type="button" value="중복 확인" class="form-control" id="btn"
-						onclick="idChk();"></td>
 				</tr>
 				<tr>
 					<th>주소</th>

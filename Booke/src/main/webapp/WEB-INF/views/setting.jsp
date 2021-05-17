@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -7,95 +7,91 @@
 <title>Book e On&On</title>
 <!-- bootstrap css -->
 <link rel="stylesheet"
-    href="${pageContext.request.contextPath}/resources/css/bootstrap.min.css">
+	href="${pageContext.request.contextPath}/resources/css/bootstrap.min.css">
 <!-- style css -->
 <link rel="stylesheet"
-    href="${pageContext.request.contextPath}/resources/css/style.css">
+	href="${pageContext.request.contextPath}/resources/css/style.css">
 <!-- Responsive-->
 <link rel="stylesheet"
-    href="${pageContext.request.contextPath}/resources/css/responsive.css">
+	href="${pageContext.request.contextPath}/resources/css/responsive.css">
 
 <link rel="stylesheet" href="resources/css/mainpage.css" type="text/css">
 
 
 <style type="text/css">
 body {
-    padding-top: 80px;
-    background-color: #f5f5f5;
+	align-items: center !important;
+	padding-top: 80px;
+	background-color: #f5f5f5;
+}
+
+.text-center {
+	text-align: center !important;
 }
 
 .form-signup {
-    width: 100%;
-    max-width: 80%;
-    padding: 15px;
-    margin: auto;
+	width: 100%;
+	max-width: 590px;
+	padding: 15px;
+	margin: auto;
+	margin-bottom: 180px;
 }
 
 .form-control {
-    padding: 0.5rem;
+	padding: 0.5rem;
+	border: 1px solid;
+	color: black !important;
 }
 
-#hddiv {
-    background-color: rgb(119, 109, 97) !important;
-    padding: 0.5rem;
+th {
+	width: 100px;
+	font-weight: 400;
 }
 
-#dvres{
-    height: 270px;
+td {
+	padding: 0.5rem;
 }
+
+td>#btn {
+	height: 60px;
+	background-color: rgb(181, 227, 216);
+	border: none;
+}
+
 </style>
 </head>
 
-<body>
+<body class="text-center">
 
-    <jsp:include page="header.jsp"></jsp:include>
-    <br>
-    <br>
-
-    <main class="form-signup">
-        <h1 style="margin-bottom: 30px;">Private Place For U</h1>
-
-        <!-- 친구 리스트 테이블 tr tr td  -->
-        <section>
-            <style>
-table, th, td {
-  border: 1px solid black;
-  border-collapse: seperate;
-  text-align:center;
-  table-align:center;
-}
-th, td {
-  padding: 15px;
-}
-</style>
-</head>
-<body>
-
-
-<table style="width:70%">
-  <tr>
-    <th><input type="button" value="개인정보수정" onclick="location.href='updateform.do'"></th>
-    <th><input type="button" value="쪽지관리" onclick="location.href=''"></th> 
-    <th><input type="button" value="친구관리" onclick="location.href='friend.do'"></th>
-  </tr>
-</table>
-<table style="width:70%">
-  <tr>
-    <td><strong>감성 이 미 지</strong></td>
-    <td><strong>홀  룰  루</strong></td>
-    <td><strong><input type="button" value="회원탈퇴" onclick="location.href='md_aks.do'"></strong></td>
-  </tr>
-</table>
-
-        </section>
-        
-
-    </main>
-
-
+	<jsp:include page="header.jsp"></jsp:include>
+	<br>
+	<br>
+	<br>
+	<main class="form-signup">
+		<h1>회원 설정</h1>
+		<hr style="color: black !important">
+		<br><br>
+		<table>
+			<tr>
+				<td><input type="button" value="공지사항" class="form-control" id="btn" style="width: 170px; margin-top: 20px; font-size: 14pt;"
+							 onclick="location.href=''"></td>
+				<td><input type="button" value="쪽지관리" class="form-control" id="btn" style="width: 170px; margin-top: 20px; font-size: 14pt;"
+							onclick="location.href=''"></td>
+				<td><input type="button" value="친구관리" class="form-control" id="btn" style="width: 170px; margin-top: 20px; font-size: 14pt;"
+							onclick="location.href='friend.do'"></td>
+			</tr>
+			<tr>
+				<td><input type="button" value="회원 정보 수정" class="form-control" id="btn" style="width: 170px; margin-top: 20px; font-size: 14pt;"
+							onclick="location.href='updateform.do'"></td>
+				<td><input type="button" value="회원 탈퇴" class="form-control" id="btn" style="width: 170px; margin-top: 20px; font-size: 14pt;"
+							onclick="location.href='md_aks.do'"></td>
+				<td><input type="button" value="감성 이미지 기능" class="form-control" id="btn" style="width: 170px; margin-top: 20px; font-size: 14pt;" 
+							onclick="location.href=''"></td>
+			</tr>
+		</table>
+				
+	</main>
 </body>
+<jsp:include page="footer.jsp"></jsp:include>
 
-</html>
-		<jsp:include page="footer.jsp"></jsp:include>
-</body>
 </html>

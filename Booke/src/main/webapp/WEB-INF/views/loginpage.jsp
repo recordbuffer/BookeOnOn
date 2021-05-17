@@ -57,34 +57,32 @@ a:hover{color:rgb(223, 45, 139);}
 
 
 	<main class="form-signin">
-	 <from method="post" action="loginAction.jsp">
 		<img class="mb-4" src="resources/images/logo.png" alt="#" width="130">
 		<br> <br>
 		<hr>
 		<br>
 		<br>
 		
-		<form action="main.do">
+		<form action="login.do" method="post">
+		    <input type="hidden" value="login">
 			<div class="form">
-				<input type="text" class="form-control" placeholder="아이디">
+				<input type="text" class="form-control" placeholder="아이디" name="be_id">
 			</div>
 			<br>
 			<div class="form">
-				<input type="password" class="form-control" placeholder="비밀번호">
+				<input type="text" class="form-control" placeholder="비밀번호"name="be_pw">
 			</div>
 			<br>
 			<div class="form">
-				<input type="submit" value="로그인" class="form-control" id="btn"
-					onclick="">
+				<input type="submit" value="로그인" class="form-control" id="btn">
 			</div>
 		</form>
-		
+		 <!-- 로그인 실패시 메세지 -->
+        <!--  <span style="color: red;">${param.message}</span>-->
 		<br><br><br>
 		<a href="">아이디 or 비밀번호 찾기</a>&nbsp;&nbsp;<span>/</span>&nbsp;
 		<a href="signup.do">회원가입</a>
-		<a href="loginAction.jsp"></a>
 		
-
 	</main>
 
 
