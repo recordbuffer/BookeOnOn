@@ -1,5 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+
+<%@page import="java.util.List"%>
+<%@ page import="com.mvc.book.model.dto.MemberDto" %>
+<% List<MemberDto> friendList = (List<MemberDto>)request.getAttribute("friendList");  %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -177,27 +181,34 @@
 						<div class="col-sm-12">
 							<div class="login_menu">
 								<!-- 서재 / 커뮤니티 / 내 서재 버튼 div -->
+								<div>
 								<div class="login_img">
-									<img src="resources/images/kjh.png"
-										style="border-radius: 100%;">
+									<img src="resources/images/kjh.png" style="border-radius: 100%;">
 								</div>
 								<div class="login_name">
 									<!-- 설정 / 쪽지 버튼, 닉네임 -->
-									<a href="setting.do"><i class="bi bi-gear-fill" style="font-size: 2.5rem; color: white; position: absolute; left: 160px;"></i></a>
-									<a href="msg.do"><i class="bi bi-chat-text-fill" style="font-size: 2.5rem; color: white; position: relative; left: 110px;"></i></a>
-									<div class="login_nick">닉네임</div>
-								</div>
-								<div>
-									<!-- 읽은 책 / 읽고 싶은 책 -->
-									<div class="read_book">
-										읽은 책 <br> <span style="font-size: 25px;">몇 권</span>
+									<a href="setting.do"><i class="bi bi-gear-fill" style="font-size: 2.2rem; color: white; position: absolute; left: 160px; transform: translate(5px, 10px);"></i></a>
+									<div style="transform: translate(-10px, 58px);">
+										<p style="font-size: 15pt;">@ ${user.be_id }</p>
+										<p style="font-size: 25pt;">${user.be_nn }<span style="font-size: 19pt;">님</span></p>
+										<input type="button" class="btn btn-outline-dark" value="LOGOUT" style="transform: translate(130px, -58px);" onclick="location.href='logout.do'">
 									</div>
-									<div class="want_book">
-										읽고 싶은 책 <br> <span style="font-size: 25px;">몇 권</span>
+									<div style="transform: translate(-124px,30px);  color:white; ">
+										<span style="font-size: 20pt;">친구</span >&nbsp;&nbsp;&nbsp;
+										<span style="font-size: 18pt;">33<a href="frd.do"></a></span><span style="font-size: 16pt;"> 명</span>
+										<a href="fsearch.do"><i class="bi bi-plus-circle" style="font-size: 1.8rem; color: white; position: relative; left: 80px;"></i></a>
+										<a href="msg.do"><i class="bi bi-chat-text-fill" style="font-size: 1.8rem; color: white; position: relative; left: 90px;"></i></a>
 									</div>
 								</div>
-								<div class="attainment">
-									<!-- 목표 달성도 -->
+								</div>
+								<div style="color:white; text-align:center; transform: translate(0px, -30px);">
+									<div style="font-size:20pt;"><span>42</span><span style="font-size: 19pt;"> 권</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+									<span>143 권</span></div>
+									<div style="transform: translate(3px,7px);"><span>읽은 책</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+									<span>읽고 싶은 책</span></div>
+								</div>
+								<!-- 목표 달성도 -->
+								<div class="attainment" style="transform: translate(0px, 220px); height: 155px;">
 									목표달성도
 								</div>
 							</div>							
@@ -285,9 +296,10 @@
 									</div>
 								</div>
 								<div style="background-color:rgb(119, 109, 97);">
-								<form class="d-flex" action="fsearch.do" style="padding:5px">
-									<input class="form-control me-2" type="text" placeholder="친구 찾기" aria-label="Search">&nbsp; 
-									<input class="btn btn-outline-dark" type="submit" value="Search">
+								<form class="d-flex" style="padding:5px" action="fres.do" method="post">
+									<input type="hidden" value="searchid">
+									<input class="form-control me-2" type="text" placeholder="친구 찾기" id="searchid" name="searchid">&nbsp; 
+									<input class="btn btn-outline-dark" type="submit" id="searchbtn" name="searchbtn" value="Search">
 								</form>
 							</div>
 							</div>

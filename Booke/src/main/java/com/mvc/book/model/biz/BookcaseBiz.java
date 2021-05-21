@@ -11,12 +11,20 @@ public interface BookcaseBiz {
 	// 서재 읽고 싶은 책 리스트
 	public List<W_bookDto> W_bookSelectAll();
 
+	// 서재 읽고 싶은 책 갯수
+	public int cntWbook();
+	
 	// 서재 읽고 싶은 책 삭제
 	public int W_bookDel(W_bookDto no);
+	
+//--------------------------------------------
 
 	// 서재 읽은 책 리스트
 	public List<R_bookDto> R_bookSelectAll();
 
+	// 서재 읽은 책 갯수
+	public int cntRbook();
+	
 	// 서재 읽은 책 삭제
 	public int R_bookDelete(R_bookDto no);
 

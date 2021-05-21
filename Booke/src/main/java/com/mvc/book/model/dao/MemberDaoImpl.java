@@ -33,8 +33,15 @@ public class MemberDaoImpl implements MemberDao{
 
 	@Override
 	public MemberDto login(MemberDto dto) {
-		// TODO Auto-generated method stub
-		return null;
+		MemberDto user = null;
+		
+		try {
+			user = sqlSession.selectOne(NAMESPACE+"login",dto);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+		return user;
 	}
 
 	@Override
@@ -48,6 +55,20 @@ public class MemberDaoImpl implements MemberDao{
 		// TODO Auto-generated method stub
 		
 	}
+	
+	@Override
+	public MemberDto memberGET(int be_id) {
+		MemberDto res = null;
+		
+		try {
+			res = sqlSession.selectOne(NAMESPACE+"memberGet",be_id);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+		return res;
+	}
+	
 
 	@Override
 	public String updateGET(HttpSession session, Model model) {
@@ -78,5 +99,6 @@ public class MemberDaoImpl implements MemberDao{
 		// TODO Auto-generated method stub
 		return null;
 	}
+
 
 }

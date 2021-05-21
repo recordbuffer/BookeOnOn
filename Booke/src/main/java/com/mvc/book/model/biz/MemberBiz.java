@@ -23,12 +23,18 @@ public interface MemberBiz {
 
 		// 로그인 비밀번호 찾기
 		public void mailSendWithPW(String be_id, String be_email, HttpServletRequest reqeust);
+		
+		//회원 정보 보기
+		public MemberDto memberGET(int be_id);
 
 		// 회원 정보 수정
 		public String updateGET(HttpSession session, Model model);
 
 		// 회원 탈퇴
 		public int deleteMember(String be_id, String be_pw);
+		
+		// 로그아웃
+		public void logout(HttpSession session);
 		
 		
 		//[ 관리자 기능 ]

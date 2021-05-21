@@ -13,11 +13,13 @@ public interface FriendDao {
 	public List<MemberDto> searchMember(String searchid);
 
 	// 친구 목록 조회
-	public List<FriendDto> selectFList();
+	public List<MemberDto> selectFList(String be_id);
 
 	// 친구 맺기
 	public int insertFriend(FriendDto dto);
 
 	// 친구 끊기
 	public int deleteFriend(int flist_no);
+	
+	
 }

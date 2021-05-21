@@ -18,6 +18,12 @@ public class BookcaseBizImpl implements BookcaseBiz{
 	}
 
 	@Override
+	public int cntWbook() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
 	public int W_bookDel(W_bookDto no) {
 		// TODO Auto-generated method stub
 		return 0;
@@ -27,6 +33,12 @@ public class BookcaseBizImpl implements BookcaseBiz{
 	public List<R_bookDto> R_bookSelectAll() {
 		// TODO Auto-generated method stub
 		return null;
+	}
+
+	@Override
+	public int cntRbook() {
+		// TODO Auto-generated method stub
+		return 0;
 	}
 
 	@Override

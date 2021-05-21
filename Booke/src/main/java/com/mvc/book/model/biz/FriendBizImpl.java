@@ -13,17 +13,16 @@ import com.mvc.book.model.dto.MemberDto;
 public class FriendBizImpl implements FriendBiz{
 
 	@Autowired
-	private FriendDao fdao;
+	private FriendDao dao;
 	
 	@Override
 	public List<MemberDto> searchMember(String searchid) {
-		return fdao.searchMember(searchid);
+		return dao.searchMember(searchid);
 	}
 
 	@Override
-	public List<FriendDto> selectFList() {
-		// TODO Auto-generated method stub
-		return null;
+	public List<MemberDto> selectFList(String be_id) {
+		return dao.selectFList(be_id);
 	}
 
 	@Override
@@ -37,5 +36,7 @@ public class FriendBizImpl implements FriendBiz{
 		// TODO Auto-generated method stub
 		return 0;
 	}
+
+
 
 }

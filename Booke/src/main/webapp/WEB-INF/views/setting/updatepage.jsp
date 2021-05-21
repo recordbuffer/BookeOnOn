@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+	
 <!DOCTYPE html>
 <html>
 <head>
@@ -74,34 +75,34 @@ td>#btn {
 				<tr>
 					<th>아이디</th>
 					<td><input type="text" class="form-control" name="be_id"
-						readonly="readonly" value=""></td>
+						readonly="readonly" value="${user.be_id }"></td>
 				</tr>
 				<tr>
 					<th>비밀번호</th>
-					<td><input type="text" class="form-control" name="be_pw"></td>
+					<td><input type="text" class="form-control" name="be_pw" ></td>
 				</tr>
 				<tr>
 					<th>이름</th>
 					<td><input type="text" class="form-control" name="be_name"
-						readonly="readonly" value=""></td>
+						readonly="readonly" value="${user.be_name }"></td>
 				</tr>
 				<tr>
 					<th>닉네임</th>
-					<td><input type="text" class="form-control" name="be_nn"></td>
+					<td><input type="text" class="form-control" name="be_nn" value="${user.be_nn }"></td>
 				</tr>
 				<tr>
 					<th>주소</th>
-					<td><input type="text" class="form-control" name="be_addr"></td>
+					<td><input type="text" class="form-control" name="be_addr" value="${user.be_addr }"></td>
 				</tr>
 				<tr>
 					<th>이메일</th>
 					<td><input type="text" class="form-control" name="be_email"
-						readonly="readonly" value=""></td>
+						readonly="readonly" value="${user.be_email }"></td>
 				</tr>
 				<tr>
 					<th>전화번호</th>
 					<td><input type="text" class="form-control" name="be_phone"
-						readonly="readonly" value=""></td>
+						readonly="readonly" value="${user.be_phone }"></td>
 				</tr>
 				<tr>
 					<td colspan="3"><input type="submit" value="수정 완료"

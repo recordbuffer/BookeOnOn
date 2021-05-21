@@ -3,13 +3,18 @@ package com.mvc.book.model.biz;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.ui.Model;
 
+import com.mvc.book.model.dao.MemberDao;
 import com.mvc.book.model.dto.MemberDto;
 
 @Service
 public class MemberBizImpl implements MemberBiz{
+	
+	@Autowired
+	private MemberDao dao;
 
 	@Override
 	public void memberJoinMethod(MemberDto dto) {
@@ -25,8 +30,7 @@ public class MemberBizImpl implements MemberBiz{
 
 	@Override
 	public MemberDto login(MemberDto dto) {
-		// TODO Auto-generated method stub
-		return null;
+		return dao.login(dto);
 	}
 
 	@Override
@@ -40,6 +44,13 @@ public class MemberBizImpl implements MemberBiz{
 		// TODO Auto-generated method stub
 		
 	}
+	
+
+	@Override
+	public MemberDto memberGET(int be_id) {
+		return dao.memberGET(be_id);
+	}
+	
 
 	@Override
 	public String updateGET(HttpSession session, Model model) {
@@ -52,6 +63,11 @@ public class MemberBizImpl implements MemberBiz{
 		// TODO Auto-generated method stub
 		return 0;
 	}
+	
+	@Override
+	public void logout(HttpSession session) {
+		session.invalidate();
+	}	
 
 	@Override
 	public String loginCheck(MemberDto dto) {
@@ -70,5 +86,8 @@ public class MemberBizImpl implements MemberBiz{
 		// TODO Auto-generated method stub
 		return null;
 	}
+
+
+
 
 }

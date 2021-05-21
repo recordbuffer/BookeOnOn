@@ -1,8 +1,5 @@
 package com.mvc.book.controller;
-
-import java.util.List;
-
-import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -11,20 +8,17 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import com.mvc.book.model.biz.FriendBiz;
 import com.mvc.book.model.biz.NoticeBiz;
-import com.mvc.book.model.dto.MemberDto;
+
 
 @Controller
 public class MainController {
 
 	private static final Logger logger = LoggerFactory.getLogger(MainController.class);
-
-	@Autowired
-	private FriendBiz fbiz;
 	
 	@Autowired
 	private NoticeBiz nbiz;
+
 	
 	// [시작 > 메인]
 	// 웰컴페이지로 이동
@@ -35,20 +29,14 @@ public class MainController {
 		return "welcome";
 	}
 
-	// 메인 페이지로 이동
-	@RequestMapping("/main.do")
-	public String main() {
-		logger.info("MAIN PAGE");
-
-		return "mainpage";
-	}
-
 	// [회원 로그인]
 	// 로그인 페이지로 이동
 	@RequestMapping("/loginform.do")
 	public String loginForm() {
 		logger.info("LOGIN FORM");
 
+
+		
 		return "login/loginpage";
 	}
 
@@ -68,7 +56,18 @@ public class MainController {
 		return "login/signuppage_idchk";
 	}
 
+	
 	// [메인 페이지]
+	// 로그인 후 메인 페이지로 이동
+	@RequestMapping("/main.do")
+	public String main(HttpSession session) {
+		logger.info("MAIN PAGE");
+		
+		
+
+		return "mainpage";
+	}
+
 	// 메인_지도 위치 팝업
 	@RequestMapping("/detailmap.do")
 	public String detailmap() {
@@ -87,31 +86,7 @@ public class MainController {
 		return "bookintro/detailpopup";
 	}
 	
-	
-	// [ 친구 검색 ]
-	// 친구 검색 페이지로 이동
-	@RequestMapping("/fsearch.do")
-	public String fsearchpage() {
-		logger.info("FRIEND SEARCH PAGE");
 
-		return "friend/fsearchpage";
-	}
-	
-		
-	// 친구 검색 페이지 > 검색 결과 페이지로 이동
-	@RequestMapping("/fres.do")
-	public String fres(HttpServletRequest request) {
-		logger.info("FRIEND SEARCH RES PAGE");
-
-		String searchid = request.getParameter("searchid");
-		
-		List<MemberDto> list = fbiz.searchMember(searchid);
-		request.setAttribute("list", list);
-		
-		return "friend/fsearchpage_res";
-	}
-
-	
 	//[ 쪽지 기능]
 	// 쪽지 보내기 
 	@RequestMapping("/msg.do")
@@ -198,28 +173,8 @@ public class MainController {
 		return "setting/mdeletepage_Chk";
 	}
 
-	// 친구 관리 페이지로 이동
-	@RequestMapping("/friend.do")
-	public String friend() {
-		logger.info("FRIEND PAGE");
-
-		return "friend/friendpage";
-	}
-
 	// 쪽지 관리 페이지로 이동
 
-	
-	//[ 커뮤니티 ]
-	//커뮤니티 페이지로 이동
-	@RequestMapping("/communityMain.do")
-	public String communityMain() {
-		return "community/communityMain";
-	}
-	
-	//커뮤니티 채팅방으로 이동
-	@RequestMapping("/communityChat.do")
-	public String communityChat() {
-		return "community/communityChat";
-	}
+
 
 }

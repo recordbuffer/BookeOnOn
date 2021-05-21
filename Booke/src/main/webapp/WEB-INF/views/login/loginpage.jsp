@@ -16,7 +16,7 @@
 	href="${pageContext.request.contextPath}/resources/css/bootstrap.min.css"
 	rel="stylesheet"
 	integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6">
-	
+
 <style type="text/css">
 body {
 	display: flex;
@@ -47,9 +47,13 @@ body {
 	border: none;
 }
 
-a{text-decoration: none;
+a {
+	text-decoration: none;
 }
-a:hover{color:rgb(223, 45, 139);}
+
+a:hover {
+	color: rgb(223, 45, 139);
+}
 </style>
 
 </head>
@@ -60,25 +64,28 @@ a:hover{color:rgb(223, 45, 139);}
 		<img class="mb-4" src="resources/images/logo.png" alt="#" width="130">
 		<br> <br>
 		<hr>
-		<br>
-		<br>
-		
-		<form action="main.do">
+		<br> <br>
+
+		<form action="login.do" method="post">
+			<input type="hidden" value="login">
 			<div class="form">
-				<input type="text" class="form-control" placeholder="아이디">
+				<input type="text" class="form-control" placeholder="아이디"
+					name="be_id">
 			</div>
 			<br>
 			<div class="form">
-				<input type="text" class="form-control" placeholder="비밀번호">
+				<input type="text" class="form-control" placeholder="비밀번호"
+					name="be_pw">
 			</div>
 			<br>
 			<div class="form">
 				<input type="submit" value="로그인" class="form-control" id="btn">
 			</div>
 		</form>
-		
-		<br><br><br>
-		<a href="">아이디 or 비밀번호 찾기</a>&nbsp;&nbsp;<span>/</span>&nbsp;
+
+		<br>
+		<br>
+		<br> <a href="">아이디 or 비밀번호 찾기</a>&nbsp;&nbsp;<span>/</span>&nbsp;
 		<a href="signup.do">회원가입</a>
 
 	</main>

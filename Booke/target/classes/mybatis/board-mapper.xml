@@ -2,30 +2,56 @@
 <!DOCTYPE mapper
   PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-  <mapper namespace="mybooke">
+<mapper namespace="mybooke">
 
-	<!-- 친구 검색 -->
-	<select id="searchMember" parameterType="memberDto" resultType="memberDto">
-		SELECT BE_ID, BE_NN, BE_ROLE
-		FROM BE_MEMBER
-		WHERE BE_ID LIKE '%'|| #{searchid} ||'%'
-		OR BE_NN LIKE '%'|| #{searchid} ||'%'
-	</select>
-  
-  
-  
-  
-  
-  	<!-- 공지사항  -->
-	<select id="selectList" resultType="noticeDto">
-		SELECT BD_NO, BD_TITLE, BD_NN, BD_DATE
-		FROM NOTICEBOARD 
+	<!-- 로그인 -->
+	<select id="login" parameterType="memberDto" resultType="memberDto">
+		SELECT * FROM BE_MEMBER
+		WHERE BE_ID=#{be_id} and BE_PW=#{be_pw}
 	</select>
 	
+	<!-- 회원 정보 보기 -->
+	<select id="memberGet" resultType="memberDto">
+		SELECT * FROM BE_MEMBER
+		WHERE BE_ID=#{be_id}
+	</select>
+
+	<!-- 친구 리스트 조회 -->
+	<select id="friendList" resultType="memberDto">
+		SELECT BE_ID, BE_NN, BE_ROLE
+		FROM BE_MEMBER
+		WHERE BE_ID IN (SELECT M2 FROM BE_FRIEND WHERE M1=#{be_id})
+	</select>
+	
+	<!-- 친구 추가 -->
+	<insert id="addFriend">
+		INSERT INTO BE_FRIEND
+		VALUES(FLIST_SEQ.NEXTVAL, #{be_id}, #{M2})
+	</insert>
+
+	<!-- 친구 검색 -->
+	<select id="searchMember" parameterType="memberDto"	resultType="memberDto">
+		SELECT BE_ID, BE_NN, BE_ROLE
+		FROM BE_MEMBER
+		WHERE BE_ID LIKE
+		'%'|| #{searchid} ||'%'
+		OR BE_NN LIKE '%'|| #{searchid} ||'%'
+	</select>
+
+
+	<!-- 공지사항 모두 보기-->
+	<select id="selectList" resultType="noticeDto">
+		SELECT BD_NO, BD_TITLE,
+		BD_NN, BD_DATE
+		FROM NOTICEBOARD
+	</select>
+
+	<!-- 공지사항 하나 보기 -->
 	<select id="selectOne" resultType="noticeDto">
-		SELECT BD_NN, BD_TITLE, BD_CONTENT
+		SELECT BD_NN, BD_TITLE,
+		BD_CONTENT
 		FROM NOTICEBOARD
 		WHERE BD_NO = #{bd_no}
-	</select>  
-  
-  </mapper>
+	</select>
+
+</mapper>

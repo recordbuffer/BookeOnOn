@@ -30,10 +30,18 @@ public class FriendDaoImpl implements FriendDao{
 	}
 
 	@Override
-	public List<FriendDto> selectFList() {
-		// TODO Auto-generated method stub
-		return null;
+	public List<MemberDto> selectFList(String be_id) {
+		List<MemberDto> list = new ArrayList<MemberDto>();
+
+		try {
+			list = sqlSession.selectList(NAMESPACE+"friendList",be_id);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+		return list;
 	}
+	
 
 	@Override
 	public int insertFriend(FriendDto dto) {
@@ -46,5 +54,7 @@ public class FriendDaoImpl implements FriendDao{
 		// TODO Auto-generated method stub
 		return 0;
 	}
+
+
 
 }

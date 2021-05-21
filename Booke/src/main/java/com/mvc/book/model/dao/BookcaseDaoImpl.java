@@ -15,11 +15,17 @@ public class BookcaseDaoImpl implements BookcaseDao{
 
 	@Autowired
 	private SqlSessionTemplate sqlSession;
-	
+
 	@Override
 	public List<W_bookDto> W_bookSelectAll() {
 		// TODO Auto-generated method stub
 		return null;
+	}
+
+	@Override
+	public int cntWbook() {
+		// TODO Auto-generated method stub
+		return 0;
 	}
 
 	@Override
@@ -32,6 +38,12 @@ public class BookcaseDaoImpl implements BookcaseDao{
 	public List<R_bookDto> R_bookSelectAll() {
 		// TODO Auto-generated method stub
 		return null;
+	}
+
+	@Override
+	public int cntRbook() {
+		// TODO Auto-generated method stub
+		return 0;
 	}
 
 	@Override
