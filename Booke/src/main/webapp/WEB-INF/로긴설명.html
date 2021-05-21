@@ -1,33 +1,33 @@
 <!--
-로그인 수정본
-login.jsp -> controll에서 요청받고 -> biz로 넘겨주고 -> bizimple-> dao -> dao impl -> board mapper -> return 받은값 반대로 jsp 
-1. 로그인 처리를 위한 DTO 클래스 -> MemberDto
-2. DAO, DAO IMPL 클래스 구현 -> MemberDao, MemberDaoimpl
+濡쒓렇�씤 �닔�젙蹂�
+login.jsp -> controll�뿉�꽌 �슂泥�諛쏄퀬 -> biz濡� �꽆寃⑥＜怨� -> bizimple-> dao -> dao impl -> board mapper -> return 諛쏆�媛� 諛섎�濡� jsp 
+1. 濡쒓렇�씤 泥섎━瑜� �쐞�븳 DTO �겢�옒�뒪 -> MemberDto
+2. DAO, DAO IMPL �겢�옒�뒪 援ы쁽 -> MemberDao, MemberDaoimpl
 3. 
  
 
-첫번쨰 시도 
+泥ル쾲夷� �떆�룄 
 
-login.jsp -> LoginController.java(컨트롤러) -> loginpage.jsp(뷰)
-MemberDTO.java, MemberDAO.java (모델)
+login.jsp -> LoginController.java(而⑦듃濡ㅻ윭) -> loginpage.jsp(酉�)
+MemberDTO.java, MemberDAO.java (紐⑤뜽)
 
 
-** 두번째 시도 
-로그인 설계도  
-M - SQL(DAO 분리) , DAO , DTO , Service , LoginCase(Service 분리).java
-DTO : 계층간 데이터 교환을 위환 자바 빈즈  DTO 또는 VO 라고 부름 
-DAO : DB접근하는 객체 사용이유 효율과 커넥션, 보안성 떄문 
+** �몢踰덉㎏ �떆�룄 
+濡쒓렇�씤 �꽕怨꾨룄  
+M - SQL(DAO 遺꾨━) , DAO , DTO , Service , LoginCase(Service 遺꾨━).java
+DTO : 怨꾩링媛� �뜲�씠�꽣 援먰솚�쓣 �쐞�솚 �옄諛� 鍮덉쫰  DTO �삉�뒗 VO �씪怨� 遺�由� 
+DAO : DB�젒洹쇳븯�뒗 媛앹껜 �궗�슜�씠�쑀 �슚�쑉怨� 而ㅻ꽖�뀡, 蹂댁븞�꽦 �뻹臾� 
 V - login_form , login_msg(check) , login_check_modul.jsp
 C - LoginController.java(servlet)
 
 
-**순서**
-VIEW(Client)->Controller ->Service(비교) -> DAO(추출) -> DB
-DB ->  DAO(추출) -> Service(비교) -> Controller -> VIEW(Client)
+**�닚�꽌**
+VIEW(Client)->Controller ->Service(鍮꾧탳) -> DAO(異붿텧) -> DB
+DB ->  DAO(異붿텧) -> Service(鍮꾧탳) -> Controller -> VIEW(Client)
 
 
-**세번째 시도 
-userDao -> Dto 생성 -> loginpage.jsp dao 실행 코드 작성   
+**�꽭踰덉㎏ �떆�룄 
+userDao -> Dto �깮�꽦 -> loginpage.jsp dao �떎�뻾 肄붾뱶 �옉�꽦   
 
 /*
 	public String loginCheck(String be_id, String be_pw) {
@@ -62,16 +62,23 @@ userDao -> Dto 생성 -> loginpage.jsp dao 실행 코드 작성
 	  }
 	  /*
 	   HttpSession 
-Session 이란 서버가 해당 웹에 접근한 사용자를 식별하는 방법입니다. 
-웹에서는 접근한 사용자에게 Response Header 필드인 ser-cookie 값으로 사용자를 식별하는 Session Id를 부여합니다. 
-웹으로부터 부여된 Session Id는 해당 웹(서버)과 브라우저(클라이언트) 메모리에 저장됩니다. 
-이때 클라이언트 메모리에 사용되는 Cookie의 타입은 Session이 종료될 때 함께 소멸되는 메모리 Cookie가 사용됩니다. 
-이러한 Session 을 이용하는 방식의 핵심은 HttpSession을 이용해 원하는 객체를 보관할 수 있다는 점입니다. 
-사용자는 항상 Session Cookie를 사용해 접근하고,  
-서버의 내부에 HttpSession 객체를 보관하기 때문에 보안상 안전하게 됩니다. 
+Session �씠�� �꽌踰꾧� �빐�떦 �쎒�뿉 �젒洹쇳븳 �궗�슜�옄瑜� �떇蹂꾪븯�뒗 諛⑸쾿�엯�땲�떎. 
+�쎒�뿉�꽌�뒗 �젒洹쇳븳 �궗�슜�옄�뿉寃� Response Header �븘�뱶�씤 ser-cookie 媛믪쑝濡� �궗�슜�옄瑜� �떇蹂꾪븯�뒗 Session Id瑜� 遺��뿬�빀�땲�떎. 
+�쎒�쑝濡쒕��꽣 遺��뿬�맂 Session Id�뒗 �빐�떦 �쎒(�꽌踰�)怨� 釉뚮씪�슦��(�겢�씪�씠�뼵�듃) 硫붾え由ъ뿉 ���옣�맗�땲�떎. 
+�씠�븣 �겢�씪�씠�뼵�듃 硫붾え由ъ뿉 �궗�슜�릺�뒗 Cookie�쓽 ���엯�� Session�씠 醫낅즺�맆 �븣 �븿猿� �냼硫몃릺�뒗 硫붾え由� Cookie媛� �궗�슜�맗�땲�떎. 
+�씠�윭�븳 Session �쓣 �씠�슜�븯�뒗 諛⑹떇�쓽 �빑�떖�� HttpSession�쓣 �씠�슜�빐 �썝�븯�뒗 媛앹껜瑜� 蹂닿��븷 �닔 �엳�떎�뒗 �젏�엯�땲�떎. 
+�궗�슜�옄�뒗 �빆�긽 Session Cookie瑜� �궗�슜�빐 �젒洹쇳븯怨�,  
+�꽌踰꾩쓽 �궡遺��뿉 HttpSession 媛앹껜瑜� 蹂닿��븯湲� �븣臾몄뿉 蹂댁븞�긽 �븞�쟾�븯寃� �맗�땲�떎. 
 
  -->
  
+ 
+ 
+<!--  
+ 1. signuppage.jsp -> 데이터 입력 후 가입하기 버튼 클릭! 
+ 2. Maincontroller -> joinpost(memberdto member 실행), 성공시 LOGIN PAGE로 
+ 3. 지금 biz가 -> void 값 말고 int insert board dto 값으로 변경 // 쉅시간 보드  글쓰기한거 참고 수업시간 글쓰기 메서드 참고 
+    -->
  
  
  

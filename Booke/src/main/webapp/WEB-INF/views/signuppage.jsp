@@ -69,7 +69,7 @@ td>#btn {
 		<br> <br>
 		<hr>
 		<br>
-		<form action="">
+		<form action="signup.do" method="post">
 			<table>
 				<tr>
 					<th>아이디</th>

@@ -17,16 +17,27 @@ public class MemberDaoImpl implements MemberDao{
 	@Autowired
 	private SqlSessionTemplate sqlSession;
 	
+	
 	@Override
-	public void memberJoinMethod(MemberDto dto) {
-		// TODO Auto-generated method stub
-		
+	public int memberJoinMethod(MemberDto dto){
+		int res = 0;
+		try {
+			res = sqlSession.insert(NAMESPACE+"signup",dto);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return res;
 	}
 
 	@Override
-	public boolean Idcheck(String be_id) {
-		// TODO Auto-generated method stub
-		return false;
+	public int Idcheck(String be_id) {
+		int res = 0;
+		try {
+			res = sqlSession.insert(NAMESPACE+"signup",dto);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return res;
 	}
 
 	@Override

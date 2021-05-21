@@ -16,9 +16,8 @@ public class MemberBizImpl implements MemberBiz{//로긴 넘겨준다고 다오�
     private MemberDao dao;
 	
 	@Override
-	public void memberJoinMethod(MemberDto dto) {
-		// TODO Auto-generated method stub
-		
+	public int memberJoinMethod(MemberDto dto) {
+		return dao.memberJoinMethod(dto);
 	}
 
 	@Override

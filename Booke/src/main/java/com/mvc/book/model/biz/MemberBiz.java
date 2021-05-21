@@ -10,7 +10,7 @@ import com.mvc.book.model.dto.MemberDto;
 public interface MemberBiz {
 		// [ 회원기능 ]
 		// 회원가입
-		public void memberJoinMethod(MemberDto dto);
+		public int memberJoinMethod(MemberDto dto);
 
 		// 회원가입_아이디중복체크
 		public boolean Idcheck(String be_id);

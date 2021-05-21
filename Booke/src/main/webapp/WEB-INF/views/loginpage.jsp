@@ -64,7 +64,7 @@ a:hover{color:rgb(223, 45, 139);}
 		<br>
 		
 		<form action="login.do" method="post">
-		    <input type="hidden" value="login">
+		    <!-- <input type="hidden" value="login"> -->
 			<div class="form">
 				<input type="text" class="form-control" placeholder="아이디" name="be_id">
 			</div>
@@ -81,7 +81,7 @@ a:hover{color:rgb(223, 45, 139);}
         <!--  <span style="color: red;">${param.message}</span>-->
 		<br><br><br>
 		<a href="">아이디 or 비밀번호 찾기</a>&nbsp;&nbsp;<span>/</span>&nbsp;
-		<a href="signup.do">회원가입</a>
+		<a href="signupform.do">회원가입</a>
 		
 	</main>
 

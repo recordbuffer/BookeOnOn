@@ -1,5 +1,6 @@
 package com.mvc.book.controller;
 
+import javax.inject.Inject;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
@@ -11,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 import com.mvc.book.model.biz.MemberBiz;
+import com.mvc.book.model.dao.MemberDao;
 import com.mvc.book.model.dto.MemberDto;
 
 @Controller
@@ -20,6 +22,7 @@ public class MainController {
 
 	 @Autowired
 	 private MemberBiz mbiz;
+	 
 
     // [시작 > 메인]
 	// 웰컴페이지로 이동
@@ -40,21 +43,35 @@ public class MainController {
 
 	// [회원 로그인]
 	// 로그인 페이지로 이동
+    @RequestMapping("/loginform.do")
+    public String loginForm() {
+        logger.info("LOGIN FORM");
+
+
+
+        return "loginpage";
+    }
 	// 성공시 -> "/main.do" 이동 -> 
 	// 로긴 실패시 -> "/loginform.do" 실패 알람 
-	@RequestMapping("/loginform.do")
-	public String loginForm() {
-		logger.info("LOGIN FORM");
-
-		return "loginpage";
+	  
+	// 회원 가입 post
+	@RequestMapping(value = "/signup.do", method = RequestMethod.POST)
+	public String postSignup(MemberDto dto){
+	 logger.info("signup.do");
+	 int res = mbiz.memberJoinMethod(dto);
+	 if(res>0) {
+		 return "redirect:loginform.do";
+	 }else
+		 return "redirect:signupform.do";
+	 
 	}
-	@RequestMapping(value="/login.do", method=RequestMethod.POST)
+
+		@RequestMapping(value="/login.do", method=RequestMethod.POST)
 	public String login(MemberDto dto, HttpServletRequest request) {
 		logger.info("login");
 		
 		HttpSession session = request.getSession();
 		MemberDto res = mbiz.login(dto);
-		
 		if(res == null) {
 			return "redirect:loginform.do";
 		}else {
@@ -64,12 +81,14 @@ public class MainController {
 	}
 
 	// 회원가입 페이지로 이동
-	@RequestMapping("/signup.do")
-	public String signupform() {
-		logger.info("SIGN UP FORM");
+		@RequestMapping("/signupform.do")
+	    public String signupform() {
+	        logger.info("signupform.do");
 
-		return "signuppage";
-	}
+
+
+	        return "signuppage";
+	    }
 
 	// 회원가입_아이디 중복 체크 페이지로 이동
 	@RequestMapping(value = "/idChk.do")
