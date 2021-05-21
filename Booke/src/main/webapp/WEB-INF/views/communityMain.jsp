@@ -94,7 +94,8 @@
 											<div class="card-header bg-transparent border-secondary">Project</div>
 											<div class="card-body">
 												<h5 class="card-title">Booke On&On</h5>
-												<p class="card-text">나만의 책장을 손쉽게 만들고 좋아하는 책을 통해 소통해 보자.</p>
+												<p class="card-text"
+													onclick="location.href='chatTest.do'">나만의 책장을 손쉽게 만들고 좋아하는 책을 통해 소통해 보자.</p>
 											</div>
 											<div class="card-footer bg-transparent border-secondary">6명
 												참여중</div>
