@@ -134,7 +134,7 @@ p>button{
 								<h5 class="card-text"><%=item.getContents() %></h5>
 								<h5 class="mt-3 w-100 float-left text-center"><%=item.getPublisher() %></h5>
 								<h5 class="mt-3 w-100 float-left text-center"><%=item.getSale_price() %></h5>
-								<button>저장</button>
+								<button>상세페이지</button>
 							</div>
 						</div>
 					</div>
