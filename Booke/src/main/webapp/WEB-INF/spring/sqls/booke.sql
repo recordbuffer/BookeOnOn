@@ -1,10 +1,10 @@
 DROP SEQUENCE M_NOSEQ;
 DROP TABLE BE_MEMBER CASCADE CONSTRAINTS;
 
---È¸¿ø ¹øÈ£ ½ÃÄö½º
+--È¸ï¿½ï¿½ ï¿½ï¿½È£ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 CREATE SEQUENCE M_NOSEQ NOCACHE;
 
---È¸¿ø Å×ÀÌºí 
+--È¸ï¿½ï¿½ ï¿½ï¿½ï¿½Ìºï¿½ 
 CREATE TABLE BE_MEMBER(
  BE_NO NUMBER NOT NULL,
  BE_ID VARCHAR2(100) NOT NULL,		
@@ -25,22 +25,22 @@ CREATE TABLE BE_MEMBER(
 );
 
 INSERT INTO BE_MEMBER VALUES(
-M_NOSEQ.NEXTVAL, 'thal00','1234','°¨ÀÚ','¹Ú¼Ò¹Ì','¼­¿ï½Ã ¼ÛÆÄ±¸','010-1111-3333','pth00@naver.com','Y','ADM');
+M_NOSEQ.NEXTVAL, 'thal00','1234','ï¿½ï¿½ï¿½ï¿½','ï¿½Ú¼Ò¹ï¿½','ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ä±ï¿½','010-1111-3333','pth00@naver.com','Y','ADM');
 
 INSERT INTO BE_MEMBER VALUES(
-M_NOSEQ.NEXTVAL, 'wngus99','1234','±è¹ä','±èÁÖÇö','°æ±âµµ ¼º³²½Ã','010-8888-6666','wn99@naver.com','Y','ADM');
+M_NOSEQ.NEXTVAL, 'wngus99','1234','ï¿½ï¿½ï¿½','ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½','ï¿½ï¿½âµµ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½','010-8888-6666','wn99@naver.com','Y','ADM');
 
 INSERT INTO BE_MEMBER VALUES(
-M_NOSEQ.NEXTVAL, 'tjwjd00','1234','¼øµÎºÎ','¹®¼­Á¤','°æ±âµµ ±¤¸í½Ã','010-3553-5555','moon00@naver.com','Y','ADM');
+M_NOSEQ.NEXTVAL, 'tjwjd00','1234','ï¿½ï¿½ï¿½Îºï¿½','ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½','ï¿½ï¿½âµµ ï¿½ï¿½ï¿½ï¿½ï¿½','010-3553-5555','moon00@naver.com','Y','ADM');
 
 INSERT INTO BE_MEMBER VALUES(
-M_NOSEQ.NEXTVAL, 'tmddnjs77','1234','Å°À§','Ã¤½Â¿ø','°æ±âµµ ³²¾çÁÖ½Ã','010-6666-7777','cccww11@naver.com','Y','L3');
+M_NOSEQ.NEXTVAL, 'tmddnjs77','1234','Å°ï¿½ï¿½','Ã¤ï¿½Â¿ï¿½','ï¿½ï¿½âµµ ï¿½ï¿½ï¿½ï¿½ï¿½Ö½ï¿½','010-6666-7777','cccww11@naver.com','Y','L3');
 
 INSERT INTO BE_MEMBER VALUES(
-M_NOSEQ.NEXTVAL, 'tjdtn44','1234','¿Á¼ö¼ö','¹Î¼º¼ö','°æ±âµµ ¼º³²½Ã','010-1111-9999','ssuu1919@naver.com','Y','L1');
+M_NOSEQ.NEXTVAL, 'tjdtn44','1234','ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½','ï¿½Î¼ï¿½ï¿½ï¿½','ï¿½ï¿½âµµ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½','010-1111-9999','ssuu1919@naver.com','Y','L1');
 
 INSERT INTO BE_MEMBER VALUES(
-M_NOSEQ.NEXTVAL, 'wjddn99','1234','¼ö¹Ú','ÃÖÁ¤¿ì','°æ±âµµ ¾È¾ç½Ã','010-1234-7777','jwooo00@naver.com',default,default);
+M_NOSEQ.NEXTVAL, 'wjddn99','1234','ï¿½ï¿½ï¿½ï¿½','ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½','ï¿½ï¿½âµµ ï¿½È¾ï¿½ï¿½','010-1234-7777','jwooo00@naver.com',default,default);
 
 
 
@@ -49,10 +49,10 @@ SELECT * FROM BE_MEMBER;
 DROP SEQUENCE FLIST_SEQ;
 DROP TABLE BE_FRIEND CASCADE CONSTRAINTS;
 
---Ä£±¸ ¹øÈ£ ½ÃÄö½º
+--Ä£ï¿½ï¿½ ï¿½ï¿½È£ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 CREATE SEQUENCE FLIST_SEQ NOCACHE;
 
---Ä£±¸ Å×ÀÌºí
+--Ä£ï¿½ï¿½ ï¿½ï¿½ï¿½Ìºï¿½
 CREATE TABLE BE_FRIEND(
  FLIST_NO NUMBER NOT NULL,
  M1 VARCHAR2(100) NOT NULL,
@@ -86,10 +86,10 @@ SELECT * FROM BE_FRIEND;
 DROP SEQUENCE MSG_SEQ;
 DROP TABLE BE_MSG CASCADE CONSTRAINTS;
 
---ÂÊÁö ¹øÈ£ ½ÃÄö½º
+--ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½È£ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 CREATE SEQUENCE MSG_SEQ NOCACHE;
  
---ÂÊÁö Å×ÀÌºí
+--ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ìºï¿½
 CREATE TABLE BE_MSG(
  MSG_NO NUMBER NOT NULL,
  FLIST_NO NUMBER NOT NULL,
@@ -101,7 +101,30 @@ CREATE TABLE BE_MSG(
 );
 
 INSERT INTO BE_MSG VALUES(
-MSG_SEQ.NEXTVAL, 1, 'Ã¹ ÂÊÁöÀÔ´Ï´Ù. ¾î¶°¼¼¿ä?', DEFAULT);
+MSG_SEQ.NEXTVAL, 1, 'Ã¹ ï¿½ï¿½ï¿½ï¿½ï¿½Ô´Ï´ï¿½. ï¿½î¶°ï¿½ï¿½ï¿½ï¿½?', DEFAULT);
 
 SELECT * FROM BE_MSG;
 -------------------
+
+
+--ï¿½ï¿½ï¿½ï¿½ ï¿½Ë»ï¿½ ï¿½ï¿½È£ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+CREATE SEQUENCE B_NO NOCACHE;
+
+--ï¿½ï¿½
+DROP TABLE BOOK CASCADE CONSTRAINTS;
+ï¿½ï¿½ ï¿½Ë»ï¿½ ï¿½ï¿½ï¿½Ìºï¿½
+CREATE TABLE BOOK(
+ ISBN VARCHAR2(200) NOT NULL,
+ B_TITLE VARCHAR2(200) NOT NULL,
+ B_AUTHORS VARCHAR2(200) NOT NULL,
+ B_PUBLISHER VARCHAR2(200) NOT NULL,
+ B_PRICE INT NOT NULL,
+ B_COVER VARCHAR2(200) NOT NULL,
+ B_CONTENTS VARCHAR2(200) NOT NULL,
+ B_PUBDATE DATE TIME NOT NULL,
+ CONSTRAINT BOOK_PK PRIMARY KEY(ISBN)
+);
+
+SELECT * FROM BOOK;
+
+

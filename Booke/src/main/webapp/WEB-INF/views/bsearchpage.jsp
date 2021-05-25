@@ -30,6 +30,13 @@ try{
 <head>
 <meta charset="UTF-8">
 <title>main</title>
+
+<script type="text/javascript">
+
+	
+
+</script>
+
 <!-- bootstrap css -->
 <link rel="stylesheet"
 	href="${pageContext.request.contextPath}/resources/css/bootstrap.min.css">
@@ -85,10 +92,12 @@ p>button{
 			<div class="row h-100 align-items-center">
 				<div class="col-lg-12" id="hddiv">
 					<h1 class="display-4 text-white mt-1 mb-1">
-						<button type="button" class="btn btn-dark" >작가</button>
-						<button type="button" class="btn btn-dark" >도서명</button>
-						<form class="d-flex" action="bres.do">
-							<input class="form-control me-2" type="text" placeholder="Search"
+						<button type="button" class="btn btn-dark">북이온앤온 검색하기</button>
+						<form class="d-flex" action="bsearch.do">
+							<input class="form-control me-2" type="text" name="query" placeholder="Search"
+								<%if(query != null) { %>
+								value="<%=query %>"
+								<%} %>
 								aria-label="Search">&nbsp; 
 							<input class="btn btn-outline-dark" type="submit" value="Search">
 						</form>
@@ -97,21 +106,6 @@ p>button{
 			</div>
 		</div>
 	</header>
-
-	<!-- Page Content -->
-	<form action="bsearch.do">
-		<input type="text" name="query" placeholder="검색어를 입력해주세요" 
-		<%if(query != null) { %>
-		value="<%=query %>"
-		<%} %>
-		/>
-		<select name="sort">
-			<option value="accuracy" <%if(sort.equals("accuraacy")) { out.print("selected"); }%>>정확도순</option>
-			<option value="recency" <%if(sort.equals("recency")) { out.print("recency"); }%>>최신순</option>
-			
-		</select>
-		<input type="submit" value="검색" />
-	</form>
 	
 	<!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
 
@@ -129,12 +123,12 @@ p>button{
 							<a href="<%=item.getUrl() %>"><img class="card-img-top" src="<%=item.getThumbnail() %>" alt="Card image cap"></a>
 							</div>
 							<div class="card-body pt-0">
-								<h5 class="card-title"><a href="<%=item.getUrl() %>"><%=item.getTitle() %></a></h5>
+								<h5 class="card-title"><a href="<%=item.getUrl() %>"><%=item.getTitle() %></a></h5><!-- 나중에 URL 대신 보낼 jsp 위치를 적어놓으면 된다. -->
 								<h5 class="card-text"><%=item.getAuthors()[0] %></h5>
 								<h5 class="card-text"><%=item.getContents() %></h5>
 								<h5 class="mt-3 w-100 float-left text-center"><%=item.getPublisher() %></h5>
-								<h5 class="mt-3 w-100 float-left text-center"><%=item.getSale_price() %></h5>
-								<button>상세페이지</button>
+								<h5 class="mt-3 w-100 float-left text-center"><%=item.getPrice() %></h5>
+								<input type="button" id="btn" value="상세보기" onclick="idcheck();"><!-- 읽고싶어요는 상세보기안에 만들기 (일고싶어요랑 읽었어요)-->
 							</div>
 						</div>
 					</div>
