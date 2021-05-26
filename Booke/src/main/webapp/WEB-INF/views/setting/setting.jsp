@@ -1,5 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+	
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+	
 <!DOCTYPE html>
 <html>
 <head>
@@ -77,8 +80,17 @@ td>#btn {
 							 onclick="location.href='notice.do'"></td>
 				<td><input type="button" value="쪽지관리" class="form-control" id="btn" style="width: 170px; margin-top: 20px; font-size: 14pt;"
 							onclick="location.href=''"></td>
-				<td><input type="button" value="친구관리" class="form-control" id="btn" style="width: 170px; margin-top: 20px; font-size: 14pt;"
+				<!-- 관리자 계정일 경우 -->
+				<c:choose>
+				<c:when test="${user.be_role == 'ADM' }">			
+					<td><input type="button" value="회원관리" class="form-control" id="btn" style="width: 170px; margin-top: 20px; font-size: 14pt;"
+							onclick="location.href='userAll.do'"></td>		
+				</c:when>
+				<c:otherwise>
+					<td><input type="button" value="친구관리" class="form-control" id="btn" style="width: 170px; margin-top: 20px; font-size: 14pt;"
 							onclick="location.href='friend.do'"></td>
+				</c:otherwise>
+				</c:choose>
 			</tr>
 			<tr>
 				<td><input type="button" value="회원 정보 수정" class="form-control" id="btn" style="width: 170px; margin-top: 20px; font-size: 14pt;"

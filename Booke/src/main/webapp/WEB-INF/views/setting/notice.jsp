@@ -60,30 +60,38 @@ td>a{
 		<!-- 결과 테이블 -->
 		<section>
 			<div style="height: 100%">
-				<table class="table table-striped" style="text-align:center">
+				<table class="table table-hover" style="text-align:center">
 					<col width="30">
 					<col width="150">
 					<col width="30">
 					<col width="100">
-					<tr >
+					<tr style="font-size: 14pt;">
 						<th>글 번호</th>
 						<th>글 제목</th>
 						<th>작성자</th>
 						<th>작성일</th>
 					</tr>
-					<c:forEach items="${list }" var="dto">
+					<c:forEach items="${list }" var="board">
 						<tr>
-							<td>${dto.bd_no }</td>
-							<td><a href="noticeOne.do?bd_no=${dto.bd_no}">${dto.bd_title }</a></td>
-							<td>${dto.bd_nn }</td>
-							<td>${dto.bd_date }</td>
+							<td>${board.bd_no }</td>
+							<td><a href="noticeOne.do?bd_no=${board.bd_no}">${board.bd_title }</a></td>
+							<td>${board.bd_nn }</td>
+							<td>${board.bd_date }</td>
 						</tr>
 					</c:forEach>
+					<!-- 관리자 계정일 경우 -->
+					<c:if test="${user.be_role == 'ADM' }">
+						<tr>
+							<td colspan="4" align="right" style="padding:0;">
+								<input type="button" class="btn btn-outline-dark" value="글 작성" onclick="location.href='ninsertform.do'">
+							</td>
+						</tr>
+					</c:if>
 				</table>
 			</div>
 		</section>
 
-		<div style="height: 100px"></div>
+		<div style="height: 180px"></div>
 	</main>
 
 	<jsp:include page="../footer.jsp"></jsp:include>

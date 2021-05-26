@@ -41,7 +41,6 @@ public class FriendDaoImpl implements FriendDao{
 		
 		return list;
 	}
-	
 
 	@Override
 	public int insertFriend(FriendDto dto) {

@@ -2,9 +2,10 @@ package com.mvc.book.model.biz;
 
 import java.util.List;
 
+import com.mvc.book.model.dto.MemberDto;
 import com.mvc.book.model.dto.NoticeDto;
 
-public interface NoticeBiz {
+public interface AdminBiz {
 
 	//[공지사항]
 	//공지사항 모두 보기
@@ -21,5 +22,11 @@ public interface NoticeBiz {
 	
 	//공지사항 글삭제
 	public int delete(int bd_no);
+	
+	//모든 회원 출력
+	public List<MemberDto> userList();
+	
+	//회원 강제 탈퇴
+	public int userout(int be_no);
 	
 }

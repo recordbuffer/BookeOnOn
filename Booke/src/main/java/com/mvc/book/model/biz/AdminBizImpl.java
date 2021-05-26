@@ -5,14 +5,15 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.mvc.book.model.dao.NoticeDao;
+import com.mvc.book.model.dao.AdminDao;
+import com.mvc.book.model.dto.MemberDto;
 import com.mvc.book.model.dto.NoticeDto;
 
 @Service
-public class NoticeBizImpl implements NoticeBiz{
+public class AdminBizImpl implements AdminBiz{
 
 	@Autowired
-	private NoticeDao dao;
+	private AdminDao dao;
 	
 	@Override
 	public List<NoticeDto> selectList() {
@@ -26,20 +27,27 @@ public class NoticeBizImpl implements NoticeBiz{
 
 	@Override
 	public int insert(NoticeDto dto) {
-		// TODO Auto-generated method stub
-		return 0;
+		return dao.insert(dto);
 	}
 
 	@Override
 	public int update(NoticeDto dto) {
-		// TODO Auto-generated method stub
-		return 0;
+		return dao.update(dto);
 	}
 
 	@Override
 	public int delete(int bd_no) {
-		// TODO Auto-generated method stub
-		return 0;
+		return dao.delete(bd_no);
+	}
+
+	@Override
+	public List<MemberDto> userList() {
+		return dao.userList();
+	}
+
+	@Override
+	public int userout(int be_no) {
+		return dao.userout(be_no);
 	}
 	
 

@@ -7,7 +7,7 @@
 	<!-- 로그인 -->
 	<select id="login" parameterType="memberDto" resultType="memberDto">
 		SELECT * FROM BE_MEMBER
-		WHERE BE_ID=#{be_id} and BE_PW=#{be_pw}
+		WHERE BE_ID=#{be_id} and BE_PW=#{be_pw} and BE_ENABLED='Y'
 	</select>
 	
 	<!-- 회원 정보 보기 -->
@@ -38,20 +38,19 @@
 		OR BE_NN LIKE '%'|| #{searchid} ||'%'
 	</select>
 
-
 	<!-- 공지사항 모두 보기-->
-	<select id="selectList" resultType="noticeDto">
+	<select id="noticeAll" resultType="noticeDto">
 		SELECT BD_NO, BD_TITLE,
 		BD_NN, BD_DATE
 		FROM NOTICEBOARD
 	</select>
 
 	<!-- 공지사항 하나 보기 -->
-	<select id="selectOne" resultType="noticeDto">
-		SELECT BD_NN, BD_TITLE,
+	<select id="noticeOne" resultType="noticeDto">
+		SELECT BD_NO, BD_NN, BD_TITLE,
 		BD_CONTENT
 		FROM NOTICEBOARD
 		WHERE BD_NO = #{bd_no}
 	</select>
-
+	
 </mapper>

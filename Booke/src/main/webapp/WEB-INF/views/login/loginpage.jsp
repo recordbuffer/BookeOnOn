@@ -86,7 +86,7 @@ a:hover {
 		<br>
 		<br>
 		<br> <a href="">아이디 or 비밀번호 찾기</a>&nbsp;&nbsp;<span>/</span>&nbsp;
-		<a href="signup.do">회원가입</a>
+		<a href="signupform.do">회원가입</a>
 
 	</main>
 

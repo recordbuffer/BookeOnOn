@@ -1,9 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-
-<%@page import="java.util.List"%>
-<%@ page import="com.mvc.book.model.dto.MemberDto" %>
-<% List<MemberDto> friendList = (List<MemberDto>)request.getAttribute("friendList");  %>
+	
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -182,9 +181,25 @@
 							<div class="login_menu">
 								<!-- 서재 / 커뮤니티 / 내 서재 버튼 div -->
 								<div>
-								<div class="login_img">
-									<img src="resources/images/kjh.png" style="border-radius: 100%;">
-								</div>
+								<!-- 계정에 따라 프로필 -->
+								<c:choose>
+								<c:when test="${user.be_role == 'ADM' }">
+									<div class="login_img">
+									<img src="resources/images/kjh.png" style="border-radius: 100%;"></div>
+								</c:when>
+								<c:when test="${user.be_role == 'L3' }">
+									<div class="login_img">
+									<img src="resources/images/L3.png" style="transform: translate(23px, 5px); border-radius: 100%; height: 110px;"></div>
+								</c:when>
+								<c:when test="${user.be_role == 'L2' }">
+									<div class="login_img">
+									<img src="resources/images/L2.png" style="border-radius: 100%;"></div>
+								</c:when>
+								<c:otherwise>
+									<div class="login_img">
+									<img src="resources/images/L1.png" style="border-radius: 100%; height: 100px; transform: translate(25px, 12px);""></div>
+								</c:otherwise>
+								</c:choose>
 								<div class="login_name">
 									<!-- 설정 / 쪽지 버튼, 닉네임 -->
 									<a href="setting.do"><i class="bi bi-gear-fill" style="font-size: 2.2rem; color: white; position: absolute; left: 160px; transform: translate(5px, 10px);"></i></a>
@@ -195,7 +210,7 @@
 									</div>
 									<div style="transform: translate(-124px,30px);  color:white; ">
 										<span style="font-size: 20pt;">친구</span >&nbsp;&nbsp;&nbsp;
-										<span style="font-size: 18pt;">33<a href="frd.do"></a></span><span style="font-size: 16pt;"> 명</span>
+										<span style="font-size: 18pt;">${cntFList}<a href="frd.do"></a></span><span style="font-size: 16pt;"> 명</span>
 										<a href="fsearch.do"><i class="bi bi-plus-circle" style="font-size: 1.8rem; color: white; position: relative; left: 80px;"></i></a>
 										<a href="msg.do"><i class="bi bi-chat-text-fill" style="font-size: 1.8rem; color: white; position: relative; left: 90px;"></i></a>
 									</div>

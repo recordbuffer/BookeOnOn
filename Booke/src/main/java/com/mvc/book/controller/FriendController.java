@@ -43,7 +43,7 @@ public class FriendController {
 			String searchid = request.getParameter("searchid");
 			
 			List<MemberDto> list = fbiz.searchMember(searchid);
-			request.setAttribute("list", list);
+			request.setAttribute("Searchlist", list);
 			
 			return "friend/fsearchpage_res";
 		}
@@ -61,8 +61,27 @@ public class FriendController {
 			
 			model.addAttribute("friendList",friendList);
 			
-			return "friend/friendpage";
-			
+			return "friend/friendpage";		
 		}
+		
+		
+		
+		/*
+		 * // 친구 맺기
+		 * 
+		 * @RequestMapping(value="insertF.do", method=RequestMethod.POST) public int
+		 * insertFriend(HttpSession session,String M2) {
+		 * 
+		 * MemberDto user = (MemberDto)session.getAttribute("user"); String be_id =
+		 * user.getBe_id();
+		 * 
+		 * int res = fbiz.insertFriend(be_id,M2);
+		 * 
+		 * 
+		 * return 0; }
+		 */
+		
+		// 친구 끊기
+		
 		
 }

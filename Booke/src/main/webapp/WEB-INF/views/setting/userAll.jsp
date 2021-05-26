@@ -3,7 +3,7 @@
 	
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
-	
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -64,42 +64,44 @@ td>img{
 	<br>
 
 	<main class="form-signup">
-		<h1 style="margin-bottom: 20px;">내 친구 목록</h1>
-
-		<div style="height: 60px"></div>
-
+		<h1 style="margin-bottom: 20px;">회원 목록</h1>
+		<div style="height: 30px"></div>
 		<!-- 결과 테이블 -->
 		<section>
-			<div style="height: 270px" >
+			<h5 style="text-align: right;">총 ${fn:length(userList)} 명</h5>
+			<div style="height: 100%" >
 				<table class="table table-hover">
-					<col width="100">
-					<col width="100">
-					<col width="100">
-					<col width="100">
-					<col width="100">
 					<tr>
+						<th>번호</th>
 						<th>아이디</th>
+						<th>이름</th>
 						<th>닉네임</th>
+						<th>이메일</th>
 						<th>회원등급</th>
-						<th>친구 상태</th>
-						<th>쪽지 보내기</th>
-					</tr>
-					<c:forEach items="${friendList }" var="flist">
+						<th>탈퇴여부</th>
+						<th>&nbsp;</th>
+					</tr>					
+					<c:forEach items="${userList }" var="ulist">
 						<tr>
-							<td>${flist.be_id }</td>
-							<td>${flist.be_nn }</td>
-							<td>${flist.be_role }</td>
+						<!-- 본인 계정은 안보이게 하고 싶은데 일단 안돼서 관리자 계정만 넣어줌 -->						
+						<c:if test="${ulist.be_id != 'thal00'}">
+							<td>${ulist.be_no }</td>
+							<td>${ulist.be_id }</td>
+							<td>${ulist.be_name }</td>							
+							<td>${ulist.be_nn }</td>
+							<td>${ulist.be_email}</td>
+							<td>${ulist.be_role }</td>
+							<td>${ulist.be_enabled }</td>
 							<td>
-								<button type="submit" id="fbtn" class="btn btn-outline-dark btn-sm" style="margin: 0px;" onclick="location.href='insertF.do?M2=${flist.be_id }'">친구 맺기</button>						
-								<button type="submit" id="mbtn" class="btn btn-dark btn-sm" style="margin: 0px;" onclick="">친구 끊기</button>
-							<td><img src="resources/images/mail.png" alt="#"></td>
+								<input type="button" class="btn btn-outline-dark btn-sm" value="강제탈퇴" onclick="location.href='userout.do?be_no=${ulist.be_no}'">
+							</td>				
+						</c:if>	
 						</tr>
 					</c:forEach>
-					<c:set var="cntFList"  value="${fn:length(friendList)}" scope="session"></c:set>
 				</table>
 			</div>
 		</section>
-		<div style="height: 20px"></div>
+		<div style="height: 80px"></div>
 
 	</main>
 

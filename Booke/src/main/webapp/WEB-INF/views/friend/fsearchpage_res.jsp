@@ -2,11 +2,6 @@
 	pageEncoding="UTF-8"%>
 
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-
-<%@ page import="com.mvc.book.model.dto.MemberDto" %>
-<%@ page import="java.util.List" %>	
-
-<% List<MemberDto> list = (List<MemberDto>)request.getAttribute("list"); %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -79,6 +74,8 @@ td>img {
 		<!-- 결과 테이블 -->
 		<section>
 			<div style="height: 100%">
+			<form action="">
+				<input type="hidden" value="M2">
 				<table class="table table-hover">
 					<col width="100">
 					<col width="100">
@@ -92,22 +89,20 @@ td>img {
 						<th>친구 상태</th>
 						<th>쪽지 보내기</th>
 					</tr>
+					<c:forEach items="${Searchlist }" var="slist">
 					<tr>
-						<%
-							for (MemberDto dto : list) {
-						%>
-					</tr>
-					<tr>
-						<td><%=dto.getBe_id()%></td>
-						<td><%=dto.getBe_nn()%></td>
-						<td><%=dto.getBe_role() %></td>
-						<td><button class="btn btn-outline-dark btn-sm" type="submit" style="margin: 0px;">친구</button></td>
+						<td id="M2">${slist.be_id }</td>
+						<td>${slist.be_nn }</td>
+						<td>${slist.be_role }</td>
+						<td>
+							<button type="submit" id="fbtn" class="btn btn-outline-dark btn-sm" style="margin: 0px;" onclick="location.href='insertF.do'">친구 맺기</button>						
+							<button type="submit" id="mbtn" class="btn btn-dark btn-sm" style="margin: 0px;" onclick="location.href='deleteF.do'">친구 끊기</button>
+						</td>
 						<td><img src="resources/images/mail.png" alt="#"></td>
 					</tr>
-					<%
-						}
-					%>
+					</c:forEach>
 				</table>
+			</form>
 			</div>
 		</section>
 

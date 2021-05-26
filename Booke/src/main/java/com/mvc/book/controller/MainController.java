@@ -1,4 +1,7 @@
 package com.mvc.book.controller;
+
+import java.util.List;
+
 import javax.servlet.http.HttpSession;
 
 import org.slf4j.Logger;
@@ -8,7 +11,9 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import com.mvc.book.model.biz.NoticeBiz;
+import com.mvc.book.model.biz.AdminBiz;
+import com.mvc.book.model.biz.FriendBiz;
+import com.mvc.book.model.dto.MemberDto;
 
 
 @Controller
@@ -17,7 +22,8 @@ public class MainController {
 	private static final Logger logger = LoggerFactory.getLogger(MainController.class);
 	
 	@Autowired
-	private NoticeBiz nbiz;
+	private AdminBiz ambiz;
+	private FriendBiz fbiz;
 
 	
 	// [시작 > 메인]
@@ -41,7 +47,7 @@ public class MainController {
 	}
 
 	// 회원가입 페이지로 이동
-	@RequestMapping("/signup.do")
+	@RequestMapping("/signupform.do")
 	public String signupform() {
 		logger.info("SIGN UP FORM");
 
@@ -60,10 +66,8 @@ public class MainController {
 	// [메인 페이지]
 	// 로그인 후 메인 페이지로 이동
 	@RequestMapping("/main.do")
-	public String main(HttpSession session) {
+	public String main(HttpSession session, Model model) {
 		logger.info("MAIN PAGE");
-		
-		
 
 		return "mainpage";
 	}
@@ -133,7 +137,7 @@ public class MainController {
 	public String noticepage(Model model) {
 		logger.info("NOTICE PAGE");
 		
-		model.addAttribute("list",nbiz.selectList());
+		model.addAttribute("list", ambiz.selectList());
 
 		return "setting/notice";
 	}
@@ -143,7 +147,7 @@ public class MainController {
 	public String noticeOne(Model model, int bd_no) {
 		logger.info("NOTICE SELECT ONE");
 		
-		model.addAttribute("dto",nbiz.selectOne(bd_no));
+		model.addAttribute("board", ambiz.selectOne(bd_no));
 		
 		return "setting/noticeOne";
 	}
