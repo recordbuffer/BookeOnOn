@@ -1,21 +1,33 @@
 package com.mvc.book.controller;
 
+import java.io.Console;
 import java.text.DateFormat;
 import java.util.Date;
 import java.util.Locale;
 
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
+import com.mvc.book.kakaoapidb.kakaodbbiz;
+import com.mvc.book.kakaoapidb.kakaodbdto;
+import com.mvc.book.kakaoapidb.kakaordto;
+
 @Controller
 public class MainController {
 
 	private static final Logger logger = LoggerFactory.getLogger(MainController.class);
-
+	
+	@Autowired
+	private kakaodbbiz biz;
+	
 	@RequestMapping(value = "/", method = RequestMethod.GET)
 	public String home(Locale locale, Model model) {
 		logger.info("Welcome home! The client locale is {}.", locale);
@@ -130,6 +142,49 @@ public class MainController {
 	public String bres() {
 		return "bsearchpage_res";
 	}
+	
+	//도서검색 읽고싶어요 db저장
+	@RequestMapping("/kakaodb.do")
+	public String kakaodb(HttpServletRequest request, HttpServletResponse response) {
+		String cover = request.getParameter("cover");
+		String title = request.getParameter("title");
+		String authors = request.getParameter("authors");
+		String contents = request.getParameter("contents");
+		System.out.println("String"+cover);
+		System.out.println("String"+title);
+		System.out.println("String"+authors);
+		System.out.println("String"+contents);
+		
+		kakaodbdto dto = new kakaodbdto(0, 0, title, authors, cover, null);
+		
+		int res = biz.insert(dto);
+		
+		System.out.println(res);
+		
+		return "res";
+	}
+	
+	//읽고싶어요
+	@RequestMapping("/kakaoW.do")
+	public String kakaoW(HttpServletRequest request, HttpServletResponse response) {
+		String cover = request.getParameter("cover");
+		String title = request.getParameter("title");
+		String authors = request.getParameter("authors");
+		String contents = request.getParameter("contents");
+		System.out.println("String"+cover);
+		System.out.println("String"+title);
+		System.out.println("String"+authors);
+		System.out.println("String"+contents);
+		
+		kakaordto dto1 = new kakaordto(0, 0, title, authors, cover, null);
+		
+		int res1 = biz.winsert(dto1);
+		
+		System.out.println(res1);
+		
+		return "res";
+	}
+	
 
 	// [ 서재 ]
 	// 서재 페이지로 이동

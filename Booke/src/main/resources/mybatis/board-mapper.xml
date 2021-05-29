@@ -4,4 +4,15 @@
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
   <mapper namespace="mybooke">
   
+  <insert id="kakaowinsert" parameterType="kakaordto">
+  	INSERT INTO W_BOOK
+	VALUES(W_NOSEQ.NEXTVAL, 1, #{b_title}, #{b_author}, #{b_cover}, SYSDATE)
+  </insert>
+  
+  <insert id="kakaoinsert" parameterType="kakaodbdto">
+  	INSERT INTO R_BOOK
+	VALUES(R_NOSEQ.NEXTVAL, 1, #{b_title}, #{b_author}, #{b_cover}, SYSDATE)
+  </insert>
+  
+  
   </mapper>

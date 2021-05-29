@@ -5,9 +5,14 @@
   <configuration>
   	<typeAliases>
   		<typeAlias type="com.mvc.book.model.dto.BookDto" alias="bookDto"/>
+  		<typeAlias type="com.mvc.book.kakaoapidb.kakaodbdto" alias="kakaodbdto"/>
+  		<typeAlias type="com.mvc.book.kakaoapidb.kakaordto" alias="kakaordto"/>
+  		<typeAlias type="com.mvc.book.model.dto.R_bookDto" alias="R_bookdto"/>
+  		<typeAlias type="com.mvc.book.model.dto.W_bookDto" alias="W_bookdto"/>
   	</typeAliases>
   	
   	<mappers>
   		<mapper resource="/mybatis/board-mapper.xml"/>
   	</mappers>
+  	
   </configuration>
