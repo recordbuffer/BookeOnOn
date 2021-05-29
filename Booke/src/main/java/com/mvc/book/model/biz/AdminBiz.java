@@ -29,4 +29,7 @@ public interface AdminBiz {
 	//회원 강제 탈퇴
 	public int userout(int be_no);
 	
+	//회원 탈퇴 복구
+	public int userback(int be_no);
+	
 }

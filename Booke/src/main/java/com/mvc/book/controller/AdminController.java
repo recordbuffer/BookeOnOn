@@ -99,9 +99,7 @@ public class AdminController {
 	@RequestMapping("/userout.do")
 	public String userOut(int be_no) {
 		logger.info("USER DELETE");
-		
-		System.out.println(be_no);
-		
+				
 		int res = ambiz.userout(be_no);
 		
 		 if(res>0) {
@@ -110,5 +108,20 @@ public class AdminController {
 			return "redirect:userAll.do"; 
 		}
 	}
-
+	
+	// 회원 탈퇴 복구
+	@RequestMapping("/userback.do")
+	public String userBack(int be_no) {
+		logger.info("USER BACK");
+		
+		System.out.println(be_no);
+		
+		int res = ambiz.userback(be_no);
+		
+		 if(res>0) {
+			 return "redirect:userAll.do"; 
+		} else { 
+			return "redirect:userAll.do"; 
+		}
+	}
 }

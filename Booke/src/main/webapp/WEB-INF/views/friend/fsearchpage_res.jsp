@@ -2,6 +2,7 @@
 	pageEncoding="UTF-8"%>
 
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -74,35 +75,38 @@ td>img {
 		<!-- 결과 테이블 -->
 		<section>
 			<div style="height: 100%">
-			<form action="">
-				<input type="hidden" value="M2">
-				<table class="table table-hover">
-					<col width="100">
-					<col width="100">
-					<col width="100">
-					<col width="100">
-					<col width="100">
-					<tr>
-						<th>아이디</th>
-						<th>닉네임</th>
-						<th>회원등급</th>
-						<th>친구 상태</th>
-						<th>쪽지 보내기</th>
-					</tr>
-					<c:forEach items="${Searchlist }" var="slist">
-					<tr>
-						<td id="M2">${slist.be_id }</td>
-						<td>${slist.be_nn }</td>
-						<td>${slist.be_role }</td>
-						<td>
-							<button type="submit" id="fbtn" class="btn btn-outline-dark btn-sm" style="margin: 0px;" onclick="location.href='insertF.do'">친구 맺기</button>						
-							<button type="submit" id="mbtn" class="btn btn-dark btn-sm" style="margin: 0px;" onclick="location.href='deleteF.do'">친구 끊기</button>
-						</td>
-						<td><img src="resources/images/mail.png" alt="#"></td>
-					</tr>
+				<form action="">
+					<input type="hidden" value="M2">
+					<table class="table table-hover">
+						<col width="100">
+						<col width="100">
+						<col width="100">
+						<col width="100">
+						<col width="100">
+						<tr>
+							<th>아이디</th>
+							<th>닉네임</th>
+							<th>회원등급</th>
+							<th>친구 상태</th>
+							<th>쪽지 보내기</th>
+						</tr>
+						<tr>
+					<c:forEach items="${Searchlist }" var="slist" varStatus="status">
+							<td>${slist.be_id }</td>
+							<td>${slist.be_nn }</td>
+							<td>${slist.be_role }</td>
+							<td>
+								<button type="submit" id="fbtn" class="btn btn-outline-danger btn-sm" style="margin: 0px;"
+										onclick="location.href='deleteF.do?m2=${slist.be_id}'">친구끊기</button>
+							
+								<button type="submit" id="mbtn" class="btn btn-outline-dark btn-sm" style="margin: 0px;" 
+										onclick="location.href='.do'">친구맺기</button>
+							</td>
+							<td><img src="resources/images/mail.png" alt="#"></td>
 					</c:forEach>
-				</table>
-			</form>
+						</tr>
+					</table>
+				</form>
 			</div>
 		</section>
 

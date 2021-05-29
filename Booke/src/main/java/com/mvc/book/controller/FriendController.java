@@ -1,6 +1,8 @@
 package com.mvc.book.controller;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
@@ -14,7 +16,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 import com.mvc.book.model.biz.FriendBiz;
-import com.mvc.book.model.dto.FriendDto;
 import com.mvc.book.model.dto.MemberDto;
 
 @Controller
@@ -37,7 +38,7 @@ public class FriendController {
 			
 		// 친구 검색 페이지 > 검색 결과 페이지로 이동
 		@RequestMapping("/fres.do")
-		public String fres(HttpServletRequest request) {
+		public String fres(HttpServletRequest request,HttpSession session) {
 			logger.info("FRIEND SEARCH RES PAGE");
 
 			String searchid = request.getParameter("searchid");
@@ -45,6 +46,13 @@ public class FriendController {
 			List<MemberDto> list = fbiz.searchMember(searchid);
 			request.setAttribute("Searchlist", list);
 			
+			//친구 상태 확인
+			MemberDto user = (MemberDto)session.getAttribute("user");
+			String be_id = user.getBe_id();
+			
+			List<MemberDto> friendList = fbiz.selectFList(be_id);
+			request.setAttribute("friendList", friendList);
+
 			return "friend/fsearchpage_res";
 		}
 		
@@ -82,6 +90,26 @@ public class FriendController {
 		 */
 		
 		// 친구 끊기
-		
+		@RequestMapping(value="/deleteF.do")
+		public String deleteFriend(HttpSession session, String m2) {
+			logger.info("FRIEND DELETE");
+			
+			MemberDto user = (MemberDto)session.getAttribute("user");
+			String m1 = user.getBe_id();
+			
+			Map<String, String> map = new HashMap<String, String>();
+			map.put("m1", m1);
+			map.put("m2", m2);
+			
+			
+			int res = fbiz.deleteFriend(map);
+			
+			if(res>0) {
+				return "redirect:friend.do";
+			} else {
+				return "redirect:friend.do";
+			}
+			
+		}
 		
 }

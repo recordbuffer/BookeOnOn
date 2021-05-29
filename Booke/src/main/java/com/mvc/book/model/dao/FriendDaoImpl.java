@@ -2,6 +2,7 @@ package com.mvc.book.model.dao;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
 import org.mybatis.spring.SqlSessionTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -49,9 +50,16 @@ public class FriendDaoImpl implements FriendDao{
 	}
 
 	@Override
-	public int deleteFriend(int flist_no) {
-		// TODO Auto-generated method stub
-		return 0;
+	public int deleteFriend(Map map) {
+		int res = 0;
+		
+		try {
+			res = sqlSession.delete(NAMESPACE+"deleteFriend",map);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+				
+		return res;
 	}
 
 

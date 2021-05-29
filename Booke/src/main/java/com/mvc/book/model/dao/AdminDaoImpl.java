@@ -106,6 +106,19 @@ public class AdminDaoImpl implements AdminDao{
 		
 		return res;
 	}
+
+	@Override
+	public int userback(int be_no) {
+		int res = 0;
+		
+		try {
+			res = sqlSession.update(NAMESPACE2+"userBack",be_no);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+		return res;
+	}
 	
 
 }

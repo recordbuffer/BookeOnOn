@@ -68,10 +68,10 @@ td>img{
 		<div style="height: 30px"></div>
 		<!-- 결과 테이블 -->
 		<section>
-			<h5 style="text-align: right;">총 ${fn:length(userList)} 명</h5>
+			<h5 style="text-align: right;">총 ${cntList} 명</h5>
 			<div style="height: 100%" >
 				<table class="table table-hover">
-					<tr>
+					<tr style="font-size: 14pt;">
 						<th>번호</th>
 						<th>아이디</th>
 						<th>이름</th>
@@ -93,11 +93,19 @@ td>img{
 							<td>${ulist.be_role }</td>
 							<td>${ulist.be_enabled }</td>
 							<td>
-								<input type="button" class="btn btn-outline-dark btn-sm" value="강제탈퇴" onclick="location.href='userout.do?be_no=${ulist.be_no}'">
+						<c:choose>
+							<c:when test="${ulist.be_enabled =='Y' }">
+								<input type="button" class="btn btn-outline-danger btn-sm" value="강제탈퇴" onclick="location.href='userout.do?be_no=${ulist.be_no}'">
+							</c:when>
+							<c:otherwise>
+								<input type="button" class="btn btn-outline-dark btn-sm" value="탈퇴복구" onclick="location.href='userback.do?be_no=${ulist.be_no}'">								
+							</c:otherwise>
+						</c:choose>
 							</td>				
 						</c:if>	
 						</tr>
 					</c:forEach>
+					<c:set var="cntList"  value="${fn:length(userList)-1}" scope="session"></c:set>					
 				</table>
 			</div>
 		</section>

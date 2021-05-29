@@ -49,6 +49,11 @@ public class AdminBizImpl implements AdminBiz{
 	public int userout(int be_no) {
 		return dao.userout(be_no);
 	}
+
+	@Override
+	public int userback(int be_no) {
+		return dao.userback(be_no);
+	}
 	
 
 }

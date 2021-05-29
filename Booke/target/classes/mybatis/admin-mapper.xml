@@ -37,4 +37,12 @@
 		WHERE BE_NO=#{be_no}
 	</update>
 	
+	<!-- 회원 탈퇴 복구-->
+	<update id="userBack">
+		UPDATE BE_MEMBER
+		SET BE_ENABLED='Y'
+		WHERE BE_NO=#{be_no}
+	</update>
+	
+	
 </mapper>

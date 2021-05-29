@@ -77,7 +77,7 @@ td>img{
 					<col width="100">
 					<col width="100">
 					<col width="100">
-					<tr>
+					<tr style="font-size: 14pt;">
 						<th>아이디</th>
 						<th>닉네임</th>
 						<th>회원등급</th>
@@ -90,8 +90,8 @@ td>img{
 							<td>${flist.be_nn }</td>
 							<td>${flist.be_role }</td>
 							<td>
-								<button type="submit" id="fbtn" class="btn btn-outline-dark btn-sm" style="margin: 0px;" onclick="location.href='insertF.do?M2=${flist.be_id }'">친구 맺기</button>						
-								<button type="submit" id="mbtn" class="btn btn-dark btn-sm" style="margin: 0px;" onclick="">친구 끊기</button>
+								<button type="submit" id="mbtn" class="btn btn-outline-danger btn-sm" style="margin: 0px;" 
+								onclick="location.href='deleteF.do?m2=${flist.be_id}'">친구 끊기</button>
 							<td><img src="resources/images/mail.png" alt="#"></td>
 						</tr>
 					</c:forEach>

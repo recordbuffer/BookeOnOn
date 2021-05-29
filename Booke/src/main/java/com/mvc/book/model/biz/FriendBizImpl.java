@@ -1,6 +1,7 @@
 package com.mvc.book.model.biz;
 
 import java.util.List;
+import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -32,11 +33,8 @@ public class FriendBizImpl implements FriendBiz{
 	}
 
 	@Override
-	public int deleteFriend(int flist_no) {
-		// TODO Auto-generated method stub
-		return 0;
+	public int deleteFriend(Map map) {
+		return dao.deleteFriend(map);
 	}
-
-
 
 }

@@ -1,6 +1,7 @@
 package com.mvc.book.model.biz;
 
 import java.util.List;
+import java.util.Map;
 
 import com.mvc.book.model.dto.FriendDto;
 import com.mvc.book.model.dto.MemberDto;
@@ -17,6 +18,6 @@ public interface FriendBiz {
 	public int insertFriend(FriendDto dto);
 
 	// 친구 끊기
-	public int deleteFriend(int flist_no);
+	public int deleteFriend(Map map);
 
 }

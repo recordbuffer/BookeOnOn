@@ -17,15 +17,13 @@ public class MemberBizImpl implements MemberBiz{
 	private MemberDao dao;
 
 	@Override
-	public void memberJoinMethod(MemberDto dto) {
-		// TODO Auto-generated method stub
-		
+	public int memberJoinMethod(MemberDto dto) {
+		return dao.memberJoinMethod(dto);
 	}
 
 	@Override
-	public boolean Idcheck(String be_id) {
-		// TODO Auto-generated method stub
-		return false;
+	public int Idcheck(MemberDto dto) {
+		return dao.Idcheck(dto);
 	}
 
 	@Override
@@ -44,18 +42,15 @@ public class MemberBizImpl implements MemberBiz{
 		// TODO Auto-generated method stub
 		
 	}
-	
 
 	@Override
-	public MemberDto memberGET(int be_id) {
-		return dao.memberGET(be_id);
+	public MemberDto getMemberInfo(MemberDto dto) {
+		return dao.getMemberInfo(dto);
 	}
-	
 
 	@Override
-	public String updateGET(HttpSession session, Model model) {
-		// TODO Auto-generated method stub
-		return null;
+	public int modifyMemberInfo(MemberDto dto) {
+		return dao.modifyMemberInfo(dto);
 	}
 
 	@Override
@@ -63,11 +58,11 @@ public class MemberBizImpl implements MemberBiz{
 		// TODO Auto-generated method stub
 		return 0;
 	}
-	
+
 	@Override
 	public void logout(HttpSession session) {
 		session.invalidate();
-	}	
+	}
 
 	@Override
 	public String loginCheck(MemberDto dto) {
