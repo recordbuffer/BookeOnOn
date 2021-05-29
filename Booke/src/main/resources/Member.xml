@@ -4,6 +4,6 @@
 
 <configuration>
     <typeAliases>
-          <typeAlias alias="MemberDto" type="com.mvc.book.model.dto.MemberDto" />
+<!--           <typeAlias alias="MemberDto" type="com.mvc.book.model.dto.MemberDto" /> -->
     </typeAliases>
 </configuration>

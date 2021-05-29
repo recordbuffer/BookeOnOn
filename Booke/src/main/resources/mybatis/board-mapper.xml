@@ -17,15 +17,31 @@
      'Y', 'L1')
 </insert>
 <!-- 아이디 중복 체크  -->
-<select id="signuppage_idchk" resultType="int">
+<select id="signuppage_idchk" parameterType="memberDto" resultType="int">
   SELECT COUNT(*) FROM BE_MEMBER
 	WHERE BE_ID = #{be_id}
-	
-</select>
+	</select>
+<!-- 비번 중복 체크  -->
+	<!--  <select id="signuppage_pwchk" resultType="int">-->
+  <!--SELECT COUNT(*) FROM BE_MEMBER-->
+	<!--WHERE BE_PW= #{be_pw}-->
+<!--</select>-->
   <select id="login" parameterType="memberDto" resultType="memberDto">
     select * from BE_MEMBER 
     WHERE BE_ID=#{be_id} and BE_PW=#{be_pw}
   </select>
   
+  <select id="selectMemberInfo" parameterType="memberDto" resultType="memberDto">
+  	SELECT *
+  	FROM BE_MEMBER
+  	WHERE BE_NO = #{be_no}
+  </select>
+  
+  <update id="updateMemberInfo" parameterType="memberDto">
+  	UPDATE BE_MEMBER
+  		SET BE_NN = #{be_nn}
+  			, BE_ADDR = #{be_addr}
+  	WHERE BE_NO = #{be_no}
+  </update>
   
   </mapper>

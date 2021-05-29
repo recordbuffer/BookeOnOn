@@ -1,0 +1,84 @@
+<!--
+濡쒓렇�씤 �닔�젙蹂�
+login.jsp -> controll�뿉�꽌 �슂泥�諛쏄퀬 -> biz濡� �꽆寃⑥＜怨� -> bizimple-> dao -> dao impl -> board mapper -> return 諛쏆�媛� 諛섎�濡� jsp 
+1. 濡쒓렇�씤 泥섎━瑜� �쐞�븳 DTO �겢�옒�뒪 -> MemberDto
+2. DAO, DAO IMPL �겢�옒�뒪 援ы쁽 -> MemberDao, MemberDaoimpl
+3. 
+ 
+
+泥ル쾲夷� �떆�룄 
+
+login.jsp -> LoginController.java(而⑦듃濡ㅻ윭) -> loginpage.jsp(酉�)
+MemberDTO.java, MemberDAO.java (紐⑤뜽)
+
+
+** �몢踰덉㎏ �떆�룄 
+濡쒓렇�씤 �꽕怨꾨룄  
+M - SQL(DAO 遺꾨━) , DAO , DTO , Service , LoginCase(Service 遺꾨━).java
+DTO : 怨꾩링媛� �뜲�씠�꽣 援먰솚�쓣 �쐞�솚 �옄諛� 鍮덉쫰  DTO �삉�뒗 VO �씪怨� 遺�由� 
+DAO : DB�젒洹쇳븯�뒗 媛앹껜 �궗�슜�씠�쑀 �슚�쑉怨� 而ㅻ꽖�뀡, 蹂댁븞�꽦 �뻹臾� 
+V - login_form , login_msg(check) , login_check_modul.jsp
+C - LoginController.java(servlet)
+
+
+**�닚�꽌**
+VIEW(Client)->Controller ->Service(鍮꾧탳) -> DAO(異붿텧) -> DB
+DB ->  DAO(異붿텧) -> Service(鍮꾧탳) -> Controller -> VIEW(Client)
+
+
+**�꽭踰덉㎏ �떆�룄 
+userDao -> Dto �깮�꽦 -> loginpage.jsp dao �떎�뻾 肄붾뱶 �옉�꽦   
+
+/*
+	public String loginCheck(String be_id, String be_pw) {
+	    String name = null;
+	    Connection conn = null;
+	    PreparedStatement pstmt = null;
+	    ResultSet rs = null;
+			
+	    try {
+	      conn = DatabaseUtil.getConnection(); 
+	      String SQL = "SELECT NAME FROM member WHERE userid=? and password=?";
+	      pstmt = conn.prepareStatement(SQL);
+	      pstmt.setString(1, be_id);
+	      pstmt.setString(2, be_pw);
+				
+	      rs = pstmt.executeQuery();
+	      if(rs.next()) {
+	        name = rs.getString("name");
+	      }
+	    } catch (Exception e) {
+	      e.printStackTrace();
+	    } finally {
+	      try {
+	        if(rs != null)
+	          rs.close();
+	      } catch (Exception e2) {
+	        e2.printStackTrace();
+	      }
+	    }
+			
+	    return name;
+	  }
+	  /*
+	   HttpSession 
+Session �씠�� �꽌踰꾧� �빐�떦 �쎒�뿉 �젒洹쇳븳 �궗�슜�옄瑜� �떇蹂꾪븯�뒗 諛⑸쾿�엯�땲�떎. 
+�쎒�뿉�꽌�뒗 �젒洹쇳븳 �궗�슜�옄�뿉寃� Response Header �븘�뱶�씤 ser-cookie 媛믪쑝濡� �궗�슜�옄瑜� �떇蹂꾪븯�뒗 Session Id瑜� 遺��뿬�빀�땲�떎. 
+�쎒�쑝濡쒕��꽣 遺��뿬�맂 Session Id�뒗 �빐�떦 �쎒(�꽌踰�)怨� 釉뚮씪�슦��(�겢�씪�씠�뼵�듃) 硫붾え由ъ뿉 ���옣�맗�땲�떎. 
+�씠�븣 �겢�씪�씠�뼵�듃 硫붾え由ъ뿉 �궗�슜�릺�뒗 Cookie�쓽 ���엯�� Session�씠 醫낅즺�맆 �븣 �븿猿� �냼硫몃릺�뒗 硫붾え由� Cookie媛� �궗�슜�맗�땲�떎. 
+�씠�윭�븳 Session �쓣 �씠�슜�븯�뒗 諛⑹떇�쓽 �빑�떖�� HttpSession�쓣 �씠�슜�빐 �썝�븯�뒗 媛앹껜瑜� 蹂닿��븷 �닔 �엳�떎�뒗 �젏�엯�땲�떎. 
+�궗�슜�옄�뒗 �빆�긽 Session Cookie瑜� �궗�슜�빐 �젒洹쇳븯怨�,  
+�꽌踰꾩쓽 �궡遺��뿉 HttpSession 媛앹껜瑜� 蹂닿��븯湲� �븣臾몄뿉 蹂댁븞�긽 �븞�쟾�븯寃� �맗�땲�떎. 
+
+ -->
+ 
+ 
+ 
+<!--  
+ 1. signuppage.jsp -> 데이터 입력 후 가입하기 버튼 클릭! 
+ 2. Maincontroller -> joinpost(memberdto member 실행), 성공시 LOGIN PAGE로 
+ 3. 지금 biz가 -> void 값 말고 int insert board dto 값으로 변경 // 쉅시간 보드  글쓰기한거 참고 수업시간 글쓰기 메서드 참고 
+    -->
+ 
+ 
+ 

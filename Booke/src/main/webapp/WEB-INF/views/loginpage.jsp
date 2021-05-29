@@ -70,7 +70,7 @@ a:hover{color:rgb(223, 45, 139);}
 			</div>
 			<br>
 			<div class="form">
-				<input type="text" class="form-control" placeholder="비밀번호"name="be_pw">
+				<input type="password" class="form-control" placeholder="비밀번호"name="be_pw">
 			</div>
 			<br>
 			<div class="form">
