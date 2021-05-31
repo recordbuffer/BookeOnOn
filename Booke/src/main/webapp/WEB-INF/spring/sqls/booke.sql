@@ -156,6 +156,60 @@ NOTICEBD_SEQ.NEXTVAL, '감자', '북이온앤온 서비스 준비 중', '서비스 준비 중입니다
 SELECT * FROM noticeboard;
 
 --------
+DROP SEQUENCE R_NOSEQ ;
+DROP TABLE R_BOOK CASCADE CONSTRAINTS;
+
+--읽은 책 서재 번호 시퀀스
+CREATE SEQUENCE R_NOSEQ NOCACHE;
+
+--읽은 책 서재 테이블
+CREATE TABLE R_BOOK(
+ R_NO NUMBER NOT NULL,
+ BE_NO NUMBER NOT NULL,
+ B_TITLE VARCHAR2(1000) NOT NULL,
+ B_AUTHOR VARCHAR2(1000) NOT NULL,
+ B_COVER VARCHAR2(1000) NOT NULL,
+ ADDDATE DATE DEFAULT SYSDATE,
+ 
+ CONSTRAINT R_BOOK_PK PRIMARY KEY(R_NO),
+ CONSTRAINT R_BOOK_FK FOREIGN KEY(BE_NO) REFERENCES BE_MEMBER(BE_NO)
+ );
+
+INSERT INTO R_BOOK
+VALUES(R_NOSEQ.NEXTVAL,6,'침묵의 봄 - 개정판', '레이첼 카슨', 'https://image.aladin.co.kr/product/1446/13/cover150/k192531425_2.jpg', sysdate);
+
+
+INSERT INTO R_BOOK
+VALUES(R_NOSEQ.NEXTVAL,6,'인간 실격','다자이 오사무', 'https://image.aladin.co.kr/product/49/16/cover150/893746103x_3.jpg', sysdate); 
+
+
+INSERT INTO R_BOOK
+VALUES(R_NOSEQ.NEXTVAL, 6, '동물농장', '조지 오웰','https://image.aladin.co.kr/product/4/6/cover150/s893746005x_1.jpg', SYSDATE);
+
+INSERT INTO R_BOOK
+VALUES(R_NOSEQ.NEXTVAL, 6, '멋진 신세계', '올더스 헉슬리', 'https://image.aladin.co.kr/product/6083/61/cover150/8973814729_2.jpg', SYSDATE);
+
+INSERT INTO R_BOOK
+VALUES(R_NOSEQ.NEXTVAL, 6, '페스트', '알베르 카뮈','https://image.aladin.co.kr/product/1126/73/cover150/s8937462672_1.jpg',SYSDATE);
+
+INSERT INTO R_BOOK
+VALUES(R_NOSEQ.NEXTVAL, 6, '돈키호테 1~2 (리커버 특별판 + 박스 세트) - 전2권', '미겔 데 세르반테스 사아베드라', 'https://image.aladin.co.kr/product/26057/74/cover150/k312737053_1.jpg', SYSDATE);
+
+INSERT INTO R_BOOK
+VALUES(R_NOSEQ.NEXTVAL, 6, '이상한 나라의 앨리스 (디즈니 애니메이션 70주년 특별 에디션)', '루이스 캐럴','https://image.aladin.co.kr/product/26817/67/cover150/k882730197_1.jpg',SYSDATE);
+
+INSERT INTO R_BOOK
+VALUES(R_NOSEQ.NEXTVAL, 6, '데미안', '헤르만 헤세','https://image.aladin.co.kr/product/26/0/cover150/s742633278_1.jpg',SYSDATE);
+
+INSERT INTO R_BOOK
+VALUES(R_NOSEQ.NEXTVAL, 6, '사랑의 기술', '에리히 프롬','https://image.aladin.co.kr/product/20329/93/cover150/8931011628_1.jpg',  SYSDATE);
+
+INSERT INTO R_BOOK
+VALUES(R_NOSEQ.NEXTVAL, 6, '어린 왕자', '앙투안 드 생텍쥐페리','https://image.aladin.co.kr/product/26963/90/cover150/8964361946_1.jpg', SYSDATE);
+
+SELECT * FROM R_BOOK;
+
+-----------
 DROP TABLE BOOKSTATS CASCADE CONSTRAINTS;
 
 --목표 테이블

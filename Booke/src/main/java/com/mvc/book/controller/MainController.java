@@ -110,14 +110,12 @@ public class MainController {
 	// 서재 페이지로 이동
 	@RequestMapping("/bcase.do")
 	public String bcase() {
+		logger.info("BOOKCASE PAGE");
+
 		return "bookcase/bookcase";
 	}
 
-	// 서재 페이지_캘린더로 이동
-	@RequestMapping("/bcaseCal.do")
-	public String bcaseCal() {
-		return "bookcase/bookcase_cal";
-	}
+
 
 	// [설정]
 	// 설정 페이지로 이동

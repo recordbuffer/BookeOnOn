@@ -9,7 +9,7 @@ import com.mvc.book.model.dto.W_bookDto;
 public interface BookcaseBiz {
 	// [ 서재 기능 ]
 	// 서재 읽고 싶은 책 리스트
-	public List<W_bookDto> W_bookSelectAll();
+	public List<W_bookDto> W_bookSelectAll(int be_no);
 
 	// 서재 읽고 싶은 책 갯수
 	public int cntWbook();
@@ -20,7 +20,7 @@ public interface BookcaseBiz {
 //--------------------------------------------
 
 	// 서재 읽은 책 리스트
-	public List<R_bookDto> R_bookSelectAll();
+	public List<R_bookDto> R_bookSelectAll(int be_no);
 
 	// 서재 읽은 책 갯수
 	public int cntRbook();

@@ -16,7 +16,8 @@
 	<insert id="signup">
 		insert into be_member(BE_NO, BE_ID, BE_PW, BE_NN, BE_NAME, BE_ADDR,
 		BE_PHONE, BE_EMAIL, BE_ENABLED, BE_ROLE)
-		values(m_noseq.nextval, #{be_id},
+		values(m_noseq.nextval,
+		#{be_id},
 		#{be_pw},
 		#{be_nn}, <!-- 닉네임 -->
 		#{be_name},
@@ -40,11 +41,12 @@
 		FROM BE_MEMBER
 		WHERE BE_NO = #{be_no}
 	</select>
-	
+
 	<!-- 회원 정보 수정 -->
 	<update id="updateMemberInfo" parameterType="memberDto">
 		UPDATE BE_MEMBER
-		SET BE_NN = #{be_nn}
+		SET
+		BE_NN = #{be_nn}
 		, BE_ADDR = #{be_addr}
 		WHERE BE_NO = #{be_no}
 	</update>
@@ -80,6 +82,28 @@
 		'%'|| #{searchid} ||'%'
 		OR BE_NN LIKE '%'|| #{searchid} ||'%'
 	</select>
+
+	<!-- 읽은 책 서재 리스트 -->
+	<select id="rbList" resultType="r_bookDto">
+		SELECT BE_NO, B_COVER, ADDDATE
+		FROM R_BOOK
+		WHERE BE_NO=#{be_no}
+	</select>
+
+	<!-- 읽은 책 서재 담기 -->
+	<insert parameterType="r_bookDto" id="kakaoinsert">
+		INSERT INTO R_BOOK
+		VALUES(R_NOSEQ.NEXTVAL, 1, #{b_title}, #{b_author}, #{b_cover}, SYSDATE)
+	</insert>
+
+
+	<!-- 읽고싶은 책 서재 담기 -->
+	<insert parameterType="w_bookDto" id="kakaowinsert">
+		INSERT INTO W_BOOK
+		VALUES(W_NOSEQ.NEXTVAL, 1, #{b_title}, #{b_author}, #{b_cover},SYSDATE)
+	</insert>
+
+
 
 	<!-- 공지사항 모두 보기 -->
 	<select id="noticeAll" resultType="noticeDto">

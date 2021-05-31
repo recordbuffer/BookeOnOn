@@ -1,5 +1,6 @@
 package com.mvc.book.model.dao;
 
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
@@ -17,7 +18,7 @@ public class BookcaseDaoImpl implements BookcaseDao{
 	private SqlSessionTemplate sqlSession;
 
 	@Override
-	public List<W_bookDto> W_bookSelectAll() {
+	public List<W_bookDto> W_bookSelectAll(int be_no) {
 		// TODO Auto-generated method stub
 		return null;
 	}
@@ -35,9 +36,16 @@ public class BookcaseDaoImpl implements BookcaseDao{
 	}
 
 	@Override
-	public List<R_bookDto> R_bookSelectAll() {
-		// TODO Auto-generated method stub
-		return null;
+	public List<R_bookDto> R_bookSelectAll(int be_no) {
+		List<R_bookDto> list = new ArrayList<R_bookDto>();
+		
+		try {
+			list = sqlSession.selectList(NAMESPACE+"rbList",be_no);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+		return list;
 	}
 
 	@Override

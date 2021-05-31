@@ -90,8 +90,8 @@ td>img {
 							<th>친구 상태</th>
 							<th>쪽지 보내기</th>
 						</tr>
-						<tr>
 					<c:forEach items="${Searchlist }" var="slist" varStatus="status">
+						<tr>
 							<td>${slist.be_id }</td>
 							<td>${slist.be_nn }</td>
 							<td>${slist.be_role }</td>
@@ -103,8 +103,8 @@ td>img {
 										onclick="location.href='.do'">친구맺기</button>
 							</td>
 							<td><img src="resources/images/mail.png" alt="#"></td>
-					</c:forEach>
 						</tr>
+					</c:forEach>
 					</table>
 				</form>
 			</div>
