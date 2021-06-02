@@ -1,5 +1,7 @@
 package com.mvc.book.controller;
 
+import java.util.List;
+
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
@@ -64,6 +66,18 @@ public class MainController {
 	@RequestMapping("/main.do")
 	public String main(HttpSession session, Model model) {
 		logger.info("MAIN PAGE");
+		
+		//친구 리스트 조회
+		/*
+		 * MemberDto user = (MemberDto)session.getAttribute("user"); String be_id =
+		 * user.getBe_id();
+		 * 
+		 * List<MemberDto> friendList = fbiz.selectFList(be_id);
+		 * model.addAttribute("friendList",friendList);
+		 */
+		
+		//서재 리스트 조회
+		
 
 		return "mainpage";
 	}

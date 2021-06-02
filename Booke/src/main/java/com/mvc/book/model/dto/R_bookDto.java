@@ -89,5 +89,12 @@ public class R_bookDto {
 	}
 
 
+	@Override
+	public String toString() {
+		return "R_bookDto [r_no=" + r_no + ", be_no=" + be_no + ", b_title=" + b_title + ", b_author=" + b_author
+				+ ", b_cover=" + b_cover + ", adddate=" + adddate + "]";
+	}
+
+
 	
 }

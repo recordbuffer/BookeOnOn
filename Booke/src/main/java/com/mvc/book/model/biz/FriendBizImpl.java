@@ -26,6 +26,7 @@ public class FriendBizImpl implements FriendBiz{
 		return dao.selectFList(be_id);
 	}
 
+
 	@Override
 	public int insertFriend(FriendDto dto) {
 		// TODO Auto-generated method stub
@@ -36,5 +37,6 @@ public class FriendBizImpl implements FriendBiz{
 	public int deleteFriend(Map map) {
 		return dao.deleteFriend(map);
 	}
+
 
 }

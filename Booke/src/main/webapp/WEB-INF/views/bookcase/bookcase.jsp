@@ -1,5 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+	
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -114,37 +117,60 @@
 						<div class="col-sm-12">
 							<div class="login_menu">
 								<!-- 서재 / 커뮤니티 / 내 서재 버튼 div -->
-								<div class="login_img">
-									<img src="resources/images/kjh.png"
-										style="border-radius: 100%;">
-								</div>
+								<div>
+								<!-- 계정에 따라 프로필 -->
+								<c:choose>
+								<c:when test="${user.be_role == 'ADM' }">
+									<div class="login_img">
+									<img src="resources/images/kjh.png" style="border-radius: 100%;"></div>
+								</c:when>
+								<c:when test="${user.be_role == 'L3' }">
+									<div class="login_img">
+									<img src="resources/images/L3.png" style="transform: translate(23px, 5px); border-radius: 100%; height: 110px;"></div>
+								</c:when>
+								<c:when test="${user.be_role == 'L2' }">
+									<div class="login_img">
+									<img src="resources/images/L2.png" style="border-radius: 100%;"></div>
+								</c:when>
+								<c:otherwise>
+									<div class="login_img">
+									<img src="resources/images/L1.png" style="border-radius: 100%; height: 100px; transform: translate(25px, 12px);""></div>
+								</c:otherwise>
+								</c:choose>
 								<div class="login_name">
 									<!-- 설정 / 쪽지 버튼, 닉네임 -->
-									<a href="setting.do"><i class="bi bi-gear-fill"
-										style="font-size: 2.5rem; color: white; position: absolute; left: 160px;"></i></a>
-									<a href="msg.do"><i class="bi bi-chat-text-fill"
-										style="font-size: 2.5rem; color: white; position: relative; left: 110px;"></i></a>
-									<div class="login_nick">닉네임</div>
-								</div>
-								<div>
-									<!-- 읽은 책 / 읽고 싶은 책 -->
-									<div class="read_book">
-										읽은 책 <br> <span style="font-size: 25px;">몇 권</span>
+									<a href="setting.do"><i class="bi bi-gear-fill" style="font-size: 2.2rem; color: white; position: absolute; left: 160px; transform: translate(5px, 10px);"></i></a>
+									<div style="transform: translate(-10px, 58px);">
+										<p style="font-size: 15pt;">@ ${user.be_id }</p>
+										<p style="font-size: 25pt;">${user.be_nn }<span style="font-size: 19pt;">님</span></p>
+										<input type="button" class="btn btn-outline-dark" value="LOGOUT" style="transform: translate(130px, -58px);" onclick="location.href='logout.do'">
 									</div>
-									<div class="want_book">
-										읽고 싶은 책 <br> <span style="font-size: 25px;">몇 권</span>
+									<div style="transform: translate(-124px,30px);  color:white; ">
+										<span style="font-size: 20pt;">친구</span >&nbsp;&nbsp;&nbsp;
+										<span style="font-size: 18pt;">${cntFList}<a href="frd.do"></a></span><span style="font-size: 16pt;"> 명</span>
+										<a href="fsearch.do"><i class="bi bi-plus-circle" style="font-size: 1.8rem; color: white; position: relative; left: 80px;"></i></a>
+										<a href="msg.do"><i class="bi bi-chat-text-fill" style="font-size: 1.8rem; color: white; position: relative; left: 90px;"></i></a>
 									</div>
 								</div>
-								<div class="attainment">
-									<!-- 목표 달성도 -->
+								</div>
+								<div style="color:white; text-align:center; transform: translate(0px, -30px);">
+									<div style="font-size:20pt;"><span>42</span><span style="font-size: 19pt;"> 권</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+									<span>143 권</span></div>
+									<div style="transform: translate(3px,7px);"><span>읽은 책</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+									<span>읽고 싶은 책</span></div>
+								</div>
+								<!-- 목표 달성도 -->
+								<div class="attainment" style="transform: translate(0px, 220px); height: 155px;">
 									목표달성도
 								</div>
-							</div>
+							</div>			
+							
+								
 							<div class="d3">
-								<input type="button" value="캘린더"
-									onclick="location.href='bcaseCal.do'">
+								<div class="d-grid gap-2">
+									<input type="button" class="btn btn-outline-dark" value="Calendar" style="height: 60px;" onclick="location.href='bcaseCal.do'">
+								</div>
 							</div>
-
 						</div>
 					</div>
 				</div>

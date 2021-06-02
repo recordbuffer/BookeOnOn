@@ -1,9 +1,10 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-	pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+	
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="EUC-KR">
+<meta charset="UTF-8">
 <title>Insert title here</title>
 <style type="text/css">
 body {
@@ -12,19 +13,41 @@ body {
 }
 
 .detailmap {
-	width: 50%;
-	height: 580px;
-	border: 1px solid black;
+	width: 70%;
+	height: 400px;
 	position: relative;
 }
 
 .detailaddr {
-	width: 50%;
-	height: 580px;
-	border: 1px solid black;
-	position: relative;
-	left: 50%;
-	top: -582px;
+	width: 285px;
+    height: 400px;
+    position: relative;
+    left: 71%;
+    top: -402px;
+}
+
+#sample5_address{
+	width: 97%;
+    height: 55px;
+    text-align: center;
+}
+
+#library{
+	border: 5px solid rgb(119, 109, 097);
+    width: 100%;
+    height: 40%;
+    top: 10px;
+    background: rgb(181, 227, 216);
+}
+
+#store{
+	border: 5px solid rgb(119, 109, 097);
+    width: 100%;
+    height: 40%;
+    position: relative;
+    top: 10px;
+    background: rgb(181, 227, 216);
+
 }
 </style>
 </head>
@@ -33,68 +56,13 @@ body {
 		<div id="map" style="width: 100%; height: 100%;"></div>
 	</div>
 	<div class="detailaddr">
-		<input type="text" id="sample5_address" placeholder="ÁÖ¼Ò"> <input
-			type="button" onclick="sample5_execDaumPostcode()" value="ÁÖ¼Ò °Ë»ö"><br>
-		<div id="map"
-			style="width: 300px; height: 300px; margin-top: 10px; display: none"></div>
-		<script
-			src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
-		<script
-			src="//dapi.kakao.com/v2/maps/sdk.js?appkey=9ec334948643a95282b6e3466aaebc54&libraries=services"></script>
-		<script>
-			var mapContainer = document.getElementById('map'), // Áöµµ¸¦ Ç¥½ÃÇÒ div
-			mapOption = {
-				center : new daum.maps.LatLng(37.537187, 127.005476), // ÁöµµÀÇ Áß½ÉÁÂÇ¥
-				level : 5
-			// ÁöµµÀÇ È®´ë ·¹º§
-			};
-
-			//Áöµµ¸¦ ¹Ì¸® »ý¼º
-			var map = new daum.maps.Map(mapContainer, mapOption);
-			//ÁÖ¼Ò-ÁÂÇ¥ º¯È¯ °´Ã¼¸¦ »ý¼º
-			var geocoder = new daum.maps.services.Geocoder();
-			//¸¶Ä¿¸¦ ¹Ì¸® »ý¼º
-			var marker = new daum.maps.Marker({
-				position : new daum.maps.LatLng(37.537187, 127.005476),
-				map : map
-			});
-
-			function sample5_execDaumPostcode() {
-				new daum.Postcode(
-						{
-							oncomplete : function(data) {
-								var addr = data.address; // ÃÖÁ¾ ÁÖ¼Ò º¯¼ö
-
-								// ÁÖ¼Ò Á¤º¸¸¦ ÇØ´ç ÇÊµå¿¡ ³Ö´Â´Ù.
-								document.getElementById("sample5_address").value = addr;
-								// ÁÖ¼Ò·Î »ó¼¼ Á¤º¸¸¦ °Ë»ö
-								geocoder
-										.addressSearch(
-												data.address,
-												function(results, status) {
-													// Á¤»óÀûÀ¸·Î °Ë»öÀÌ ¿Ï·áµÆÀ¸¸é
-													if (status === daum.maps.services.Status.OK) {
-
-														var result = results[0]; //Ã¹¹øÂ° °á°úÀÇ °ªÀ» È°¿ë
-
-														// ÇØ´ç ÁÖ¼Ò¿¡ ´ëÇÑ ÁÂÇ¥¸¦ ¹Þ¾Æ¼­
-														var coords = new daum.maps.LatLng(
-																result.y,
-																result.x);
-														// Áöµµ¸¦ º¸¿©ÁØ´Ù.
-														mapContainer.style.display = "block";
-														map.relayout();
-														// Áöµµ Áß½ÉÀ» º¯°æÇÑ´Ù.
-														map.setCenter(coords);
-														// ¸¶Ä¿¸¦ °á°ú°ªÀ¸·Î ¹ÞÀº À§Ä¡·Î ¿Å±ä´Ù.
-														marker
-																.setPosition(coords)
-													}
-												});
-							}
-						}).open();
-			}
-		</script>
+		<input type="text" id="sample5_address" placeholder="ì£¼ì†Œ"> 
+		<input type="button" id="library" onclick="library();" value="ì£¼ë³€ ë„ì„œê´€ ì°¾ê¸°">
+		<input type="button" id="store" onclick="store();" value="ì£¼ë³€ ì„œì  ì°¾ê¸°">
+		<div id="map" style="width: 300px; height: 300px; margin-top: 10px; display: none"></div>
+		<script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
+		<script src="//dapi.kakao.com/v2/maps/sdk.js?appkey=9ec334948643a95282b6e3466aaebc54&libraries=services"></script>
+		<script type="text/javascript" src="js/detailmap.js"></script>
 	</div>
 </body>
 </html>

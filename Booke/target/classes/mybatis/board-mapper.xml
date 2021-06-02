@@ -52,7 +52,7 @@
 	</update>
 
 
-
+<!-- 친구기능 -->
 	<!-- 친구 리스트 조회 -->
 	<select id="friendList" resultType="memberDto">
 		SELECT BE_ID, BE_NN, BE_ROLE
@@ -83,12 +83,18 @@
 		OR BE_NN LIKE '%'|| #{searchid} ||'%'
 	</select>
 
+
+
+
+<!-- 서재 기능 -->
 	<!-- 읽은 책 서재 리스트 -->
 	<select id="rbList" resultType="r_bookDto">
 		SELECT BE_NO, B_COVER, ADDDATE
 		FROM R_BOOK
 		WHERE BE_NO=#{be_no}
 	</select>
+
+
 
 	<!-- 읽은 책 서재 담기 -->
 	<insert parameterType="r_bookDto" id="kakaoinsert">
@@ -105,6 +111,9 @@
 
 
 
+
+
+<!-- 공지사항 -->
 	<!-- 공지사항 모두 보기 -->
 	<select id="noticeAll" resultType="noticeDto">
 		SELECT BD_NO, BD_TITLE,

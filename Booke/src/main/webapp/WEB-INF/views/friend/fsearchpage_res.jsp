@@ -96,11 +96,22 @@ td>img {
 							<td>${slist.be_nn }</td>
 							<td>${slist.be_role }</td>
 							<td>
-								<button type="submit" id="fbtn" class="btn btn-outline-danger btn-sm" style="margin: 0px;"
-										onclick="location.href='deleteF.do?m2=${slist.be_id}'">친구끊기</button>
-							
-								<button type="submit" id="mbtn" class="btn btn-outline-dark btn-sm" style="margin: 0px;" 
+							<c:set var="frd" value="false"/>
+							<c:forEach items="${friendList }" var="flist">
+								<c:if test="${status.current.be_id ==flist.be_id }">
+									<c:set var="frd" value="true"/>
+								</c:if>
+							</c:forEach>
+							<c:choose>
+								<c:when test="${frd == true }">
+									<button type="submit" id="fbtn" class="btn btn-outline-danger btn-sm" style="margin: 0px;"
+										onclick="location.href='deleteF.do?m2='${slist.be_id}">친구끊기</button>
+								</c:when>
+								<c:otherwise>
+									<button type="submit" id="mbtn" class="btn btn-outline-dark btn-sm" style="margin: 0px;" 
 										onclick="location.href='.do'">친구맺기</button>
+								</c:otherwise>
+							</c:choose>
 							</td>
 							<td><img src="resources/images/mail.png" alt="#"></td>
 						</tr>

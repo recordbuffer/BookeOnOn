@@ -16,7 +16,6 @@ public interface FriendDao {
 	// 친구 목록 조회
 	public List<MemberDto> selectFList(String be_id);
 	
-
 	// 친구 맺기
 	public int insertFriend(FriendDto dto);
 

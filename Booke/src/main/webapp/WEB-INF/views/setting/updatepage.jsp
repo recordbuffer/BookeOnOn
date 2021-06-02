@@ -113,12 +113,12 @@ td>#btn {
 		<h1>회원 정보 수정</h1>
 		<hr style="color:black!important">
 		<form id="frm" method="post" onsubmit="return false">
-		<input type="hidden" id="be_no" value="${info.be_no}" />
+		<input type="hidden" id="be_no" value="${user.be_no}" />
 			<table>
 				<tr>
 					<th>아이디</th>
 					<td><input type="text" class="form-control" name="be_id" id="be_id"
-						readonly="readonly" value="${info.be_id}"></td>
+						readonly="readonly" value="${user.be_id}"></td>
 				</tr>
 				<tr>
 					<th>비밀번호</th>
@@ -127,25 +127,25 @@ td>#btn {
 				<tr>
 					<th>이름</th>
 					<td><input type="text" class="form-control" name="be_name" id="be_name"
-						readonly="readonly" value="${info.be_name}"></td>
+						readonly="readonly" value="${user.be_name}"></td>
 				</tr>
 				<tr>
 					<th>닉네임</th>
-					<td><input type="text" class="form-control" name="be_nn" id="be_nn" value="${info.be_nn}"></td>
+					<td><input type="text" class="form-control" name="be_nn" id="be_nn" value="${user.be_nn}"></td>
 				</tr>
 				<tr>
 					<th>주소</th>
-					<td><input type="text" class="form-control" name="be_addr" id="be_addr" value="${info.be_addr}"></td>
+					<td><input type="text" class="form-control" name="be_addr" id="be_addr" value="${user.be_addr}"></td>
 				</tr>
 				<tr>
 					<th>이메일</th>
 					<td><input type="text" class="form-control" name="be_email" id="be_email"
-						readonly="readonly" value="${info.be_email}"></td>
+						readonly="readonly" value="${user.be_email}"></td>
 				</tr>
 				<tr>
 					<th>전화번호</th>
 					<td><input type="text" class="form-control" name="be_phone" id="be_phone"
-						readonly="readonly" value="${info.be_phone}"></td>
+						readonly="readonly" value="${user.be_phone}"></td>
 				</tr>
 				<tr>
 					<td colspan="3"><input type="submit" value="수정 완료"

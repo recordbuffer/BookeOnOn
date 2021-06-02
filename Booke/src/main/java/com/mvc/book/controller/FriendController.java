@@ -27,7 +27,7 @@ public class FriendController {
 	private FriendBiz fbiz;
 	
 	// [ 친구 검색 ]
-		// 친구 검색 페이지로 이동
+		// 회원 검색 페이지로 이동
 		@RequestMapping("/fsearch.do")
 		public String fsearchpage() {
 			logger.info("FRIEND SEARCH PAGE");
@@ -36,7 +36,7 @@ public class FriendController {
 		}
 		
 			
-		// 친구 검색 페이지 > 검색 결과 페이지로 이동
+		// 회원 검색 페이지 > 검색 결과 페이지로 이동
 		@RequestMapping("/fres.do")
 		public String fres(HttpServletRequest request,HttpSession session) {
 			logger.info("FRIEND SEARCH RES PAGE");

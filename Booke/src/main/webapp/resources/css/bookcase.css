@@ -259,9 +259,8 @@
 .d3 {
 	width: 400px;
 	height: 100px;
-	border: 1px solid black;
 	position: absolute;
-	left: -15%;
+	left: -13%;
 	top: 490px;
 	right: 0%;
 	text-align: center;

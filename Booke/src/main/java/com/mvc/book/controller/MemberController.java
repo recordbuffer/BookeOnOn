@@ -95,7 +95,7 @@ public class MemberController {
 		String resultMessage = "";
 		
 		// 세션에 로그인 정보가 존재하는지 여부 확인
-		if (session.getAttribute("be_no") != null && !"".equals(String.valueOf(session.getAttribute("be_no")))) {
+		if (session.getAttribute("user") != null && !"".equals(String.valueOf(session.getAttribute("user")))) {
 		
 			MemberDto memberDto = new MemberDto();
 			memberDto.setBe_no(Integer.valueOf(request.getParameter("be_no")));

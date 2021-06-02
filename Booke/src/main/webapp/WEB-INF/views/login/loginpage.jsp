@@ -74,7 +74,7 @@ a:hover {
 			</div>
 			<br>
 			<div class="form">
-				<input type="text" class="form-control" placeholder="비밀번호"
+				<input type="password" class="form-control" placeholder="비밀번호"
 					name="be_pw">
 			</div>
 			<br>

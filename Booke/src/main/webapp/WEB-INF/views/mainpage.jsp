@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-	
+
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
 <!DOCTYPE html>
@@ -37,6 +37,7 @@
 
 <link rel="stylesheet" href="resources/css/footer.css">
 <link rel="stylesheet" href="resources/css/mainpage.css">
+
 </head>
 
 <body>
@@ -55,37 +56,43 @@
 			</div>
 		</div>
 	</header>
-
-	<!-- API 연습 -->
-	<script src="https://code.jquery.com/jquery-3.4.1.js" type="text/javascript"
-        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
-	 <script type="text/javascript">
-	 $.ajax({
-         method: "GET",
-         url: "https://dapi.kakao.com/v3/search/book?target=title",
-         data: { 
-             query: "문학",
-             sort: "accuracy",
-             page: 3,
-             size: 50       
-         },
-         headers: { Authorization: "KakaoAK 7454d95d609df58bfc2bf0407895a1c0" }
-     })
-         .done(function (msg){
-             console.log(msg);
-             $("#best1").append("<img src = '" + msg.documents[0].thumbnail + "'/>");
-             $("#best2").append("<img src = '" + msg.documents[1].thumbnail + "'/>");
-             $("#best3").append("<img src = '" + msg.documents[2].thumbnail + "'/>");
-             $("#best4").append("<img src = '" + msg.documents[3].thumbnail + "'/>");
-             $("#best5").append("<img src = '" + msg.documents[4].thumbnail + "'/>");
-             $("#new1").append("<img src = '" + msg.documents[5].thumbnail + "'/>");
-             $("#new2").append("<img src = '" + msg.documents[6].thumbnail + "'/>");
-             $("#new3").append("<img src = '" + msg.documents[7].thumbnail + "'/>");
-             $("#new4").append("<img src = '" + msg.documents[8].thumbnail + "'/>");
-             $("#new5").append("<img src = '" + msg.documents[9].thumbnail + "'/>");
-         });
-</script>
-
+	<script
+    src="https://code.jquery.com/jquery-3.6.0.js"
+    integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+    crossorigin="anonymous"></script>
+    <script
+	src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+	integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+	crossorigin="anonymous"></script>
+    <script type="text/javascript">
+    		$.getJSON("json/newspecial.json", function(data){
+    			console.log(data);
+    			$("#best1").append("<img src = '" + data.item[0].cover + "'/>");
+    			$("#best2").append("<img src = '" + data.item[1].cover + "'/>");
+    			$("#best3").append("<img src = '" + data.item[2].cover + "'/>");
+    			$("#best4").append("<img src = '" + data.item[3].cover + "'/>");
+    			$("#best5").append("<img src = '" + data.item[4].cover + "'/>");
+    			$(".bb_1_star").append("<img src = 'resources/images/rating" + data.item[0].customerReviewRank + ".jpg'/>");
+    			$(".bb_2_star").append("<img src = 'resources/images/rating" + data.item[1].customerReviewRank + ".jpg'/>");
+    			$(".bb_3_star").append("<img src = 'resources/images/rating" + data.item[2].customerReviewRank + ".jpg'/>");
+    			$(".bb_4_star").append("<img src = 'resources/images/rating" + data.item[3].customerReviewRank + ".jpg'/>");
+    			$(".bb_5_star").append("<img src = 'resources/images/rating" + data.item[4].customerReviewRank + ".jpg'/>");
+    		});
+    		$.getJSON("json/editorchoice.json", function(data){
+    			$("#new1").append("<img src = '" + data.item[0].cover + "'/>");
+    			$("#new2").append("<img src = '" + data.item[1].cover + "'/>");
+    			$("#new3").append("<img src = '" + data.item[2].cover + "'/>");
+    			$("#new4").append("<img src = '" + data.item[3].cover + "'/>");
+    			$("#new5").append("<img src = '" + data.item[4].cover + "'/>");
+    			$(".nb_1_star").append("<img src = 'resources/images/rating" + data.item[0].customerReviewRank + ".jpg'/>");
+    			$(".nb_2_star").append("<img src = 'resources/images/rating" + data.item[1].customerReviewRank + ".jpg'/>");
+    			$(".nb_3_star").append("<img src = 'resources/images/rating" + data.item[2].customerReviewRank + ".jpg'/>");
+    			$(".nb_4_star").append("<img src = 'resources/images/rating" + data.item[3].customerReviewRank + ".jpg'/>");
+    			$(".nb_5_star").append("<img src = 'resources/images/rating" + data.item[4].customerReviewRank + ".jpg'/>");
+    		});
+    		
+    </script>
+	
 	<!-- Page Content -->
 	<div class="container-fluid">
 		<div class="row">
@@ -94,78 +101,42 @@
 					<div class="row" id="cdb">
 						<div class="best_seller">
 							<div class="best_category text-right">
-							<div class="text-left" style="position: absolute; font-size: 30px; margin: 8px;">베스트셀러</div>
-								<div class="btn-group" role="group"
-									aria-label="Basic radio toggle button group">
-									<input type="radio" class="btn-check" name="best_btnradio"
-										id="btnradio1" autocomplete="off" checked> <label
-										class="btn btn-outline-primary" for="btnradio1">전체 </label> <input
-										type="radio" class="btn-check" name="best_btnradio"
-										id="btnradio2" autocomplete="off"> <label
-										class="btn btn-outline-primary" for="btnradio2">문학 </label> <input
-										type="radio" class="btn-check" name="best_btnradio"
-										id="btnradio3" autocomplete="off"> <label
-										class="btn btn-outline-primary" for="btnradio3">소설 </label> <input
-										type="radio" class="btn-check" name="best_btnradio"
-										id="btnradio4" autocomplete="off"> <label
-										class="btn btn-outline-primary" for="btnradio4">만화책 </label> <input
-										type="radio" class="btn-check" name="best_btnradio"
-										id="btnradio5" autocomplete="off"> <label
-										class="btn btn-outline-primary" for="btnradio5">교재 </label>
-								</div>
+							<div class="text-left" style="position: absolute; font-size: 30px; margin: 8px;">주목할 만한 신간 리스트</div>
 							</div>
 							<div class="best_book bb_1 text-center" id="best1">
-								<div class="bb_1_star text-center">별점</div>
+								<div class="bb_1_star text-center"></div>
 							</div>
 							<div class="best_book bb_2 text-center"  id="best2">
-								<div class="bb_2_star text-center">별점</div>
+								<div class="bb_2_star text-center"></div>
 							</div>
 							<div class="best_book bb_3 text-center"  id="best3">
-								<div class="bb_3_star text-center">별점</div>
+								<div class="bb_3_star text-center"></div>
 							</div>
 							<div class="best_book bb_4 text-center"  id="best4">
-								<div class="bb_4_star text-center">별점</div>
+								<div class="bb_4_star text-center"></div>
 							</div>
 							<div class="best_book bb_5 text-center"  id="best5">
-								<div class="bb_5_star text-center">별점</div>
+								<div class="bb_5_star text-center"></div>
 							</div>
 						</div>
 						<div class="col-sm-12 new_seller">
 							<div class="new_category text-right">
-							<div class="text-left" style="position: absolute; font-size: 30px; margin: 8px;">신간</div>
-								<div class="btn-group" role="group"
-									aria-label="Basic radio toggle button group">
-									<input type="radio" class="btn-check" name="new_btnradio"
-										id="btnradio6" autocomplete="off" checked> <label
-										class="btn btn-outline-primary" for="btnradio6">전체 </label> <input
-										type="radio" class="btn-check" name="new_btnradio"
-										id="btnradio7" autocomplete="off"> <label
-										class="btn btn-outline-primary" for="btnradio7">문학 </label> <input
-										type="radio" class="btn-check" name="new_btnradio"
-										id="btnradio8" autocomplete="off"> <label
-										class="btn btn-outline-primary" for="btnradio8">소설 </label> <input
-										type="radio" class="btn-check" name="new_btnradio"
-										id="btnradio9" autocomplete="off"> <label
-										class="btn btn-outline-primary" for="btnradio9">만화책 </label> <input
-										type="radio" class="btn-check" name="new_btnradio"
-										id="btnradio10" autocomplete="off"> <label
-										class="btn btn-outline-primary" for="btnradio10">교재 </label>
-								</div>
+							<div class="text-left" style="position: absolute; font-size: 30px; margin: 8px;">에디터 추천 리스트</div>
 							</div>
 							<div class="new_book nb_1 text-center"  id="new1">
-								<div class="nb_1_star text-center">별점</div>
+								<div class="nb_1_star text-center"></div>
 							</div>
 							<div class="new_book nb_2 text-center" id="new2">
-								<div class="nb_2_star text-center">별점</div>
+								<div class="nb_2_star text-center"></div>
 							</div>
 							<div class="new_book nb_3 text-center" id="new3">
-								<div class="nb_3_star text-center">별점</div>
+								<div class="nb_3_star text-center"></div>
 							</div>
 							<div class="new_book nb_4 text-center" id="new4">
-								<div class="nb_4_star text-center">별점</div>
+								<div class="nb_4_star text-center"></div>
 							</div>
 							<div class="new_book nb_5 text-center" id="new5">
-								<div class="nb_5_star text-center">별점</div>
+								<div class="nb_5_star text-center"></div>
 							</div>
 						</div>
 						<br> <br>
@@ -226,7 +197,7 @@
 								<div class="attainment" style="transform: translate(0px, 220px); height: 155px;">
 									목표달성도
 								</div>
-							</div>							
+							</div>
 							<div class="friend">
 								<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
 									integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"

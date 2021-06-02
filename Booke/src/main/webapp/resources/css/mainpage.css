@@ -14,7 +14,7 @@
 }
 
 body {
-	background-color: #f5f5f5 !important;
+	background-color: #f5f5f5;
 }
 
 .col-lg-12 {
@@ -28,13 +28,15 @@ body {
 
 .best_category {
 	width: 888px;
-	background-color: rgb(181, 227, 216);
+    height: 65px;
+    background-color: rgb(181, 227, 216);
 }
 
 .new_category {
 	width: 888px;
     left: 0px;
     top: 180px;
+    height: 65px;
     background-color: rgb(181, 227, 216);
     position: relative;
 }
@@ -82,7 +84,6 @@ body {
 
 .bb_1_star, .bb_2_star, .bb_3_star, .bb_4_star, .bb_5_star {
 	position: absolute;
-    border: 1px solid black;
     width: 170px;
     height: 35px;
     left: -1px;
@@ -121,7 +122,6 @@ body {
 
 .nb_1_star, .nb_2_star, .nb_3_star, .nb_4_star, .nb_5_star {
 	position: absolute;
-    border: 1px solid black;
     width: 170px;
     height: 35px;
     left: -1px;
@@ -177,7 +177,7 @@ body {
     height: 500px;
     border: 1px solid black;
     left: 12px;
-    top: 340px;
+    top: 370px;
 }
 
 .friend {

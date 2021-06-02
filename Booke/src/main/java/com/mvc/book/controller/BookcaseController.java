@@ -32,10 +32,13 @@ public class BookcaseController {
 
 		MemberDto user = (MemberDto)session.getAttribute("user");
 		int be_no = user.getBe_no();
+		System.out.println(be_no);
 		
-		List<R_bookDto> readbookList = bcbiz.R_bookSelectAll(be_no);
 		
-		model.addAttribute("rbList",readbookList);
+		//읽은 책 리스트 조회
+		List<R_bookDto> readbookList = bcbiz.R_bookSelectAll(be_no);		
+		model.addAttribute("readbookList",readbookList);
+		System.out.println(readbookList.toString());
 		
 		return "bookcase/bookcase_cal";
 	}
