@@ -75,13 +75,12 @@ td>img {
 		<!-- 결과 테이블 -->
 		<section>
 			<div style="height: 100%">
-				<form action="">
-					<input type="hidden" value="M2">
+				<form action="fsearch.do">
 					<table class="table table-hover">
 						<col width="100">
 						<col width="100">
 						<col width="100">
-						<col width="100">
+						<col width="50">
 						<col width="100">
 						<tr>
 							<th>아이디</th>
@@ -95,7 +94,6 @@ td>img {
 							<td>${slist.be_id }</td>
 							<td>${slist.be_nn }</td>
 							<td>${slist.be_role }</td>
-							<td>
 							<c:set var="frd" value="false"/>
 							<c:forEach items="${friendList }" var="flist">
 								<c:if test="${status.current.be_id ==flist.be_id }">
@@ -103,17 +101,26 @@ td>img {
 								</c:if>
 							</c:forEach>
 							<c:choose>
-								<c:when test="${frd == true }">
-									<button type="submit" id="fbtn" class="btn btn-outline-danger btn-sm" style="margin: 0px;"
-										onclick="location.href='deleteF.do?m2='${slist.be_id}">친구끊기</button>
+								<c:when test="${status.current.be_id == user.be_id }">
+								
 								</c:when>
 								<c:otherwise>
+							<c:choose>
+								<c:when test="${frd == true }">
+									<td>								
+									<button type="submit" id="fbtn" class="btn btn-outline-danger btn-sm" style="margin: 0px;"
+										onclick="location.href='delF.do?m2=${status.current.be_id}'">친구끊기</button></td>
+									<td><img src="resources/images/mail.png" alt="#"></td>
+								</c:when>
+								<c:otherwise>
+									<td>
 									<button type="submit" id="mbtn" class="btn btn-outline-dark btn-sm" style="margin: 0px;" 
-										onclick="location.href='.do'">친구맺기</button>
+										onclick="location.href='insertF.do?m2=${status.current.be_id}'">친구맺기</button></td>
+									<td><img src="resources/images/unable.png" alt="#"></td>
 								</c:otherwise>
 							</c:choose>
-							</td>
-							<td><img src="resources/images/mail.png" alt="#"></td>
+								</c:otherwise>
+							</c:choose>
 						</tr>
 					</c:forEach>
 					</table>

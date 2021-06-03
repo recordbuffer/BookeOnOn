@@ -50,11 +50,6 @@ td>img{
 }
 
 </style>
-<script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-<script type="text/javascript">
-	$(document).ready(function(){
-});
-</script>
 </head>
 
 <body>
@@ -99,7 +94,7 @@ td>img{
 				</table>
 			</div>
 		</section>
-		<div style="height: 20px"></div>
+		<div style="height: 70px"></div>
 
 	</main>
 

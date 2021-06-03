@@ -84,6 +84,15 @@
 	</select>
 
 
+<!-- 쪽지 기능 -->
+	<!-- 쪽지 모두 출력 -->
+	<select id="mailAll" resultType="msgDto">
+		SELECT a.M1, b.MSG_CONTENT, b.MSG_DATE
+		FROM BE_FRIEND a, BE_MSG b
+		WHERE a.FLIST_NO = b.FLIST_NO
+		AND a.M2=#{be_id}
+	</select>
+
 
 
 <!-- 서재 기능 -->

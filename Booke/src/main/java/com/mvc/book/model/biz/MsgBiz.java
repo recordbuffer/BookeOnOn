@@ -10,7 +10,7 @@ public interface MsgBiz {
 	public int insertMsg(MsgDto dto);
 
 	// 쪽지 목록 조회
-	public List<MsgDto> selectMsgList();
+	public List<MsgDto> selectMsgList(String be_id);
 
 	// 쪽지 하나 상세 조회
 	public MsgDto selectMsg(int msg_no);

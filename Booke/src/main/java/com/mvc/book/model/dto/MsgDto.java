@@ -14,6 +14,7 @@ public class MsgDto {
 		super();
 		// TODO Auto-generated constructor stub
 	}
+
 	public MsgDto(int msg_no, String flist_no, String msg_content, Date msg_date) {
 		super();
 		this.msg_no = msg_no;
@@ -21,30 +22,39 @@ public class MsgDto {
 		this.msg_content = msg_content;
 		this.msg_date = msg_date;
 	}
+
 	public int getMsg_no() {
 		return msg_no;
 	}
+
 	public void setMsg_no(int msg_no) {
 		this.msg_no = msg_no;
 	}
+
 	public String getFlist_no() {
 		return flist_no;
 	}
+
 	public void setFlist_no(String flist_no) {
 		this.flist_no = flist_no;
 	}
+
 	public String getMsg_content() {
 		return msg_content;
 	}
+
 	public void setMsg_content(String msg_content) {
 		this.msg_content = msg_content;
 	}
+
 	public Date getMsg_date() {
 		return msg_date;
 	}
+
 	public void setMsg_date(Date msg_date) {
 		this.msg_date = msg_date;
 	}
-	
+
+
 	
 }

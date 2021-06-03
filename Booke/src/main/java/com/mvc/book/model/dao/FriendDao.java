@@ -17,7 +17,7 @@ public interface FriendDao {
 	public List<MemberDto> selectFList(String be_id);
 	
 	// 친구 맺기
-	public int insertFriend(FriendDto dto);
+	public int insertFriend(Map map);
 
 	// 친구 끊기
 	public int deleteFriend(Map map);

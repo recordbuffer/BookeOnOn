@@ -1,5 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -21,7 +24,7 @@
 <style type="text/css">
 body {
 	padding-top: 80px;
-	background-color: #f5f5f5;
+	background-color: #f5f5f5 !important;
 }
 
 .form-signup {
@@ -39,42 +42,54 @@ body {
 	background-color: rgb(119, 109, 97) !important;
 	padding: 0.5rem;
 }
-
-#dvres {
-	height: 300px;
+td>a{
+	color:black !important;
 }
 </style>
-
-<script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-<script type="text/javascript">
-
-</script>
 </head>
 
-<body> 
+<body>
 
 	<jsp:include page="../header.jsp"></jsp:include>
 	<br>
 	<br>
 
 	<main class="form-signup">
-		<h1 style="margin-bottom: 20px;">회원 검색</h1>
+		<h1 style="margin-bottom: 50px;">쪽지 관리</h1>
 
-		<!-- 검색 창 -->
-		<div id="hddiv">
-			<form class="d-flex" action="fres.do" method="GET">
-				<input type="hidden" value="searchid">
-				<input class="form-control me-2" type="text" placeholder="Search" id="searchid" name="searchid">&nbsp; 
-				<input class="btn btn-outline-dark" type="submit" id="searchbtn" name="searchbtn" value="Search">
-			</form>
-		</div>
-
-		<!-- 친구 리스트 테이블 -->
+		<!-- 결과 테이블 -->
 		<section>
-			<div id="dvres"></div>
+			<div style="height: 100%">
+				<table class="table table-hover" style="text-align:center">
+					<col width="30">
+					<col width="100">
+					<col width="150">
+					<col width="100">
+					<tr style="font-size: 14pt;">
+						<th><input type="checkbox" name="all" onclick="allChk(this.checked);"> </th>
+						<th>보낸 사람</th>
+						<th>내용</th>
+						<th>작성일</th>
+					</tr>
+					<c:forEach items="${msgList }" var="mail">
+					<tr>
+						<td>${mail.m1 }</td>
+						<td>${mail.msg_content }</td>
+						<td>${mail.msg_date }</td>						
+					</tr>
+					</c:forEach>
+					<tr>
+						<td colspan="4" align="right" style="padding:0;">
+							<input type="button" class="btn btn-outline-dark" value="삭제" onclick="location.href='.do'">
+						</td>
+					</tr>
+				</table>
+			</div>
 		</section>
 
+		<div style="height: 180px"></div>
 	</main>
+
 	<jsp:include page="../footer.jsp"></jsp:include>
 
 

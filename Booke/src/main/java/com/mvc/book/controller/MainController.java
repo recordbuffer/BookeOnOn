@@ -15,7 +15,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import com.mvc.book.model.biz.AdminBiz;
 import com.mvc.book.model.biz.FriendBiz;
 import com.mvc.book.model.biz.MemberBiz;
+import com.mvc.book.model.biz.MsgBiz;
 import com.mvc.book.model.dto.MemberDto;
+import com.mvc.book.model.dto.MsgDto;
 
 @Controller
 public class MainController {
@@ -26,6 +28,7 @@ public class MainController {
 	private AdminBiz ambiz;
 	private FriendBiz fbiz;
 	private MemberBiz mbiz;
+	private MsgBiz	msgbiz;
 
 	// [시작 > 메인]
 	// 웰컴페이지로 이동
@@ -193,5 +196,15 @@ public class MainController {
 	}
 
 	// 쪽지 관리 페이지로 이동
+	@RequestMapping("/mailAll.do")
+	public String mailpage(HttpSession session, Model model) {
+		logger.info("MAIL PAGE");
+		
+		MemberDto user = (MemberDto)session.getAttribute("user"); 
+		String be_id = user.getBe_id();
+		
 
+		return "mail/mailAll";
+	}
+	
 }

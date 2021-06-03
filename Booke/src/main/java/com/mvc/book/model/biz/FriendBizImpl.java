@@ -28,9 +28,8 @@ public class FriendBizImpl implements FriendBiz{
 
 
 	@Override
-	public int insertFriend(FriendDto dto) {
-		// TODO Auto-generated method stub
-		return 0;
+	public int insertFriend(Map map) {
+		return dao.insertFriend(map);
 	}
 
 	@Override

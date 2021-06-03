@@ -127,6 +127,18 @@ MSG_SEQ.NEXTVAL, 4, '쪽지입니다', DEFAULT);
 
 SELECT * FROM BE_MSG;
 
+SELECT  MSG_CONTENT, MSG_DATE FROM BE_MSG WHERE  FLIST_NO=1;
+SELECT  MSG_CONTENT, MSG_DATE FROM BE_MSG WHERE  FLIST_NO=(SELECT FLIST_NO FROM BE_FRIEND WHERE m1='tmddnjs77' and m2='wjddn99');
+
+SELECT b.FLIST_NO, a.M1, a.M2, b.MSG_CONTENT, b.MSG_DATE 
+FROM be_friend a, be_msg b
+WHERE a.flist_no = b.flist_no;
+
+--all
+SELECT a.M1, b.MSG_CONTENT, b.MSG_DATE 
+FROM be_friend a, be_msg b
+WHERE a.flist_no = b.flist_no AND a.M2='tjdtn44';
+
 commit;
 -------------------
 DROP SEQUENCE NOTICEBD_SEQ;

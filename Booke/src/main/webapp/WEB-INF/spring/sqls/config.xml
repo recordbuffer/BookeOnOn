@@ -5,7 +5,8 @@
   <configuration>
   	<typeAliases>
   		<typeAlias type="com.mvc.book.model.dto.MemberDto" alias="memberDto"/>	
-  		<typeAlias type="com.mvc.book.model.dto.NoticeDto" alias="noticeDto"/>	  		
+  		<typeAlias type="com.mvc.book.model.dto.NoticeDto" alias="noticeDto"/>	  
+   		<typeAlias type="com.mvc.book.model.dto.MsgDto" alias="msgDto"/>	   				
   		<typeAlias type="com.mvc.book.model.dto.FriendDto" alias="friendDto"/>	  		
   		<typeAlias type="com.mvc.book.model.dto.R_bookDto" alias="r_bookDto"/>	  		
 		<typeAlias type="com.mvc.book.model.dto.W_bookDto" alias="w_bookDto"/>	  

@@ -1,5 +1,6 @@
 package com.mvc.book.model.dao;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import org.mybatis.spring.SqlSessionTemplate;
@@ -22,9 +23,16 @@ public class MsgDaoImpl implements MsgDao{
 	}
 
 	@Override
-	public List<MsgDto> selectMsgList() {
-		// TODO Auto-generated method stub
-		return null;
+	public List<MsgDto> selectMsgList(String be_id) {
+		List<MsgDto> list = new ArrayList<MsgDto>();
+		
+		try {
+			list = sqlSession.selectList(NAMESPACE+"mailAll",be_id);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+		return list;
 	}
 
 	@Override

@@ -16,7 +16,7 @@ public interface FriendBiz {
 	
 	
 	// 친구 맺기
-	public int insertFriend(FriendDto dto);
+	public int insertFriend(Map map);
 
 	// 친구 끊기
 	public int deleteFriend(Map map);

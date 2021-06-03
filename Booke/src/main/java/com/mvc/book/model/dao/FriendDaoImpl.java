@@ -45,9 +45,16 @@ public class FriendDaoImpl implements FriendDao{
 	
 
 	@Override
-	public int insertFriend(FriendDto dto) {
-		// TODO Auto-generated method stub
-		return 0;
+	public int insertFriend(Map map) {
+		int res = 0;
+		
+		try {
+			res = sqlSession.insert(NAMESPACE+"addFriend", map);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+		return res;
 	}
 
 	@Override
