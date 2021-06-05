@@ -5,6 +5,7 @@ import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import org.apache.http.Header;
 import org.apache.http.HttpHeaders;
@@ -17,14 +18,18 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.client.HttpComponentsClientHttpRequestFactory;
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.client.RestTemplate;
 
 import com.mvc.book.model.biz.kakaodbbiz;
 import com.mvc.book.model.dto.BookInfodto;
+import com.mvc.book.model.dto.MemberDto;
 import com.mvc.book.model.dto.R_bookDto;
 import com.mvc.book.model.dto.W_bookDto;
 
+@Controller
 public class BookController {
 
 	private static final Logger logger = LoggerFactory.getLogger(CommunityController.class);
@@ -45,7 +50,8 @@ public class BookController {
 		sb.append("https://dapi.kakao.com");
 		sb.append("/v3/search/book");
 		sb.append("?query=").append(query)
-			.append("&sort=").append(sort);
+			.append("&sort=").append(sort)
+			.append("&size=").append(9);
 		
 		//System.out.println(sb.toString());
 		Header jsonHeader = new BasicHeader(HttpHeaders.CONTENT_TYPE, "application/json");
@@ -84,50 +90,64 @@ public class BookController {
 	}
 	
 	//도서검색 읽고싶어요 db저장
-	@RequestMapping("/kakaodb.do")
-	public String kakaodb(HttpServletRequest request, HttpServletResponse response) {
-		logger.info("W_BOOK INSERT");
-		
-		String cover = request.getParameter("cover");
-		String title = request.getParameter("title");
-		String authors = request.getParameter("authors");
-		String contents = request.getParameter("contents");
-		System.out.println("String"+cover);
-		System.out.println("String"+title);
-		System.out.println("String"+authors);
-		System.out.println("String"+contents);
-		
-		W_bookDto dto = new W_bookDto(0, 0, title, authors, cover, null);
-		
-		int res = biz.insert(dto);
-		
-		System.out.println(res);
-		
-		return "res";
-	}
-	
-	//읽은책 담기
-	@RequestMapping("/kakaoW.do")
-	public String kakaoW(HttpServletRequest request, HttpServletResponse response) {
-		logger.info("R_BOOK INSERT");
-		
-		String cover = request.getParameter("cover");
-		String title = request.getParameter("title");
-		String authors = request.getParameter("authors");
-		String contents = request.getParameter("contents");
-		System.out.println("String"+cover);
-		System.out.println("String"+title);
-		System.out.println("String"+authors);
-		System.out.println("String"+contents);
-		
-		R_bookDto dto1 = new R_bookDto(0, 0, title, authors, cover, null);
-		
-		int res1 = biz.winsert(dto1);
-		
-		System.out.println(res1);
-		
-		return "res";
-	}
-	
+    @RequestMapping(value="/kakaodb.do", method = RequestMethod.POST)
+    public String kakaodb(HttpServletRequest request, HttpServletResponse response, HttpSession session) {
+        logger.info("W_BOOK INSERT");
+
+        String cover = request.getParameter("cover");
+        String title = request.getParameter("title");
+        String authors = request.getParameter("authors");
+        String contents = request.getParameter("contents");
+        System.out.println("String"+cover);
+        System.out.println("String"+title);
+        System.out.println("String"+authors);
+        System.out.println("String"+contents);
+
+        MemberDto user = (MemberDto)session.getAttribute("user");
+		int be_no = user.getBe_no();
+        
+        W_bookDto dto = new W_bookDto(0, be_no, title, authors, cover, null);
+
+        int res = biz.insert(dto);
+
+        System.out.println(res);
+
+        if(res>0) {
+        	return "redirect:bsearch.do";
+        } else {
+        	return "redirect:bsearch.do";
+        }
+    }
+
+    //읽은책 담기
+    @RequestMapping(value="/kakaoW.do", method = RequestMethod.POST)
+    public String kakaoW(HttpServletRequest request, HttpServletResponse response, HttpSession session) {
+        logger.info("R_BOOK INSERT");
+
+        String cover = request.getParameter("cover");
+        String title = request.getParameter("title");
+        String authors = request.getParameter("authors");
+        String contents = request.getParameter("contents");
+        System.out.println("String"+cover);
+        System.out.println("String"+title);
+        System.out.println("String"+authors);
+        System.out.println("String"+contents);
+
+        MemberDto user = (MemberDto)session.getAttribute("user");
+		int be_no = user.getBe_no();
+        
+        
+        R_bookDto dto1 = new R_bookDto(0, be_no, title, authors, cover, null);
+
+        int res1 = biz.winsert(dto1);
+
+        System.out.println(res1);
+
+        if(res1>0) {
+        	return "redirect:bsearch.do";
+        } else {
+        	return "redirect:bsearch.do";
+        }
+    }
 
 }

@@ -38,6 +38,30 @@
 <link rel="stylesheet" href="resources/css/footer.css">
 <link rel="stylesheet" href="resources/css/mainpage.css">
 <link rel="stylesheet" href="resources/css/bookcase.css">
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		for(var i = 15; i <= 29; i++){
+			$(".n" + i).hide();
+		}
+	})
+	function next(){
+		for(var i = 0; i <= 14; i++){
+			$(".n" + i).hide();
+		}
+		for(var i = 15; i <= 29; i++){
+			$(".n" + i).show();
+		}
+	}
+	function prev(){
+		for(var i = 0; i <= 14; i++){
+			$(".n" + i).show();
+		}
+		for(var i = 15; i <= 29; i++){
+			$(".n" + i).hide();
+		}
+	}
+</script>
 </head>
 
 <body>
@@ -70,28 +94,17 @@
 					<div class="row" id="cdb">
 						<div class="bcaseframe">
 							<div class="d1">
-								<input type="button" class="w_book" value="읽고 싶은책" onclick="">
-								<input type="button" class="n_book" value="읽은 책" onclick="">
+								<input type="button" class="w_book" value="읽고 싶은책" onclick="location.href='selectwbook.do';">
+								<input type="button" class="n_book" value="읽은 책" onclick="location.href='selectrbook.do';">
 								<div class="b1"></div>
 								<div class="b2"></div>
 								<div class="b3"></div>
-								<div class="n1">
-									<img src="resources/images/book-3.png">
-								</div>
-								<div class="n2"></div>
-								<div class="n3"></div>
-								<div class="n4"></div>
-								<div class="n5"></div>
-								<div class="n6"></div>
-								<div class="n7"></div>
-								<div class="n8"></div>
-								<div class="n9"></div>
-								<div class="n10"></div>
-								<div class="n11"></div>
-								<div class="n12"></div>
-								<div class="n13"></div>
-								<div class="n14"></div>
-								<div class="n15"></div>
+								<c:forEach items="${bookList}" var="bookList" varStatus="status">
+									<div class="n${status.index}${bookList[Status.index]}"><img src="<c:out value='${bookList.b_cover}'/>"></div>
+								</c:forEach>
+								<input type="button" class="next" onclick="next();">
+								<button class="prev" onclick="prev();"><img src="./resources/images/prev.png"></button>
+								<button class="next" onclick="next();"><img src="./resources/images/next.png"></button>
 							</div>
 						</div>
 						<div class="bcaseframe2">
@@ -154,8 +167,8 @@
 								</div>
 								</div>
 								<div style="color:white; text-align:center; transform: translate(0px, -30px);">
-									<div style="font-size:20pt;"><span>42</span><span style="font-size: 19pt;"> 권</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-									<span>143 권</span></div>
+									<div style="font-size:20pt;"><span>${r_book}</span><span style="font-size: 19pt;"> 권</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+									<span>${w_book} 권</span></div>
 									<div style="transform: translate(3px,7px);"><span>읽은 책</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 									<span>읽고 싶은 책</span></div>
 								</div>

@@ -1,6 +1,7 @@
 package com.mvc.book.model.dto;
 
 import java.util.Date;
+import java.util.List;
 
 public class MsgDto {
 	//쪽지 정보
@@ -9,18 +10,20 @@ public class MsgDto {
 	private String msg_content;			//쪽지 내용
 	private Date msg_date;				//쪽지 날짜
 	
+	private FriendDto frienddto;
 	
 	public MsgDto() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
 
-	public MsgDto(int msg_no, String flist_no, String msg_content, Date msg_date) {
+	public MsgDto(int msg_no, String flist_no, String msg_content, Date msg_date, FriendDto frienddto) {
 		super();
 		this.msg_no = msg_no;
 		this.flist_no = flist_no;
 		this.msg_content = msg_content;
 		this.msg_date = msg_date;
+		this.frienddto = frienddto;
 	}
 
 	public int getMsg_no() {
@@ -55,6 +58,14 @@ public class MsgDto {
 		this.msg_date = msg_date;
 	}
 
+	public FriendDto getFrienddto() {
+		return frienddto;
+	}
 
+	public void setFrienddto(FriendDto frienddto) {
+		this.frienddto = frienddto;
+	}
+
+	
 	
 }

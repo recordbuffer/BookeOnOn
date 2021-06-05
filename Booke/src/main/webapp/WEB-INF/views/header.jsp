@@ -13,6 +13,7 @@
 
 #name {
 	font-weight: bold;
+	color: rgb(255, 255, 255);
 }
 </style>
 

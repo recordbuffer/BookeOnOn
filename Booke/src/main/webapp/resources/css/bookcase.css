@@ -29,184 +29,214 @@
 	background-color: rgb(181, 227, 216);
 }
 
-.n1 {
-	height: 18%;
-	width: 18%;
-	border: 1px solid black;
-	margin: 0px 0px 0px 10px;
-	border: 1px solid black;
+.n0 {
 	position: absolute;
 	top: 18%;
-	left: 0%;
-	background-color: rgb(255, 255, 255);
+	left: 3%;
+	width: 135px;
+}
+
+.n1 {
+	position: absolute;
+	top: 18%;
+	left: 23%;
+	width: 135px;
 }
 
 .n2 {
-	height: 18%;
-	width: 18%;
-	border: 1px solid black;
-	margin: 0px 0px 0px 9px;
-	border: 1px solid black;
 	position: absolute;
 	top: 18%;
-	left: 20%;
-	background-color: rgb(255, 255, 255);
+	left: 41%;
+	width: 135px;
 }
 
 .n3 {
-	height: 18%;
-	width: 18%;
-	border: 1px solid black;
-	margin: 0px 0px 0px 27px;
-	border: 1px solid black;
 	position: absolute;
 	top: 18%;
-	left: 38%;
-	background-color: rgb(255, 255, 255);
+	left: 59%;
+	width: 135px;
 }
 
 .n4 {
-	height: 18%;
-	width: 18%;
-	border: 1px solid black;
-	margin: 0px 0px 0px 45px;
-	border: 1px solid black;
 	position: absolute;
 	top: 18%;
-	left: 56%;
-	background-color: rgb(255, 255, 255);
+	left: 77%;
+	width: 135px;
 }
 
 .n5 {
-	height: 18%;
-	width: 18%;
-	border: 1px solid black;
-	margin: 0px 0px 0px 60px;
-	border: 1px solid black;
 	position: absolute;
-	top: 18%;
-	left: 74%;
-	background-color: rgb(255, 255, 255);
+	top: 43%;
+	left: 3%;
+	width: 135px;
 }
 
 .n6 {
-	height: 18%;
-	width: 18%;
-	border: 1px solid black;
-	margin: 0px 0px 0px 10px;
-	border: 1px solid black;
 	position: absolute;
 	top: 43%;
-	left: %;
-	background-color: rgb(255, 255, 255);
+	left: 23%;
+	width: 135px;
 }
 
 .n7 {
-	height: 18%;
-	width: 18%;
-	border: 1px solid black;
-	margin: 0px 0px 0px 9px;
-	border: 1px solid black;
 	position: absolute;
 	top: 43%;
-	left: 20%;
-	background-color: rgb(255, 255, 255);
+	left: 41%;
+	width: 135px;
 }
 
 .n8 {
-	height: 18%;
-	width: 18%;
-	border: 1px solid black;
-	margin: 0px 0px 0px 27px;
-	border: 1px solid black;
 	position: absolute;
 	top: 43%;
-	left: 38%;
-	background-color: rgb(255, 255, 255);
+	left: 59%;
+	width: 135px;
 }
 
 .n9 {
-	height: 18%;
-	width: 18%;
-	border: 1px solid black;
-	margin: 0px 0px 0px 45px;
-	border: 1px solid black;
 	position: absolute;
 	top: 43%;
-	left: 56%;
-	background-color: rgb(255, 255, 255);
+	left: 77%;
+	width: 135px;
 }
 
 .n10 {
-	height: 18%;
-	width: 18%;
-	border: 1px solid black;
-	margin: 0px 0px 0px 60px;
-	border: 1px solid black;
 	position: absolute;
-	top: 43%;
-	left: 74%;
-	background-color: rgb(255, 255, 255);
+	top: 68%;
+	left: 3%;
+	width: 135px;
 }
 
 .n11 {
-	height: 18%;
-	width: 18%;
-	border: 1px solid black;
-	margin: 0px 0px 0px 10px;
-	border: 1px solid black;
 	position: absolute;
 	top: 68%;
-	left: 0%;
-	background-color: rgb(255, 255, 255);
+	left: 23%;
+	width: 135px;
 }
 
 .n12 {
-	height: 18%;
-	width: 18%;
-	border: 1px solid black;
-	margin: 0px 0px 0px 9px;
-	border: 1px solid black;
 	position: absolute;
 	top: 68%;
-	left: 20%;
-	background-color: rgb(255, 255, 255);
+	left: 41%;
+	width: 135px;
 }
 
 .n13 {
-	height: 18%;
-	width: 18%;
-	border: 1px solid black;
-	margin: 0px 0px 0px 27px;
-	border: 1px solid black;
 	position: absolute;
 	top: 68%;
-	left: 38%;
-	background-color: rgb(255, 255, 255);
+	left: 59%;
+	width: 135px;
 }
 
 .n14 {
-	height: 18%;
-	width: 18%;
-	border: 1px solid black;
-	margin: 0px 0px 0px 45px;
-	border: 1px solid black;
 	position: absolute;
 	top: 68%;
-	left: 56%;
-	background-color: rgb(255, 255, 255);
+	left: 77%;
+	width: 135px;
 }
 
 .n15 {
-	height: 18%;
-	width: 18%;
-	border: 1px solid black;
-	margin: 0px 0px 0px 60px;
-	border: 1px solid black;
+	position: absolute;
+	top: 18%;
+	left: 3%;
+	width: 135px;
+}
+
+.n16 {
+	position: absolute;
+	top: 18%;
+	left: 23%;
+	width: 135px;
+}
+
+.n17 {
+	position: absolute;
+	top: 18%;
+	left: 41%;
+	width: 135px;
+}
+
+.n18 {
+	position: absolute;
+	top: 18%;
+	left: 59%;
+	width: 135px;
+}
+
+.n19 {
+	position: absolute;
+	top: 18%;
+	left: 77%;
+	width: 135px;
+}
+
+.n20 {
+	position: absolute;
+	top: 43%;
+	left: 3%;
+	width: 135px;
+}
+
+.n21 {
+	position: absolute;
+	top: 43%;
+	left: 23%;
+	width: 135px;
+}
+
+.n22 {
+	position: absolute;
+	top: 43%;
+	left: 41%;
+	width: 135px;
+}
+
+.n23 {
+	position: absolute;
+	top: 43%;
+	left: 59%;
+	width: 135px;
+}
+
+.n24 {
+	position: absolute;
+	top: 43%;
+	left: 77%;
+	width: 135px;
+}
+
+.n25 {
 	position: absolute;
 	top: 68%;
-	left: 74%;
-	background-color: rgb(255, 255, 255);
+	left: 3%;
+	width: 135px;
+}
+
+.n26 {
+	position: absolute;
+	top: 68%;
+	left: 23%;
+	width: 135px;
+}
+
+.n27 {
+	position: absolute;
+	top: 68%;
+	left: 41%;
+	width: 135px;
+}
+
+.n28 {
+	position: absolute;
+	top: 68%;
+	left: 59%;
+	width: 135px;
+}
+
+.n29 {
+	position: absolute;
+	top: 68%;
+	left: 77%;
+	width: 135px;
 }
 
 .b1 {
@@ -306,4 +336,21 @@
 	left: 0%;
 	text-align: center;
 	background-color: rgb(181, 227, 216);
+}
+.next{
+	width: 60px;
+    left: 95%;
+    position: absolute;
+    top: 50%;
+    border: none;
+    background: no-repeat;
+}
+
+.prev{
+	width: 60px;
+    left: -1%;
+    position: absolute;
+    top: 50%;
+    border: none;
+    background: no-repeat;
 }

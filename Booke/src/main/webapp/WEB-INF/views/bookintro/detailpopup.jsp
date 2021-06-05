@@ -1,5 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+	
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -100,14 +103,14 @@ body {
     height: 40px;
     position: absolute;
     left: 30px;
-    top: 530px;
+    top: 440px;
 }
 .readbook{
 	background: rgb(119, 109, 97);
     width: 385px;
     height: 80px;
     left: 30px;
-    top: 330px;
+    top: 489px;
     position: absolute;
     
 }
@@ -116,7 +119,7 @@ body {
     width: 385px;
     height: 80px;
     left: 577px;
-    top: 475px;
+    top: 385px;
     position: absolute;
     
 }
@@ -146,7 +149,16 @@ body {
     width: 385px;
     position: relative;
     left: 30px;
-    top: 120px;
+    top: 98px;
+    text-align: center;
+    vertical-align: middle;
+}
+.price{
+	border: 5px solid rgb(119, 109, 97);
+    width: 385px;
+    position: relative;
+    left: 30px;
+    top: 125px;
     text-align: center;
     vertical-align: middle;
 }
@@ -198,15 +210,37 @@ body {
 <script type="text/javascript">
 	function check(){
 		var check = confirm("읽은 책에 등록하시겠습니까?");
+		var date = $("#date").val();
+		
+		console.log(date);
 		
 		var submitfalse = function(){if(check == false){return false;}};
 		
-		if(check == true && $("#date").val() != null){
-			alert("등록을 완료했습니다.");
-		}else if(check == true && $("#date").val() == null){
-			alert("날짜를 입력하세요");
-			return false
-		}else{
+		if(check == true){
+			if(date == ""){
+				alert("날짜를 입력하세요");
+				return false;
+				$("form").bind("submit", submitfalse);
+			}else{
+			alert("등록을 완료했습니다.");				
+			}
+		}else if(check == false){
+			alert("등록을 취소했습니다.");
+			$("form").bind("submit", submitfalse);
+		}
+		
+	}
+	
+	function wantcheck(){
+		var check = confirm("읽은 책에 등록하시겠습니까?");
+		
+		console.log(date);
+		
+		var submitfalse = function(){if(check == false){return false;}};
+		
+		if(check == true){
+			alert("등록을 완료했습니다.");					
+		}else if(check == false){
 			alert("등록을 취소했습니다.");
 			$("form").bind("submit", submitfalse);
 		}
@@ -250,6 +284,9 @@ body {
 							<input type="hidden" name="title" value="<%=request.getParameter("title")%>">
 							<input type="hidden" name="author" value="<%=request.getParameter("author")%>">
 							<input type="hidden" name="cover" value="<%=request.getParameter("cover")%>">
+							<input type="hidden" name="publisher" value="<%=request.getParameter("publisher")%>">
+							<input type="hidden" name="price" value="<%=request.getParameter("price")%>">
+							<input type="hidden" name="description" value="<%=request.getParameter("description")%>">
 							<div class="intro1">
 								<div class="title">
 									<h3><%=request.getParameter("title")%></h3>
@@ -260,10 +297,13 @@ body {
 								<div class="publisher">
 									출판사 : <%=request.getParameter("publisher")%>
 								</div>
+								<div class="price">
+									가격 : <%=request.getParameter("price")%>원
+								</div>
 								<input class="readbook" type="submit" value="읽은 책 담기" onclick="check();">
 								
 								<div class="date">
-								<input type="date" id="date" name="date">
+								<input type="date" id="date" name="date" style="width:100%;">
 								</div>
 									
 							</div>
@@ -275,51 +315,65 @@ body {
 							<input type="hidden" name="title" value="<%=request.getParameter("title")%>">
 							<input type="hidden" name="author" value="<%=request.getParameter("author")%>">
 							<input type="hidden" name="cover" value="<%=request.getParameter("cover")%>">
-							<input class="wantbook" type="submit" value="읽고싶은 책 담기" onclick="check();">
+							<input class="wantbook" type="submit" value="읽고싶은 책 담기" onclick="wantcheck();">
 							</form>
-						</div>
-						<div class="name">이 작가의 다른 도서 보기</div>
-						<div class="comment">
-							<div class="book0"></div>
-							<div class="book1"></div>
-							<div class="book2"></div>
-							<div class="book3"></div>
 						</div>
 					</div>
 				</div>
 			</div>
-			<div class="col-sm-2">
+		<div class="col-md-2">
 				<div class="container">
 					<div class="row">
 						<div class="col-sm-12">
 							<div class="login_menu">
 								<!-- 서재 / 커뮤니티 / 내 서재 버튼 div -->
-								<div class="login_img">
-									<img src="resources/images/kjh.png"
-										style="border-radius: 100%;">
-								</div>
+								<div>
+								<!-- 계정에 따라 프로필 -->
+								<c:choose>
+								<c:when test="${user.be_role == 'ADM' }">
+									<div class="login_img">
+									<img src="resources/images/kjh.png" style="border-radius: 100%;"></div>
+								</c:when>
+								<c:when test="${user.be_role == 'L3' }">
+									<div class="login_img">
+									<img src="resources/images/L3.png" style="transform: translate(23px, 5px); border-radius: 100%; height: 110px;"></div>
+								</c:when>
+								<c:when test="${user.be_role == 'L2' }">
+									<div class="login_img">
+									<img src="resources/images/L2.png" style="border-radius: 100%;"></div>
+								</c:when>
+								<c:otherwise>
+									<div class="login_img">
+									<img src="resources/images/L1.png" style="border-radius: 100%; height: 100px; transform: translate(25px, 12px);""></div>
+								</c:otherwise>
+								</c:choose>
 								<div class="login_name">
 									<!-- 설정 / 쪽지 버튼, 닉네임 -->
-									<a href="setting.do"><i class="bi bi-gear-fill"
-										style="font-size: 2.5rem; color: white; position: absolute; left: 160px;"></i></a>
-									<a href="msg.do"><i class="bi bi-chat-text-fill"
-										style="font-size: 2.5rem; color: white; position: relative; left: 110px;"></i></a>
-									<div class="login_nick">닉네임</div>
-								</div>
-								<div>
-									<!-- 읽은 책 / 읽고 싶은 책 -->
-									<div class="read_book">
-										읽은 책 <br> <span style="font-size: 25px;">몇 권</span>
+									<a href="setting.do"><i class="bi bi-gear-fill" style="font-size: 2.2rem; color: white; position: absolute; left: 160px; transform: translate(5px, 10px);"></i></a>
+									<div style="transform: translate(-10px, 58px);">
+										<p style="font-size: 15pt;">@ ${user.be_id }</p>
+										<p style="font-size: 25pt;">${user.be_nn }<span style="font-size: 19pt;">님</span></p>
+										<input type="button" class="btn btn-outline-dark" value="LOGOUT" style="transform: translate(130px, -58px);" onclick="location.href='logout.do'">
 									</div>
-									<div class="want_book">
-										읽고 싶은 책 <br> <span style="font-size: 25px;">몇 권</span>
+									<div style="transform: translate(-124px,30px);  color:white; ">
+										<span style="font-size: 20pt;">친구</span >&nbsp;&nbsp;&nbsp;
+										<span style="font-size: 18pt;">${cntFList}<a href="frd.do"></a></span><span style="font-size: 16pt;"> 명</span>
+										<a href="fsearch.do"><i class="bi bi-plus-circle" style="font-size: 1.8rem; color: white; position: relative; left: 80px;"></i></a>
+										<a href="msg.do"><i class="bi bi-chat-text-fill" style="font-size: 1.8rem; color: white; position: relative; left: 90px;"></i></a>
 									</div>
 								</div>
-								<div class="attainment">
-									<!-- 목표 달성도 -->
+								</div>
+								<div style="color:white; text-align:center; transform: translate(0px, -30px);">
+									<div style="font-size:20pt;"><span>${r_book}</span><span style="font-size: 19pt;"> 권</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+									<span>${w_book} 권</span></div>
+									<div style="transform: translate(3px,7px);"><span>읽은 책</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+									<span>읽고 싶은 책</span></div>
+								</div>
+								<!-- 목표 달성도 -->
+								<div class="attainment" style="transform: translate(0px, 220px); height: 155px;">
 									목표달성도
 								</div>
-							</div>
+							</div>							
 							<div class="library_map">
 								<div id="map" style="width: 400px; height: 225px;"></div>
 								<script type="text/javascript"

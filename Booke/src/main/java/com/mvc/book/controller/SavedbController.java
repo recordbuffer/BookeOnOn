@@ -30,24 +30,26 @@ public class SavedbController {
 	
 	@RequestMapping("/rsavedb.do")
 	public String Rinsert(HttpSession session, HttpServletRequest request, HttpServletResponse response) throws ParseException{
-		logger.info("READSAVEDB");
+	logger.info("READSAVEDB");
 		
 		String title = request.getParameter("title");
 		String author = request.getParameter("author");
 		String cover = request.getParameter("cover");
 		String date = request.getParameter("date");
-		
-		DateFormat dateFormat = new SimpleDateFormat ("yyyy-MM-dd");
-		Date endDate = dateFormat.parse(date);
-
-
-		System.out.println("date : " +  date);
-		System.out.println("enddate : " + endDate);
+		Date endDate = null;
 		
 		MemberDto user = (MemberDto)session.getAttribute("user");
 		int be_no = user.getBe_no();
+		DateFormat dateFormat = new SimpleDateFormat ("yyyy-MM-dd");
 		
+		try {
+			endDate = dateFormat.parse(date);
+		} catch (ParseException e) {
+			e.printStackTrace();
+			return "bookintro/detailpopup";
+		} 
 
+		
 		R_bookDto dto = new R_bookDto(0, be_no, title, author, cover, endDate);
 		
 		int res = biz.Rinsert(dto);

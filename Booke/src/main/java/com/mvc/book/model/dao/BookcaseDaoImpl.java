@@ -19,8 +19,15 @@ public class BookcaseDaoImpl implements BookcaseDao{
 
 	@Override
 	public List<W_bookDto> W_bookSelectAll(int be_no) {
-		// TODO Auto-generated method stub
-		return null;
+		List<W_bookDto> list = new ArrayList<W_bookDto>();
+		
+			try {
+				list = sqlSession.selectList(NAMESPACE + "wbList", be_no);
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+			
+		return list;
 	}
 
 	@Override

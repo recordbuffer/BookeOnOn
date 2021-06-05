@@ -18,7 +18,7 @@ public class BookcaseBizImpl implements BookcaseBiz{
 
 	@Override
 	public List<W_bookDto> W_bookSelectAll(int be_no) {
-		return null;
+		return dao.W_bookSelectAll(be_no);
 	}
 
 	@Override

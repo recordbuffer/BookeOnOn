@@ -14,9 +14,9 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.mvc.book.model.biz.FriendBiz;
+import com.mvc.book.model.biz.MsgBiz;
 import com.mvc.book.model.dto.MemberDto;
 
 @Controller
@@ -26,6 +26,7 @@ public class FriendController {
 
 	@Autowired
 	private FriendBiz fbiz;
+	private MsgBiz msgbiz;
 
 	// [ 친구 검색 ]
 	// 회원 검색 페이지로 이동
@@ -143,5 +144,61 @@ public class FriendController {
 		}
 
 	}
+	
+	//쪽지 쓰기 페이지
+	@RequestMapping("msgPage.do")
+	public String msginsertpage(HttpSession session, Model model) {
+		logger.info("MSG INSERT PAGE");
+		
+		MemberDto user = (MemberDto) session.getAttribute("user");
+		String be_id = user.getBe_id();
+
+		List<MemberDto> friendList = fbiz.selectFList(be_id);
+		model.addAttribute("friendList", friendList);
+		
+		
+		return "mail/msginsert";
+	}
+	
+	//쪽지 쓰기
+	@RequestMapping(value="/msginsert.do", method = RequestMethod.POST)
+	public String msginsert(HttpServletRequest request, HttpSession session) {
+		logger.info("MSG INSERT");
+		
+		//m1
+		MemberDto user = (MemberDto) session.getAttribute("user");
+		String m1 = user.getBe_id();
+
+		//m2
+		String m2 = request.getParameter("m2");
+		
+		//msg_content
+		String msg_content = request.getParameter("msg_content");
+		
+		System.out.println(m1);
+		System.out.println(m2);
+		System.out.println(msg_content);
+		
+		return "redirect:mailAll.do";
+	}
+	
+	
+	
+	// 쪽지 삭제
+	@RequestMapping("/msgdelete.do")
+	public String msgmuldelete(int msg_no) {
+		logger.info("MSG DELETE");
+				
+		int res = msgbiz.deleteMsg(msg_no);
+		
+		if(res>0) {
+			return "redirect:mailAll.do";
+		} else {
+			return "redirect:mailAll.do";
+		}
+		
+	}
+	
+	
 
 }

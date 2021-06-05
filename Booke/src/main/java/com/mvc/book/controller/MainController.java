@@ -16,8 +16,8 @@ import com.mvc.book.model.biz.AdminBiz;
 import com.mvc.book.model.biz.FriendBiz;
 import com.mvc.book.model.biz.MemberBiz;
 import com.mvc.book.model.biz.MsgBiz;
+import com.mvc.book.model.dto.FMsgDto;
 import com.mvc.book.model.dto.MemberDto;
-import com.mvc.book.model.dto.MsgDto;
 
 @Controller
 public class MainController {
@@ -28,7 +28,9 @@ public class MainController {
 	private AdminBiz ambiz;
 	private FriendBiz fbiz;
 	private MemberBiz mbiz;
-	private MsgBiz	msgbiz;
+	
+	@Autowired
+	private MsgBiz msgbiz;
 
 	// [시작 > 메인]
 	// 웰컴페이지로 이동
@@ -203,6 +205,8 @@ public class MainController {
 		MemberDto user = (MemberDto)session.getAttribute("user"); 
 		String be_id = user.getBe_id();
 		
+		List<FMsgDto> msgList = msgbiz.selectMsgList(be_id);
+		model.addAttribute("msgList",msgList);
 
 		return "mail/mailAll";
 	}

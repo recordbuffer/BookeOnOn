@@ -5,20 +5,17 @@ public class FriendDto {
 	private int flist_no;			//친구 번호
 	private String m1;				//회원번호1_친구 건 사람
 	private String m2;				//회원번호2_친구 받은 사람
-	
-	private int fnum;				//친구 수
-	
+		
 	public FriendDto() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
 
-	public FriendDto(int flist_no, String m1, String m2, int fnum) {
+	public FriendDto(int flist_no, String m1, String m2) {
 		super();
 		this.flist_no = flist_no;
 		this.m1 = m1;
 		this.m2 = m2;
-		this.fnum = fnum;
 	}
 
 	public int getFlist_no() {
@@ -44,15 +41,6 @@ public class FriendDto {
 	public void setM2(String m2) {
 		this.m2 = m2;
 	}
-
-	public int getFnum() {
-		return fnum;
-	}
-
-	public void setFnum(int fnum) {
-		this.fnum = fnum;
-	}
-
 	
 	
 }
