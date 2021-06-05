@@ -1,6 +1,7 @@
 package com.mvc.book.model.biz;
 
 import java.util.List;
+import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -16,9 +17,8 @@ public class MsgBizImpl implements MsgBiz{
 	private MsgDao dao;
 	
 	@Override
-	public int insertMsg(MsgDto dto) {
-		// TODO Auto-generated method stub
-		return 0;
+	public int insertMsg(Map map) {
+		return dao.insertMsg(map);
 	}
 
 	@Override

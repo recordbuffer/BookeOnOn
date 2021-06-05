@@ -2,6 +2,7 @@ package com.mvc.book.model.dao;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
 import org.mybatis.spring.SqlSessionTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,9 +19,15 @@ public class MsgDaoImpl implements MsgDao{
 	
 	
 	@Override
-	public int insertMsg(MsgDto dto) {
-		// TODO Auto-generated method stub
-		return 0;
+	public int insertMsg(Map map) {
+		int res = 0;
+		
+		try {
+			res = sqlSession.insert(NAMESPACE+"msgadd",map);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return res;
 	}
 
 	@Override
@@ -29,7 +36,7 @@ public class MsgDaoImpl implements MsgDao{
 		List<FMsgDto> list = new ArrayList<FMsgDto>();
 		
 		try {
-			list = sqlSession.selectList(NAMESPACE+"mailAll",be_id);
+			list = sqlSession.selectList(NAMESPACE+"msgAll",be_id);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}

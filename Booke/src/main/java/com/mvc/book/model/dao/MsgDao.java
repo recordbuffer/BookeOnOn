@@ -1,6 +1,7 @@
 package com.mvc.book.model.dao;
 
 import java.util.List;
+import java.util.Map;
 
 import com.mvc.book.model.dto.FMsgDto;
 import com.mvc.book.model.dto.MsgDto;
@@ -10,7 +11,7 @@ public interface MsgDao {
 	
 	// [ 쪽지 기능 ]
 	// 쪽지 보내기
-	public int insertMsg(MsgDto dto);
+	public int insertMsg(Map map);
 
 	// 쪽지 목록 조회
 	public List<FMsgDto> selectMsgList(String be_id);

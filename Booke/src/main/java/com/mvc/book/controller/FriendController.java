@@ -157,29 +157,35 @@ public class FriendController {
 		model.addAttribute("friendList", friendList);
 		
 		
-		return "mail/msginsert";
+		return "msg/msginsert";
 	}
 	
 	//쪽지 쓰기
 	@RequestMapping(value="/msginsert.do", method = RequestMethod.POST)
-	public String msginsert(HttpServletRequest request, HttpSession session) {
+	public String msginsert(HttpSession session,HttpServletRequest request) {
 		logger.info("MSG INSERT");
 		
-		//m1
 		MemberDto user = (MemberDto) session.getAttribute("user");
 		String m1 = user.getBe_id();
-
-		//m2
-		String m2 = request.getParameter("m2");
 		
-		//msg_content
+		String m2 = request.getParameter("m2");
 		String msg_content = request.getParameter("msg_content");
 		
-		System.out.println(m1);
-		System.out.println(m2);
-		System.out.println(msg_content);
+		Map<String, String> map = new HashMap<String, String>();
+		map.put("m1", m1);
+		map.put("m2", m2);
+		map.put("msg_content", msg_content);
 		
-		return "redirect:mailAll.do";
+		System.out.println(map);
+		
+		int res = msgbiz.insertMsg(map);
+		
+		if(res>0) {
+			return "redirect:mailAll.do";
+		} else {
+			return "redirect:mailAll.do";
+		}
+		
 	}
 	
 	

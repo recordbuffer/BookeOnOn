@@ -198,9 +198,9 @@ public class MainController {
 	}
 
 	// 쪽지 관리 페이지로 이동
-	@RequestMapping("/mailAll.do")
+	@RequestMapping("/msgAll.do")
 	public String mailpage(HttpSession session, Model model) {
-		logger.info("MAIL PAGE");
+		logger.info("MSG PAGE");
 		
 		MemberDto user = (MemberDto)session.getAttribute("user"); 
 		String be_id = user.getBe_id();
@@ -208,7 +208,7 @@ public class MainController {
 		List<FMsgDto> msgList = msgbiz.selectMsgList(be_id);
 		model.addAttribute("msgList",msgList);
 
-		return "mail/mailAll";
+		return "msg/msgAll";
 	}
 	
 }

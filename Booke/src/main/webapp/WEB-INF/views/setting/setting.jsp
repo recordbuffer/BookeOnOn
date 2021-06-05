@@ -79,7 +79,7 @@ td>#btn {
 				<td><input type="button" value="공지사항" class="form-control" id="btn" style="width: 170px; margin-top: 20px; font-size: 14pt;"
 							 onclick="location.href='notice.do'"></td>
 				<td><input type="button" value="쪽지관리" class="form-control" id="btn" style="width: 170px; margin-top: 20px; font-size: 14pt;"
-							onclick="location.href='mailAll.do'"></td>
+							onclick="location.href='msgAll.do'"></td>
 				<!-- 관리자 계정일 경우 -->
 				<c:choose>
 				<c:when test="${user.be_role == 'ADM' }">			

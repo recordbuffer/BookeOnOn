@@ -65,7 +65,7 @@ textarea {
 					<table class="table">
 						<tr style="margin-left: 20px">
 							<th style="width: 130px">발신자</th>
-							<td>${user.be_id }</td>
+							<td><input type="hidden" name="bd_nn" value="${user.be_id }">${user.be_id }</td>
 						</tr>
 						<tr style="margin-left: 20px">
 							<th style="width: 130px">수신자</th>
@@ -84,7 +84,7 @@ textarea {
 						<tr>
 							<td colspan="2" align="right">
 								<input type="submit" class="btn btn-outline-dark" value="전송"> 
-								<input type="button" class="btn btn-outline-dark" value="목록"  onclick="location.href='mailAll.do'">
+								<input type="button" class="btn btn-outline-dark" value="목록"  onclick="location.href='msgAll.do'">
 							</td>
 						</tr>
 					</table>

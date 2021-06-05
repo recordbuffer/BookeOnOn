@@ -87,12 +87,22 @@
 
 <!-- 쪽지 기능 -->
 	<!-- 쪽지 모두 출력 -->
-	<select id="mailAll" parameterType="String" resultType="fmsgDto">
+	<select id="msgAll" parameterType="String" resultType="fmsgDto">
 		SELECT a.M1, a.M2, b.MSG_NO, b.MSG_CONTENT, b.MSG_DATE
 		FROM BE_FRIEND a, BE_MSG b
 		WHERE a.FLIST_NO = b.FLIST_NO
 		AND a.M2=#{be_id}
 	</select>
+	
+	<!-- 쪽지 작성 -->
+	<insert id="msgadd" parameterType="msgDto">
+		INSERT INTO BE_MSG VALUES
+		(MSG_SEQ.NEXTVAL, (
+			SELECT FLIST_NO FROM BE_FRIEND
+			WHERE M1=#{m1} AND M2=#{m2}
+		), #{msg_content}, SYSDATE )
+	</insert>
+
 
 	<!-- 쪽지 삭제 -->
 	<delete id="msgdel" parameterType="int">

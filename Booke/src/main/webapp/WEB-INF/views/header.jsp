@@ -79,11 +79,9 @@
 			<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
 				<div class="menu-area">
 					<div class="limit-box menu-area-main1">
-						<a id="name" href="bsearch.do"><i class="bi bi-search"
-							style="font-size: 2rem;"></i></a> <a id="name" href="msg.do"><i
-							class="bi bi-chat-text-fill" style="font-size: 2rem;"></i></a> <a
-							id="name" href="setting.do"><i class="bi bi-gear-fill"
-							style="font-size: 2rem;"></i></a>
+						<a id="name" href="bsearch.do"><i class="bi bi-search" style="font-size: 2rem;"></i></a> 
+						<a id="name" href="msgAll.do"><i class="bi bi-chat-text-fill" style="font-size: 2rem;"></i></a>
+						<a id="name" href="setting.do"><i class="bi bi-gear-fill" style="font-size: 2rem;"></i></a>
 					</div>
 				</div>
 			</div>

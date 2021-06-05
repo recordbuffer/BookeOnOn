@@ -135,9 +135,14 @@ FROM be_friend a, be_msg b
 WHERE a.flist_no = b.flist_no;
 
 --all
-SELECT a.M1, b.MSG_CONTENT, b.MSG_DATE 
+SELECT a.M1, a.M2, b.MSG_CONTENT, b.MSG_DATE 
 FROM be_friend a, be_msg b
-WHERE a.flist_no = b.flist_no AND a.M2='tjdtn44';
+WHERE a.flist_no = b.flist_no;
+
+SELECT FLIST_NO FROM BE_FRIEND WHERE M1='tmddnjs77' AND M2='wjddn99';
+
+INSERT INTO BE_MSG VALUES(
+MSG_SEQ.NEXTVAL, (SELECT FLIST_NO FROM BE_FRIEND WHERE M1='tmddnjs77' AND M2='wjddn99'), '조인 후 쪽지', SYSDATE);
 
 commit;
 -------------------
