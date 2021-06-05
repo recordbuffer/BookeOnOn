@@ -2,17 +2,123 @@
 <!DOCTYPE mapper
   PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-  <mapper namespace="mybooke">
-  
-  <insert id="kakaowinsert" parameterType="kakaordto">
-  	INSERT INTO W_BOOK
-	VALUES(W_NOSEQ.NEXTVAL, 1, #{b_title}, #{b_author}, #{b_cover}, SYSDATE)
-  </insert>
-  
-  <insert id="kakaoinsert" parameterType="kakaodbdto">
-  	INSERT INTO R_BOOK
-	VALUES(R_NOSEQ.NEXTVAL, 1, #{b_title}, #{b_author}, #{b_cover}, SYSDATE)
-  </insert>
-  
-  
-  </mapper>
+<mapper namespace="mybooke">
+
+	<!-- 로그인 -->
+	<select id="login" parameterType="memberDto"
+		resultType="memberDto">
+		SELECT * FROM BE_MEMBER
+		WHERE BE_ID=#{be_id} and
+		BE_PW=#{be_pw} and BE_ENABLED='Y'
+	</select>
+
+	<!-- 회원가입 -->
+	<insert id="signup">
+		insert into be_member(BE_NO, BE_ID, BE_PW, BE_NN, BE_NAME, BE_ADDR,
+		BE_PHONE, BE_EMAIL, BE_ENABLED, BE_ROLE)
+		values(m_noseq.nextval,
+		#{be_id},
+		#{be_pw},
+		#{be_nn}, <!-- 닉네임 -->
+		#{be_name},
+		#{be_addr}, <!-- 주소 -->
+		#{be_phone},
+		#{be_email},
+		'Y', 'L1')
+	</insert>
+
+	<!-- 아이디 중복 체크 -->
+	<select id="signuppage_idchk" parameterType="memberDto"
+		resultType="int">
+		SELECT COUNT(*) FROM BE_MEMBER
+		WHERE BE_ID = #{be_id}
+	</select>
+
+	<!-- 회원정보보기 -->
+	<select id="selectMemberInfo" parameterType="memberDto"
+		resultType="memberDto">
+		SELECT *
+		FROM BE_MEMBER
+		WHERE BE_NO = #{be_no}
+	</select>
+
+	<!-- 회원 정보 수정 -->
+	<update id="updateMemberInfo" parameterType="memberDto">
+		UPDATE BE_MEMBER
+		SET
+		BE_NN = #{be_nn}
+		, BE_ADDR = #{be_addr}
+		WHERE BE_NO = #{be_no}
+	</update>
+
+
+
+	<!-- 친구 리스트 조회 -->
+	<select id="friendList" resultType="memberDto">
+		SELECT BE_ID, BE_NN, BE_ROLE
+		FROM BE_MEMBER
+		WHERE BE_ID IN (SELECT M2 FROM BE_FRIEND WHERE
+		M1=#{be_id})
+	</select>
+
+	<!-- 친구 끊기 -->
+	<delete id="deleteFriend" parameterType="hashmap">
+		DELETE FROM BE_FRIEND
+		WHERE M1=#{m1} AND M2=#{m2}
+	</delete>
+
+	<!-- 친구 추가 -->
+	<insert id="addFriend" parameterType="hashmap">
+		INSERT INTO BE_FRIEND
+		VALUES(FLIST_SEQ.NEXTVAL, #{m1}, #{m2})
+	</insert>
+
+	<!-- 친구 검색 -->
+	<select id="searchMember" parameterType="memberDto"
+		resultType="memberDto">
+		SELECT BE_ID, BE_NN, BE_ROLE
+		FROM BE_MEMBER
+		WHERE BE_ID LIKE
+		'%'|| #{searchid} ||'%'
+		OR BE_NN LIKE '%'|| #{searchid} ||'%'
+	</select>
+
+	<!-- 읽은 책 서재 리스트 -->
+	<select id="rbList" resultType="r_bookDto">
+		SELECT BE_NO, B_COVER, ADDDATE
+		FROM R_BOOK
+		WHERE BE_NO=#{be_no}
+	</select>
+
+	<!-- 읽은 책 서재 담기 -->
+	<insert parameterType="r_bookDto" id="kakaoinsert">
+		INSERT INTO R_BOOK
+		VALUES(R_NOSEQ.NEXTVAL, 1, #{b_title}, #{b_author}, #{b_cover}, SYSDATE)
+	</insert>
+	
+
+	<!-- 읽고싶은 책 서재 담기 -->
+	<insert parameterType="w_bookDto" id="kakaowinsert">
+		INSERT INTO W_BOOK
+		VALUES(W_NOSEQ.NEXTVAL, 1, #{b_title}, #{b_author}, #{b_cover},SYSDATE)
+	</insert>
+
+
+
+	<!-- 공지사항 모두 보기 -->
+	<select id="noticeAll" resultType="noticeDto">
+		SELECT BD_NO, BD_TITLE,
+		BD_NN,
+		BD_DATE
+		FROM NOTICEBOARD
+	</select>
+
+	<!-- 공지사항 하나 보기 -->
+	<select id="noticeOne" resultType="noticeDto">
+		SELECT BD_NO, BD_NN, BD_TITLE,
+		BD_CONTENT
+		FROM NOTICEBOARD
+		WHERE BD_NO = #{bd_no}
+	</select>
+
+</mapper>
