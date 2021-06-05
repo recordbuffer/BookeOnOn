@@ -75,7 +75,7 @@ p>button{
 }
 
 .test {
-    background: rgb(181, 227, 216);
+    background: rgb(119, 109, 97);
     width: 40%;
     position: absolute;
     left: 20px;
@@ -83,7 +83,7 @@ p>button{
 }
 
 .test1 {
-    background: rgb(181, 227, 216);
+    background: rgb(119, 109, 97);
     width: 40%;
     position: absolute;
     right: 5%;
@@ -103,6 +103,17 @@ p>button{
     left: 100px;
 }
 
+#card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: rgb(181, 227, 216);
+    background-clip: border-box;
+    border: 1px solid rgb(119, 109, 97);
+    border-radius: .25rem;
+}
 
 </style>
 </head>
@@ -146,7 +157,7 @@ p>button{
 				%>
 					<!--Profile Card 5-->
 					<div class="col-md-4 mt-4">
-						<div class="card profile-card-5">
+						<div class="card profile-card-5" id="card">
 							<br>
 							<div class="card-img-block" >
 							<a href="<%=item.getUrl() %>"><img class="card-img-top" id="imgsize" src="<%=item.getThumbnail() %>" alt="Card image cap"></a>
