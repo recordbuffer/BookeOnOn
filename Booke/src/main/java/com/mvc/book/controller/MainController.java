@@ -15,8 +15,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import com.mvc.book.model.biz.AdminBiz;
 import com.mvc.book.model.biz.FriendBiz;
 import com.mvc.book.model.biz.MemberBiz;
-import com.mvc.book.model.biz.MsgBiz;
-import com.mvc.book.model.dto.FMsgDto;
 import com.mvc.book.model.dto.MemberDto;
 
 @Controller
@@ -29,8 +27,6 @@ public class MainController {
 	private FriendBiz fbiz;
 	private MemberBiz mbiz;
 	
-	@Autowired
-	private MsgBiz msgbiz;
 
 	// [시작 > 메인]
 	// 웰컴페이지로 이동
@@ -197,18 +193,6 @@ public class MainController {
 		return "setting/mdeletepage_Chk";
 	}
 
-	// 쪽지 관리 페이지로 이동
-	@RequestMapping("/msgAll.do")
-	public String mailpage(HttpSession session, Model model) {
-		logger.info("MSG PAGE");
-		
-		MemberDto user = (MemberDto)session.getAttribute("user"); 
-		String be_id = user.getBe_id();
-		
-		List<FMsgDto> msgList = msgbiz.selectMsgList(be_id);
-		model.addAttribute("msgList",msgList);
 
-		return "msg/msgAll";
-	}
 	
 }

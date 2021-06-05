@@ -20,5 +20,7 @@ public interface MsgBiz {
 	// 쪽지 삭제
 	public int deleteMsg(int msg_no);
 
+	// 보낸 쪽지 목록 조회
+	public List<FMsgDto> sendMsgList(String be_id);
 	
 }

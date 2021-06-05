@@ -17,6 +17,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 import com.mvc.book.model.biz.FriendBiz;
 import com.mvc.book.model.biz.MsgBiz;
+import com.mvc.book.model.dto.FMsgDto;
 import com.mvc.book.model.dto.MemberDto;
 
 @Controller
@@ -145,7 +146,36 @@ public class FriendController {
 
 	}
 	
-	//쪽지 쓰기 페이지
+	// 쪽지 관리 페이지로 이동
+	@RequestMapping("/msgAll.do")
+	public String msgpage(HttpSession session, Model model) {
+		logger.info("MSG PAGE");
+		
+		MemberDto user = (MemberDto)session.getAttribute("user"); 
+		String be_id = user.getBe_id();
+		
+		List<FMsgDto> msgList = msgbiz.selectMsgList(be_id);
+		model.addAttribute("msgList",msgList);
+
+		return "msg/msgAll";
+	}
+	
+	// 내가 보낸 쪽지 페이지로 이동
+	@RequestMapping("/sendmsgAll.do")
+	public String sendMsgPage(HttpSession session, Model model) {
+		logger.info("SEND MSG PAGE");
+		
+		MemberDto user = (MemberDto)session.getAttribute("user"); 
+		String be_id = user.getBe_id();
+		
+		List<FMsgDto> sendmsgList = msgbiz.sendMsgList(be_id);
+		model.addAttribute("sendmsgList",sendmsgList);
+		
+		return "msg/msgsendAll";
+	}
+	
+	
+	// 쪽지 쓰기 페이지
 	@RequestMapping("msgPage.do")
 	public String msginsertpage(HttpSession session, Model model) {
 		logger.info("MSG INSERT PAGE");
@@ -159,6 +189,7 @@ public class FriendController {
 		
 		return "msg/msginsert";
 	}
+	
 	
 	//쪽지 쓰기
 	@RequestMapping(value="/msginsert.do", method = RequestMethod.POST)
@@ -187,7 +218,6 @@ public class FriendController {
 		}
 		
 	}
-	
 	
 	
 	// 쪽지 삭제

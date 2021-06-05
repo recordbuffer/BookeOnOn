@@ -63,4 +63,17 @@ public class MsgDaoImpl implements MsgDao{
 		return res;
 	}
 
+	@Override
+	public List<FMsgDto> sendMsgList(String be_id) {
+		List<FMsgDto> list = new ArrayList<FMsgDto>();
+		
+		try {
+			list = sqlSession.selectList(NAMESPACE+"sendmsgAll",be_id);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+		return list;
+	}
+
 }

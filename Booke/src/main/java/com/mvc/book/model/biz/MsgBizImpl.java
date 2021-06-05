@@ -37,4 +37,9 @@ public class MsgBizImpl implements MsgBiz{
 		return dao.deleteMsg(msg_no);
 	}
 
+	@Override
+	public List<FMsgDto> sendMsgList(String be_id) {
+		return dao.sendMsgList(be_id);
+	}
+
 }

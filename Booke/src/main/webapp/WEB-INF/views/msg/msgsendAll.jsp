@@ -67,7 +67,7 @@ td>a {
 	<br>
 
 	<main class="form-signup">
-		<h1 style="margin-bottom: 50px;">쪽지 관리</h1>
+		<h1 style="margin-bottom: 50px;">보낸 쪽지 관리</h1>
 
 		<!-- 결과 테이블 -->
 		<section>
@@ -82,18 +82,18 @@ td>a {
 								<col width="50">
 								<col width="50">
 								<tr style="font-size: 14pt;">
-									<th>보낸 사람</th>
+									<th>받은 사람</th>
 									<th>내용</th>
 									<th>작성일</th>
 									<th></th>
 								</tr>
-								<c:forEach items="${msgList }" var="msg">
+								<c:forEach items="${sendmsgList }" var="smsg">
 									<tr>
-										<td>${msg.m1 }</td>
-										<td>${msg.msg_content }</td>
-										<td>${msg.msg_date }</td>									
+										<td>${smsg.m2 }</td>
+										<td>${smsg.msg_content }</td>
+										<td>${smsg.msg_date }</td>									
 										<td>
-											<input type="submit" class="btn btn-dark" value="삭제" onclick="location.href='msgdelete.do?msg_no=${msg.msg_no}'">
+											<input type="submit" class="btn btn-dark" value="삭제" onclick="location.href='msgdelete.do?msg_no=${mail.msg_no}'">
 										</td>
 								</c:forEach>
 							</table>

@@ -109,6 +109,14 @@
 		DELETE FROM BE_MSG
 		WHERE MSG_NO=#{msg_no}
 	</delete>
+	
+	<!-- 보낸 쪽지 모두 출력 -->
+	<select id="sendmsgAll" parameterType="String" resultType="fmsgDto">
+		SELECT a.M1, a.M2, b.MSG_NO, b.MSG_CONTENT, b.MSG_DATE
+		FROM BE_FRIEND a, BE_MSG b
+		WHERE a.FLIST_NO = b.FLIST_NO
+		AND a.M1=#{be_id}
+	</select>
 
 
 <!-- 서재기능 -->
