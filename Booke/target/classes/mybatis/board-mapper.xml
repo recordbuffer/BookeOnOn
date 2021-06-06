@@ -52,7 +52,7 @@
 	</update>
 
 
-<!-- 친구기능 -->
+	<!-- 친구기능 -->
 	<!-- 친구 리스트 조회 -->
 	<select id="friendList" resultType="memberDto">
 		SELECT BE_ID, BE_NN, BE_ROLE
@@ -85,21 +85,23 @@
 
 
 
-<!-- 쪽지 기능 -->
+	<!-- 쪽지 기능 -->
 	<!-- 쪽지 모두 출력 -->
 	<select id="msgAll" parameterType="String" resultType="fmsgDto">
-		SELECT a.M1, a.M2, b.MSG_NO, b.MSG_CONTENT, b.MSG_DATE
-		FROM BE_FRIEND a, BE_MSG b
+		SELECT
+		a.M1, a.M2, b.MSG_NO, b.MSG_CONTENT, b.MSG_DATE
+		FROM BE_FRIEND a,
+		BE_MSG b
 		WHERE a.FLIST_NO = b.FLIST_NO
 		AND a.M2=#{be_id}
 	</select>
-	
+
 	<!-- 쪽지 작성 -->
 	<insert id="msgadd" parameterType="msgDto">
 		INSERT INTO BE_MSG VALUES
 		(MSG_SEQ.NEXTVAL, (
-			SELECT FLIST_NO FROM BE_FRIEND
-			WHERE M1=#{m1} AND M2=#{m2}
+		SELECT FLIST_NO FROM BE_FRIEND
+		WHERE M1=#{m1} AND M2=#{m2}
 		), #{msg_content}, SYSDATE )
 	</insert>
 
@@ -107,51 +109,73 @@
 	<!-- 쪽지 삭제 -->
 	<delete id="msgdel" parameterType="int">
 		DELETE FROM BE_MSG
-		WHERE MSG_NO=#{msg_no}
+		WHERE
+		MSG_NO=#{msg_no}
 	</delete>
-	
+
 	<!-- 보낸 쪽지 모두 출력 -->
-	<select id="sendmsgAll" parameterType="String" resultType="fmsgDto">
+	<select id="sendmsgAll" parameterType="String"
+		resultType="fmsgDto">
 		SELECT a.M1, a.M2, b.MSG_NO, b.MSG_CONTENT, b.MSG_DATE
-		FROM BE_FRIEND a, BE_MSG b
+		FROM
+		BE_FRIEND a, BE_MSG b
 		WHERE a.FLIST_NO = b.FLIST_NO
 		AND a.M1=#{be_id}
 	</select>
 
 
-<!-- 서재기능 -->
-<!-- 읽은 책 서재 리스트 -->
+	<!-- 서재기능 -->
+	<!-- 읽은 책 서재 리스트 -->
 	<select resultType="r_bookDto" id="rbList">
 		SELECT R_NO, B_COVER, ADDDATE
 		FROM R_BOOK
 		WHERE BE_NO=#{be_no}
-		ORDER BY ADDDATE DESC 
+		ORDER BY ADDDATE DESC
 	</select>
 
-<!-- 읽고싶은 책 서재 리스트 -->
+	<!-- 읽고싶은 책 서재 리스트 -->
 	<select resultType="w_bookDto" id="wbList">
 		SELECT W_NO, B_COVER, ADDDATE
 		FROM W_BOOK
 		WHERE BE_NO=#{be_no}
-		ORDER BY ADDDATE DESC 
+		ORDER BY ADDDATE DESC
 	</select>
 
 	<!-- 검색 후 읽은 책 서재 담기 -->
-    <insert parameterType="r_bookDto" id="kakaoinsert">
-        INSERT INTO R_BOOK
-        VALUES(R_NOSEQ.NEXTVAL,#{be_no}, #{b_title}, #{b_author}, #{b_cover}, SYSDATE)
-    </insert>
+	<insert parameterType="r_bookDto" id="kakaoinsert">
+		INSERT INTO R_BOOK
+		VALUES(R_NOSEQ.NEXTVAL,#{be_no}, #{b_title}, #{b_author}, #{b_cover}, SYSDATE)
+	</insert>
 
 
-    <!-- 검색 후 읽고싶은 책 서재 담기 -->
-    <insert parameterType="w_bookDto" id="kakaowinsert">
-        INSERT INTO W_BOOK
-        VALUES(W_NOSEQ.NEXTVAL, #{be_no}, #{b_title}, #{b_author}, #{b_cover},SYSDATE)
-    </insert>
+	<!-- 검색 후 읽고싶은 책 서재 담기 -->
+	<insert parameterType="w_bookDto" id="kakaowinsert">
+		INSERT INTO W_BOOK
+		VALUES(W_NOSEQ.NEXTVAL, #{be_no}, #{b_title}, #{b_author}, #{b_cover},SYSDATE)
+	</insert>
+
+
+	<!--통계기능 -->
+	<resultMap id="BookStatsMap" type="HashMap">
+		<id property="r_no" column="r_no" />
+		<id property="be_no" column="be_no" />
+		<id property="target" column="target" />
+		<id property="year" column="year" />
+	</resultMap>
+
+	<select id="selectAllRow" resultMap="BookStatsMap">
+		SELECT TO_CHAR(ADDDATE,'MM') AS MONTH, COUNT(*) AS CNT
+		FROM R_BOOK
+		WHERE TO_CHAR(ADDDATE, 'YYYY') = #{btnChart}
+		GROUP BY TO_CHAR(ADDDATE,'MM')
+		ORDER BY TO_CHAR(ADDDATE,'MM') 
+	</select>
 
 
 
-<!-- 공지사항 -->
+
+
+	<!-- 공지사항 -->
 	<!-- 공지사항 모두 보기 -->
 	<select id="noticeAll" resultType="noticeDto">
 		SELECT BD_NO, BD_TITLE,

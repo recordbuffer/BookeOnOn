@@ -34,34 +34,14 @@
 	src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
 	integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
 	crossorigin="anonymous"></script>
+	
+<script src="/book/resources/js/chartjs/dist/chart.js"></script>
 
 <link rel="stylesheet" href="resources/css/footer.css">
 <link rel="stylesheet" href="resources/css/mainpage.css">
 <link rel="stylesheet" href="resources/css/bookcase.css">
 <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script type="text/javascript">
-	$(document).ready(function(){
-		for(var i = 15; i <= 29; i++){
-			$(".n" + i).hide();
-		}
-	})
-	function next(){
-		for(var i = 0; i <= 14; i++){
-			$(".n" + i).hide();
-		}
-		for(var i = 15; i <= 29; i++){
-			$(".n" + i).show();
-		}
-	}
-	function prev(){
-		for(var i = 0; i <= 14; i++){
-			$(".n" + i).show();
-		}
-		for(var i = 15; i <= 29; i++){
-			$(".n" + i).hide();
-		}
-	}
-</script>
+<script type="text/javascript"src = "js/bookcase.js"></script>
 </head>
 
 <body>
@@ -111,6 +91,27 @@
 							<div class="d2">
 								<div class="a1">
 									<div class="m1">월별 통계</div>
+									<div class="container-div">
+										<div class="controls-div">
+
+											<select id="yyyy" name="yyyy">
+												<option value="2015">2015</option>
+												<option value="2016">2016</option>
+												<option value="2017">2017</option>
+												<option value="2018">2018</option>
+												<option value="2019">2019</option>
+												<option value="2020">2020</option>
+												<option value="2021">2021</option>
+											</select>
+											<button id="btnChart" name="btnChart">확인</button>
+
+
+										</div>
+										<div class="chart-container"
+											style="position: relative; width: 85vw">
+											<canvas id="myChart" width="867" height="260"></canvas>
+										</div>
+									</div>
 								</div>
 								<div class="a2">
 									<div class="m2">년별 통계</div>

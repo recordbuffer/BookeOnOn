@@ -1,49 +1,62 @@
 package com.mvc.book.model.dto;
 
+import java.util.Date;
+
 public class BookStatsDto {
-	//목표 통계 정보
-    private int monthTarget;			//월별 목표
-    private int yearTarget;				//년별 목표
-    private int monthStats;				//월별 달성도
-    private int yearStats;				//년별 달성도
-    
-    
+	// 목표 통계 정보
+	private int r_no; // 회원번호
+	private int be_no; // 읽은 책
+	private int target; // 목표
+	private Date year; // 년월
+
 	public BookStatsDto() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-	public BookStatsDto(int monthTarget, int yearTarget, int monthStats, int yearStats) {
+	
+	
+
+	public BookStatsDto(int r_no, int be_no, int target, Date year) {
 		super();
-		this.monthTarget = monthTarget;
-		this.yearTarget = yearTarget;
-		this.monthStats = monthStats;
-		this.yearStats = yearStats;
+		this.r_no = r_no;
+		this.be_no = be_no;
+		this.target = target;
+		this.year = year;
 	}
-	public int getMonthTarget() {
-		return monthTarget;
+
+
+
+	public int getR_no() {
+		return r_no;
 	}
-	public void setMonthTarget(int monthTarget) {
-		this.monthTarget = monthTarget;
+
+	public void setR_no(int r_no) {
+		this.r_no = r_no;
 	}
-	public int getYearTarget() {
-		return yearTarget;
+
+	public int getBe_no() {
+		return be_no;
 	}
-	public void setYearTarget(int yearTarget) {
-		this.yearTarget = yearTarget;
+
+	public void setBe_no(int be_no) {
+		this.be_no = be_no;
 	}
-	public int getMonthStats() {
-		return monthStats;
+
+	public int getTarget() {
+		return target;
 	}
-	public void setMonthStats(int monthStats) {
-		this.monthStats = monthStats;
+
+	public void setTarget(int target) {
+		this.target = target;
 	}
-	public int getYearStats() {
-		return yearStats;
+
+	public Date getYear() {
+		return year;
 	}
-	public void setYearStats(int yearStats) {
-		this.yearStats = yearStats;
+
+	public void setYear(Date year) {
+		this.year = year;
 	}
-    
-    
+
 	
 }
