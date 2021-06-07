@@ -35,6 +35,20 @@
 <link rel="stylesheet" href="resources/css/footer.css">
 <link rel="stylesheet" href="resources/css/mainpage.css">
 
+<style type="text/css">
+
+.image {
+    width: 1200px;
+    height: 350px;
+    background-image: url(resources/images/책광고13.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    transform: scaleX(1.5);
+}
+
+</style>
+
 </head>
 
 <body>
@@ -47,7 +61,8 @@
 			<div class="row h-100 align-items-center">
 				<div class="col-lg-12" id="hddiv">
 					<h1 class="display-4 text-white mt-5 mb-2">인기 도서 BEST</h1>
-					<p class="lead mb-5 text-white-50">광고</p>
+					<div class="image">
+					</div>
 				</div>
 			</div>
 		</div>

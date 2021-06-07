@@ -8,6 +8,21 @@
 <head>
 <meta charset="UTF-8">
 <title>main</title>
+
+<style type="text/css">
+
+.image {
+    width: 1200px;
+    height: 350px;
+    background-image: url(resources/images/책광고6.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    transform: scaleX(1.5);
+}
+
+</style>
+
 <!-- bootstrap css -->
 <link rel="stylesheet"
 	href="${pageContext.request.contextPath}/resources/css/bootstrap.min.css">
@@ -39,6 +54,7 @@
 <link rel="stylesheet" href="resources/css/mainpage.css">
 
 
+
 </head>
 
 <body>
@@ -50,9 +66,10 @@
 	<header class="bg-primary py-5 mb-5" id="mainhd">
 		<div class="container h-100">
 			<div class="row h-100 align-items-center">
-				<div class="col-lg-12" id="hddiv">
+				<div class="col-lg-12" id="hddiv" >
 					<h1 class="display-4 text-white mt-5 mb-2">인기 도서 BEST</h1>
-					<p class="lead mb-5 text-white-50">광고</p>
+					<div class="image">
+					</div>
 				</div>
 			</div>
 		</div>
