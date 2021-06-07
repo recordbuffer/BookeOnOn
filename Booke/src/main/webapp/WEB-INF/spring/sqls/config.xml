@@ -12,13 +12,14 @@
   		<typeAlias type="com.mvc.book.model.dto.R_bookDto" alias="r_bookDto"/>	  		
 		<typeAlias type="com.mvc.book.model.dto.W_bookDto" alias="w_bookDto"/>	  
 		<typeAlias type="com.mvc.book.model.dto.BookStatsDto" alias="bookStatsDto"/>
+		<typeAlias alias="bkDto" type="com.mvc.book.model.dto.BkDto"/>
   	</typeAliases>
   	
   	<mappers>
   		<mapper resource="/mybatis/board-mapper.xml"/>
    		<mapper resource="/mybatis/admin-mapper.xml"/>
    		<mapper resource="/mybatis/savedb-mapper.xml"/>
-
+		<mapper resource="/mybatis/community-mapper.xml"/>
   	</mappers>
   	
   </configuration>

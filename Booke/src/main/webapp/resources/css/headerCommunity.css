@@ -1,0 +1,60 @@
+@charset "UTF-8";
+
+.header {
+	height: 100px;
+	padding: 0px 0px;
+	position: fixed;
+	left: 0;
+	top: 0;
+	z-index: 1;
+	background-color: rgb(247, 240, 232);
+	width: 100%;
+	justify-content: space-between;
+	display: flex;
+}
+
+.logo {
+	float: left;
+    margin: 0px 0px 0px 50px;
+    background-size: cover;
+    width: 182px;
+    height: 60px;
+    position: relative;
+    top: 10px;
+}
+
+
+.bo {
+	background-color: rgb(119, 109, 097);
+	position: fixed;
+	width: 100%;
+	top: 57px;
+	height: 5px;
+	left: 0px;
+	z-index: 1;
+}
+
+.menu-area-main {
+	position: fixed;
+	left: 80%;
+	z-index: 1;
+	top: 20px;
+}
+
+.menu-area-main1 {
+	position: fixed;
+	left: 90%;
+	z-index: 1;
+	top: 20px;
+}
+
+.brown { 
+	width:100%;
+	height: 100px;
+	background-color: rgb(119, 109, 097);
+}
+
+
+.dropdown-menu {
+	background-color: currentcolor;
+}

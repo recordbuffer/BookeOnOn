@@ -47,14 +47,7 @@
       	initialView: 'dayGridMonth',
     });
     calendar.render(
-    		var test = [];
-    		if(readbookList.length>0){
-    			for(var i=0; i<readbookList.length; i++){
-    				test.push({
-    					
-    				})
-    			}
-    		}
+    		
     );
   });
 

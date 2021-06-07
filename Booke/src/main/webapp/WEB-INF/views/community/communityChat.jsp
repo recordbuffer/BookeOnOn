@@ -15,10 +15,10 @@
 <link rel="stylesheet"
 	href="${pageContext.request.contextPath}/resources/css/responsive.css">
 
-<link rel="stylesheet" href="resources/css/mainpage.css" type="text/css">
+<link rel="stylesheet" href="resources/css/communityMain.css" type="text/css">
 
-<link rel="stylesheet" href="resources/css/community.css"
-	type="text/css">
+<link rel="stylesheet" href="resources/css/communityChat.css" type="text/css">
+
 
 <!-- CSS only -->
 <link
@@ -31,11 +31,10 @@
 	src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
 	integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
 	crossorigin="anonymous"></script>
-	
 
-
-<link rel="stylesheet" href="resources/css/footer.css">
-
+<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
+<script type="text/javascript"
+	src="https://cdnjs.cloudflare.com/ajax/libs/sockjs-client/1.1.5/sockjs.min.js"></script>
 
 
 
@@ -43,7 +42,7 @@
 
 <body>
 
-	<jsp:include page="../header.jsp"></jsp:include>
+	<jsp:include page="headerCommunity.jsp"></jsp:include>
 
 
 	<header class="bg-primary py-5 mb-5" id="mainhd">
@@ -69,17 +68,13 @@
 
 					<h1>
 						&nbsp;&nbsp;<span class="badge"
-							style="font-size: 120%; background-color: rgb(181, 227, 216);">책마루</span>
+							style="font-size: 100%; background-color: rgb(243, 193, 188);">소통방</span>
 						<span class="btn-group" role="group" aria-label="Basic example"
 							style="left: 60%;">
 
 							<button type="button" class="btn"
-								style="background-color: rgb(119, 109, 097)"
+								style="background-color: rgb(196, 175, 173)"
 								onclick="location.href='communityMain.do'">커뮤니티 홈</button>
-							<button type="button" class="btn"
-								style="background-color: rgb(119, 109, 097)">설정</button>
-							<button type="button" class="btn"
-								style="background-color: rgb(119, 109, 097)">편집</button>
 						</span>
 					</h1>
 				</div>
@@ -105,84 +100,20 @@
 			<div class="col-lg-12">
 				<div class="ibox chat-view">
 					<div class="ibox-title">
-						<small class="pull-right text-muted">Last message: Mon Apl
+						<small class="float-right text-muted">Last message: Mon Apl
 							29 2021 - 18:39:23</small> Chat room panel
 					</div>
 					<div class="ibox-content">
 						<div class="container">
-							<div class="row">
+							<div class="row justify-content-center">
 								<div class="col-lg-8 ">
-									<div class="chat-discussion">
-
-										<div class="chat-message left">
-											<img class="message-avatar"
-												src="resources/images/psm.png"
-												alt="">
-											<div class="message">
-												<a class="message-author" href="#"> 박소미 님 </a> <span
-													class="message-date"> Thu Apl 29 2021 - 08:39:23 </span> <span
-													class="message-content"> Lorem ipsum dolor sit amet,
-													consectetuer adipiscing elit, sed diam nonummy nibh euismod
-													tincidunt ut laoreet dolore magna aliquam erat volutpat. </span>
-											</div>
-										</div>
-										<div class="chat-message right">
-											<img class="message-avatar"
-												src="resources/images/csw.png"
-												alt="">
-											<div class="message">
-												<a class="message-author" href="#"> 채승원 님 </a> <span
-													class="message-date"> Thu Apl 29 2021 - 11:12:36 </span> <span
-													class="message-content"> Many desktop publishing
-													packages and web page editors now use Lorem Ipsum as their
-													default model text, and a search for 'lorem ipsum' will
-													uncover. </span>
-											</div>
-										</div>
-										<div class="chat-message right">
-											<img class="message-avatar"
-												src="resources/images/kjh.png"
-												alt="">
-											<div class="message">
-												<a class="message-author" href="#"> 김주현 님 </a> <span
-													class="message-date"> Thu Apl 29 2021 - 11:12:39 </span> <span
-													class="message-content"> There are many variations
-													of passages of Lorem Ipsum available, but the majority have
-													suffered alteration. </span>
-											</div>
-										</div>
-										<div class="chat-message left">
-											<img class="message-avatar"
-												src="resources/images/psm.png"
-												alt="">
-											<div class="message">
-												<a class="message-author" href="#"> 박소미 님 </a> <span
-													class="message-date"> Thu Apl 29 2021 - 11:13:36 </span> <span
-													class="message-content"> All the Lorem Ipsum
-													generators on the Internet tend to repeat predefined chunks
-													as necessary, making this the first true generator on the
-													Internet. It uses a dictionary of over 200 Latin words. </span>
-											</div>
-										</div>
-										<div class="chat-message right">
-											<img class="message-avatar"
-												src="resources/images/mss.png"
-												alt="">
-											<div class="message">
-												<a class="message-author" href="#"> 민성수 님 </a> <span
-													class="message-date"> Fri Apl 30 2021 - 11:12:36 </span> <span
-													class="message-content"> All the Lorem Ipsum
-													generators on the Internet tend to repeat predefined chunks
-													as necessary, making this the first true generator on the
-													Internet. It uses a dictionary of over 200 Latin words. </span>
-											</div>
-										</div>
-
+									<div id="messageArea">
+										<div>${nickname}님이 입장하셨습니다. </div>
 									</div>
 
 								</div>
 
-								<div class="col-lg-3 offset-col-lg-0">
+								<div class="col-lg-4">
 									<div class="chat-users">
 
 
@@ -264,9 +195,9 @@
 							<div class="col-lg-12">
 								<div class="chat-message-form">
 									<div class="form-group">
-										<textarea class="form-control message-input" name="message"
-											placeholder="Enter message text and press enter"
-											style="resize: none;"></textarea>
+									<input type="text" id="message" style="width: 1000px; height:100px;" placeholder="메세지를 입력하세요"/>
+									<input type="button" id="sendBtn" value="submit" class="btn btn-dark btn-lg"/>
+																				
 									</div>
 								</div>
 							</div>
@@ -279,16 +210,40 @@
 		</div>
 	</div>
 
-
-
-
-
-
 	<br>
 	<br>
 	<br>
 	<br>
 	<br>
-	<jsp:include page="../footer.jsp"></jsp:include>
+	<jsp:include page="footerCommunity.jsp"></jsp:include>
+	<script type="text/javascript">
+	
+	$("#sendBtn").click(function() {
+		sendMessage();
+		
+		$('#message').val('')
+	});
+
+	let sock = new SockJS("http://localhost:8787/book/chatt.do/");
+	
+	sock.onmessage = onMessage;
+	
+	sock.onclose = onClose;
+	// 메시지 전송
+	function sendMessage() {
+		sock.send($("#message").val());
+	}
+	// 서버로부터 메시지를 받았을 때
+	function onMessage(msg) {
+		var data = msg.data;
+		var nickname = "${nickname}"
+		$("#messageArea").append(" : " + data + "<br/>");
+	}
+	// 서버와 연결을 끊었을 때
+	function onClose(evt) {
+		$("#messageArea").append("연결 끊김");
+
+	}
+</script>
 </body>
 </html>

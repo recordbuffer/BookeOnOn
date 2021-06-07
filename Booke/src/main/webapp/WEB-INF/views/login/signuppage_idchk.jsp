@@ -60,7 +60,7 @@ td>#btn {
 	// 화면이 다 그려진 이후 실행됨.
 	$(document).ready(function(){
 		$("#btn").click(function(){
-			var goUrl = "/checkId.do";
+			var goUrl = "/book/checkId.do";
 			
 			$.ajax({
 				url: goUrl,

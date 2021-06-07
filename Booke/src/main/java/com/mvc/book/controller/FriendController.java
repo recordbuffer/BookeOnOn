@@ -16,8 +16,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 import com.mvc.book.model.biz.FriendBiz;
-import com.mvc.book.model.biz.MsgBiz;
-import com.mvc.book.model.dto.FMsgDto;
 import com.mvc.book.model.dto.MemberDto;
 
 @Controller
@@ -27,7 +25,6 @@ public class FriendController {
 
 	@Autowired
 	private FriendBiz fbiz;
-	private MsgBiz msgbiz;
 
 	// [ 친구 검색 ]
 	// 회원 검색 페이지로 이동
@@ -145,96 +142,5 @@ public class FriendController {
 		}
 
 	}
-	
-	// 쪽지 관리 페이지로 이동
-	@RequestMapping("/msgAll.do")
-	public String msgpage(HttpSession session, Model model) {
-		logger.info("MSG PAGE");
-		
-		MemberDto user = (MemberDto)session.getAttribute("user"); 
-		String be_id = user.getBe_id();
-		
-		List<FMsgDto> msgList = msgbiz.selectMsgList(be_id);
-		model.addAttribute("msgList",msgList);
-
-		return "msg/msgAll";
-	}
-	
-	// 내가 보낸 쪽지 페이지로 이동
-	@RequestMapping("/sendmsgAll.do")
-	public String sendMsgPage(HttpSession session, Model model) {
-		logger.info("SEND MSG PAGE");
-		
-		MemberDto user = (MemberDto)session.getAttribute("user"); 
-		String be_id = user.getBe_id();
-		
-		List<FMsgDto> sendmsgList = msgbiz.sendMsgList(be_id);
-		model.addAttribute("sendmsgList",sendmsgList);
-		
-		return "msg/msgsendAll";
-	}
-	
-	
-	// 쪽지 쓰기 페이지
-	@RequestMapping("msgPage.do")
-	public String msginsertpage(HttpSession session, Model model) {
-		logger.info("MSG INSERT PAGE");
-		
-		MemberDto user = (MemberDto) session.getAttribute("user");
-		String be_id = user.getBe_id();
-
-		List<MemberDto> friendList = fbiz.selectFList(be_id);
-		model.addAttribute("friendList", friendList);
-		
-		
-		return "msg/msginsert";
-	}
-	
-	
-	//쪽지 쓰기
-	@RequestMapping(value="/msginsert.do", method = RequestMethod.POST)
-	public String msginsert(HttpSession session,HttpServletRequest request) {
-		logger.info("MSG INSERT");
-		
-		MemberDto user = (MemberDto) session.getAttribute("user");
-		String m1 = user.getBe_id();
-		
-		String m2 = request.getParameter("m2");
-		String msg_content = request.getParameter("msg_content");
-		
-		Map<String, String> map = new HashMap<String, String>();
-		map.put("m1", m1);
-		map.put("m2", m2);
-		map.put("msg_content", msg_content);
-		
-		System.out.println(map);
-		
-		int res = msgbiz.insertMsg(map);
-		
-		if(res>0) {
-			return "redirect:mailAll.do";
-		} else {
-			return "redirect:mailAll.do";
-		}
-		
-	}
-	
-	
-	// 쪽지 삭제
-	@RequestMapping("/msgdelete.do")
-	public String msgmuldelete(int msg_no) {
-		logger.info("MSG DELETE");
-				
-		int res = msgbiz.deleteMsg(msg_no);
-		
-		if(res>0) {
-			return "redirect:mailAll.do";
-		} else {
-			return "redirect:mailAll.do";
-		}
-		
-	}
-	
-	
 
 }

@@ -56,7 +56,7 @@ textarea{
 	<br>
 
 	<main class="form-signup">
-		<h1 style="margin-bottom: 20px;">공지사항</h1>
+		<h1 style="margin-bottom: 20px;">공지사항 보기</h1>
 
 		<!-- 결과 테이블 -->
 		<section>

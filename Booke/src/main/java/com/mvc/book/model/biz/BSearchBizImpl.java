@@ -2,13 +2,10 @@ package com.mvc.book.model.biz;
 
 import java.util.List;
 
-import org.springframework.stereotype.Service;
-
 import com.mvc.book.model.dto.BookDto;
 import com.mvc.book.model.dto.R_bookDto;
 import com.mvc.book.model.dto.W_bookDto;
 
-@Service
 public class BSearchBizImpl implements BSearchBiz{
 
 	@Override

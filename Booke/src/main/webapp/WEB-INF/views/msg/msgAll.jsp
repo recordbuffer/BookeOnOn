@@ -51,13 +51,6 @@ td>a {
 	width: 110px;
 }
 </style>
-
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script type="text/javascript">
-	$(function({
-		
-	}));
-</script>
 </head>
 
 <body>
@@ -67,7 +60,7 @@ td>a {
 	<br>
 
 	<main class="form-signup">
-		<h1 style="margin-bottom: 50px;">쪽지 관리</h1>
+		<h1 style="margin-bottom: 50px;">받은 쪽지</h1>
 
 		<!-- 결과 테이블 -->
 		<section>
@@ -90,10 +83,10 @@ td>a {
 								<c:forEach items="${msgList }" var="msg">
 									<tr>
 										<td>${msg.m1 }</td>
-										<td>${msg.msg_content }</td>
+										<td><a href="msgOne.do?msg_no=${msg.msg_no }">${msg.msg_content }</a></td>
 										<td>${msg.msg_date }</td>									
 										<td>
-											<input type="submit" class="btn btn-dark" value="삭제" onclick="location.href='msgdelete.do?msg_no=${msg.msg_no}'">
+											<input type="button" class="btn btn-dark" value="삭제" onclick="location.href='msgdelete.do?msg_no=${msg.msg_no}'">
 										</td>
 								</c:forEach>
 							</table>

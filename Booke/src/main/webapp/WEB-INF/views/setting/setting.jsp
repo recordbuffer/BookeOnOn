@@ -97,8 +97,8 @@ td>#btn {
 							onclick="location.href='updateform.do'"></td>
 				<td><input type="button" value="회원 탈퇴" class="form-control" id="btn" style="width: 170px; margin-top: 20px; font-size: 14pt;"
 							onclick="location.href='md_aks.do'"></td>
-				<td><input type="button" value="감성 이미지 기능" class="form-control" id="btn" style="width: 170px; margin-top: 20px; font-size: 14pt;" 
-							onclick="location.href=''"></td>
+				<td><input type="button" value="로그아웃" class="form-control" id="btn" style="width: 170px; margin-top: 20px; font-size: 14pt;" 
+							onclick="location.href='logout.do'"></td>
 			</tr>
 		</table>
 				

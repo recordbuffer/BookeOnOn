@@ -93,18 +93,16 @@
 									<div class="m1">월별 통계</div>
 									<div class="container-div">
 										<div class="controls-div">
-
+											<div style="transform: translate(650px, -30px);">
 											<select id="yyyy" name="yyyy">
-												<option value="2015">2015</option>
-												<option value="2016">2016</option>
-												<option value="2017">2017</option>
-												<option value="2018">2018</option>
-												<option value="2019">2019</option>
+												<option value="2021">2021</option>											
 												<option value="2020">2020</option>
-												<option value="2021">2021</option>
+												<option value="2019">2019</option>
+												<option value="2018">2018</option>
+												<option value="2017">2017</option>
 											</select>
 											<button id="btnChart" name="btnChart">확인</button>
-
+											</div>
 
 										</div>
 										<div class="chart-container"
@@ -161,9 +159,9 @@
 									</div>
 									<div style="transform: translate(-124px,30px);  color:white; ">
 										<span style="font-size: 20pt;">친구</span >&nbsp;&nbsp;&nbsp;
-										<span style="font-size: 18pt;">${cntFList}<a href="frd.do"></a></span><span style="font-size: 16pt;"> 명</span>
+										<span style="font-size: 18pt;">${friendcount }<a href="frd.do"></a></span><span style="font-size: 16pt;">  명</span>
 										<a href="fsearch.do"><i class="bi bi-plus-circle" style="font-size: 1.8rem; color: white; position: relative; left: 80px;"></i></a>
-										<a href="msginsert.do"><i class="bi bi-chat-text-fill" style="font-size: 1.8rem; color: white; position: relative; left: 90px;"></i></a>
+										<a href="msg.do"><i class="bi bi-chat-text-fill" style="font-size: 1.8rem; color: white; position: relative; left: 90px;"></i></a>
 									</div>
 								</div>
 								</div>
@@ -173,18 +171,14 @@
 									<div style="transform: translate(3px,7px);"><span>읽은 책</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 									<span>읽고 싶은 책</span></div>
 								</div>
-								<!-- 목표 달성도 -->
-								<div class="attainment" style="transform: translate(0px, 220px); height: 155px;">
-									목표달성도
-								</div>
-							</div>			
+							</div>
 							
 								
-							<div class="d3">
+							<!-- <div class="d3">
 								<div class="d-grid gap-2">
 									<input type="button" class="btn btn-outline-dark" value="Calendar" style="height: 60px;" onclick="location.href='bcaseCal.do'">
 								</div>
-							</div>
+							</div> -->
 						</div>
 					</div>
 				</div>

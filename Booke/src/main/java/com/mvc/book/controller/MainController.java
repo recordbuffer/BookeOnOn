@@ -13,9 +13,12 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.mvc.book.model.biz.AdminBiz;
+import com.mvc.book.model.biz.BookcaseBiz;
 import com.mvc.book.model.biz.FriendBiz;
 import com.mvc.book.model.biz.MemberBiz;
 import com.mvc.book.model.dto.MemberDto;
+import com.mvc.book.model.dto.R_bookDto;
+import com.mvc.book.model.dto.W_bookDto;
 
 @Controller
 public class MainController {
@@ -24,9 +27,12 @@ public class MainController {
 
 	@Autowired
 	private AdminBiz ambiz;
-	private FriendBiz fbiz;
+	@Autowired
 	private MemberBiz mbiz;
-	
+	@Autowired
+	private BookcaseBiz bcbiz;
+	@Autowired
+	private FriendBiz fbiz;
 
 	// [시작 > 메인]
 	// 웰컴페이지로 이동
@@ -65,20 +71,24 @@ public class MainController {
 	// [메인 페이지]
 	// 로그인 후 메인 페이지로 이동
 	@RequestMapping("/main.do")
-	public String main(HttpSession session, Model model) {
+	public String main(HttpSession session, HttpServletRequest request) {
 		logger.info("MAIN PAGE");
-		
-		//친구 리스트 조회
-		/*
-		 * MemberDto user = (MemberDto)session.getAttribute("user"); String be_id =
-		 * user.getBe_id();
-		 * 
-		 * List<MemberDto> friendList = fbiz.selectFList(be_id);
-		 * model.addAttribute("friendList",friendList);
-		 */
-		
-		//서재 리스트 조회
-		
+
+		MemberDto user = (MemberDto) session.getAttribute("user");
+		int be_no = user.getBe_no();
+		String be_id = user.getBe_id();
+
+		List<W_bookDto> Wbook = bcbiz.W_bookSelectAll(be_no);
+		List<R_bookDto> Rbook = bcbiz.R_bookSelectAll(be_no);
+		List<MemberDto> friendList = fbiz.selectFList(be_id);
+
+		int wbook = Wbook.size();
+		int rbook = Rbook.size();
+		int friendcount = friendList.size();
+
+		request.setAttribute("w_book", wbook);
+		request.setAttribute("r_book", rbook);
+		request.setAttribute("friendcount", friendcount);
 
 		return "mainpage";
 	}
@@ -91,13 +101,46 @@ public class MainController {
 
 	// 책 소개 페이지로 이동
 	@RequestMapping("/bookintro.do")
-	public String bookintro() {
+	public String bookintro(HttpSession session, HttpServletRequest request) {
+
+		MemberDto user = (MemberDto) session.getAttribute("user");
+		int be_no = user.getBe_no();
+		String be_id = user.getBe_id();
+
+		List<W_bookDto> Wbook = bcbiz.W_bookSelectAll(be_no);
+		List<R_bookDto> Rbook = bcbiz.R_bookSelectAll(be_no);
+		List<MemberDto> friendList = fbiz.selectFList(be_id);
+
+		int wbook = Wbook.size();
+		int rbook = Rbook.size();
+		int friendcount = friendList.size();
+		
+		request.setAttribute("w_book", wbook);
+		request.setAttribute("r_book", rbook);
+		request.setAttribute("friendcount", friendcount);
+
 		return "bookintro/bookintro";
 	}
 
 	// 책 소개 페이지_팝업 상세 정보
 	@RequestMapping("/detailpopup.do")
-	public String detailpopup() {
+	public String detailpopup(HttpSession session, HttpServletRequest request) {
+		MemberDto user = (MemberDto) session.getAttribute("user");
+		int be_no = user.getBe_no();
+		String be_id = user.getBe_id();
+
+		List<W_bookDto> Wbook = bcbiz.W_bookSelectAll(be_no);
+		List<R_bookDto> Rbook = bcbiz.R_bookSelectAll(be_no);
+		List<MemberDto> friendList = fbiz.selectFList(be_id);
+
+		int wbook = Wbook.size();
+		int rbook = Rbook.size();
+		int friendcount = friendList.size();
+
+		request.setAttribute("w_book", wbook);
+		request.setAttribute("r_book", rbook);
+		request.setAttribute("friendcount", friendcount);
+
 		return "bookintro/detailpopup";
 	}
 
@@ -124,13 +167,27 @@ public class MainController {
 	// [ 서재 ]
 	// 서재 페이지로 이동
 	@RequestMapping("/bcase.do")
-	public String bcase() {
+	public String bcase(HttpSession session, HttpServletRequest request) {
 		logger.info("BOOKCASE PAGE");
+
+		MemberDto user = (MemberDto) session.getAttribute("user");
+		int be_no = user.getBe_no();
+		String be_id = user.getBe_id();
+
+		List<W_bookDto> Wbook = bcbiz.W_bookSelectAll(be_no);
+		List<R_bookDto> Rbook = bcbiz.R_bookSelectAll(be_no);
+		List<MemberDto> friendList = fbiz.selectFList(be_id);
+
+		int wbook = Wbook.size();
+		int rbook = Rbook.size();
+		int friendcount = friendList.size();
+
+		request.setAttribute("w_book", wbook);
+		request.setAttribute("r_book", rbook);
+		request.setAttribute("friendcount", friendcount);
 
 		return "bookcase/bookcase";
 	}
-
-
 
 	// [설정]
 	// 설정 페이지로 이동
@@ -179,9 +236,26 @@ public class MainController {
 
 	// 회원 탈퇴 페이지로 이동
 	@RequestMapping("/md_aks.do")
-	public String mdelete() {
+	public String mdelete(HttpSession session, HttpServletRequest request) {
 		logger.info("MEMBER DELETE PAGE");
 
+		MemberDto user = (MemberDto) session.getAttribute("user");
+		int be_no = user.getBe_no();
+		String be_id = user.getBe_id();
+
+		List<W_bookDto> Wbook = bcbiz.W_bookSelectAll(be_no);
+		List<R_bookDto> Rbook = bcbiz.R_bookSelectAll(be_no);
+		List<MemberDto> friendList = fbiz.selectFList(be_id);
+
+		int wbook = Wbook.size();
+		int rbook = Rbook.size();
+		int friendcount = friendList.size();
+		
+		request.setAttribute("w_book", wbook);
+		request.setAttribute("r_book", rbook);
+		request.setAttribute("friendcount", friendcount);
+
+		
 		return "setting/mdeletepage";
 	}
 
@@ -193,6 +267,4 @@ public class MainController {
 		return "setting/mdeletepage_Chk";
 	}
 
-
-	
 }

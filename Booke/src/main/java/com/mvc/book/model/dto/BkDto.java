@@ -5,19 +5,19 @@ public class BkDto {
 	private int bk_no;						//회의실 번호
 	private String bk_name;					//회의실 이름
 	private String bk_introduce;			//회의실 간단 소개
-	private int bk_master;					//회의실 방장  회원 번호
+//	private int bk_master;					//회의실 방장  회원 번호
 	
 	
 	public BkDto() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-	public BkDto(int bk_no, String bk_name, String bk_introduce, int bk_master) {
+	public BkDto(int bk_no, String bk_name, String bk_introduce) {
 		super();
 		this.bk_no = bk_no;
 		this.bk_name = bk_name;
 		this.bk_introduce = bk_introduce;
-		this.bk_master = bk_master;
+//		this.bk_master = bk_master;
 	}
 	public int getBk_no() {
 		return bk_no;
@@ -37,12 +37,12 @@ public class BkDto {
 	public void setBk_introduce(String bk_introduce) {
 		this.bk_introduce = bk_introduce;
 	}
-	public int getBk_master() {
-		return bk_master;
-	}
-	public void setBk_master(int bk_master) {
-		this.bk_master = bk_master;
-	}
+//	public int getBk_master() {
+//		return bk_master;
+//	}
+//	public void setBk_master(int bk_master) {
+//		this.bk_master = bk_master;
+//	}
 	
 	
 }

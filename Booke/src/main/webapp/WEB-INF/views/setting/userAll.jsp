@@ -68,7 +68,7 @@ td>img{
 		<div style="height: 30px"></div>
 		<!-- 결과 테이블 -->
 		<section>
-			<h5 style="text-align: right;">총 ${cntList} 명</h5>
+			<h5 style="text-align: right;">총 ${fn:length(userList)-1} 명</h5>
 			<div style="height: 100%" >
 				<table class="table table-hover">
 					<tr style="font-size: 14pt;">
@@ -105,7 +105,6 @@ td>img{
 						</c:if>	
 						</tr>
 					</c:forEach>
-					<c:set var="cntList"  value="${fn:length(userList)-1}" scope="session"></c:set>					
 				</table>
 			</div>
 		</section>

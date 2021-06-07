@@ -140,9 +140,19 @@
 							</div>
 						</div>
 						<br> <br>
-						<div class="noting">책관련 동영상이나 회원 데이터 순위</div>
+						<div class="text-left" id="youtube">책추천 영상</div><br>
+							<div class="noting"><br><br>
+								<iframe width="850" height="470"
+									src="https://www.youtube.com/embed/eHS-VaOC5oY"
+									title="YouTube video player" frameborder="0"
+									allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+									allowfullscreen>
+								</iframe>
+							</div>
+						</div>
 					</div>
-				</div>
+				<br><br><br><br>
+				
 
 			</div>
 			<div class="col-md-2">
@@ -181,24 +191,18 @@
 									</div>
 									<div style="transform: translate(-124px,30px);  color:white; ">
 										<span style="font-size: 20pt;">친구</span >&nbsp;&nbsp;&nbsp;
-										<span style="font-size: 18pt;">${cntFList}<a href="frd.do"></a></span><span style="font-size: 16pt;"> 명</span>
+										<span style="font-size: 18pt;">${friendcount }<a href="frd.do"></a></span><span style="font-size: 16pt;"> 명</span>
 										<a href="fsearch.do"><i class="bi bi-plus-circle" style="font-size: 1.8rem; color: white; position: relative; left: 80px;"></i></a>
-										<a href="msginsert.do"><i class="bi bi-chat-text-fill" style="font-size: 1.8rem; color: white; position: relative; left: 90px;"></i></a>
+										<a href="msg.do"><i class="bi bi-chat-text-fill" style="font-size: 1.8rem; color: white; position: relative; left: 90px;"></i></a>
 									</div>
 								</div>
 								</div>
 								<div style="color:white; text-align:center; transform: translate(0px, -30px);">
-									<div style="font-size:20pt;"><span>42</span><span style="font-size: 19pt;"> 권</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-									<span>143 권</span></div>
+									<div style="font-size:20pt;"><span>${r_book }</span><span style="font-size: 19pt;"> 권</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+									<span>${w_book } 권</span></div>
 									<div style="transform: translate(3px,7px);"><span>읽은 책</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 									<span>읽고 싶은 책</span></div>
 								</div>
-								<!-- 목표 달성도 -->
-								<div class="attainment" style="transform: translate(0px, 220px); height: 155px;">
-									목표달성도
-								</div>
-							</div>
-							<div class="friend">
 								<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
 									integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
 									crossorigin="anonymous"></script>
@@ -210,78 +214,7 @@
 									src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
 									integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
 									crossorigin="anonymous"></script>
-								<div id="demo" class="carousel slide" data-ride="carousel">
-									<div class="carousel-inner">
-										<!-- 슬라이드 쇼 -->
-										<div class="carousel-item active">
-											<!--가로-->
-											<img class="d-block w-100" src="resources/images/slide.jpg"
-												alt="First slide">
-											<div class="carousel-caption d-none d-md-block">
-												<div class="circle friend1">
-													<h6 class="nickname">친구1</h6>
-												</div>
-												<div class="circle friend2">
-													<h6 class="nickname">친구2</h6>
-												</div>
-												<div class="circle friend3">
-													<h6 class="nickname">친구3</h6>
-												</div>
-											</div>
-										</div>
-										<div class="carousel-item">
-											<img class="d-block w-100" src="resources/images/slide.jpg"
-												alt="Second slide">
-											<div class="carousel-caption d-none d-md-block">
-												<div class="circle friend4">
-													<h6 class="nickname">친구4</h6>
-												</div>
-												<div class="circle friend5">
-													<h6 class="nickname">친구5</h6>
-												</div>
-												<div class="circle friend6">
-													<h6 class="nickname">친구6</h6>
-												</div>
-											</div>
-										</div>
-										<div class="carousel-item">
-											<img class="d-block w-100" src="resources/images/slide.jpg"
-												alt="Third slide">
-											<div class="carousel-caption d-none d-md-block">
-												<div class="circle friend7">
-													<h6 class="nickname">친구7</h6>
-												</div>
-												<div class="circle friend8">
-													<h6 class="nickname">친구8</h6>
-												</div>
-												<div class="circle friend9">
-													<h6 class="nickname">친구9</h6>
-												</div>
-											</div>
-										</div>
-										<!-- / 슬라이드 쇼 끝 -->
-										<!-- 왼쪽 오른쪽 화살표 버튼 -->
-										<a class="carousel-control-prev" href="#demo"
-											data-slide="prev"> <span
-											class="carousel-control-prev-icon" aria-hidden="true"></span>
-											<!-- <span>Previous</span> -->
-										</a> <a class="carousel-control-next" href="#demo"
-											data-slide="next"> <span
-											class="carousel-control-next-icon" aria-hidden="true"></span>
-											<!-- <span>Next</span> -->
-										</a>
-										<!-- / 화살표 버튼 끝 -->
-										<!-- 인디케이터 -->
-										<ul class="carousel-indicators">
-											<li data-target="#demo" data-slide-to="0" class="active"></li>
-											<!--0번부터시작-->
-											<li data-target="#demo" data-slide-to="1"></li>
-											<li data-target="#demo" data-slide-to="2"></li>
-										</ul>
-										<!-- 인디케이터 끝 -->
-									</div>
-								</div>
-								<div style="background-color:rgb(119, 109, 97);">
+								<div style="background-color:rgb(119, 109, 97); top: 30px; position: relative;">
 								<form class="d-flex" style="padding:5px" action="fres.do" method="post">
 									<input type="hidden" value="searchid">
 									<input class="form-control me-2" type="text" placeholder="친구 찾기" id="searchid" name="searchid">&nbsp; 

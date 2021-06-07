@@ -56,7 +56,7 @@ textarea {
 	<br>
 
 	<main class="form-signup">
-		<h1 style="margin-bottom: 20px;">공지사항</h1>
+		<h1 style="margin-bottom: 20px;">쪽지 보내기</h1>
 
 		<!-- 결과 테이블 -->
 		<section>
@@ -65,7 +65,7 @@ textarea {
 					<table class="table">
 						<tr style="margin-left: 20px">
 							<th style="width: 130px">발신자</th>
-							<td><input type="hidden" name="bd_nn" value="${user.be_id }">${user.be_id }</td>
+							<td>${user.be_id }</td>
 						</tr>
 						<tr style="margin-left: 20px">
 							<th style="width: 130px">수신자</th>

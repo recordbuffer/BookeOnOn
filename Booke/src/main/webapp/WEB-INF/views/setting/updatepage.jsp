@@ -58,7 +58,7 @@ td>#btn {
 	$(document).ready(function(){
 		$("#btn").click(function(){
 			if (validation()) {
-				var goUrl = "/modifyMember.do";
+				var goUrl = "/book/modifyMember.do";
 				
 				var params = {
 						be_no: $("#be_no").val(),
@@ -78,7 +78,7 @@ td>#btn {
 						
 						if (data.result) {
 							alert("회원 정보가 수정되었습니다.");
-							location.href = "/updateform.do"
+							location.href = "/book/updateform.do"
 						} else {
 							alert(decodeURIComponent(data.resultMessage));
 						}
