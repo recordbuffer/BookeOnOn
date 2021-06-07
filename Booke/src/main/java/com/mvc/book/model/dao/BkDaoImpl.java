@@ -1,6 +1,8 @@
 package com.mvc.book.model.dao;
 
+import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
 import org.mybatis.spring.SqlSessionTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -8,72 +10,79 @@ import org.springframework.stereotype.Repository;
 
 import com.mvc.book.model.dto.BkDto;
 import com.mvc.book.model.dto.MemberDto;
+import com.mvc.book.model.dto.NoticeDto;
 
 @Repository
 public class BkDaoImpl implements BkDao{
+	
 
 	@Autowired
 	private SqlSessionTemplate sqlSession;
-	
-	
+
 	@Override
-	public int makeCommunityRoom(BkDto dto) {
-		// TODO Auto-generated method stub
-		return 0;
+	public int makeCommunityRoom(Map map) {
+		int res = 0;
+		
+		try {
+			res = sqlSession.insert(NAMESPACE+"cinsert", map);
+		} catch (Exception e) {
+			
+			e.printStackTrace();
+		}
+		return res;
 	}
 
 	@Override
 	public List<BkDto> communityListAll() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public BkDto community(int no) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public String communityDel(BkDto dto) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public void groupChat() {
-		// TODO Auto-generated method stub
+		List<BkDto> list = new ArrayList<BkDto>();
 		
+		try {
+			list=sqlSession.selectList(NAMESPACE+"cselectAll");
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return list;
 	}
 
 	@Override
-	public void groupCharMember(MemberDto dto) {
-		// TODO Auto-generated method stub
+	public BkDto communityEnter(int bk_no) {
+		BkDto dto = null;
+		try {
+			dto = sqlSession.selectOne(NAMESPACE+"cselectOne",bk_no);
+		} catch (Exception e) {
+			
+			e.printStackTrace();
+		}
+		return dto;
+	}
+
+	@Override
+	public int communityDel(int bk_no) {
+		int res = 0;
 		
+		try {
+			res = sqlSession.delete(NAMESPACE+"cdelete",bk_no);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return res;
 	}
 
 	@Override
-	public String insertChat() {
-		// TODO Auto-generated method stub
-		return null;
+	public int updateCommunity(BkDto dto) {
+		int res = 0;
+		
+		try {
+			res = sqlSession.update(NAMESPACE+"cupdate",dto);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return res;
 	}
 
-	@Override
-	public String loginCheck(MemberDto dto) {
-		// TODO Auto-generated method stub
-		return null;
-	}
+	
+	
+	
 
-	@Override
-	public String level(MemberDto dto) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public String forced_Admin(String be_id, String be_pw) {
-		// TODO Auto-generated method stub
-		return null;
-	}
 
 }

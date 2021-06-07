@@ -12,8 +12,7 @@ public class MemberDto {
 	private String be_email;	//회원 이메일
 	private String be_enabled;	//회원 탈퇴여부
 	private String be_role;		//회원 등급
-	
-	
+		
 	public MemberDto() {
 		super();
 	}
@@ -34,7 +33,13 @@ public class MemberDto {
 		this.be_role = be_role;
 	}
 
-
+	//회원 목록 검색
+	public MemberDto(String be_id, String be_nn) {
+		super();
+		this.be_id = be_id;
+		this.be_nn = be_nn;
+	}	
+	
 
 	public int getBe_no() {
 		return be_no;

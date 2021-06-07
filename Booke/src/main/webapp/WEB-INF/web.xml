@@ -32,7 +32,7 @@
 
 	<servlet-mapping>
 		<servlet-name>appServlet</servlet-name>
-		<url-pattern>*.do</url-pattern>
+		<url-pattern>/</url-pattern>
 	</servlet-mapping>
 
 
@@ -53,16 +53,7 @@
 		<filter-name>encodingFilter</filter-name>
 		<url-pattern>/*</url-pattern>
 	</filter-mapping>
-	
-	<!-- cors Filter -->
-	<filter>
-		<filter-name>CORSFilter</filter-name>
-		<filter-class>com.mvc.book.utils.CORSFilter</filter-class>
-	</filter>
-	<filter-mapping>
-		<filter-name>CORSFilter</filter-name>
-		<url-pattern>/*</url-pattern>
-	</filter-mapping>
+
 
 
 </web-app>

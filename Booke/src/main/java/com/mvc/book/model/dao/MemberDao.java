@@ -8,12 +8,14 @@ import org.springframework.ui.Model;
 import com.mvc.book.model.dto.MemberDto;
 
 public interface MemberDao {
-		// [ 회원기능 ]
-		// 회원가입
-		public void memberJoinMethod(MemberDto dto);
+	String NAMESPACE = "mybooke.";
+
+	// [ 회원기능 ]
+	// 회원가입
+		public int memberJoinMethod(MemberDto dto);
 
 		// 회원가입_아이디중복체크
-		public boolean Idcheck(String be_id);
+		public int Idcheck(MemberDto dto);
 
 		// 로그인
 		public MemberDto login(MemberDto dto);
@@ -24,11 +26,23 @@ public interface MemberDao {
 		// 로그인 비밀번호 찾기
 		public void mailSendWithPW(String be_id, String be_email, HttpServletRequest reqeust);
 
-		// 회원 정보 수정
-		public String updateGET(HttpSession session, Model model);
+		// 회원 정보 보기
+		//public MemberDto memberGET(int be_id);
 
+		// 회원 정보 조회
+		public MemberDto getMemberInfo(MemberDto dto);
+		
+		// 회원 정보 수정
+		public int modifyMemberInfo(MemberDto dto);
+		
 		// 회원 탈퇴
 		public int deleteMember(String be_id, String be_pw);
+
+		// 로그아웃
+		public void logout(HttpSession session);
+
+		
+		
 		
 		//[ 관리자 기능 ]
 		// 회원 정보 조회

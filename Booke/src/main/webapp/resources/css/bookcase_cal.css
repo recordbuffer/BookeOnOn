@@ -3,12 +3,12 @@
 .d1 {
 	width: 100%;
 	height: 1200px;
-	border: 1px solid black;
+	border: 3px solid rgb(181, 227, 216);
 	position: relative;
-	border: 1px solid black;
 	left: 0%;
 	bottom: 40px;
-	background-color: rgb(119, 109, 097);
+	padding: 15px;
+	background-color: rgb(220,216,211);
 }
 
 
@@ -63,9 +63,8 @@
 .d3 {
 	width: 400px;
 	height: 100px;
-	border: 1px solid black;
 	position: absolute;
-	left: -15%;
+	left: -13%;
 	top: 490px;
 	right: 0%;
 	text-align: center;

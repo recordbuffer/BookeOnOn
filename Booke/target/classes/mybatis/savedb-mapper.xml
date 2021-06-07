@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="savedb">
+
+	<!-- 도서 정보 저장 -->
+	<insert id="wsavedb" parameterType="w_bookDto" >
+		INSERT INTO W_BOOK
+		VALUES(W_NOSEQ.NEXTVAL, #{be_no}, #{b_title}, #{b_author}, #{b_cover}, SYSDATE) 
+	</insert>
+	
+	<insert id="rsavedb" parameterType="r_bookDto" >
+		INSERT INTO R_BOOK
+		VALUES(R_NOSEQ.NEXTVAL, #{be_no}, #{b_title}, #{b_author}, #{b_cover}, #{adddate}) 
+	</insert>
+
+</mapper>

@@ -4,10 +4,22 @@
   "http://mybatis.org/dtd/mybatis-3-config.dtd">
   <configuration>
   	<typeAliases>
-  		<typeAlias type="com.mvc.book.model.dto.BookDto" alias="bookDto"/>
+  		<typeAlias type="com.mvc.book.model.dto.MemberDto" alias="memberDto"/>	
+  		<typeAlias type="com.mvc.book.model.dto.NoticeDto" alias="noticeDto"/>	  
+   		<typeAlias type="com.mvc.book.model.dto.MsgDto" alias="msgDto"/>	
+   		<typeAlias type="com.mvc.book.model.dto.FMsgDto" alias="fmsgDto"/>	   				   		   				
+  		<typeAlias type="com.mvc.book.model.dto.FriendDto" alias="friendDto"/>	  		
+  		<typeAlias type="com.mvc.book.model.dto.R_bookDto" alias="r_bookDto"/>	  		
+		<typeAlias type="com.mvc.book.model.dto.W_bookDto" alias="w_bookDto"/>	  
+		<typeAlias type="com.mvc.book.model.dto.BkDto" alias="bkDto"/>	
   	</typeAliases>
   	
   	<mappers>
   		<mapper resource="/mybatis/board-mapper.xml"/>
+   		<mapper resource="/mybatis/admin-mapper.xml"/>
+   		<mapper resource="/mybatis/savedb-mapper.xml"/>
+   		<mapper resource="/mybatis/community-mapper.xml"/>
+
   	</mappers>
+  	
   </configuration>

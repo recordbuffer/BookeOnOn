@@ -1,6 +1,8 @@
 package com.mvc.book.model.dao;
 
+import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
 import org.mybatis.spring.SqlSessionTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,27 +18,59 @@ public class FriendDaoImpl implements FriendDao{
 	private SqlSessionTemplate sqlSession;
 	
 	@Override
-	public List<MemberDto> searchMember(String bd_id, String bd_nn) {
-		// TODO Auto-generated method stub
-		return null;
+	public List<MemberDto> searchMember(String searchid) {
+		List<MemberDto> list = new ArrayList<MemberDto>();
+		
+		try {
+			list = sqlSession.selectList(NAMESPACE+"searchMember",searchid);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+		return list;
 	}
 
 	@Override
-	public List<FriendDto> selectFList() {
-		// TODO Auto-generated method stub
-		return null;
+	public List<MemberDto> selectFList(String be_id) {
+		List<MemberDto> list = new ArrayList<MemberDto>();
+
+		try {
+			list = sqlSession.selectList(NAMESPACE+"friendList",be_id);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+		return list;
+	}
+	
+
+	@Override
+	public int insertFriend(Map map) {
+		int res = 0;
+		
+		try {
+			res = sqlSession.insert(NAMESPACE+"addFriend", map);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+		return res;
 	}
 
 	@Override
-	public int insertFriend(FriendDto dto) {
-		// TODO Auto-generated method stub
-		return 0;
+	public int deleteFriend(Map map) {
+		int res = 0;
+		
+		try {
+			res = sqlSession.delete(NAMESPACE+"deleteFriend",map);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+				
+		return res;
 	}
 
-	@Override
-	public int deleteFriend(int flist_no) {
-		// TODO Auto-generated method stub
-		return 0;
-	}
+
+
 
 }

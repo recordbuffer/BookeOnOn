@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="community">
+
+	<select id="cselectAll" resultType="bkDto" >
+		SELECT BK_NO, BK_NAME, BK_INTRODUCE
+		FROM BKBK
+		ORDER BY BK_NO 
+	</select>
+	
+	<select id="cselectOne" resultType="bkDto" >
+		SELECT BK_NO, BK_NAME, BK_INTRODUCE
+		FROM BKBK
+		WHERE BK_NO = #{bk_no}
+	</select>
+	
+	<insert id="cinsert" parameterType="bkDto" >
+		INSERT INTO BKBK
+		VALUES(BKBK_SEQ.NEXTVAL, #{bk_name}, #{bk_introduce})
+		
+	</insert>
+	
+	<update id="cupdate" parameterType="bkDto" >
+		UPDATE BKBK SET BK_NAME = #{bk_name}, BK_INTRODUCE = #{bk_introduce}
+		WHERE BK_NO = #{bk_no}
+		
+	</update>
+	
+	<delete id="cdelete" parameterType="int" >
+		DELETE FROM BKBK
+		WHERE BK_NO = #{bk_no}
+	</delete> 
+</mapper>

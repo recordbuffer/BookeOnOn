@@ -16,25 +16,35 @@ public class MemberDaoImpl implements MemberDao{
 
 	@Autowired
 	private SqlSessionTemplate sqlSession;
-	
-	
-	
+
 	@Override
-	public void memberJoinMethod(MemberDto dto) {
-		// TODO Auto-generated method stub
-		
+	public int memberJoinMethod(MemberDto dto) {
+		int res = 0;
+		try {
+			res = sqlSession.insert(NAMESPACE+"signup",dto);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return res;
 	}
 
 	@Override
-	public boolean Idcheck(String be_id) {
-		// TODO Auto-generated method stub
-		return false;
+	public int Idcheck(MemberDto dto) {
+		 int result = sqlSession.selectOne(NAMESPACE + "signuppage_idchk", dto);
+		  return result;
 	}
 
 	@Override
 	public MemberDto login(MemberDto dto) {
-		// TODO Auto-generated method stub
-		return null;
+		MemberDto user = null;
+		
+		try {
+			user = sqlSession.selectOne(NAMESPACE+"login",dto);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+		return user;
 	}
 
 	@Override
@@ -50,15 +60,25 @@ public class MemberDaoImpl implements MemberDao{
 	}
 
 	@Override
-	public String updateGET(HttpSession session, Model model) {
-		// TODO Auto-generated method stub
-		return null;
+	public MemberDto getMemberInfo(MemberDto dto) {
+		return sqlSession.selectOne(NAMESPACE+"selectMemberInfo", dto);
+	}
+
+	@Override
+	public int modifyMemberInfo(MemberDto dto) {
+		return sqlSession.update(NAMESPACE+"updateMemberInfo", dto);
 	}
 
 	@Override
 	public int deleteMember(String be_id, String be_pw) {
 		// TODO Auto-generated method stub
 		return 0;
+	}
+
+	@Override
+	public void logout(HttpSession session) {
+		// TODO Auto-generated method stub
+		
 	}
 
 	@Override
@@ -78,5 +98,6 @@ public class MemberDaoImpl implements MemberDao{
 		// TODO Auto-generated method stub
 		return null;
 	}
+	
 
 }

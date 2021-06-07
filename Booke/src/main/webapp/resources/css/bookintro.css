@@ -1,4 +1,4 @@
-@charset "EUC-KR";
+@charset "UTF-8";
 
 
 body {
@@ -89,6 +89,7 @@ body {
 	background-color: rgb(119, 109, 097);
 	top: 475px;
 	left: -35px;
+	z-index: 0;
 }
 
 .login_btn {
@@ -261,8 +262,7 @@ body {
 .intro1_star, .intro2_star, .intro3_star, .intro4_star, .intro5_star {
 	width: 130px;
 	height: 25px;
-	border: 1px solid black;
-	top: 187px;
+	top: 182px;
 	position: absolute;
 }
 
@@ -274,4 +274,9 @@ body {
     top: 710px;
     border: 5px solid rgb(119, 109, 97);
     background-color: rgb(181, 227, 216);
+}
+
+.pagination{
+	position: relative;
+    left: 390px;
 }

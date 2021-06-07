@@ -1,39 +1,36 @@
 package com.mvc.book.controller;
 
-import java.text.DateFormat;
-import java.util.Date;
 import java.util.List;
-import java.util.Locale;
 
-import org.json.simple.JSONObject;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.ResponseBody;
 
+import com.mvc.book.model.biz.AdminBiz;
+import com.mvc.book.model.biz.FriendBiz;
+import com.mvc.book.model.biz.MemberBiz;
+import com.mvc.book.model.biz.MsgBiz;
+import com.mvc.book.model.dto.FMsgDto;
+import com.mvc.book.model.dto.MemberDto;
 
 @Controller
 public class MainController {
-	
+
 	private static final Logger logger = LoggerFactory.getLogger(MainController.class);
 
-	@RequestMapping(value = "/", method = RequestMethod.GET)
-	public String home(Locale locale, Model model) {
-		logger.info("Welcome home! The client locale is {}.", locale);
-
-		Date date = new Date();
-		DateFormat dateFormat = DateFormat.getDateTimeInstance(DateFormat.LONG, DateFormat.LONG, locale);
-
-		String formattedDate = dateFormat.format(date);
-
-		model.addAttribute("serverTime", formattedDate);
-
-		return "home";
-	}
+	@Autowired
+	private AdminBiz ambiz;
+	private FriendBiz fbiz;
+	private MemberBiz mbiz;
+	
+	@Autowired
+	private MsgBiz msgbiz;
 
 	// [시작 > 메인]
 	// 웰컴페이지로 이동
@@ -44,29 +41,21 @@ public class MainController {
 		return "welcome";
 	}
 
-	// 메인 페이지로 이동
-	@RequestMapping("/main.do")
-	public String main() {
-		logger.info("MAIN PAGE");
-
-		return "mainpage";
-	}
-
 	// [회원 로그인]
 	// 로그인 페이지로 이동
 	@RequestMapping("/loginform.do")
 	public String loginForm() {
 		logger.info("LOGIN FORM");
 
-		return "loginpage";
+		return "login/loginpage";
 	}
 
 	// 회원가입 페이지로 이동
-	@RequestMapping("/signup.do")
+	@RequestMapping("/signupform.do")
 	public String signupform() {
 		logger.info("SIGN UP FORM");
 
-		return "signuppage";
+		return "login/signuppage";
 	}
 
 	// 회원가입_아이디 중복 체크 페이지로 이동
@@ -74,94 +63,122 @@ public class MainController {
 	public String signup_idChk() {
 		logger.info("SIGNUP ID CHECK POP UP");
 
-		return "signuppage_idchk";
+		return "login/signuppage_idchk";
 	}
 
 	// [메인 페이지]
+	// 로그인 후 메인 페이지로 이동
+	@RequestMapping("/main.do")
+	public String main(HttpSession session, Model model) {
+		logger.info("MAIN PAGE");
+		
+		//친구 리스트 조회
+		/*
+		 * MemberDto user = (MemberDto)session.getAttribute("user"); String be_id =
+		 * user.getBe_id();
+		 * 
+		 * List<MemberDto> friendList = fbiz.selectFList(be_id);
+		 * model.addAttribute("friendList",friendList);
+		 */
+		
+		//서재 리스트 조회
+		
+
+		return "mainpage";
+	}
+
 	// 메인_지도 위치 팝업
 	@RequestMapping("/detailmap.do")
 	public String detailmap() {
-		return "detailmap";
+		return "bookintro/detailmap";
 	}
 
 	// 책 소개 페이지로 이동
 	@RequestMapping("/bookintro.do")
 	public String bookintro() {
-		return "bookintro";
+		return "bookintro/bookintro";
 	}
 
 	// 책 소개 페이지_팝업 상세 정보
 	@RequestMapping("/detailpopup.do")
 	public String detailpopup() {
-		return "detailpopup";
-	}
-	
-	
-	// [ 친구 검색 ]
-	// 친구 검색 페이지로 이동
-	@RequestMapping("/fsearch.do")
-	public String fsearch() {
-		logger.info("FRIEND SEARCH PAGE");
-
-		return "fsearchpage";
+		return "bookintro/detailpopup";
 	}
 
-	// 친구 검색 페이지 > 검색 결과 페이지로 이동
-	@RequestMapping("/fres.do")
-	public String fres() {
-		logger.info("FRIEND SEARCH RES PAGE");
-
-		return "fsearchpage_res";
-	}
-
-	
-	//[ 쪽지 기능]
-	// 쪽지 보내기 
+	// [ 쪽지 기능]
+	// 쪽지 보내기
 	@RequestMapping("/msg.do")
 	public String msg() {
 		return "msg";
 	}
-	
-	
+
 	// [ 책 검색 ]
 	// 책 검색 페이지로 이동
 	@RequestMapping("/bsearch.do")
 	public String bsearch() {
-		return "bsearchpage";
+		return "searchbook/bsearchpage";
 	}
 
 	// 책 검색 결과 페이지로 이동
 	@RequestMapping("/bres.do")
 	public String bres() {
-		return "bsearchpage_res";
+		return "searchbook/bsearchpage_res";
 	}
 
 	// [ 서재 ]
 	// 서재 페이지로 이동
 	@RequestMapping("/bcase.do")
 	public String bcase() {
-		return "bookcase";
+		logger.info("BOOKCASE PAGE");
+
+		return "bookcase/bookcase";
 	}
 
-	// 서재 페이지_캘린더로 이동
-	@RequestMapping("/bcaseCal.do")
-	public String bcaseCal() {
-		return "bookcase_cal";
-	}
+
 
 	// [설정]
 	// 설정 페이지로 이동
 	@RequestMapping("/setting.do")
 	public String setting() {
-		return "setting";
+		return "setting/setting";
+	}
+
+	// 공지사항 페이지로 이동
+	@RequestMapping("/notice.do")
+	public String noticepage(Model model) {
+		logger.info("NOTICE PAGE");
+
+		model.addAttribute("list", ambiz.selectList());
+
+		return "setting/notice";
+	}
+
+	// 공지사항 하나 보기
+	@RequestMapping("/noticeOne.do")
+	public String noticeOne(Model model, int bd_no) {
+		logger.info("NOTICE SELECT ONE");
+
+		model.addAttribute("board", ambiz.selectOne(bd_no));
+
+		return "setting/noticeOne";
 	}
 
 	// 회원 정보 수정 페이지로 이동
 	@RequestMapping("/updateform.do")
-	public String updateform() {
+	public String updateform(HttpSession session, HttpServletRequest request) {
 		logger.info("UPDATE MEMBER INFO PAGE");
 
-		return "updatepage";
+		// 세션에 로그인 정보가 존재하는지 여부 확인
+		if (session.getAttribute("be_no") != null && !"".equals(String.valueOf(session.getAttribute("be_no")))) {
+
+			MemberDto memberDto = new MemberDto();
+			memberDto.setBe_no(Integer.parseInt(String.valueOf(session.getAttribute("be_no"))));
+
+			// 회원정보 데이터를 view 에 내려줌.
+			request.setAttribute("info", mbiz.getMemberInfo(memberDto));
+		}
+
+		return "setting/updatepage";
 	}
 
 	// 회원 탈퇴 페이지로 이동
@@ -169,7 +186,7 @@ public class MainController {
 	public String mdelete() {
 		logger.info("MEMBER DELETE PAGE");
 
-		return "mdeletepage";
+		return "setting/mdeletepage";
 	}
 
 	// 회원 탈퇴 확인 페이지로 이동
@@ -177,62 +194,21 @@ public class MainController {
 	public String mdelete_Chk() {
 		logger.info("MEMBER DELETE CHECK POP UP");
 
-		return "mdeletepage_Chk";
-	}
-
-	// 친구 관리 페이지로 이동
-	@RequestMapping("/friend.do")
-	public String friend() {
-		logger.info("FRIEND PAGE");
-
-		return "friendpage";
+		return "setting/mdeletepage_Chk";
 	}
 
 	// 쪽지 관리 페이지로 이동
+	@RequestMapping("/mailAll.do")
+	public String mailpage(HttpSession session, Model model) {
+		logger.info("MAIL PAGE");
+		
+		MemberDto user = (MemberDto)session.getAttribute("user"); 
+		String be_id = user.getBe_id();
+		
+		List<FMsgDto> msgList = msgbiz.selectMsgList(be_id);
+		model.addAttribute("msgList",msgList);
 
+		return "mail/mailAll";
+	}
 	
-	//[ 커뮤니티 ]
-//	//커뮤니티 페이지로 이동
-//	@RequestMapping("/communityMain.do")
-//	public String communityMain() {
-//		return "communityMain";
-//	}
-	
-//	//커뮤니티 채팅방으로 이동
-//	@RequestMapping("/communityChat.do")
-//	public String communityChat() {
-//		return "communityChat";
-//	}
-	
-	//채팅방 Test
-//	@RequestMapping(value = "/start", method = RequestMethod.POST, consumes = "application/json")
-//    @ResponseBody
-//    public String startApp(@RequestBody String body) {
-//        System.out.println(body + "예~~~");
-//        logger.info(body);
-//        return "/";
-//    }
-//
-//    @RequestMapping(value = "/chatTest.do", method = RequestMethod.GET)
-//    public String chatTest(Locale locale, Model model){
-//        JSONObject cred = new JSONObject();
-//        JSONObject auth=new JSONObject();
-//        JSONObject parent=new JSONObject();
-//        cred.put("username","adm");
-//        cred.put("password", "pwd");
-//        auth.put("tenantName", "adm");
-//        auth.put("passwordCredentials", cred);
-//        parent.put("auth", auth);
-//
-//        URLConn conn = new URLConn("http://127.0.0.1",1516);
-//        List<String> strArr = conn.urlPost(parent);
-//        model.addAttribute("list",strArr);
-//
-//        return "chatTest";
-//    }
-    
-//		@RequestMapping("/chatTest.do")
-//		public String chatTest() {
-//			return "chatTest";
-//		}
 }

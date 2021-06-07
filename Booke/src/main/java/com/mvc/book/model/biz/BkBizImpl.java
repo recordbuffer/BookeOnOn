@@ -1,56 +1,45 @@
 package com.mvc.book.model.biz;
 
 import java.util.List;
+import java.util.Map;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.mvc.book.model.dao.BkDao;
 import com.mvc.book.model.dto.BkDto;
 import com.mvc.book.model.dto.MemberDto;
 
 @Service
 public class BkBizImpl implements BkBiz{
-
-	@Override
-	public int makeCommunityRoom(BkDto dto) {
-		// TODO Auto-generated method stub
-		return 0;
-	}
+	
+	@Autowired
+	private BkDao bkdao;
 
 	@Override
 	public List<BkDto> communityListAll() {
-		// TODO Auto-generated method stub
-		return null;
+		return bkdao.communityListAll();
 	}
 
 	@Override
-	public BkDto community(int no) {
-		// TODO Auto-generated method stub
-		return null;
+	public BkDto communityEnter(int bk_no) {
+		return bkdao.communityEnter(bk_no);
 	}
 
 	@Override
-	public String communityDel(BkDto dto) {
-		// TODO Auto-generated method stub
-		return null;
+	public int makeCommunityRoom(Map map) {
+		return bkdao.makeCommunityRoom(map);
 	}
 
 	@Override
-	public void groupChat() {
-		// TODO Auto-generated method stub
-		
+	public int updateCommunity(BkDto dto) {
+		return bkdao.updateCommunity(dto);
 	}
 
 	@Override
-	public void groupCharMember(MemberDto dto) {
-		// TODO Auto-generated method stub
-		
+	public int communityDel(int bk_no) {
+		return bkdao.communityDel(bk_no);
 	}
 
-	@Override
-	public String insertChat() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-
+	
 }

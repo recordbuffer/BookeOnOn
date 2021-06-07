@@ -3,18 +3,28 @@ package com.mvc.book.model.biz;
 import java.util.Date;
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.mvc.book.model.dao.BookcaseDao;
 import com.mvc.book.model.dto.R_bookDto;
 import com.mvc.book.model.dto.W_bookDto;
 
 @Service
 public class BookcaseBizImpl implements BookcaseBiz{
+	
+	@Autowired
+	private BookcaseDao dao;
 
 	@Override
-	public List<W_bookDto> W_bookSelectAll() {
+	public List<W_bookDto> W_bookSelectAll(int be_no) {
+		return dao.W_bookSelectAll(be_no);
+	}
+
+	@Override
+	public int cntWbook() {
 		// TODO Auto-generated method stub
-		return null;
+		return 0;
 	}
 
 	@Override
@@ -24,9 +34,14 @@ public class BookcaseBizImpl implements BookcaseBiz{
 	}
 
 	@Override
-	public List<R_bookDto> R_bookSelectAll() {
+	public List<R_bookDto> R_bookSelectAll(int be_no) {
+		return dao.R_bookSelectAll(be_no);
+	}
+
+	@Override
+	public int cntRbook() {
 		// TODO Auto-generated method stub
-		return null;
+		return 0;
 	}
 
 	@Override
