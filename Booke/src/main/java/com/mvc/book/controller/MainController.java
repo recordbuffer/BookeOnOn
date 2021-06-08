@@ -167,7 +167,7 @@ public class MainController {
 	// [ 서재 ]
 	// 서재 페이지로 이동
 	@RequestMapping("/bcase.do")
-	public String bcase(HttpSession session, HttpServletRequest request) {
+	public String bcase(HttpSession session, Model model) {
 		logger.info("BOOKCASE PAGE");
 
 		MemberDto user = (MemberDto) session.getAttribute("user");
@@ -177,14 +177,16 @@ public class MainController {
 		List<W_bookDto> Wbook = bcbiz.W_bookSelectAll(be_no);
 		List<R_bookDto> Rbook = bcbiz.R_bookSelectAll(be_no);
 		List<MemberDto> friendList = fbiz.selectFList(be_id);
+		
+		model.addAttribute("bookList", Wbook);
 
 		int wbook = Wbook.size();
 		int rbook = Rbook.size();
 		int friendcount = friendList.size();
 
-		request.setAttribute("w_book", wbook);
-		request.setAttribute("r_book", rbook);
-		request.setAttribute("friendcount", friendcount);
+		model.addAttribute("w_book", wbook);
+		model.addAttribute("r_book", rbook);
+		model.addAttribute("friendcount", friendcount);
 
 		return "bookcase/bookcase";
 	}
@@ -236,7 +238,7 @@ public class MainController {
 
 	// 회원 탈퇴 페이지로 이동
 	@RequestMapping("/md_aks.do")
-	public String mdelete(HttpSession session, HttpServletRequest request) {
+	public String mdeletepage(HttpSession session, HttpServletRequest request) {
 		logger.info("MEMBER DELETE PAGE");
 
 		MemberDto user = (MemberDto) session.getAttribute("user");
@@ -259,12 +261,5 @@ public class MainController {
 		return "setting/mdeletepage";
 	}
 
-	// 회원 탈퇴 확인 페이지로 이동
-	@RequestMapping(value = "/deleteChk.do")
-	public String mdelete_Chk() {
-		logger.info("MEMBER DELETE CHECK POP UP");
-
-		return "setting/mdeletepage_Chk";
-	}
-
+	
 }

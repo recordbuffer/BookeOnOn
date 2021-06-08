@@ -58,7 +58,9 @@ h2 {
 </style>
 <script type="text/javascript">
 	function deleteChk(){
-		window.open("deleteChk.do","","width=500, height=500");
+		window.name="md_aks.do"
+		
+		window.open("deleteChk.do","delete","width=500, height=500");
 	}
 </script>
 </head>
@@ -73,7 +75,6 @@ h2 {
 		<h1>회원 탈퇴</h1>
 		<hr style="color: black !important">
 		<br>
-		<!-- 여기서 부턴 예시로 넣은 거니 나중에 지우고 코드 넣으시면 될 것 같습니다. -->
 		<h2>
 			<b>${user.be_nn }</b> 님
 		</h2>

@@ -62,6 +62,11 @@ td>#btn {
 }
 
 </style>
+<script type="text/javascript">
+    function aa() {
+        alert("로그아웃 하셨습니다.");
+    }
+</script>
 </head>
 
 <body class="text-center">
@@ -98,7 +103,7 @@ td>#btn {
 				<td><input type="button" value="회원 탈퇴" class="form-control" id="btn" style="width: 170px; margin-top: 20px; font-size: 14pt;"
 							onclick="location.href='md_aks.do'"></td>
 				<td><input type="button" value="로그아웃" class="form-control" id="btn" style="width: 170px; margin-top: 20px; font-size: 14pt;" 
-							onclick="location.href='logout.do'"></td>
+							 onclick="location.href='logout.do;' aa();"></td>
 			</tr>
 		</table>
 				

@@ -53,7 +53,16 @@ td>#btn {
 }
 </style>
 <script type="text/javascript">
-	
+	function popupClose(form){
+		form.target = opener.name;
+		
+		form.submit();
+		
+		if(opener != null){
+			
+			self.close();
+		}
+	}
 </script>
 </head>
 <body class="text-center">
@@ -61,19 +70,19 @@ td>#btn {
 		<img class="mb-4" src="resources/images/bk.gif" alt="#" width="130">
 		<br> <br>
 		<div>
-			<form action="" >
+			<form action="mdelete.do" method="post" target="md_aks.do" >
 				<table border="1"  style="background-color: #f5f5f5;">
 					<tr>
 						<th>아이디</th>
-						<td>아이디 값 여기에 들어감</td>
+						<td>${user.be_id }</td>
 					</tr>
 					<tr>
 						<th>비밀번호</th>
-						<td><input type="text" placeholder="비밀번호를 입력하세요"></td>
+						<td><input type="password" placeholder="비밀번호를 입력하세요" name="be_pw"></td>
 					</tr>
 					<tr>
-						<td colspan="2" style="background-color: rgb(100, 172, 184);"><input
-							type="button" value="탈퇴" class="form-control" id="btn" onclick=""></td>
+						<td colspan="2" style="background-color: rgb(100, 172, 184);">
+						<input type="submit" value="탈퇴" class="form-control" id="btn" onclick="window.close()"></td>
 					</tr>
 				</table>
 			</form>

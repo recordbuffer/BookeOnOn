@@ -52,7 +52,7 @@
 					<div class="center-desk">
 						<div class="logo">
 							<a href="#"><img src="resources/images/logo1.png" alt="#"
-								style="margin: 0px 0px 0px 100px;"></a>
+								style="margin:12px 0px 0px 100px;"></a>
 						</div>
 					</div>
 				</div>
@@ -62,7 +62,7 @@
 					<div class="limit-box menu-area-main">
 						<a href="loginform.do"><img
 							src="resources/images/top-icon.png" alt="#"
-							style="margin: 5px 50px 0px 100px;" /></a>
+							style="margin: 18px 50px 0px 100px;" /></a>
 					</div>
 				</div>
 			</div>
@@ -88,7 +88,7 @@
 								-골드 스미스
 							</h1>
 							<div class="button_section">
-								<a class="main_bt" href="#">뭘 넣지?</a>
+								<a class="main_bt" href="#" onclick="location.href='signupform.do'">BookeOn&On 시작하기</a>
 							</div>
 						</div>
 					</div>
@@ -106,7 +106,7 @@
 								-제시 리 베넷
 							</h1>
 							<div class="button_section">
-								<a class="main_bt" href="#">뭘 넣지?</a>
+								<a class="main_bt" href="#" onclick="location.href='signupform.do'">BookeOn&On 시작하기</a>
 							</div>
 						</div>
 					</div>
@@ -123,7 +123,7 @@
 								-아나톨 프랑스
 							</h1>
 							<div class="button_section">
-								<a class="main_bt" href="#">뭘 넣지?</a>
+								<a class="main_bt" href="#" onclick="location.href='signupform.do'">BookeOn&On 시작하기</a>
 							</div>
 						</div>
 					</div>
@@ -156,9 +156,9 @@
 						<img src="resources/images/psm.png" alt="Image"
 							class="img-fluid rounded-circle w-50 mb-5">
 						<h3>팀장 박소미</h3>
-						<p class="position text-muted">구현 기능 소개</p>
-						<p class="mb-4">코멘트</p>
-
+						<p class="position text-muted" style="padding:0px;">관리자 기능</p>
+						<p class="position text-muted" style="padding:0px;">친구 & 쪽지 기능</p>
+						<p class="position text-muted" style="padding:0px;">챗봇</p>						
 					</div>
 				</div>
 				<div class="col-md-6 col-lg-4 mb-5 mb-lg-0" data-aos="fade"
@@ -167,9 +167,7 @@
 						<img src="resources/images/cjw.png" alt="Image"
 							class="img-fluid rounded-circle w-50 mb-5">
 						<h3>최정우</h3>
-						<p class="position text-muted">구현 기능 소개</p>
-						<p class="mb-4">코멘트</p>
-
+						<p class="position text-muted" style="padding:0px;">회원 기능</p>
 					</div>
 				</div>
 				<div class="col-md-6 col-lg-4 mb-5 mb-lg-0" data-aos="fade"
@@ -178,9 +176,7 @@
 						<img src="resources/images/csw.png" alt="Image"
 							class="img-fluid rounded-circle w-50 mb-5">
 						<h3>채승원</h3>
-						<p class="position text-muted">구현 기능 소개</p>
-						<p class="mb-4">코멘트</p>
-
+						<p class="position text-muted" style="padding:0px;">독서모임 커뮤니티 기능</p>
 					</div>
 				</div>
 				<div class="col-md-6 col-lg-4 mb-5 mb-lg-0" data-aos="fade"
@@ -189,9 +185,9 @@
 						<img src="resources/images/kjh.png" alt="Image"
 							class="img-fluid rounded-circle w-50 mb-5">
 						<h3>김주현</h3>
-						<p class="position text-muted">구현 기능 소개</p>
-						<p class="position text-muted">코멘트</p>
-
+						<p class="position text-muted" style="padding:0px;">책 소개 기능</p>
+						<p class="position text-muted" style="padding:0px;">도서관 & 서점 위치 정보 제공 기능</p>
+						<p class="position text-muted" style="padding:0px;">서재 담기 & 조회 기능</p>					
 					</div>
 				</div>
 				<div class="col-md-6 col-lg-4 mb-5 mb-lg-0" data-aos="fade"
@@ -200,9 +196,7 @@
 						<img src="resources/images/msj.png" alt="Image"
 							class="img-fluid rounded-circle w-50 mb-5">
 						<h3>문서정</h3>
-						<p class="position text-muted">구현 기능 소개</p>
-						<p class="position text-muted">코멘트</p>
-
+						<p class="position text-muted" style="padding:0px;">서재 통계 기능</p>
 					</div>
 				</div>
 				<div class="col-md-6 col-lg-4 mb-5 mb-lg-0" data-aos="fade"
@@ -211,9 +205,9 @@
 						<img src="resources/images/mss.png" alt="Image"
 							class="img-fluid rounded-circle w-50 mb-5">
 						<h3>민성수</h3>
-						<p class="position text-muted">구현 기능 소개</p>
-						<p class="position text-muted">코멘트</p>
-
+						<p class="position text-muted" style="padding:0px;">책 검색 기능</p>
+						<p class="position text-muted" style="padding:0px;">서재 담기 & 조회 기능</p>						
+					<br><br><br><br>
 					</div>
 				</div>
 			</div>

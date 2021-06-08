@@ -50,7 +50,13 @@
 		, BE_ADDR = #{be_addr}
 		WHERE BE_NO = #{be_no}
 	</update>
-
+	
+	<!-- 회원 탈퇴 -->
+	<update id="mdelete">
+		UPDATE BE_MEMBER
+		SET BE_ENABLED='N'
+		WHERE BE_ID=#{be_id} AND BE_PW=#{be_pw}
+	</update>
 
 	<!-- 친구기능 -->
 	<!-- 친구 리스트 조회 -->

@@ -110,7 +110,7 @@ td>img {
 									<td>								
 									<button type="submit" id="fbtn" class="btn btn-outline-danger btn-sm" style="margin: 0px;"
 										onclick="location.href='delF.do?m2=${status.current.be_id}'">친구끊기</button></td>
-									<td><img src="resources/images/mail.png" alt="#"></td>
+									<td><img src="resources/images/mail.png" alt="#" onclick="location.href='msgPage.do'"></td>
 								</c:when>
 								<c:otherwise>
 									<td>

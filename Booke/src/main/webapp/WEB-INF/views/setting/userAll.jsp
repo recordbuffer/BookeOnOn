@@ -50,6 +50,17 @@ td>img{
 }
 
 </style>
+
+<script type="text/javascript">
+	function aa() {
+		alert("탈퇴 성공");
+	}
+	
+	function bb() {
+		alert("탈퇴 복구 성공");
+	}
+</script>
+
 <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 <script type="text/javascript">
 	$(document).ready(function(){
@@ -95,10 +106,10 @@ td>img{
 							<td>
 						<c:choose>
 							<c:when test="${ulist.be_enabled =='Y' }">
-								<input type="button" class="btn btn-outline-danger btn-sm" value="강제탈퇴" onclick="location.href='userout.do?be_no=${ulist.be_no}'">
+								<input type="button" class="btn btn-outline-danger btn-sm" value="강제탈퇴" onclick="location.href='userout.do?be_no=${ulist.be_no}'; aa();">
 							</c:when>
 							<c:otherwise>
-								<input type="button" class="btn btn-outline-dark btn-sm" value="탈퇴복구" onclick="location.href='userback.do?be_no=${ulist.be_no}'">								
+								<input type="button" class="btn btn-outline-dark btn-sm" value="탈퇴복구" onclick="location.href='userback.do?be_no=${ulist.be_no}'; bb();">								
 							</c:otherwise>
 						</c:choose>
 							</td>				

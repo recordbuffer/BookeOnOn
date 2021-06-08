@@ -39,7 +39,11 @@
 <link rel="stylesheet" href="resources/css/mainpage.css">
 
 </head>
-
+<script type="text/javascript">
+    function aa() {
+        alert("로그아웃 하셨습니다.");
+    }
+</script>
 <body>
 
 	<jsp:include page="header.jsp"></jsp:include>
@@ -92,7 +96,7 @@
     		});
     		
     </script>
-	
+
 	<!-- Page Content -->
 	<div class="container-fluid">
 		<div class="row">
@@ -164,30 +168,30 @@
 								<div>
 								<!-- 계정에 따라 프로필 -->
 								<c:choose>
-								<c:when test="${user.be_role == 'ADM' }">
-									<div class="login_img">
-									<img src="resources/images/kjh.png" style="border-radius: 100%;"></div>
-								</c:when>
-								<c:when test="${user.be_role == 'L3' }">
-									<div class="login_img">
-									<img src="resources/images/L3.png" style="transform: translate(23px, 5px); border-radius: 100%; height: 110px;"></div>
-								</c:when>
-								<c:when test="${user.be_role == 'L2' }">
-									<div class="login_img">
-									<img src="resources/images/L2.png" style="border-radius: 100%;"></div>
-								</c:when>
-								<c:otherwise>
-									<div class="login_img">
-									<img src="resources/images/L1.png" style="border-radius: 100%; height: 100px; transform: translate(25px, 12px);""></div>
-								</c:otherwise>
-								</c:choose>
+                                <c:when test="${user.be_role == 'ADM' }">
+                                    <div class="login_img">
+                                    <img src="resources/images/L4.png" style="border-radius: 100%; height: 100px; transform: translate(10px, 10px);"></div>
+                                </c:when>
+                                <c:when test="${user.be_role == 'L3' }">
+                                    <div class="login_img">
+                                    <img src="resources/images/L3.png" style="transform: translate(10px, 10px); border-radius: 100%; height: 100px;"></div>
+                                </c:when>
+                                <c:when test="${user.be_role == 'L2' }">
+                                    <div class="login_img">
+                                    <img src="resources/images/L2.png" style="border-radius: 100%; height: 100px; transform: translate(10px, 10px);"></div>
+                                </c:when>
+                                <c:otherwise>
+                                    <div class="login_img">
+                                    <img src="resources/images/L1.png" style="border-radius: 100%; height: 100px; transform: translate(10px, 10px);"></div>
+                                </c:otherwise>
+                                </c:choose>
 								<div class="login_name">
 									<!-- 설정 / 쪽지 버튼, 닉네임 -->
 									<a href="setting.do"><i class="bi bi-gear-fill" style="font-size: 2.2rem; color: white; position: absolute; left: 160px; transform: translate(5px, 10px);"></i></a>
 									<div style="transform: translate(-10px, 58px);">
 										<p style="font-size: 15pt;">@ ${user.be_id }</p>
 										<p style="font-size: 25pt;">${user.be_nn }<span style="font-size: 19pt;">님</span></p>
-										<input type="button" class="btn btn-outline-dark" value="LOGOUT" style="transform: translate(130px, -58px);" onclick="location.href='logout.do'">
+										<input type="button" class="btn btn-outline-dark" value="LOGOUT" style="transform: translate(130px, -58px);" onclick="location.href='logout.do'; aa();">
 									</div>
 									<div style="transform: translate(-124px,30px);  color:white; ">
 										<span style="font-size: 20pt;">친구</span >&nbsp;&nbsp;&nbsp;

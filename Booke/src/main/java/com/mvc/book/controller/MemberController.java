@@ -1,6 +1,8 @@
 package com.mvc.book.controller;
 
 import java.net.URLEncoder;
+import java.util.HashMap;
+import java.util.Map;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
@@ -34,6 +36,8 @@ public class MemberController {
 		HttpSession session = request.getSession();
 		// 로그인 한 사람 정보
 		MemberDto user = mbiz.login(dto);
+		String message = "없는 계정입니다.";
+		String url = "http://localhost:8787/book/loginform.do";
 
 		if (user != null) {
 			// 로그인 정보가 맞다면
@@ -46,7 +50,9 @@ public class MemberController {
 		} else {
 			// 로그인 실패
 			session.setAttribute("user", null);
-			return "redirect:loginform.do";
+			session.setAttribute("msg", message);
+			session.setAttribute("url", url);
+			return "alert";
 		}
 	}
 
@@ -76,9 +82,12 @@ public class MemberController {
 	@RequestMapping("/checkId.do")
 	public @ResponseBody String checkId(HttpServletRequest request) throws Exception {
 		logger.info("CHECK MemberDto = " + request.getParameter("be_id"));
+		
 		MemberDto memberDto = new MemberDto();
 		memberDto.setBe_id(request.getParameter("be_id"));
+		
 		logger.info("CHECK MemberDto2 = " + mbiz.Idcheck(memberDto));
+		
 		// 결과 json 객체 생성
 		JSONObject json = new JSONObject();
 		json.put("result", mbiz.Idcheck(memberDto) > 0);	// 조회한 아이디와 일치하는 정보고 0개 이상인경우 true, 아니면 false
@@ -133,10 +142,42 @@ public class MemberController {
 		// 결과 json객체 생성 
 		JSONObject json = new JSONObject();
 		json.put("result", result);
-		json.put("resultMessage", URLEncoder.encode(resultMessage, "UTF-8").replaceAll("\\+", "%20"));	//한글이 깨지는 것을 방지하기 위하여 인코딩 함. 인코딩시 띄어쓰기에 +가 들어가는 것을 제거하기 위해 replaceAll 처리함.
+		json.put("resultMessage", URLEncoder.encode(resultMessage, "UTF-8").replaceAll("\\+", "%20"));	
+		//한글이 깨지는 것을 방지하기 위하여 인코딩 함. 인코딩시 띄어쓰기에 +가 들어가는 것을 제거하기 위해 replaceAll 처리함.
 		
 		// 결과 json객체를 문자열 형식으로 반환
 		return json.toString();
+		
+	}
+	
+	// 회원 탈퇴 확인 페이지로 이동
+	@RequestMapping(value = "/deleteChk.do")
+	public String mdelete_Chk() {
+		logger.info("MEMBER DELETE CHECK POP UP");
+
+		return "setting/mdeletepage_Chk";
+	}
+
+	
+	// 회원 탈퇴
+	@RequestMapping(value="/mdelete.do", method = RequestMethod.POST)
+	public String mdelete(HttpSession session, HttpServletRequest request, String be_pw) {
+		logger.info("MEMBER DELETE");
+		
+		MemberDto user = (MemberDto)session.getAttribute("user"); 
+		String be_id = user.getBe_id();
+		
+		Map<String, String> map = new HashMap<String, String>();
+		map.put("be_id", be_id);
+		map.put("be_pw", be_pw);
+		
+		int res = mbiz.deleteMember(map);
+		
+		if(res>0) {
+			return "redirect:welcome.do";
+		} else {
+			return "redirect:md_aks.do";
+		}
 		
 	}
 

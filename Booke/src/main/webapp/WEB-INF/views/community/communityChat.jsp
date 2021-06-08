@@ -68,7 +68,7 @@
 
 					<h1>
 						&nbsp;&nbsp;<span class="badge"
-							style="font-size: 100%; background-color: rgb(243, 193, 188);">소통방</span>
+							style="font-size: 100%; background-color: rgb(243, 193, 188);"><%= request.getParameter("name") %></span>
 						<span class="btn-group" role="group" aria-label="Basic example"
 							style="left: 60%;">
 
@@ -91,7 +91,7 @@
 			<div class="col-lg-12">
 				<div class="ibox float-e-margins">
 					<div class="ibox-content">
-						<strong>Group Chat room </strong>
+						<strong><%= request.getParameter("introduce") %> </strong>
 					</div>
 				</div>
 			</div>
@@ -100,8 +100,7 @@
 			<div class="col-lg-12">
 				<div class="ibox chat-view">
 					<div class="ibox-title">
-						<small class="float-right text-muted">Last message: Mon Apl
-							29 2021 - 18:39:23</small> Chat room panel
+						<small class="float-right text-muted"></small> 채팅방
 					</div>
 					<div class="ibox-content">
 						<div class="container">
@@ -135,8 +134,7 @@
 												</div>
 											</div>
 											<div class="chat-user">
-												<span class="pull-right label label-primary">Online</span> <img
-													class="chat-avatar"
+												<img class="chat-avatar"
 													src="resources/images/mss.png"
 													alt="">
 												<div class="chat-user-name">
@@ -144,8 +142,7 @@
 												</div>
 											</div>
 											<div class="chat-user">
-												<span class="pull-right label label-primary">Online</span> <img
-													class="chat-avatar"
+												<img class="chat-avatar"
 													src="resources/images/csw.png"
 													alt="">
 												<div class="chat-user-name">
@@ -168,23 +165,7 @@
 													<a href="#">김주현 님</a>
 												</div>
 											</div>
-											<div class="chat-user">
-												<img class="chat-avatar"
-													src="resources/images/psm.png"
-													alt="">
-												<div class="chat-user-name">
-													<a href="#">안소미 님</a>
-												</div>
-											</div>
-											<div class="chat-user">
-												<span class="pull-right label label-primary">Online</span> <img
-													class="chat-avatar"
-													src="resources/images/psm.png"
-													alt="">
-												<div class="chat-user-name">
-													<a href="#">강소미 님</a>
-												</div>
-											</div>
+											
 										</div>
 									</div>
 								</div>

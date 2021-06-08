@@ -87,7 +87,7 @@ td>img{
 							<td>
 								<button type="submit" id="mbtn" class="btn btn-outline-danger btn-sm" style="margin: 0px;" 
 								onclick="location.href='deleteF.do?m2=${flist.be_id}'">친구 끊기</button>
-							<td><img src="resources/images/mail.png" alt="#"></td>
+							<td><img src="resources/images/mail.png" alt="#" onclick="location.href='msgPage.do'"></td>
 						</tr>
 					</c:forEach>
 					<c:set var="cntFList"  value="${fn:length(friendList)}" scope="session"></c:set>

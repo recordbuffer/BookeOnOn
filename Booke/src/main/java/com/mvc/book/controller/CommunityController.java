@@ -55,10 +55,6 @@ public class CommunityController {
 		int rbook = Rbook.size();
 		int friendcount = friendList.size();
 
-		System.out.println("읽고싶은책 : " + wbook);
-		System.out.println("읽은책 : " + rbook);
-		System.out.println("친구 수 : " + friendcount);
-
 		request.setAttribute("w_book", wbook);
 		request.setAttribute("r_book", rbook);
 		request.setAttribute("friendcount", friendcount);

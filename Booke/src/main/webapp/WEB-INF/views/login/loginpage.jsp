@@ -42,7 +42,7 @@ body {
 }
 
 #btn {
-	width: 176.8px;
+	width: 190px;
 	background-color: rgb(181, 227, 216);
 	border: none;
 }
@@ -82,12 +82,11 @@ a:hover {
 				<input type="submit" value="로그인" class="form-control" id="btn">
 			</div>
 		</form>
-
 		<br>
-		<br>
-		<br> <a href="">아이디 or 비밀번호 찾기</a>&nbsp;&nbsp;<span>/</span>&nbsp;
-		<a href="signupform.do">회원가입</a>
-
+		<div class="form">
+			<input type="submit" value="회원가입" class="form-control" id="btn"
+				onclick="location.href='signupform.do'">
+		</div>
 	</main>
 
 

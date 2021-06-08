@@ -41,50 +41,48 @@
 				<div class="full">
 					<div class="center-desk">
 						<div class="logo">
-							<a href="main.do"><img
-								src="resources/images/buck_buck_community.png" alt="#"
-								style="margin: 0px 0px 0px -150px;"></a>
+							<a href="main.do"><img src="resources/images/buck_buck_community.png"
+								alt="#" style="margin: -15px 0px 0px -150px;"></a>
 						</div>
 					</div>
 				</div>
 			</div>
+			<div>
 			<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1">
 				<div class="menu-area1">
 					<div class="limit-box menu-area-main"
-						style="margin: 10px 0px 0px -200px; font-size: 23px;">
-						<a id="name" href="bcase.do">서재</a>
-					</div>
-				</div>
-			</div>
-			<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1">
-				<div class="menu-area2">
-					<div class="limit-box menu-area-main"
-						style="margin: 10px 0px 0px -110px; font-size: 23px;">
-						<a id="name" href="communityMain.do">커뮤니티</a>
+						style="margin: 7px 0px 0px -200px;">
+						<a id="name" href="bcase.do" style="font-size:15pt;">서재</a>
 					</div>
 				</div>
 			</div>
 			<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1">
 				<div class="menu-area3">
 					<div class="limit-box menu-area-main"
-						style="margin: 10px 0px 0px 0px; font-size: 23px;">
-						<a id="name" href="bookintro.do">책 소개</a>
+						style="margin: 7px 0px 0px -110px;">
+						<a id="name" href="bookintro.do"  style="font-size:15pt;">책 소개</a>
 					</div>
 				</div>
 			</div>
+			<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1">
+				<div class="menu-area2">
+					<div class="limit-box menu-area-main"
+						style="margin: 7px 0px 0px 0px;">
+						<a id="name" href="communityMain.do"  style="font-size:15pt;">커뮤니티</a>
+					</div>
+				</div>
+			</div>
+			</div>
 			<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
 				<div class="menu-area">
-					<div class="limit-box menu-area-main1">
-						<a id="name" href="bsearch.do"><i class="bi bi-search"
-							style="font-size: 2rem;"></i></a> <a id="name" href="msg.do"><i
-							class="bi bi-chat-text-fill" style="font-size: 2rem;"></i></a> <a
-							id="name" href="setting.do"><i class="bi bi-gear-fill"
-							style="font-size: 2rem;"></i></a>
+					<div class="limit-box menu-area-main1" style="margin: -2px 0px 0px 0px;">
+						<a id="name" href="bsearch.do"><i class="bi bi-search" style="font-size: 2rem;"></i></a> 
+						<a id="name" href="msgAll.do"><i class="bi bi-chat-text-fill" style="font-size: 2rem; margin:5px;"></i></a>
+						<a id="name" href="setting.do"><i class="bi bi-gear-fill" style="font-size: 2rem;"></i></a>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
-
 </body>
 </html>
