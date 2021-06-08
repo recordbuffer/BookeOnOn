@@ -125,11 +125,11 @@ td>#btn {
 				</tr>
 				<tr>
 					<th>이메일</th>
-					<td><input type="text" class="form-control" name="be_email"></td>
+					<td><input type="text" class="form-control" name="be_email" placeholder="***@***.com"></td>
 				</tr>
 				<tr>
 					<th>전화번호</th>
-					<td><input type="text" class="form-control" name="be_phone"></td>
+					<td><input type="text" class="form-control" name="be_phone" placeholder="010-****-****"></td>
 				</tr>
 				<tr>
 					<td colspan="3"><input type="button" value="회원가입" class="form-control" id="sbtn" style="width: 370px;margin-top: 40px;font-size: 14pt; background-color: rgb(181, 227, 216);"></td>
